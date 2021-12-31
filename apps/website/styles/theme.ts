@@ -92,10 +92,12 @@ const overrides = {
   sizes,
 };
 
-export default extendTheme({
+const theme: any = extendTheme({
   config: {
     initialColorMode: "light",
     useSystemColorMode: false,
   },
   ...overrides,
 });
+
+export default theme;

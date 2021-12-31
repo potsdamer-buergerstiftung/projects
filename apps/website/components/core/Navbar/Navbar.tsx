@@ -80,7 +80,7 @@ const Navbar: FC = () => {
                 />
               )}
               <RouterLink href="/" passHref>
-                <Link _focus={{outline: "none"}}>
+                <Link _focus={{ outline: "none" }}>
                   <PBSLogo height={{ base: 8, md: 9, lg: 10 }} my="8" />
                 </Link>
               </RouterLink>

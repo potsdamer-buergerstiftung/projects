@@ -10,8 +10,8 @@ import {
 const MotionBox = motion(Box);
 const MotionHStack = motion(HStack);
 
-function scrollToTop(){
-  window.scrollTo({top: 0, behavior: 'smooth'});
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 const ScrollProgressIndicator = () => {

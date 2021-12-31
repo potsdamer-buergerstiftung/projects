@@ -3,42 +3,49 @@
     "imageUrl": "/buer_projekte_potspresso_1260x500.jpg",
     "title": "Potspresso",
     "description": "Der Pfandbecher",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/pots_buergermobil_IMG_3195_web.jpg",
     "title": "Bürgermobil",
     "description": "Radeln ohne Alter",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/intd.jpg",
     "title": "International Tuesday",
     "description": "Internationals treffen Locals",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/kk.jpg",
     "title": "Buntes B",
     "description": "Im Klosterkeller",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/ib.png",
     "title": "Inselbühne",
     "description": "Kultur auf der Freundschaftsinsel",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/buer_projekte_potspresso_1260x500.jpg",
     "title": "Potspresso",
     "description": "Der Pfandbecher",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   },
   {
     "imageUrl": "/buer_projekte_potspresso_1260x500.jpg",
     "title": "Potspresso",
     "description": "Der Pfandbecher",
-    "link": "/projekte/potspresso"
+    "slug": "potspresso",
+    "categories": ["Nachhaltigkeit"]
   }
 ]

@@ -14,6 +14,11 @@ import { Default } from "@components/layouts";
 import { ProjectGrid } from "@components/project";
 import projects from "@config/projects.json";
 
+const mappedProjects = projects.map((project) => ({
+  ...project,
+  link: `/projekte/${project.slug}`,
+}));
+
 export default function Home() {
   return (
     <>
@@ -73,7 +78,7 @@ export default function Home() {
             </Flex>
           </Center>
           <Box pt="8">
-            <ProjectGrid projects={projects} />
+            <ProjectGrid projects={mappedProjects} />
           </Box>
         </Container>
       </Box>
