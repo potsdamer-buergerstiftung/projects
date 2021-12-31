@@ -6,9 +6,7 @@ const position: [number, number] = [51.505, -0.09];
 const Map: FC = () => {
   return (
     <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <Marker position={position}>
         <Popup>
           A pretty CSS3 popup. <br /> Easily customizable.
