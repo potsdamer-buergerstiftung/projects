@@ -36,7 +36,7 @@ export default function Home() {
             Mitmach-Stiftung ehrenamtliches Engagement.
             <br />{" "}
             <Link>
-              Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter
+              Lasst uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter
               machen.
             </Link>
           </Text>

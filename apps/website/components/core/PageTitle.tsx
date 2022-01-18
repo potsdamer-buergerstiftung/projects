@@ -14,10 +14,10 @@ const PageTitle: FC<PageTitleArgs> = ({
   contentBottom = false,
 }) => {
   return (
-    <Box pb="20" pt="40" bg="white">
+    <Box pt="40" bg="white">
       <Container maxW="container.xl">
         {!contentBottom && children}
-        <Heading size="4xl">{title}</Heading>
+        <Heading size="3xl">{title}</Heading>
         {description && (
           <Text mt="4" mb={contentBottom && children && 5}>
             {description}

@@ -13,7 +13,7 @@ import { IconButton } from "@chakra-ui/react";
 const navItems = [
   {
     href: "/unsere-mission",
-    text: "Unsere Mission",
+    text: "Wir über uns",
   },
   {
     href: "/projekte",
@@ -104,7 +104,7 @@ const Navbar: FC = () => {
             </Box>
             {showActionButton && (
               <Button background="background" color="secondary">
-                Freund:in werden
+                Untersützen und mitmachen
               </Button>
             )}
           </Stack>

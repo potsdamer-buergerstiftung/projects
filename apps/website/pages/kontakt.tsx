@@ -26,7 +26,7 @@ export default function ContactPage() {
           Schreib uns eine E-Mail
         </Button>
       </PageTitle>
-      <Box as="section">
+      <Box as="section" pt="20" bg="white">
         <Breadcrumb items={[{ label: "Kontakt", link: "/kontakt" }]} />
       </Box>
       <Box as="section" bg="white" pt="10" pb="20">

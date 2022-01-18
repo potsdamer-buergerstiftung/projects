@@ -17,19 +17,19 @@ const SocialLinks: FC = () => {
         <Text>-</Text>
       </ListItem>
       <ListItem>
-        <Link isExternal>Fb.</Link>
+        <Link isExternal>Facebook</Link>
       </ListItem>
       <ListItem>
         <Text>/</Text>
       </ListItem>
       <ListItem>
-        <Link isExternal>Inst.</Link>
+        <Link isExternal>Instagram</Link>
       </ListItem>
       <ListItem>
         <Text>/</Text>
       </ListItem>
       <ListItem>
-        <Link isExternal>Yt.</Link>
+        <Link isExternal>YouTube</Link>
       </ListItem>
     </Wrap>
   );
