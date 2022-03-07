@@ -11,7 +11,7 @@ const SocialLinks: FC = () => {
       spacing="3"
     >
       <ListItem>
-        <Text>Folge uns</Text>
+        <Text>Folg&apos; uns</Text>
       </ListItem>
       <ListItem>
         <Text>-</Text>
