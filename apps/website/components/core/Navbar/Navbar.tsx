@@ -59,7 +59,7 @@ const Navbar: FC = () => {
               direction="row"
               justify="space-between"
               align="center"
-              spacing="8"
+              spacing="4"
             >
               {showNavigationMenuButton && (
                 <IconButton

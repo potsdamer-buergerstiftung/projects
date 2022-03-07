@@ -24,7 +24,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ items }) => {
         height="100vh"
         width="100%"
         maxWidth="85%"
-        zIndex="100"
+        zIndex="10000"
         p="6"
         initial={{ opacity: 0, x: "-100px" }}
         animate={{ opacity: 1, x: 0 }}
