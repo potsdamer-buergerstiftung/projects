@@ -104,7 +104,7 @@ const Navbar: FC = () => {
             </Box>
             {showActionButton && (
               <Button background="background" color="secondary">
-                Untersützen und mitmachen
+                Untersützen & mitmachen
               </Button>
             )}
           </Stack>
