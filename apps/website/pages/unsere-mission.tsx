@@ -58,7 +58,7 @@ export default function UnsereMissionPage() {
                 <AccordionPanel pb={4} px="0">
                   Wir sind eine institutionell und finanziell unabhängige
                   gemeinnützige Stiftung von und für Bürgerinnen und Bürger mit
-                  möglichst breitem Stiftungszweck. Wir en  gagieren uns
+                  möglichst breitem Stiftungszweck. Wir en gagieren uns
                   nachhaltig und dauerhaft für das Gemeinwesen vor Ort. Sie
                   unterstützt mit ihrer Arbeit bürgerschaftliches Engagement.
                 </AccordionPanel>
