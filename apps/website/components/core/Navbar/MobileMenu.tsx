@@ -40,7 +40,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ items }) => {
             aria-label="Close Menu"
             icon={<CloseIcon />}
             size="sm"
-          ></IconButton>
+          />
           <VStack align="start">
             {items.map((item, i) => (
               <MobileMenuItem key={i} {...item} />
@@ -60,7 +60,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ items }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ times: [0.4, 0, 0.2, 1] }}
-      ></MotionBox>
+      />
     </>
   );
 };
