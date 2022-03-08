@@ -1,11 +1,10 @@
 import { IconButton } from "@chakra-ui/button";
-import { Box, Flex, Stack, VStack } from "@chakra-ui/layout";
+import { CloseIcon } from "@chakra-ui/icons";
+import { Box, VStack } from "@chakra-ui/layout";
 import { useUI } from "@components/context";
-import { SocialLinks } from "@components/misc";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import MobileMenuItem from "./MobileMenuItem";
-import { CloseIcon } from "@chakra-ui/icons";
 
 interface MobileMenuProps {
   items: any[];
