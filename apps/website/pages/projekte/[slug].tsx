@@ -1,5 +1,5 @@
 import PageTitle from "@components/core/PageTitle";
-import { Default } from "@components/layouts";
+import { Default, useShowBackButton } from "@components/layouts";
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { Breadcrumb } from "@components/core";
 
@@ -31,6 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Project({ project }) {
+  useShowBackButton();
   return (
     <>
       <PageTitle title={project.title} description={project.description}>

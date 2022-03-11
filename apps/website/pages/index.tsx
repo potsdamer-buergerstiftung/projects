@@ -54,7 +54,7 @@ export default function Home() {
                 spacing="3"
               >
                 <ListItem>
-                  <Text fontWeight="normal">Filtern nach</Text>
+                  <Text fontWeight="normal">Projekte filtern nach</Text>
                 </ListItem>
                 <ListItem>
                   <Text>-</Text>

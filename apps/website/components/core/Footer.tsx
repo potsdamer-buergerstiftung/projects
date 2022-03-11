@@ -82,6 +82,7 @@ const Footer: FC = () => {
               </Box>
               <Box>
                 <Wrap direction="row" spacing="4">
+                  <Text color="gray.600">GitHub</Text>
                   <Text color="gray.600">Datenschutzerklärung</Text>
                   <Text color="gray.600">Impressum</Text>
                 </Wrap>

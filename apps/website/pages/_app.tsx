@@ -16,6 +16,7 @@ import "@fontsource/space-grotesk/700.css";
 import dayjs from "dayjs";
 import "leaflet/dist/leaflet.css";
 import { ManagedUIContext } from "@components/context";
+import { RecoilRoot } from "recoil";
 
 function handleExitComplete() {
   if (typeof window !== "undefined") {
@@ -34,14 +35,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head />
       <ChakraProvider theme={theme}>
         <ManagedUIContext>
-          <Layout pageProps={pageProps}>
-            <AnimatePresence
-              exitBeforeEnter
-              onExitComplete={handleExitComplete}
-            >
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
-          </Layout>
+          <RecoilRoot>
+            <Layout pageProps={pageProps}>
+              <AnimatePresence
+                exitBeforeEnter
+                onExitComplete={handleExitComplete}
+              >
+                <Component {...pageProps} key={router.route} />
+              </AnimatePresence>
+            </Layout>
+          </RecoilRoot>
         </ManagedUIContext>
       </ChakraProvider>
     </>

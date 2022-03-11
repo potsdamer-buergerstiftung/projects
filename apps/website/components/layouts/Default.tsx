@@ -10,9 +10,12 @@ import { SocialLinks } from "@components/misc";
 import CookieBanner from "@components/misc/CookieBanner";
 import ScrollProgressIndicator from "@components/misc/ScrollProgressIndicator";
 import { useAcceptCookies } from "@lib/hooks/useAcceptCookies";
+import { useShowBackButtonState } from "./state";
+import BackButton from "@components/misc/BackButton";
 
 const Layout: FC = ({ children }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies();
+  const [showBackButton] = useShowBackButtonState();
 
   const showSocialLinks = useBreakpointValue({ base: false, xl: true });
   const showScrollProgressIndicator = useBreakpointValue({
@@ -23,6 +26,16 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <Navbar />
+      {showBackButton && showScrollProgressIndicator && (
+        <Box
+          zIndex={1000}
+          top="100px"
+          position="fixed"
+          left={{ base: "1rem", xl: 10 }}
+        >
+          <BackButton />
+        </Box>
+      )}
       {showSocialLinks && (
         <Flex
           position="fixed"
@@ -42,12 +55,12 @@ const Layout: FC = ({ children }) => {
         <Flex
           position="fixed"
           zIndex="10"
-          left="4.4vh"
+          left={{ base: "1rem", xl: 10 }}
           transformOrigin="left top"
           transform="rotate(-90deg) translate(-50%, 0)"
           top="50%"
+          height="12"
           align="center"
-          minH="56px"
           float="left"
         >
           <ScrollProgressIndicator />
