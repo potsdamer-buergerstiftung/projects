@@ -1,16 +1,16 @@
 import {
   Box,
   Container,
-  Heading,
-  Link,
-  Text,
-  Center,
   Flex,
-  Wrap,
-  List,
-  ListItem,
   Grid,
   GridItem,
+  Heading,
+  Link,
+  List,
+  ListItem,
+  SimpleGrid,
+  Text,
+  Wrap,
 } from "@chakra-ui/layout";
 import { Default } from "@components/layouts";
 import { ProjectGrid } from "@components/project";
@@ -82,14 +82,34 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
-      <Box w="full" bg="white" py="4">
+      <Box w="full" bg="white" pb="24" pt="24">
         <Container maxW="container.xl">
-          <Grid templateColumns="repeat(5, 1fr)" gap={6}>
-            <GridItem w="100%" h="10" bg="blue.500" />
-            <GridItem w="100%" h="10" bg="blue.500" />
-            <GridItem w="100%" h="10" bg="blue.500" />
-            <GridItem w="100%" h="10" bg="blue.500" />
-            <GridItem w="100%" h="10" bg="blue.500" />
+          <Grid
+            columns={2}
+            spacing="10"
+            templateColumns="repeat(5, 1fr)"
+            gap={6}
+          >
+            <GridItem colSpan={2}>
+              <Heading as="h2" size="lg" mb="4" variant="subtitle">
+                Unser Motto
+              </Heading>
+              <Heading as="h2" size="xl" mb="4" maxW="md">
+                Ehrenamtlich, engagiert, miteinander
+              </Heading>
+            </GridItem>
+            <GridItem colSpan={3}>
+              <Text>
+                Alle sind eingeladen, sich mit Ideen, Zeit und Geld für eine{" "}
+                <b>positive Entwicklung Potsdams einzubringen</b>. Wir vernetzen
+                Gleichgesinnte, versammeln engagierte Menschen, bieten
+                Unterstützung als Plattform für Ehrenamt und möchten es den
+                Menschen in Potsdam leichter machen, das{" "}
+                <b>Gemeinwohl zu stärken</b>, Gemeinschaftsgefühl zu erleben,
+                ein herzliches Miteinander und eine starke Zukunft für Potsdam
+                zu stiften.
+              </Text>
+            </GridItem>
           </Grid>
         </Container>
       </Box>
