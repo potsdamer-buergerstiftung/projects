@@ -21,7 +21,15 @@ const components = {
       lineHeight: "0.3em",
       letterSpacing: "-0.03em",
     },
-    variants: {},
+    variants: {
+      subtitle: {
+        textTransform: "uppercase",
+        fontSize: "sm",
+        fontFamily: "body",
+        fontWeight: "600",
+        color: "gray.600",
+      },
+    },
   },
   Button: {
     baseStyle: {
