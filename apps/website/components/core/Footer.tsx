@@ -19,7 +19,7 @@ const Footer: FC = () => {
 
   return (
     <>
-      <Box as="footer">
+      <Box as="footer" bg="gray.50">
         <Container maxW="container.xl">
           <Box fontSize="md" py="20">
             <Grid templateColumns="repeat(4, 1fr)" gap="5">
