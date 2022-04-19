@@ -9,6 +9,8 @@ import {
   Wrap,
   List,
   ListItem,
+  Grid,
+  GridItem,
 } from "@chakra-ui/layout";
 import { Default } from "@components/layouts";
 import { ProjectGrid } from "@components/project";
