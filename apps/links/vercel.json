@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/*.ts": {
+    "entries/*.ts": {
       "memory": 128
     }
   }
