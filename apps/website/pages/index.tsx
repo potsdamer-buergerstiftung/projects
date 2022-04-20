@@ -106,7 +106,7 @@ export default function Home() {
                 Unterstützung als Plattform für Ehrenamt und möchten es den
                 Menschen in Potsdam leichter machen, das{" "}
                 <b>Gemeinwohl zu stärken</b>, Gemeinschaftsgefühl zu erleben,
-                ein herzliches Miteinander und eine starke Zukunft für Potsdam
+                ein <b>herzliches Miteinander</b> und eine starke Zukunft für Potsdam
                 zu stiften.
               </Text>
             </GridItem>
