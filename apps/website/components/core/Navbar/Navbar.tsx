@@ -20,7 +20,7 @@ const navItems = [
     text: "Projekte",
   },
   {
-    href: "/aktuelles",
+    href: "/blog",
     text: "Aktuelles",
   },
   {

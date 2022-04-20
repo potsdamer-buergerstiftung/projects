@@ -1,6 +1,5 @@
 import ProjectCard from "./ProjectCard";
 import ProjectGrid from "./ProjectGrid";
+import ProjectView from "./ProjectView";
 
-export { ProjectCard, ProjectGrid };
-
-export { default as ProjectView } from "./ProjectView";
+export { ProjectCard, ProjectGrid, ProjectView };

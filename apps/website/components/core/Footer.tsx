@@ -1,3 +1,4 @@
+import { DownloadIcon } from "@chakra-ui/icons";
 import {
   Box,
   Container,
@@ -63,10 +64,15 @@ const Footer: FC = () => {
                 </Box>
                 <Box mt="10">
                   <Heading size="md" mb="8">
-                    Spenden
+                    Pressekit
                   </Heading>
-                  <Text>Friedrich-Ebert-Straße 94</Text>
-                  <Text>14467 Potsdam</Text>
+                  <Text>
+                    Du möchtest über uns berichten? Wir haben dir ein Paket für
+                    die freie Verwendung geschnürt.
+                  </Text>
+                  <Button size="sm" mt="4" rightIcon={<DownloadIcon />}>
+                    Download
+                  </Button>
                 </Box>
               </GridItem>
               <GridItem colSpan={1}>
