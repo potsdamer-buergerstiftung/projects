@@ -1,7 +1,3 @@
 {
-  "functions": {
-    "entries/*.ts": {
-      "memory": 128
-    }
-  }
+  "rewrites": [{ "source": "/:link", "destination": "/api/:link" }]
 }
