@@ -4,6 +4,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Link,
   Stack,
   Text,
   VStack,
@@ -22,19 +23,29 @@ const Footer: FC = () => {
       <Box as="footer" bg="gray.50">
         <Container maxW="container.xl">
           <Box fontSize="md" py="20">
-            <Grid templateColumns="repeat(4, 1fr)" gap="5">
+            <Grid templateColumns="repeat(4, 1fr)" gap="8">
               <GridItem colSpan={1}>
-                <VStack spacing="10" align="left">
-                  <Logo width="full" maxW="48" />
-                  <SocialLinks />
+                <VStack>
+                  <VStack spacing="10" align="left">
+                    <Logo width="full" maxW="48" />
+                    <SocialLinks showFollowUsLabel={false} />
+                  </VStack>
                 </VStack>
               </GridItem>
               <GridItem colSpan={1}>
                 <Heading size="md" mb="8">
-                  Adresse
+                  Komm vorbei
                 </Heading>
-                <Text>Friedrich-Ebert-Straße 94</Text>
-                <Text>14467 Potsdam</Text>
+                <Box>
+                  <Text fontWeight="bold">MAZ-Pyramide</Text>
+                  <Text>Friedrich-Engels-Straße 24</Text>
+                  <Text>14473 Potsdam</Text>
+                </Box>
+                <Box mt="8">
+                  <Text fontWeight="bold">Inselbühne</Text>
+                  <Text>Burgstraße 8</Text>
+                  <Text>14467 Potsdam</Text>
+                </Box>
               </GridItem>
               <GridItem colSpan={1}>
                 <Box>
@@ -44,11 +55,15 @@ const Footer: FC = () => {
                   <Text>
                     Du möchtest helfen, die Stadt l(i)ebenswerter zu machen?
                   </Text>
-                  <Text>info@potsdamer-buergerstiftung.org</Text>
+                  <Text>
+                    <Link href="mailto:ehrenamt@potsdamer-buergerstiftung.org">
+                      ehrenamt@potsdamer-buergerstiftung.org
+                    </Link>
+                  </Text>
                 </Box>
                 <Box mt="10">
                   <Heading size="md" mb="8">
-                    Ehrenamt
+                    Spenden
                   </Heading>
                   <Text>Friedrich-Ebert-Straße 94</Text>
                   <Text>14467 Potsdam</Text>
