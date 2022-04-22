@@ -55,7 +55,7 @@ const ScrollProgressIndicator = () => {
                 height="full"
               />
             </Box>
-            <Text fontWeight="bold" fontSize="md">
+            <Text fontWeight="bold" fontSize="md" lineHeight="1em">
               Nach oben scrollen
             </Text>
           </MotionHStack>

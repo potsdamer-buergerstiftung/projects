@@ -41,12 +41,14 @@ export default function Project({ project }) {
           <Text>Seit Februar 2019</Text>
         </HStack>
       </PageTitle>
-      <Breadcrumb
-        items={[
-          { label: "Projekte", link: "/projekte" },
-          { label: project.title, link: `/projekte/${project.slug}` },
-        ]}
-      />
+      <Box as="section" pt="20" bg="white">
+        <Breadcrumb
+          items={[
+            { label: "Projekte", link: "/projekte" },
+            { label: project.title, link: `/projekte/${project.slug}` },
+          ]}
+        />
+      </Box>
       <Box as="section" bg="white" pt="5">
         <ProjectView />
       </Box>

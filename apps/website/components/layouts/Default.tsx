@@ -31,7 +31,7 @@ const Layout: FC = ({ children }) => {
           zIndex={1000}
           top="100px"
           position="fixed"
-          left={{ base: "1rem", xl: 10 }}
+          left={{ base: "1rem", xl: 12 }}
         >
           <BackButton />
         </Box>
@@ -55,11 +55,10 @@ const Layout: FC = ({ children }) => {
         <Flex
           position="fixed"
           zIndex="10"
-          left={{ base: "1rem", xl: 10 }}
+          left={{ base: "1rem", xl: 16 }}
           transformOrigin="left top"
           transform="rotate(-90deg) translate(-50%, 0)"
           top="50%"
-          height="12"
           align="center"
           float="left"
         >
