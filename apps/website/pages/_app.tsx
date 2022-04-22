@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { Head } from "@components/core";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import "dayjs/locale/de";
 
 dayjs.locale("de");
@@ -24,6 +26,8 @@ function handleExitComplete() {
   }
 }
 
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY);
+
 const Noop: FC = ({ children }) => <>{children}</>;
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -36,14 +40,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ChakraProvider theme={theme}>
         <ManagedUIContext>
           <RecoilRoot>
-            <Layout pageProps={pageProps}>
-              <AnimatePresence
-                exitBeforeEnter
-                onExitComplete={handleExitComplete}
-              >
-                <Component {...pageProps} key={router.route} />
-              </AnimatePresence>
-            </Layout>
+            <Elements stripe={stripePromise}>
+              <Layout pageProps={pageProps}>
+                <AnimatePresence
+                  exitBeforeEnter
+                  onExitComplete={handleExitComplete}
+                >
+                  <Component {...pageProps} key={router.route} />
+                </AnimatePresence>
+              </Layout>
+            </Elements>
           </RecoilRoot>
         </ManagedUIContext>
       </ChakraProvider>
