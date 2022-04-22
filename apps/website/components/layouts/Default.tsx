@@ -1,17 +1,13 @@
-import { FC } from "react";
-import { Navbar, Footer } from "@components/core";
 import {
-  Box,
-  useColorModeValue as mode,
-  useBreakpointValue,
-  Flex,
+  Box, Flex, useBreakpointValue, useColorModeValue as mode
 } from "@chakra-ui/react";
+import { Footer, Navbar } from "@components/core";
 import { SocialLinks } from "@components/misc";
-import CookieBanner from "@components/misc/CookieBanner";
+import BackButton from "@components/misc/BackButton";
 import ScrollProgressIndicator from "@components/misc/ScrollProgressIndicator";
 import { useAcceptCookies } from "@lib/hooks/useAcceptCookies";
+import { FC } from "react";
 import { useShowBackButtonState } from "./state";
-import BackButton from "@components/misc/BackButton";
 
 const Layout: FC = ({ children }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies();

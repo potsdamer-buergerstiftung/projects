@@ -1,7 +1,11 @@
 import {
-    Box, Button, Container,
-    Stack, useColorModeValue as mode
+  Box,
+  Button,
+  Container,
+  Stack,
+  useColorModeValue as mode,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FC } from "react";
 import { PBSLogo } from "ui";
 
@@ -19,9 +23,11 @@ const Layout: FC = ({ children }) => {
             >
               <PBSLogo height={{ base: 8, md: 9, lg: 10 }} my="8" />
             </Stack>
-            <Button background="background" color="secondary">
-              Kontakt
-            </Button>
+            <Link passHref href="/kontakt">
+              <Button background="background" color="secondary" as="a">
+                Kontakt
+              </Button>
+            </Link>
           </Stack>
         </Container>
       </Box>
