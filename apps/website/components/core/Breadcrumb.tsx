@@ -27,7 +27,7 @@ const BC: FC<BreadcrumbArgs> = ({ items }) => {
         >
           <BreadcrumbItem>
             <RouterLink href="/" passHref>
-              <BreadcrumbLink color="black" fontWeight="normal">
+              <BreadcrumbLink color="black" fontWeight="bold">
                 Startseite
               </BreadcrumbLink>
             </RouterLink>
@@ -35,7 +35,10 @@ const BC: FC<BreadcrumbArgs> = ({ items }) => {
           {items.map((item, i) => (
             <BreadcrumbItem isCurrentPage={items.length === i + 1} key={i}>
               <RouterLink href={item.link} passHref key={i}>
-                <BreadcrumbLink color="black" fontWeight="normal">
+                <BreadcrumbLink
+                  color="black"
+                  fontWeight={items.length === i + 1 ? "normal" : "bold"}
+                >
                   {item.label}
                 </BreadcrumbLink>
               </RouterLink>
