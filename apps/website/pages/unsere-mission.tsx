@@ -24,12 +24,12 @@ export default function UnsereMissionPage() {
   return (
     <>
       <PageTitle
-        title="Wir über uns"
+        title="Über uns"
         description="Gemeinsam Gutes tun und Sinn stiften"
       />
       <Box as="section" pt="20" bg="white">
         <Breadcrumb
-          items={[{ label: "Wir über uns", link: "/wir-ueber-uns" }]}
+          items={[{ label: "Über uns", link: "/ueber-uns" }]}
         />
       </Box>
       <Grid
@@ -39,7 +39,7 @@ export default function UnsereMissionPage() {
       >
         <GridItem colSpan={1} background="white">
           <AspectRatio ratio={3 / 2}>
-            <Image src="/aushd.jpg" layout="fill" objectFit="cover" />
+            <Image src="/aushd.jpg" layout="fill" objectFit="cover" alt="test" />
           </AspectRatio>
         </GridItem>
         <GridItem colSpan={1} background="gray.50">
@@ -58,7 +58,7 @@ export default function UnsereMissionPage() {
                 <AccordionPanel pb={4} px="0">
                   Wir sind eine institutionell und finanziell unabhängige
                   gemeinnützige Stiftung von und für Bürgerinnen und Bürger mit
-                  möglichst breitem Stiftungszweck. Wir en gagieren uns
+                  möglichst breitem Stiftungszweck. Wir engagieren uns
                   nachhaltig und dauerhaft für das Gemeinwesen vor Ort. Sie
                   unterstützt mit ihrer Arbeit bürgerschaftliches Engagement.
                 </AccordionPanel>
@@ -163,6 +163,7 @@ export default function UnsereMissionPage() {
                 src="/team/marie-luise-glahr.jpg"
                 layout="fill"
                 objectFit="cover"
+                alt="Bild von Marie-Luise-Glahr"
               />
             </AspectRatio>
           </GridItem>
@@ -172,6 +173,7 @@ export default function UnsereMissionPage() {
                 src="/team/felix-mueller-stueler.jpg"
                 layout="fill"
                 objectFit="cover"
+                alt="Bild von Felix Müller-Stüler"
               />
             </AspectRatio>
           </GridItem>
@@ -181,6 +183,7 @@ export default function UnsereMissionPage() {
                 src="/team/elisabeth-diemer.jpg"
                 layout="fill"
                 objectFit="cover"
+                alt="Bild von Elisabeth Diemer"
               />
             </AspectRatio>
           </GridItem>
@@ -190,6 +193,7 @@ export default function UnsereMissionPage() {
                 src="/team/rosa-toledano.jpg"
                 layout="fill"
                 objectFit="cover"
+                alt="Bild von Rosa Toledano"
               />
             </AspectRatio>
           </GridItem>

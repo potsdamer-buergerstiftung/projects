@@ -20,9 +20,14 @@ export default function ContactPage() {
       <PageTitle
         title="Kontakt"
         contentBottom
-        description="Hinterlasse uns ein paar Infos und wir melden uns bei dir. "
+        description="Schreib uns, ruf an oder komm vorbei. Wir freuen uns auf dich."
       >
-        <Button colorScheme="green" bg="brand">
+        <Button
+          colorScheme="green"
+          bg="brand"
+          as="a"
+          href="mailto:info@potsdamer-buergerstiftung.org"
+        >
           Schreib uns eine E-Mail
         </Button>
       </PageTitle>
@@ -33,28 +38,32 @@ export default function ContactPage() {
         <Container maxW="container.xl">
           <Grid templateColumns="repeat(5, 1fr)" gap={10}>
             <GridItem colSpan={2}>
-              <Heading size="md" mb="5">
-                Kontakt aufnehmen
+              <Heading size="lg" mb="6">
+                Telefon &amp; E-Mail
               </Heading>
-              <Text>Allgemeine Fragen</Text>
               <Text fontWeight="bold">0331 23180300</Text>
               <Text fontWeight="bold">info@potsdamer-buergerstiftung.org</Text>
               <Text mt="5">Arbeitszeiten:</Text>
-              <Text>Montag - Freitag</Text>
+              <Text>Montag - Donnerstag</Text>
               <Text>9 Uhr - 15 Uhr</Text>
             </GridItem>
             <GridItem colSpan={1}>
-              <Heading size="md" mb="5">
-                Vorbeikommen
+              <Heading size="lg" mb="6">
+                Komm vorbei
               </Heading>
-              <Text>
-                Friedrich-Engels-Straße 24, <br />
-                14473 Potsdam, <br />
-                Deutschland
-              </Text>
+              <Box>
+                <Text fontWeight="bold">MAZ-Pyramide</Text>
+                <Text>Friedrich-Engels-Straße 24</Text>
+                <Text>14473 Potsdam</Text>
+              </Box>
+              <Box mt="8">
+                <Text fontWeight="bold">Inselbühne</Text>
+                <Text>Burgstraße 8</Text>
+                <Text>14467 Potsdam</Text>
+              </Box>
             </GridItem>
             <GridItem colSpan={1}>
-              <Heading size="md" mb="5">
+              <Heading size="lg" mb="6">
                 Social Media
               </Heading>
               <VStack gap={0} align="start">

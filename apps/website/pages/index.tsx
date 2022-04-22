@@ -92,7 +92,7 @@ export default function Home() {
           >
             <GridItem colSpan={2}>
               <Heading as="h2" size="lg" mb="4" variant="subtitle">
-                Unser Motto
+                Lebe deine Stadt
               </Heading>
               <Heading as="h2" size="xl" mb="4" maxW="md">
                 Ehrenamtlich, engagiert, miteinander

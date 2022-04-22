@@ -13,7 +13,7 @@ import { IconButton } from "@chakra-ui/react";
 const navItems = [
   {
     href: "/unsere-mission",
-    text: "Wir über uns",
+    text: "Über uns",
   },
   {
     href: "/projekte",

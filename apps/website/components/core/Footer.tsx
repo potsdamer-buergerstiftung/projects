@@ -54,7 +54,7 @@ const Footer: FC = () => {
                     Ehrenamt
                   </Heading>
                   <Text>
-                    Du möchtest helfen, die Stadt l(i)ebenswerter zu machen?
+                    Du möchtest mitmachen?
                   </Text>
                   <Text>
                     <Link href="mailto:ehrenamt@potsdamer-buergerstiftung.org">
