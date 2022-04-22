@@ -53,9 +53,7 @@ const Footer: FC = () => {
                   <Heading size="md" mb="8">
                     Ehrenamt
                   </Heading>
-                  <Text>
-                    Du möchtest mitmachen?
-                  </Text>
+                  <Text>Du möchtest mitmachen?</Text>
                   <Text>
                     <Link href="mailto:ehrenamt@potsdamer-buergerstiftung.org">
                       ehrenamt@potsdamer-buergerstiftung.org
@@ -79,7 +77,10 @@ const Footer: FC = () => {
                 <Heading size="md" mb="8">
                   Für Newsletter anmelden
                 </Heading>
-                <InputGroup size="md">
+                <Text>
+                  Neuigkeiten und Aktuelles von uns für dich - kein Spam, versprochen.
+                </Text>
+                <InputGroup size="md" mt="4">
                   <Input
                     pr="4.5rem"
                     placeholder="E-Mail-Adresse"
