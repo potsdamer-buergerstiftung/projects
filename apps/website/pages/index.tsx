@@ -1,5 +1,7 @@
-export default function ComingSoon() { 
-    return (
-        <h1>Coming soon</h1>
-    )
+import ComingSoon from "@components/layouts/ComingSoon";
+
+export default function ComingSoonPage() {
+  return <h1>Coming Soon</h1>;
 }
+
+ComingSoonPage.Layout = ComingSoon;
