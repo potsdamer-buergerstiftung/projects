@@ -6,7 +6,8 @@ interface ProjectGridProps {
   projects: ProjectCardProps[];
 }
 
-function indexToColSpanSize(index: number): number {
+function indexToColSpanSize(index: number, len: number): number {
+
   if ((index + 9) % 10 == 0) {
     return 2;
   }
@@ -23,7 +24,11 @@ const ProjectGrid: FC<ProjectGridProps> = ({ projects }) => {
     <Grid templateColumns="repeat(6, 1fr)" gap={10}>
       {projects.map((project, i) => (
         <GridItem
-          colSpan={{ base: 6, md: 3, lg: indexToColSpanSize(i) * 2 }}
+          colSpan={{
+            base: 6,
+            md: 3,
+            lg: indexToColSpanSize(i, projects.length) * 2,
+          }}
           key={i}
         >
           <ProjectCard {...project} />
