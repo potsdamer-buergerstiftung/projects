@@ -1,11 +1,10 @@
-import PageTitle from "@components/core/PageTitle";
-import { Default, useShowBackButton } from "@components/layouts";
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { Breadcrumb } from "@components/core";
-
-import { GetStaticProps, GetStaticPaths } from "next";
-import projects from "@config/projects.json";
+import PageTitle from "@components/core/PageTitle";
+import { Default, useShowBackButton } from "@components/layouts";
 import { ProjectView } from "@components/project";
+import projects from "@config/projects.json";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const project = projects.find((p) => p.slug == params.slug);

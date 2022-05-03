@@ -9,16 +9,20 @@ export default async function handler(
     line_items: [
       {
         price_data: {
-          currency: "usd",
-          product_data: {
-            name: "T-shirt",
-          },
           unit_amount: 2000,
+          currency: "eur",
+          product_data: {
+            name: "Freundeskreis der Bürgerstiftung",
+          },
+          recurring: {
+            interval: "month",
+          },
         },
         quantity: 1,
       },
     ],
-    mode: "payment",
+    payment_method_types: ["card", "sepa_debit"],
+    mode: "subscription",
     success_url: "https://example.com/success",
     cancel_url: "https://example.com/cancel",
   });

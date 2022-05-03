@@ -1,3 +1,4 @@
 import PBSLogo from "./PBSLogo";
+import FundraisingForm from "./FundraisingForm";
 
-export { PBSLogo };
+export { PBSLogo, FundraisingForm };

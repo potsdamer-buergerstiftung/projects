@@ -27,10 +27,10 @@ const navItems = [
     href: "/kontakt",
     text: "Kontakt",
   },
-  {
+  /* {
     href: "/shop",
     text: "Shop",
-  },
+  }, */
 ];
 
 const Navbar: FC = () => {
