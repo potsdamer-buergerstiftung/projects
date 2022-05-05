@@ -67,7 +67,7 @@ export default function ContactPage() {
                 Social Media
               </Heading>
               <VStack gap={0} align="start">
-                <Link color="gray.700">Facebook</Link>
+                <Link color="gray.700" href="https://instagram.com/inselbuehne">Facebook</Link>
                 <Link color="gray.700" href="https://instagram.com/inselbuehne">Instagram</Link>
               </VStack>
             </GridItem>
