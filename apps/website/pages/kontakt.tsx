@@ -26,7 +26,7 @@ export default function ContactPage() {
           colorScheme="green"
           bg="brand"
           as="a"
-          href="mailto:info@potsdamer-buergerstiftung.org"
+          href="mailto:hallo@inselbuehne-potsdam.de"
         >
           Schreib uns eine E-Mail
         </Button>
@@ -41,8 +41,8 @@ export default function ContactPage() {
               <Heading size="lg" mb="6">
                 Telefon &amp; E-Mail
               </Heading>
-              <Text fontWeight="bold">0331 23180300</Text>
-              <Text fontWeight="bold">info@potsdamer-buergerstiftung.org</Text>
+              <Text fontWeight="bold">0331 23180309</Text>
+              <Text fontWeight="bold">hallo@inselbuehne-potsdam.de</Text>
               <Text mt="5">Arbeitszeiten:</Text>
               <Text>Montag - Donnerstag</Text>
               <Text>9 Uhr - 15 Uhr</Text>
@@ -68,8 +68,7 @@ export default function ContactPage() {
               </Heading>
               <VStack gap={0} align="start">
                 <Link color="gray.700">Facebook</Link>
-                <Link color="gray.700">Instagram</Link>
-                <Link color="gray.700">YouTube</Link>
+                <Link color="gray.700" href="https://instagram.com/inselbuehne">Instagram</Link>
               </VStack>
             </GridItem>
           </Grid>
