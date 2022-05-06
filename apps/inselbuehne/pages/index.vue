@@ -1,5 +1,5 @@
 <template>
     <NuxtLayout name="default">
-        <h1>Startseite</h1>
+        <h1 class="h-32">Startseite</h1>
     </NuxtLayout>
 </template>
