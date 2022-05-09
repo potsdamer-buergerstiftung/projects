@@ -81,6 +81,6 @@ export const useUI = () => {
   return context;
 };
 
-export const ManagedUIContext: FC = ({ children }) => (
+export const ManagedUIContext: FC<{ children: React.FC }> = ({ children }) => (
   <UIProvider>{children}</UIProvider>
 );

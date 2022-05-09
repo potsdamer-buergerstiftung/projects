@@ -24,7 +24,7 @@ function handleExitComplete() {
   }
 }
 
-const Noop: FC = ({ children }) => <>{children}</>;
+const Noop: FC<{ children: React.FC }> = ({ children }) => <>{children}</>;
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

@@ -1,13 +1,13 @@
 import { Box, Heading, Container, Text } from "@chakra-ui/layout";
-import { FC } from "react";
 
 interface PageTitleArgs {
   title: string;
   description?: string;
   contentBottom?: boolean;
+  children: React.ReactNode;
 }
 
-const PageTitle: FC<PageTitleArgs> = ({
+const PageTitle: React.FC<PageTitleArgs> = ({
   title,
   description,
   children,
