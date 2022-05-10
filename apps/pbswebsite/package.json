@@ -9,6 +9,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@nuxt/image": "^0.6.2",
     "@nuxtjs/tailwindcss": "^5.0.4",
     "nuxt": "3.0.0-rc.3"
   },
