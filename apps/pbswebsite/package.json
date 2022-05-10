@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxi dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.4",
-    "nuxt": "3.0.0-rc.1"
+    "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
