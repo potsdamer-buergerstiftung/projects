@@ -1,14 +1,5 @@
-<script lang="ts" setup>
-const isHovered = ref(false);
-
-function setHovered(value: boolean) {
-    isHovered.value = value;
-}
-</script>
-
 <template>
-    <div class="group w-full h-96 relative overflow-hidden rounded-lg cursor-pointer" @mouseenter="setHovered(true)"
-        @mouseleave="setHovered(false)">
+    <div class="group w-full h-96 relative overflow-hidden rounded-lg cursor-pointer">
         <img src="~/assets/img/img.jpg" class="object-cover transition duration-500 group-hover:scale-110" />
         <div
             class="absolute top-0 right-0 left-0 bottom-0 pointer-events-none bg-gradient-to-t from-black opacity-60" />
