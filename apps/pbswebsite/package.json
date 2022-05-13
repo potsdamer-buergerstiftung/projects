@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fontsource/space-grotesk": "^4.5.8",
+    "@heroicons/vue": "^1.0.6",
     "@vueuse/motion": "^2.0.0-beta.12"
   }
 }

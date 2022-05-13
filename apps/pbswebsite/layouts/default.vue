@@ -11,7 +11,24 @@ useHead({
 
 <template>
     <div class="antialiased">
+        <div class="sp">
+            <ScrollProgressIndicator />
+        </div>
         <Header />
         <slot />
     </div>
 </template>
+
+<style lang="postcss">
+.sp {
+    @apply origin-top-left;
+    transform: rotate(-90deg) translate(-50%,0);
+    @apply left-[4vh];
+    @apply fixed;
+    @apply top-[50%];
+    @apply z-50;
+    @apply inline-flex;
+    @apply align-middle;
+    @apply items-center;
+}
+</style>
