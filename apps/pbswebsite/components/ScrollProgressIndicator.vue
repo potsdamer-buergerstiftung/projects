@@ -6,7 +6,7 @@
                 'width': progress + '%'
             }" />
         </div>
-        <p class="font-bold">Nach oben scrollen</p>
+        <p class="font-bold text-sm">Nach oben scrollen</p>
     </button>
 </template>
 

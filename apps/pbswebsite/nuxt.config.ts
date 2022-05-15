@@ -14,4 +14,7 @@ export default defineNuxtConfig({
     "@fontsource/space-grotesk/700.css",
     "@fontsource/space-grotesk/400.css",
   ],
+  experimental: {
+    reactivityTransform: true,
+  },
 });
