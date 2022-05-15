@@ -16,6 +16,9 @@ useHead({
                 <ScrollProgressIndicator />
             </div>
         </ClientOnly>
+        <div class="sl">
+            <SocialMediaLinks />
+        </div>
         <Header />
         <slot />
     </div>
@@ -23,8 +26,6 @@ useHead({
 
 <style lang="postcss">
 .sp {
-    @apply transition;
-    @apply opacity-100;
     @apply origin-top-left;
     transform: rotate(-90deg) translate(-50%, 0);
     @apply left-[4vh];
@@ -34,5 +35,18 @@ useHead({
     @apply inline-flex;
     @apply align-middle;
     @apply items-center;
+}
+
+.sl {
+    @apply origin-top-right;
+    transform: rotate(-90deg) translate(50%, -100%);
+    @apply right-[4vh];
+    @apply fixed;
+    @apply top-[50%];
+    @apply z-50;
+    @apply inline-flex;
+    @apply align-middle;
+    @apply items-center;
+    @apply float-right;
 }
 </style>
