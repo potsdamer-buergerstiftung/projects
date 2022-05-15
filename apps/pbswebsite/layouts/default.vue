@@ -11,9 +11,11 @@ useHead({
 
 <template>
     <div class="antialiased">
-        <div class="sp">
-            <ScrollProgressIndicator />
-        </div>
+        <ClientOnly>
+            <div class="sp">
+                <ScrollProgressIndicator />
+            </div>
+        </ClientOnly>
         <Header />
         <slot />
     </div>
@@ -21,8 +23,10 @@ useHead({
 
 <style lang="postcss">
 .sp {
+    @apply transition;
+    @apply opacity-100;
     @apply origin-top-left;
-    transform: rotate(-90deg) translate(-50%,0);
+    transform: rotate(-90deg) translate(-50%, 0);
     @apply left-[4vh];
     @apply fixed;
     @apply top-[50%];
