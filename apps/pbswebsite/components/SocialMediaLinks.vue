@@ -8,8 +8,8 @@ const { showFollowUsLabel = true } = defineProps<Props>()
 
 <template>
     <div class="flex flex-row space-x-4">
-        <p class="text-green-500 font-bold" v-if="showFollowUsLabel">Folg' uns</p>
-        <span class="text-navy-900 font-bold" v-if="showFollowUsLabel">-</span>
+        <p class="text-green-500 font-bold text-sm" v-if="showFollowUsLabel">Folg' uns</p>
+        <span class="text-navy-900 font-bold text-sm" v-if="showFollowUsLabel">-</span>
         <ul class="flex flex-row space-x-4">
             <li>
                 <NuxtLink to="/" class="text-navy-900 font-bold hover:text-green-500 transition text-sm">Facebook</NuxtLink>
