@@ -17,7 +17,7 @@ definePageMeta({
         </div>
     </section>
     <section class="bg-gray-50">
-        <div class="container mx-auto pb-24 text-center space-y-10 flex flex-col">
+        <div class="container mx-auto pb-32 text-center space-y-10 flex flex-col">
             <EventCard />
             <EventCard />
             <EventCard />
