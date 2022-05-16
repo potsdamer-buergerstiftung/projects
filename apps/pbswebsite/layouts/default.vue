@@ -17,10 +17,11 @@ useHead({
             </div>
         </ClientOnly>
         <div class="sl">
-            <SocialMediaLinks />
+            <SocialMediaLinks size="large"/>
         </div>
         <Header />
         <slot />
+        <Footer />
     </div>
 </template>
 
