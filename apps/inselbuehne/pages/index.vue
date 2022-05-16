@@ -14,8 +14,8 @@ definePageMeta({
                             Runde</span>.
                     </h1>
                     <p class="text-lg mt-4 leading-relaxed">
-                        Wir haben den Winter genutzt, um Künstlerinnen und Künstlern ein weiteres Jahr einen Ort zu
-                        schenken oder so.
+                        Wir haben den Winter genutzt, um Künstlerinnen und Künstlern ein weiteres Jahr den Ort zur
+                        Verfügung zu stellen, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
                     </p>
                     <button
                         class="mt-5 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium">

@@ -1,6 +1,6 @@
 <template>
     <NuxtLink
-        class="w-full overflow-hidden rounded-tl-xl rounded-br-xl bg-white shadow-lg transition hover:shadow-xl hover:-translate-y-2 duration-300 cursor-pointer grid grid-cols-5">
+        class="w-full overflow-hidden rounded-tl-2xl rounded-br-2xl bg-white shadow-lg transition hover:shadow-xl hover:-translate-y-2 duration-300 cursor-pointer grid grid-cols-5">
         <div class="col-span-2 w-full bg-green-500 bg-cover h-full relative">
             <div class="absolute right-6 top-1/2 bg-white shadow-md p-4 -translate-y-1/2 rounded-tl-md rounded-br-md">
                 <p>Juni</p>

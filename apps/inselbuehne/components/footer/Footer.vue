@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-gray-900">
+    <footer class="bg-teal-900">
         <FooterBanner />
         <FooterCopyright />
     </footer>
