@@ -8,22 +8,22 @@ definePageMeta({
 <template>
     <div>
         <section class="bg-green-100">
-            <div class="container mx-auto px-4 pt-24 pb-12 grid grid-cols-2 gap-16 items-center">
-                <div>
+            <div class="container mx-auto px-4 pt-44 pb-24 grid grid-cols-5 gap-16 items-center">
+                <div class="col-span-3 max-w-xl">
                     <h1 class="font-serif text-6xl">Wir gehen in die <span class="text-green-500">zweite
                             Runde</span>.
                     </h1>
-                    <p class="text-lg mt-4 leading-relaxed">
+                    <p class="text-lg mt-6 leading-relaxed">
                         Wir haben den Winter genutzt, um Künstlerinnen und Künstlern ein weiteres Jahr den Ort zur
                         Verfügung zu stellen, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
                     </p>
                     <button
-                        class="mt-5 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium transition hover:bg-green-400">
+                        class="mt-6 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium transition hover:bg-green-400">
                         Zu den Veranstaltungen
                     </button>
                 </div>
-                <div>
-                    <div class="aspect-[4/3]">
+                <div class="col-span-2">
+                    <div class="aspect-[3/2] bg-cover bg-green-500">
 
                     </div>
                 </div>
