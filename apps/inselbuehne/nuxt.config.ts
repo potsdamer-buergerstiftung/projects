@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@vueuse/motion/nuxt"],
   css: [
     "@fontsource/dm-sans/400.css",
     "@fontsource/dm-sans/500.css",

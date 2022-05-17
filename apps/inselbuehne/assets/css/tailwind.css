@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-enter-active {
+  animation: page-in 0.8s;
+}
+.page-leave-active {
+  animation: page-out 0.5s;
+}
+@keyframes page-in {
+  0% {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes page-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

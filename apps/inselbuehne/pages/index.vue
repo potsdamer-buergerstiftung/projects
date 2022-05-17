@@ -18,7 +18,7 @@ definePageMeta({
                         Verfügung zu stellen, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
                     </p>
                     <button
-                        class="mt-5 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium">
+                        class="mt-5 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium transition hover:bg-green-400">
                         Zu den Veranstaltungen
                     </button>
                 </div>
@@ -41,15 +41,15 @@ definePageMeta({
                     </div>
                     <div>
                         <button
-                            class="mt-4 px-4 py-2.5 rounded-tl-lg shadow-md transition hover:bg-green-600 rounded-br-lg bg-green-500 text-white text-md font-medium">
+                            class="mt-4 px-4 py-2.5 rounded-tl-lg shadow-md transition hover:bg-green-400 rounded-br-lg bg-green-500 text-white text-md font-medium">
                             Alle Beiträge
                         </button>
                     </div>
                 </div>
                 <div class="mt-12 grid grid-cols-3 gap-8">
-                    <ArticleCard />
-                    <ArticleCard />
-                    <ArticleCard />
+                    <ArticleCard/>
+                    <ArticleCard/>
+                    <ArticleCard/>
                 </div>
             </div>
         </section>
@@ -61,8 +61,9 @@ definePageMeta({
                     </div>
                 </div>
                 <div>
-                    <h1 class="font-serif text-4xl">Was ist die Inselbühne?</h1>
-                    <p class="text-lg mt-4 leading-relaxed text-gray-600">
+                    <h1 class="font-serif text-4xl" v-motion-fade-visible-once>Was ist die
+                        Inselbühne?</h1>
+                    <p class="text-lg mt-4 leading-relaxed text-gray-600" v-motion-fade-visible-once>
                         Inselbühne haben wir die 1974 errichtete Freilichtbühne auf der Freundschaftsinsel neu benannt.
                         Seit
                         2012 wurde sie nicht mehr genutzt und es gab Pläne, sie abzureißen. Das wollten wir verhindern,
@@ -84,7 +85,7 @@ definePageMeta({
                     notwendig, die Du entweder über unsere Website oder über unser Ticket-Telefon bestellen kannst.
                 </p>
                 <button
-                    class="mt-4 shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-600">
+                    class="mt-4 shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-400">
                     Zu den Veranstaltungen
                 </button>
             </div>
