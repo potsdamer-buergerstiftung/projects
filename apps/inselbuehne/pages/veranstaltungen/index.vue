@@ -1,8 +1,16 @@
 <script setup>
+import { Directus } from '@directus/sdk';
+
 definePageMeta({
     title: "Veranstaltungen"
-})  
+})
+
+const directus = new Directus('https://cms.potsdamer-buergerstiftung.org');
+
+const { data } = useAsyncData("events", () => directus.items("events").readByQuery({ limit: -1 }));
 </script>
+
+
 
 <template>
     <div>
@@ -21,10 +29,7 @@ definePageMeta({
         </section>
         <section class="bg-gray-50">
             <div class="container mx-auto pb-32 text-center space-y-10 flex flex-col">
-                <EventCard />
-                <EventCard />
-                <EventCard />
-                <EventCard />
+                <EventCard v-for="item in data" />
             </div>
         </section>
     </div>

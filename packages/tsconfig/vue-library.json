@@ -1,11 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "React Library",
+  "display": "Vue Library",
   "extends": "./base.json",
+  "include": ["shims-vue.d.ts"],
   "compilerOptions": {
     "lib": ["ES2015"],
     "module": "ESNext",
-    "target": "ES6",
-    "jsx": "react-jsx"
+    "target": "ESNext",
+    "jsx": "preserve",
+    "allowJs": true
   }
 }
