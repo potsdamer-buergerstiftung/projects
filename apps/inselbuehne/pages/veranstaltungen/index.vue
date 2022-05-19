@@ -5,7 +5,11 @@ definePageMeta({
 
 const { getItems } = useDirectusItems();
 
-const posts = await getItems({ collection: "events" })
+const posts = await getItems({
+    collection: "events", params: {
+        sort: "-start"
+    }
+})
 
 </script>
 
@@ -27,7 +31,7 @@ const posts = await getItems({ collection: "events" })
         <section class="bg-gray-50">
             <div class="container mx-auto pb-32 text-center space-y-10 flex flex-col">
                 <EventCard v-for="event in posts" :title="event.title" :eventId="event.id" :summary="event.summary"
-                    :start="event.start" />
+                    :start="event.start" :image="event.image" :registration_needed="event.registration_needed" />
             </div>
         </section>
     </div>
