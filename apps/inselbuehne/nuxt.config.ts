@@ -9,11 +9,23 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@vueuse/motion/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/motion/nuxt",
+    "@nuxtjs/dayjs",
+    "nuxt-directus",
+  ],
   css: [
     "@fontsource/dm-sans/400.css",
     "@fontsource/dm-sans/500.css",
     "@fontsource/dm-sans/700.css",
     "@fontsource/dm-serif-display/400.css",
   ],
+  dayjs: {
+    locales: ["de"],
+    defaultLocale: "de",
+  },
+  directus: {
+    url: "https://cms.potsdamer-buergerstiftung.org",
+  },
 });

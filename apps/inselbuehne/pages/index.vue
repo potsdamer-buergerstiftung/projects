@@ -1,8 +1,13 @@
 <script setup>
 definePageMeta({
     layout: "default",
-    title: "Brücken bauen, Menschen verbinden"
+    title: "Wir gehen in die zweite Runde"
 })
+
+const { getItems } = useDirectusItems();
+
+const posts = await getItems({ collection: "posts" })
+
 </script>
 
 <template>
@@ -47,9 +52,8 @@ definePageMeta({
                     </div>
                 </div>
                 <div class="mt-12 grid grid-cols-3 gap-8">
-                    <ArticleCard/>
-                    <ArticleCard/>
-                    <ArticleCard/>
+                    <ArticleCard v-for="post in posts" :post-id="post.id" :image-url="post.image" :title="post.title"
+                        :summary="post.excerpt" />
                 </div>
             </div>
         </section>
