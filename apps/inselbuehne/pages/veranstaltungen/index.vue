@@ -7,7 +7,7 @@ const { getItems } = useDirectusItems();
 
 const posts = await getItems({
     collection: "events", params: {
-        sort: "-start"
+        sort: "start"
     }
 })
 
