@@ -53,4 +53,5 @@ jobs:
           app-name: 'pbs-cms-directus'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F9650441D7F5443EA6E02FEB6BE1EFEF }}
-          package: .
+          package: ./apps/cms
+          startup-command: npx directus bootstrap && npx directus start
