@@ -13,7 +13,9 @@
                         <button
                             class="inline-flex items-center shadow-md px-3 py-2 rounded-tl-lg rounded-br-lg bg-gray-50 text-sm font-medium transition hover:bg-gray-100">
                             Veranstaltung teilen
-                            <ShareIcon class="h-4 w-4 ml-1" />
+                            <ClientOnly>
+                                <ShareIcon class="w-4 h-4 ml-1" />
+                            </ClientOnly>
                         </button>
                         <button v-if="registration_needed"
                             class="mt-4 w-full text-center shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-400">
@@ -68,11 +70,9 @@
     </section>
 </template>
 
-<script lang="ts">
-import { ShareIcon } from "@heroicons/vue/outline"
-</script>
-
 <script setup lang="ts">
+import { ShareIcon } from "@heroicons/vue/outline";
+
 definePageMeta({
     layout: "default",
     title: "Wir gehen in die zweite Runde"
