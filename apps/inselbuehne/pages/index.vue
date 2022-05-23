@@ -1,7 +1,7 @@
 <script setup>
 definePageMeta({
     layout: "default",
-    title: "Wir gehen in die zweite Runde"
+    title: "Es geht weiter"
 })
 
 const { getItems } = useDirectusItems();
@@ -13,8 +13,8 @@ const posts = await getItems({ collection: "posts" })
 <template>
     <div>
         <section class="bg-green-100">
-            <div class="container mx-auto px-4 pt-48 pb-24 grid grid-cols-5 gap-16 items-center">
-                <div class="col-span-5 md:col-span-3 max-w-xl">
+            <div class="container mx-auto px-4 pt-48 pb-24 grid grid-cols-6 gap-16 items-center">
+                <div class="col-span-6 md:col-span-3 max-w-xl">
                     <h1 class="font-serif text-5xl lg:text-6xl">Wir gehen in die <span class="text-green-500">zweite
                             Runde</span>.
                     </h1>
@@ -27,9 +27,10 @@ const posts = await getItems({ collection: "posts" })
                         Zu den Veranstaltungen
                     </NuxtLink>
                 </div>
-                <div class="col-span-5 md:col-span-2">
-                    <div class="aspect-[3/2] bg-cover bg-green-500 w-full">
-
+                <div class="col-span-6 md:col-span-3">
+                    <div class="aspect-[5/3]">
+                        <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/a5ff92e4-a012-45b6-bc5d-352b219dcdf6?key=low-1000`"
+                            alt="test" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
