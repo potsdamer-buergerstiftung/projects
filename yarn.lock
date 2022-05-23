@@ -2146,9 +2146,18 @@
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.2.33.tgz"
   integrity sha512-UBc1Pg1T3yZ97vsA2ueER0F6GbJebLHYlEi4ou1H5YL4KWvMOOWwpYo9/QpWq93wxKG6Wo13IY74Hcn/f7c7Bg==
 
-"@vueuse/core@^8.0.1", "@vueuse/core@^8.1.2":
+"@vueuse/core@8.5.0", "@vueuse/core@^8.0.1", "@vueuse/core@^8.1.2":
   version "8.5.0"
   resolved "https://registry.npmjs.org/@vueuse/core/-/core-8.5.0.tgz"
+  integrity sha512-VEJ6sGNsPlUp0o9BGda2YISvDZbhWJSOJu5zlp2TufRGVrLcYUKr31jyFEOj6RXzG3k/H4aCYeZyjpItfU8glw==
+  dependencies:
+    "@vueuse/metadata" "8.5.0"
+    "@vueuse/shared" "8.5.0"
+    vue-demi "*"
+
+"@vueuse/core@^8.5.0":
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-8.5.0.tgz#2b7548e52165c88e1463756c36188e105d806543"
   integrity sha512-VEJ6sGNsPlUp0o9BGda2YISvDZbhWJSOJu5zlp2TufRGVrLcYUKr31jyFEOj6RXzG3k/H4aCYeZyjpItfU8glw==
   dependencies:
     "@vueuse/metadata" "8.5.0"
@@ -2188,6 +2197,17 @@
     framesync "^6.1.0"
     popmotion "^11.0.3"
     style-value-types "^5.1.0"
+    vue-demi "*"
+
+"@vueuse/nuxt@^8.5.0":
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-8.5.0.tgz#392617df38d56f87b705f5feef4af27544371f6c"
+  integrity sha512-riGrDwlTQbjSDxyw46oc1catXpZwzzRrEk+PTy8NQZG6uevgJ8wNuAhPVx/5oG0jYG/t2orIFfc9xGEA6uytSg==
+  dependencies:
+    "@nuxt/kit" "^3.0.0-rc.2"
+    "@vueuse/core" "8.5.0"
+    "@vueuse/metadata" "8.5.0"
+    local-pkg "^0.4.1"
     vue-demi "*"
 
 "@vueuse/shared@8.5.0", "@vueuse/shared@^8.0.1", "@vueuse/shared@^8.1.2":

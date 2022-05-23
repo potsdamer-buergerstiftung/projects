@@ -14,22 +14,21 @@ const posts = await getItems({ collection: "posts" })
     <div>
         <section class="bg-green-100">
             <div class="container mx-auto px-4 pt-48 pb-24 grid grid-cols-5 gap-16 items-center">
-                <div class="col-span-3 max-w-xl">
-                    <h1 class="font-serif text-6xl">Wir gehen in die <span class="text-green-500">zweite
+                <div class="col-span-5 md:col-span-3 max-w-xl">
+                    <h1 class="font-serif text-5xl lg:text-6xl">Wir gehen in die <span class="text-green-500">zweite
                             Runde</span>.
                     </h1>
                     <p class="text-lg mt-6 leading-relaxed">
                         Wir haben den Winter genutzt, um Künstlerinnen und Künstlern ein weiteres Jahr den Ort zur
                         Verfügung zu stellen, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
                     </p>
-                    <NuxtLink
-                        to="/veranstaltungen"
+                    <NuxtLink to="/veranstaltungen"
                         class="inline-flex mt-6 px-5 py-3 shadow-md rounded-tl-lg rounded-br-lg bg-green-500 text-white text-lg font-medium transition hover:bg-green-400">
                         Zu den Veranstaltungen
                     </NuxtLink>
                 </div>
-                <div class="col-span-2">
-                    <div class="aspect-[3/2] bg-cover bg-green-500">
+                <div class="col-span-5 md:col-span-2">
+                    <div class="aspect-[3/2] bg-cover bg-green-500 w-full">
 
                     </div>
                 </div>
@@ -89,8 +88,7 @@ const posts = await getItems({ collection: "posts" })
                     Veranstaltung zu besuchen, sind trotz der überwiegenden Mehrheit kostenloser Veranstaltungen Tickets
                     notwendig, die Du entweder über unsere Website oder über unser Ticket-Telefon bestellen kannst.
                 </p>
-                <NuxtLink
-                    to="/veranstaltungen"
+                <NuxtLink to="/veranstaltungen"
                     class="inline-flex mt-4 shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-400">
                     Zu den Veranstaltungen
                 </NuxtLink>

@@ -1,5 +1,6 @@
 <template>
-    <div class="overflow-hidden overscroll-contain lg:hidden fixed top-0 right-0 left-0 bottom-0 -translate-x-full bg-white z-40 transition duration-500"
+    <div v-if="mdAndSmaller"
+        class="overflow-hidden overscroll-contain lg:hidden fixed top-0 right-0 left-0 bottom-0 -translate-x-full bg-white z-40 transition duration-500"
         :class="{ 'translate-x-0': headerState.isMobileMenuOpen }">
 
         <div class="container mx-auto py-2 mt-8 flex flex-row justify-between px-4">
@@ -21,6 +22,10 @@
 
 <script setup lang="ts">
 import { useHeaderState } from "../state"
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const mdAndSmaller = breakpoints.smaller("lg")
 
 const headerState = useHeaderState()
 </script>
