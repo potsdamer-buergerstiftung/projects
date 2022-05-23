@@ -71,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-import { ShareIcon } from "@heroicons/vue/outline";
+import { ShareIcon } from "@heroicons/vue/outline/esm";
 
 definePageMeta({
     layout: "default",
