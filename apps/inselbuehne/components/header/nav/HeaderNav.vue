@@ -1,8 +1,6 @@
 <template>
     <nav
         class="container flex flex-row items-center justify-between w-full h-full px-4 mx-auto lg:px-0 lg:justify-center">
-
-        <Body :class="bodyClass" />
         <div class="flex-row items-center justify-end hidden w-full h-full lg:flex gap-x-3 xl:gap-x-5">
             <HeaderNavItem title="Veranstaltungen" link="/veranstaltungen" />
             <HeaderNavItem title="Blog" link="/blog" />
@@ -32,7 +30,4 @@
 import { useHeaderState } from "../state"
 
 const headerState = useHeaderState()
-
-// Prevent user from scrolling when menu is open
-const bodyClass = computed(() => headerState.isMobileMenuOpen ? "overflow-y-hidden" : "overflow-y-auto")
 </script>
