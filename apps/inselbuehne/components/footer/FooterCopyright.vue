@@ -1,5 +1,6 @@
 <template>
-    <div class="container mx-auto px-4 py-16 flex flex-col lg:flex-row justify-between items-center">
+    <div
+        class="text-center lg:text-left container mx-auto px-4 py-16 flex flex-col lg:flex-row justify-between items-center">
         <p class="text-gray-500">&copy; 2022 Potsdamer Bürgerstiftung &amp; Mitwirkende</p>
         <ul class="mt-4 lg:mt-0 flex flex-row space-x-4">
             <li>
