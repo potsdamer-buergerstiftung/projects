@@ -1,15 +1,15 @@
 <template>
     <div v-if="mdAndSmaller"
-        class="overflow-hidden overscroll-contain lg:hidden fixed top-0 right-0 left-0 bottom-0 -translate-x-full bg-white z-40 transition duration-500"
+        class="fixed top-0 bottom-0 left-0 right-0 z-40 overflow-hidden bg-white overscroll-contain lg:hidden -translate-x-full transition duration-500"
         :class="{ 'translate-x-0': headerState.isMobileMenuOpen }">
 
-        <div class="container mx-auto py-2 mt-8 flex flex-row justify-between px-4">
+        <div class="container flex flex-row justify-between px-4 py-2 mx-auto mt-8">
             <HeaderNavBrand />
             <button class="font-bold" @click="headerState.setMobileMenu()">
                 Menü schließen
             </button>
         </div>
-        <div class="container mx-auto px-2 mt-12 flex flex-col">
+        <div class="container flex flex-col px-2 mx-auto mt-12">
             <HeaderNavItem title="Veranstaltungen" link="/veranstaltungen" />
             <HeaderNavItem title="Blog" link="/blog" />
             <HeaderNavItem title="Über uns" link="/ueber-uns" />

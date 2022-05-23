@@ -1,8 +1,8 @@
 <template>
     <div
-        class="text-center lg:text-left container mx-auto px-4 py-16 flex flex-col lg:flex-row justify-between items-center">
+        class="container flex flex-col items-center justify-between px-4 py-16 mx-auto text-center lg:text-left lg:flex-row">
         <p class="text-gray-500">&copy; 2022 Potsdamer Bürgerstiftung &amp; Mitwirkende</p>
-        <ul class="mt-4 lg:mt-0 flex flex-row space-x-4">
+        <ul class="flex flex-row mt-4 lg:mt-0 space-x-4">
             <li>
                 <NuxtLink to="/impressum" class="text-gray-500 hover:text-green-300 transition">Impressum</NuxtLink>
             </li>

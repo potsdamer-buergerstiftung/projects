@@ -24,11 +24,11 @@ const { size = "default" } = defineProps<Props>()
 
 <template>
     <div class="flex flex-row space-x-4">
-        <p class="text-green-500 font-bold text-sm" v-if="size === 'large'">Folg' uns</p>
-        <span class="text-navy-900 font-bold text-sm" v-if="size === 'large'">-</span>
+        <p class="text-sm font-bold text-green-500" v-if="size === 'large'">Folg' uns</p>
+        <span class="text-sm font-bold text-navy-900" v-if="size === 'large'">-</span>
         <ul class="flex flex-row space-x-4">
             <li v-for="link in links">
-                <NuxtLink to="/" class="text-navy-900 font-bold hover:text-green-500 transition text-sm">{{ size ===
+                <NuxtLink to="/" class="text-sm font-bold text-navy-900 hover:text-green-500 transition">{{ size ===
                         'compact' ? link.short + "." : link.text
                 }}</NuxtLink>
             </li>

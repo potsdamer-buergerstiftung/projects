@@ -17,9 +17,9 @@ function addZero(index: string): string {
 </script>
 
 <template>
-    <NuxtLink :to="link" class="group py-2 px-4 text-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-        <div class="items-end flex flex-col">
-            <span class="transition leading-4 text-xs font-bold text-gray-500 group-hover:text-green-500">{{ addZero(index) }}</span>
+    <NuxtLink :to="link" class="px-4 py-2 text-lg group focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+        <div class="flex flex-col items-end">
+            <span class="text-xs font-bold text-gray-500 transition leading-4 group-hover:text-green-500">{{ addZero(index) }}</span>
             <span class="transition leading-4 text-[16px] font-medium text-navy-900 group-hover:text-green-500">{{ title }}</span>
         </div>
     </NuxtLink>

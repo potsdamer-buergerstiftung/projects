@@ -1,12 +1,12 @@
 <template>
-    <div class="container mx-auto px-4 py-12">
-        <div class="text-center md:text-left flex flex-col lg:flex-row lg:items-center justify-between lg:gap-4">
+    <div class="container px-4 py-12 mx-auto">
+        <div class="flex flex-col justify-between text-center md:text-left lg:flex-row lg:items-center lg:gap-4">
             <div>
-                <h1 class="font-serif text-2xl lg:text-4xl text-white">Ein Projekt der
+                <h1 class="font-serif text-2xl text-white lg:text-4xl">Ein Projekt der
                     <NuxtLink to="https://www.potsdamer-buergerstiftung.org" class="text-green-300">
                         Potsdamer Bürgerstiftung</NuxtLink>.
                 </h1>
-                <p class="text-gray-300 mt-2">Wir fördern ehrenamtliches Engagement und gestalten als Mitmach-Stiftung
+                <p class="mt-2 text-gray-300">Wir fördern ehrenamtliches Engagement und gestalten als Mitmach-Stiftung
                     gemeinsam
                     unsere schöne
                     Stadt noch l(i)ebenswerter.</p>

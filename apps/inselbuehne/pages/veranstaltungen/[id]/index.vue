@@ -1,19 +1,20 @@
 <template>
     <section class="bg-gray-100">
-        <div class="container mx-auto px-4 pb-32 pt-40">
-            <div class="rounded-tl-xl rounded-br-xl shadow-xl bg-white overflow-hidden">
+        <div class="container px-4 pt-40 pb-12 mx-auto">
+            <div class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:shadow-xl md:bg-white">
                 <div class="grid grid-cols-6">
-                    <div class="col-span-3 relative bg-cover bg-green-500">
+                    <div
+                        class="relative h-64 overflow-hidden bg-green-500 bg-cover rounded-tl-lg rounded-br-lg md:rounded-none col-span-6 lg:col-span-3 lg:h-full">
                         <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`" alt="test"
-                            class="w-full h-full object-cover absolute">
+                            class="absolute object-cover w-full h-full">
                     </div>
-                    <div class="col-span-3 pt-8 px-8">
-                        <p class="uppercase text-green-500 font-bold tracking-widest text-sm">{{ longStart }}</p>
-                        <h1 class="font-serif text-4xl mt-8 mb-24">{{ title }}</h1>
+                    <div class="mt-8 col-span-6 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
+                        <p class="text-sm font-bold tracking-widest text-green-500 uppercase">{{ longStart }}</p>
+                        <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ title }}</h1>
                         <button
-                            class="inline-flex items-center shadow-md px-3 py-2 rounded-tl-lg rounded-br-lg bg-gray-50 text-sm font-medium transition hover:bg-gray-100">
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 transition hover:bg-gray-100">
                             Veranstaltung teilen
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -25,18 +26,18 @@
                         </button>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-16 px-16 py-8">
-                    <div class="col-span-2">
-                        <p class="mt-4 uppercase text-green-500 font-bold tracking-widest text-sm">
+                <div class="mt-8 grid grid-cols-3 gap-4 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-8">
+                    <div class="order-2 col-span-3 md:col-span-2 md:order-1">
+                        <p class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase">
                             Beschreibung
                         </p>
                         <ClientOnly>
-                            <p class="mt-4 text-md leading-relaxed prose lg:prose-lg" v-html="description" />
+                            <p class="mt-4 leading-relaxed text-md prose lg:prose-lg" v-html="description" />
                         </ClientOnly>
                     </div>
-                    <div class="col-span-1 py-8">
+                    <div class="order-1 col-span-3 md:col-span-1 lg:py-8 md:order-2">
                         <div>
-                            <p class="mt-4 uppercase text-green-500 font-bold tracking-widest text-sm">
+                            <p class="text-sm font-bold tracking-widest text-green-500 uppercase md:mt-4">
                                 Datum und Uhrzeit
                             </p>
                             <p class="mt-4">
@@ -46,8 +47,8 @@
                                 {{ timeStart }} - {{ timeEnd }}
                             </p>
                         </div>
-                        <div class="mt-16">
-                            <p class="mt-4 uppercase text-green-500 font-bold tracking-widest text-sm">
+                        <div class="mt-8 md:mt-12 lg:mt-16">
+                            <p class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase">
                                 Veranstaltungsort
                             </p>
                             <p class="mt-4">
@@ -57,8 +58,8 @@
                                 Burgstraße, 14476 Potsdam
                             </p>
                         </div>
-                        <div class="mt-16">
-                            <p class="mt-4 uppercase text-green-500 font-bold tracking-widest text-sm">
+                        <div class="mt-8 md:mt-12 lg:mt-16">
+                            <p class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase">
                                 Hinweise vom Veranstalter
                             </p>
                             <p class="mt-4">

@@ -3,7 +3,7 @@
         <HeaderMobileNav />
     </ClientOnly>
     <HeaderBanner />
-    <header class="mt-10 h-22 absolute w-full z-30">
+    <header class="absolute z-30 w-full mt-10 h-22">
         <HeaderNav />
     </header>
 </template>

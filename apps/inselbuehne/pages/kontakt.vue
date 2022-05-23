@@ -1,20 +1,20 @@
 <template>
     <div>
         <section class="bg-gray-50">
-            <div class="max-w-3xl mx-auto pt-48 pb-24 text-center">
-                <h4 class="uppercase text-green-500 font-bold tracking-widest text-sm">Kontakt</h4>
-                <h1 class="font-serif text-6xl mt-6">Wie können wir dir helfen?</h1>
-                <p class="text-lg text-gray-600 pt-5">
+            <div class="max-w-3xl pt-48 pb-24 mx-auto text-center">
+                <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">Kontakt</h4>
+                <h1 class="mt-6 font-serif text-6xl">Wie können wir dir helfen?</h1>
+                <p class="pt-5 text-lg text-gray-600">
                     Hast Du Fragen bezüglich der Inselbühne oder möchtest Tickets bestellen? Dann kontaktiere uns doch
                     einfach!
                 </p>
             </div>
         </section>
         <section class="bg-gray-50">
-            <div class="max-w-3xl mx-auto px-4 pb-32 text-center">
+            <div class="max-w-3xl px-4 pb-32 mx-auto text-center">
                 <div class="grid grid-cols-3 gap-8">
                     <div>
-                        <svg class="text-green-500 inline-block h-14 w-14" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="inline-block text-green-500 h-14 w-14" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24">
                             <path
                                 d="M6 2h12a1 1 0 011 1v9a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1zm1.5 3a.5.5 0 000 1h6a.5.5 0 100-1h-6zm0 2a.5.5 0 000 1h3a.5.5 0 100-1h-3z"
@@ -23,13 +23,13 @@
                                 d="M3.793 6.573L12 12.5l8.207-5.927a.5.5 0 01.793.405V17a2 2 0 01-2 2H5a2 2 0 01-2-2V6.978a.5.5 0 01.793-.405z"
                                 fill="currentColor"></path>
                         </svg>
-                        <h4 class="uppercase font-bold tracking-widest pt-3">E-Mail</h4>
+                        <h4 class="pt-3 font-bold tracking-widest uppercase">E-Mail</h4>
                         <p class="text-gray-600">
                             hallo@inselbuehne-potsdam.de
                         </p>
                     </div>
                     <div>
-                        <svg class="text-green-500 inline-block h-14 w-14" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="inline-block text-green-500 h-14 w-14" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 256 256">
                             <g opacity=".3">
                                 <path
@@ -43,13 +43,13 @@
                                 <circle cx="180" cy="76" r="12" fill="currentColor" />
                             </g>
                         </svg>
-                        <h4 class="uppercase font-bold tracking-widest pt-3">Instagram</h4>
+                        <h4 class="pt-3 font-bold tracking-widest uppercase">Instagram</h4>
                         <p class="text-gray-600">
                             @inselbuehne
                         </p>
                     </div>
                     <div>
-                        <svg class="text-green-500 inline-block h-14 w-14" xmlns="http://www.w3.org/2000/svg"
+                        <svg class="inline-block text-green-500 h-14 w-14" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24">
                             <g fill="none">
                                 <path d="M0 0h24v24H0z"></path>
@@ -61,7 +61,7 @@
                                     fill="currentColor" opacity=".3"></path>
                             </g>
                         </svg>
-                        <h4 class="uppercase font-bold tracking-widest pt-3">Telefon</h4>
+                        <h4 class="pt-3 font-bold tracking-widest uppercase">Telefon</h4>
                         <p class="text-gray-600">
                             +49 331 23180309
                         </p>

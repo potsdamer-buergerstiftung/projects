@@ -1,6 +1,6 @@
 <template>
-    <div class="absolute w-full py-3 md:p-3 bg-green-200 z-50">
-        <p class="container mx-auto px-4 md:text-center text-sm">Ein Projekt der <a class="font-bold"
+    <div class="absolute z-50 w-full py-3 bg-green-200 md:p-3">
+        <p class="container px-4 mx-auto text-sm md:text-center">Ein Projekt der <a class="font-bold"
                 href="https://www.potsdamer-buergerstiftung.org">Potsdamer Bürgerstiftung</a>.</p>
     </div>
 </template>
