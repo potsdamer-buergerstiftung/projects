@@ -17,10 +17,12 @@
     "@directus/sdk": "^9.10.0",
     "@fontsource/dm-sans": "^4.5.7",
     "@fontsource/dm-serif-display": "^4.5.7",
+    "@heroicons/vue": "^1.0.6",
     "@nuxtjs/dayjs": "^1.4.1",
     "@pbs/ui": "*",
     "@vueuse/motion": "^2.0.0-beta.18",
     "dayjs": "^1.11.2",
+    "hashids": "^2.2.10",
     "nuxt-directus": "^2.0.1"
   }
 }
