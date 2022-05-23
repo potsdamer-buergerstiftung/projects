@@ -19,9 +19,11 @@
     "@fontsource/dm-serif-display": "^4.5.7",
     "@nuxtjs/dayjs": "^1.4.1",
     "@pbs/ui": "*",
+    "@pinia/nuxt": "^0.1.9",
     "@vueuse/motion": "^2.0.0-beta.18",
     "dayjs": "^1.11.2",
     "hashids": "^2.2.10",
-    "nuxt-directus": "^2.0.1"
+    "nuxt-directus": "^2.0.1",
+    "pinia": "^2.0.14"
   }
 }

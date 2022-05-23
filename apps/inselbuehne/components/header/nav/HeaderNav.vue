@@ -7,14 +7,14 @@
             <HeaderNavItem title="Über uns" link="/ueber-uns" />
         </div>
         <HeaderNavBrand />
-        <div class="lg:hidden flex flex-row items-center">
+        <button class="lg:hidden flex flex-row items-center" @click="setMobileMenu()">
             <span class="font-bold">Menü</span>
             <div class="flex flex-col space-y-1.5 ml-2">
                 <div class="h-[1px] w-6 bg-black" />
                 <div class="h-[1px] w-6 bg-black" />
                 <div class="h-[1px] w-6 bg-black" />
             </div>
-        </div>
+        </button>
         <div class="hidden lg:flex flex-row items-center justify-start w-full gap-x-5 h-full">
             <HeaderNavItem title="Presse" link="/presse" />
             <HeaderNavItem title="Unterstützen" link="/Unterstützen" />
@@ -22,3 +22,9 @@
         </div>
     </nav>
 </template>
+
+<script setup lang="ts">
+import { useHeaderState } from "../state"
+
+const { setMobileMenu } = useHeaderState()
+</script>

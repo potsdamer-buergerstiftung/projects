@@ -16,7 +16,7 @@ const posts = await getItems({
 <template>
     <div>
         <section class="bg-gray-50">
-            <div class="max-w-3xl mx-auto pt-40 pb-24 text-center">
+            <div class="max-w-3xl mx-auto pt-48 pb-24 text-center">
                 <h4 class="uppercase text-green-500 font-bold tracking-widest text-sm">Veranstaltungen</h4>
                 <h1 class="font-serif text-6xl mt-6">Bühne frei</h1>
                 <p class="text-lg text-gray-600 pt-5">

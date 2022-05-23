@@ -13,7 +13,7 @@ const posts = await getItems({ collection: "posts" })
 <template>
     <div>
         <section class="bg-green-100">
-            <div class="container mx-auto px-4 pt-44 pb-24 grid grid-cols-5 gap-16 items-center">
+            <div class="container mx-auto px-4 pt-48 pb-24 grid grid-cols-5 gap-16 items-center">
                 <div class="col-span-3 max-w-xl">
                     <h1 class="font-serif text-6xl">Wir gehen in die <span class="text-green-500">zweite
                             Runde</span>.
