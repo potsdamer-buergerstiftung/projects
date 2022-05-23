@@ -1,6 +1,6 @@
 <template>
     <NuxtLink
-        class="w-full overflow-hidden rounded-tl-xl rounded-br-xl bg-white shadow-lg transition hover:shadow-xl hover:-translate-y-2 duration-300 cursor-pointer">
+        class="block w-full overflow-hidden rounded-tl-xl rounded-br-xl bg-white shadow-lg transition hover:shadow-xl hover:-translate-y-2 duration-300 cursor-pointer">
         <div class="aspect-[16/9] bg-green-500 bg-cover">
             <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${imageUrl}?key=low-1000`" alt="test">
         </div>

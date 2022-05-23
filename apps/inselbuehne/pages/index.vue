@@ -36,35 +36,37 @@ const posts = await getItems({ collection: "posts" })
         </section>
         <section class="bg-gray-50">
             <div class="container mx-auto px-4 pt-16 pb-8">
-                <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
                     <div>
                         <hr class="h-1 w-16 bg-green-500" />
-                        <h1 class="pt-5 font-serif text-4xl">
+                        <h1 class="pt-5 font-serif text-3xl md:text-4xl">
                             Was es Neues bei uns gibt
                         </h1>
                         <h4 class="mt-2 text-lg text-gray-500">Und was alles passiert ist</h4>
                     </div>
                     <div>
                         <button
-                            class="mt-4 px-4 py-2.5 rounded-tl-lg shadow-md transition hover:bg-green-400 rounded-br-lg bg-green-500 text-white text-md font-medium">
+                            class="px-4 py-2.5 rounded-tl-lg shadow-md transition hover:bg-green-400 rounded-br-lg bg-green-500 text-white text-md font-medium">
                             Alle Beiträge
                         </button>
                     </div>
                 </div>
-                <div class="mt-12 grid grid-cols-3 gap-8">
-                    <ArticleCard v-for="post in posts" :post-id="post.id" :image-url="post.image" :title="post.title"
-                        :summary="post.excerpt" />
+                <div class="mt-12 grid grid-cols-6 gap-8">
+                    <div class="col-span-6 md:col-span-3 lg:col-span-2">
+                        <ArticleCard v-for="post in posts" :post-id="post.id" :image-url="post.image"
+                            :title="post.title" :summary="post.excerpt" />
+                    </div>
                 </div>
             </div>
         </section>
         <section class="bg-gray-50">
             <div class="container mx-auto px-4 pt-16 grid grid-cols-2 gap-16 items-center">
-                <div>
+                <div class="col-span-2 lg:col-span-1 order-2 lg:order-1">
                     <div class="aspect-[3/2] bg-green-500 bg-cover">
 
                     </div>
                 </div>
-                <div>
+                <div class="col-span-2 lg:col-span-1 order-1 lg:order-2">
                     <h1 class="font-serif text-4xl" v-motion-fade-visible-once>Was ist die
                         Inselbühne?</h1>
                     <p class="text-lg mt-4 leading-relaxed text-gray-600" v-motion-fade-visible-once>
