@@ -71,3 +71,9 @@
         </section>
     </div>
 </template>
+
+<script setup>
+definePageMeta({
+    title: 'Kontakt',
+})
+</script>
