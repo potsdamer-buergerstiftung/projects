@@ -1,8 +1,8 @@
 <template>
     <div v-if="mdAndSmaller"
-        class="fixed top-0 bottom-0 left-0 right-0 z-40 overflow-hidden bg-white transition duration-500 ease-in-out -translate-x-full overscroll-contain lg:hidden"
+        class="fixed top-0 bottom-0 left-0 right-0 z-40 overflow-hidden transition duration-500 ease-in-out -translate-x-full bg-white overscroll-contain lg:hidden"
         :class="{ 'translate-x-0': headerState.isMobileMenuOpen }">
-
+        <HeaderBanner />
         <div class="container flex flex-row justify-between px-4 py-2 mx-auto mt-8">
             <HeaderNavBrand />
             <button class="font-bold" @click="headerState.setMobileMenu()">
