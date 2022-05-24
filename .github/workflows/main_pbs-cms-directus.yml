@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /app/cms
+        working-directory: ./app/cms
 
     steps:
       - name: Check out code
