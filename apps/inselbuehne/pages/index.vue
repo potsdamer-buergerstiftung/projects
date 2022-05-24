@@ -1,15 +1,3 @@
-<script setup>
-definePageMeta({
-    layout: "default",
-    title: "Es geht weiter"
-})
-
-const { getItems } = useDirectusItems();
-
-const posts = await getItems({ collection: "posts" })
-
-</script>
-
 <template>
     <div>
         <section class="bg-green-100">
@@ -103,3 +91,23 @@ const posts = await getItems({ collection: "posts" })
         </section>
     </div>
 </template>
+
+<script setup>
+definePageMeta({
+    layout: "default",
+    title: "Es geht weiter"
+})
+
+const { getItems } = useDirectusItems();
+
+const { data: posts } = useAsyncData("posts", () => getItems({
+    collection: "posts", params: {
+        filter: {
+            project: {
+                slug: "inselbuehne"
+            }
+        }
+    }
+}))
+
+</script>

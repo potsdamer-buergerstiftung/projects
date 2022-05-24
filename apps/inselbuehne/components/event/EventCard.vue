@@ -1,20 +1,20 @@
 <template>
     <NuxtLink :to="`/veranstaltungen/${eventId}`"
-        class="w-full overflow-hidden bg-white shadow-lg cursor-pointer rounded-tl-2xl rounded-br-2xl transition hover:shadow-xl hover:-translate-y-2 duration-300 grid grid-cols-5 min-h-max lg:h-56">
+        class="grid w-full grid-cols-5 overflow-hidden transition duration-300 bg-white shadow-lg cursor-pointer rounded-tl-2xl rounded-br-2xl hover:shadow-xl hover:-translate-y-2 min-h-max lg:h-56">
         <div class="relative w-full h-64 col-span-5 lg:col-span-2 lg:h-full">
             <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`" alt="test"
                 class="absolute object-cover w-full h-full">
             <div
-                class="absolute p-4 bg-white rounded-tl-lg rounded-br-lg shadow-md left-6 lg:left-auto lg:right-6 top-1/2 -translate-y-1/2">
+                class="absolute p-4 -translate-y-1/2 bg-white rounded-tl-lg rounded-br-lg shadow-md left-6 md:left-8 lg:left-auto lg:right-6 top-1/2">
                 <p>{{ new Date(start).toLocaleDateString("de", { month: "short" }) }}</p>
                 <h1 class="font-serif text-4xl">{{ new Date(start).getUTCDate() }}</h1>
                 <p>{{ new Date(start).toLocaleDateString("de", { weekday: "short" }) }}</p>
             </div>
         </div>
         <div
-            class="flex flex-col items-start justify-between p-6 col-span-5 lg:col-span-3 lg:p-10 lg:flex-row lg:items-center lg:space-x-10">
+            class="flex flex-col items-start justify-between col-span-5 p-6 md:p-8 lg:col-span-3 lg:p-10 lg:flex-row lg:items-center lg:space-x-10">
             <div class="text-left">
-                <h1 class="font-serif text-3xl leading-tight">
+                <h1 class="font-serif text-2xl leading-tight md:text-3xl">
                     {{ title }}
                 </h1>
                 <p class="mt-4 leading-relaxed text-md">

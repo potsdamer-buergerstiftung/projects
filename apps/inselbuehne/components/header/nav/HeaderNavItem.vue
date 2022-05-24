@@ -1,6 +1,6 @@
 <template>
     <NuxtLink :to="link" class="relative px-2 py-3 text-xl transition lg:p-2 lg:text-lg hover:text-green-500"
-        active-class="text-green-500" @click="setMobileMenu()">
+        activeClass="text-green-500" @click="setMobileMenu()">
         {{ title }}
     </NuxtLink>
 </template>
