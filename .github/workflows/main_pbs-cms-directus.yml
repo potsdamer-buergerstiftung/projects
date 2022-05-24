@@ -19,17 +19,14 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-            node-version: 16
-            cache: 'yarn'
+          node-version: '14.x'
 
-      - name: Install dependencies
-          run: yarn
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
 
-        - name: Build
-          run: yarn build
-
-        - name: Test
-          run: yarn test
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -55,6 +52,5 @@ jobs:
         with:
           app-name: 'pbs-cms-directus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F9650441D7F5443EA6E02FEB6BE1EFEF }}
-          package: ./apps/cms
-          startup-command: npx directus bootstrap && npx directus start
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A20FD0E0E31A4BCFACE78DCD86281548 }}
+          package: .
