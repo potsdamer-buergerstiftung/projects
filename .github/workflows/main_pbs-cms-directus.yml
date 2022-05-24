@@ -12,24 +12,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app/cms
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Node.js version
-        uses: actions/setup-node@v1
+      - name: Check out code
+        uses: actions/checkout@v2
         with:
-            node-version: 16
-            cache: 'yarn'
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'yarn'
 
       - name: Install dependencies
-          run: yarn
+        run: yarn
 
-        - name: Build
-          run: yarn build
-
-        - name: Test
-          run: yarn test
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -55,6 +56,5 @@ jobs:
         with:
           app-name: 'pbs-cms-directus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F9650441D7F5443EA6E02FEB6BE1EFEF }}
-          package: ./apps/cms
-          startup-command: npx directus bootstrap && npx directus start
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A20FD0E0E31A4BCFACE78DCD86281548 }}
+          package: .
