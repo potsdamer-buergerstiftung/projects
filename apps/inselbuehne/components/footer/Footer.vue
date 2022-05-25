@@ -43,7 +43,7 @@
                     </ul>
                 </div>
                 <div class="col-span-6 md:col-span-2 lg:col-span-1">
-                    <h4 class="text-sm font-bold tracking-widest text-white uppercase">Partner</h4>
+                    <h4 class="text-sm font-bold tracking-widest text-white uppercase">Förderer</h4>
                     <ul class="flex flex-col mt-4 space-y-4">
                         <li>
                             <a href="https://www.potsdam.de" target="_blank"

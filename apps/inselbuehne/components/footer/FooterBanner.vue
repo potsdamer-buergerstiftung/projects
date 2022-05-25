@@ -3,7 +3,7 @@
         <div class="flex flex-col justify-between text-center md:text-left lg:flex-row lg:items-center lg:gap-4">
             <div>
                 <h1 class="font-serif text-2xl text-white lg:text-4xl">Ein Projekt der
-                    <NuxtLink to="https://www.potsdamer-buergerstiftung.org" class="text-green-300">
+                    <NuxtLink to="https://www.potsdamer-buergerstiftung.com" class="text-green-300">
                         Potsdamer Bürgerstiftung</NuxtLink>.
                 </h1>
                 <p class="mt-2 text-gray-300">Wir fördern ehrenamtliches Engagement und gestalten als Mitmach-Stiftung
