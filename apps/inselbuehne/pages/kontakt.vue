@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="bg-gray-50">
-            <div class="max-w-3xl pt-48 pb-24 mx-auto text-center">
+            <div class="px-4 lg:px-0 max-w-3xl pt-48 pb-24 mx-auto text-center">
                 <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">Kontakt</h4>
                 <h1 class="mt-6 font-serif text-6xl">Wie können wir dir helfen?</h1>
                 <p class="pt-5 text-lg text-gray-600">
