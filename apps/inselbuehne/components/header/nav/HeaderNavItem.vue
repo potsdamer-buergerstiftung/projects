@@ -11,10 +11,9 @@ import { useHeaderState } from "../state"
 interface Props {
     title: string;
     link: string;
-    isExternal?: boolean;
 }
 
-const { title, link, isExternal = false } = defineProps<Props>()
+const { title, link } = defineProps<Props>()
 
 const { setMobileMenu } = useHeaderState()
 </script>
