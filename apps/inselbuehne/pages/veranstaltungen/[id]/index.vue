@@ -26,7 +26,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-4 mt-8 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-8">
+                <div class="grid grid-cols-3 gap-4 mt-8 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-16">
                     <div class="order-2 col-span-3 md:col-span-2 md:order-1">
                         <p class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase">
                             Beschreibung
@@ -35,7 +35,7 @@
                             <p class="mt-4 leading-relaxed prose text-md lg:prose-lg" v-html="description" />
                         </ClientOnly>
                     </div>
-                    <div class="order-1 col-span-3 md:col-span-1 lg:py-8 md:order-2">
+                    <div class="order-1 col-span-3 md:col-span-1 md:order-2">
                         <div>
                             <p class="text-sm font-bold tracking-widest text-green-500 uppercase md:mt-4">
                                 Datum und Uhrzeit

@@ -49,10 +49,8 @@
         <section class="bg-gray-50">
             <div class="container grid items-center grid-cols-2 gap-16 px-4 pt-16 mx-auto">
                 <div class="order-2 col-span-2 lg:col-span-1 lg:order-1">
-                    <div class="aspect-[3/2] bg-green-500 bg-cover">
-                        <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/aa4cc52e-5b9d-4ede-b47f-820fcb729f2d?key=low-1000`"
-                            alt="test" class="object-cover w-full h-full">
-                    </div>
+                    <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/bca18d03-b2f2-4d7b-b277-c296899cb06f?width=700&quality=60&height=500`"
+                        alt="test" class="w-full">
                 </div>
                 <div class="order-1 col-span-2 lg:col-span-1 lg:order-2">
                     <h1 class="font-serif text-4xl" v-motion-fade-visible-once>Was ist die
