@@ -7,8 +7,8 @@
                             Runde</span>.
                     </h1>
                     <p class="mt-6 text-lg leading-relaxed">
-                        Wir haben den Winter genutzt, um Künstlerinnen und Künstlern ein weiteres Jahr den Ort zur
-                        Verfügung zu stellen, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
+                        Wir stellen Künstlerinnen und Künstlern ein weiteres Jahr den Ort zur
+                        Verfügung, der letztes Jahr tausende Zuschauerinnen und Zuschauer begeistern konnte.
                     </p>
                     <NuxtLink to="/veranstaltungen"
                         class="inline-flex px-5 py-3 mt-6 text-lg font-medium text-white transition bg-green-500 rounded-tl-lg rounded-br-lg shadow-md hover:bg-green-400">
@@ -16,10 +16,8 @@
                     </NuxtLink>
                 </div>
                 <div class="col-span-6 md:col-span-3">
-                    <div class="aspect-[5/3] bg-green-500 bg-cover">
-                        <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/a5ff92e4-a012-45b6-bc5d-352b219dcdf6?key=low-1000`"
-                            alt="test" class="object-cover w-full h-full">
-                    </div>
+                    <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/9fbafc25-4d32-4964-9f05-a4ac15234fa1?width=700&quality=60&height=450`"
+                        alt="test" class="w-full">
                 </div>
             </div>
         </section>
