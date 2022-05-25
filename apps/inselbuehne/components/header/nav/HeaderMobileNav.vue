@@ -5,7 +5,7 @@
         <div class="container flex flex-col px-2 mx-auto pt-44">
             <HeaderNavItem title="Veranstaltungen" link="/veranstaltungen" />
             <HeaderNavItem title="Blog" link="/blog" />
-            <HeaderNavItem title="Über uns" link="/ueber-uns" />
+            <HeaderNavItem title="Über uns" link="https://www.potsdamer-buergerstiftung.com" />
             <HeaderNavItem title="Presse" link="/presse" />
             <HeaderNavItem title="Unterstützen" link="/Unterstützen" />
             <HeaderNavItem title="Kontakt" link="/kontakt" />

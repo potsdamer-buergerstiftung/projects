@@ -4,7 +4,7 @@
         <div class="flex-row items-center justify-end hidden w-full h-full lg:flex gap-x-3 xl:gap-x-5">
             <HeaderNavItem title="Veranstaltungen" link="/veranstaltungen" />
             <HeaderNavItem title="Blog" link="/blog" />
-            <HeaderNavItem title="Über uns" link="/ueber-uns" />
+            <HeaderNavItem title="Über uns" link="https://www.potsdamer-buergerstiftung.com" />
         </div>
         <HeaderNavBrand />
         <button class="flex flex-row items-center lg:hidden" @click="headerState.setMobileMenu()">
