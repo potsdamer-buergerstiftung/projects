@@ -56,12 +56,12 @@
                     <h1 class="font-serif text-4xl" v-motion-fade-visible-once>Was ist die
                         Inselbühne?</h1>
                     <p class="mt-4 text-lg leading-relaxed text-gray-600" v-motion-fade-visible-once>
-                        Inselbühne haben wir die 1974 errichtete Freilichtbühne auf der Freundschaftsinsel neu benannt.
+                        Inselbühne haben wir die 1973 errichtete Freilichtbühne auf der Freundschaftsinsel neu benannt.
                         Seit
                         2012 wurde sie nicht mehr genutzt und es gab Pläne, sie abzureißen. Das wollten wir verhindern,
                         denn
-                        es gibt keine geeignetere Open-Air-Bühne in der Stadt. Wir meinen, Potsdam braucht eine
-                        Freilichtbühne, vor allem in Zeiten einer Pandemie.
+                        es gibt keine geeignetere Open-Air-Bühne in der Stadt. Sie ist für viele Potsdamerinnen und
+                        Potsdamer ein Traditionsort.
                     </p>
                 </div>
             </div>
