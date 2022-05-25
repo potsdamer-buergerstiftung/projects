@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="bg-green-100">
-            <div class="container grid items-center grid-cols-6 gap-16 px-4 pt-48 pb-24 mx-auto">
+            <div class="container grid items-center grid-cols-6 gap-16 px-4 pt-48 mx-auto pb-12 md:pb-24">
                 <div class="max-w-xl col-span-6 md:col-span-3">
                     <h1 class="font-serif text-5xl lg:text-6xl">Wir gehen in die <span class="text-green-500">zweite
                             Runde</span>.
@@ -22,7 +22,7 @@
             </div>
         </section>
         <section class="bg-gray-50">
-            <div class="container px-4 pt-16 pb-8 mx-auto">
+            <div class="container px-4 pt-12 md:pt-16 pb-8 mx-auto">
                 <div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
                     <div>
                         <hr class="w-16 h-1 bg-green-500" />
@@ -67,7 +67,7 @@
             </div>
         </section>
         <section class="bg-gray-50">
-            <div class="max-w-3xl px-4 pt-32 pb-32 mx-auto text-center">
+            <div class="max-w-3xl px-4 pt-24 md:pt-32 pb-24 md:pb-32 mx-auto text-center">
                 <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">Los geht's</h4>
                 <h1 class="mt-3 font-serif text-4xl">Hol' dir dein Ticket</h1>
                 <p class="mt-4 text-lg leading-relaxed text-gray-600">
@@ -98,11 +98,7 @@ const { getItems } = useDirectusItems();
 
 const { data: posts } = useAsyncData("posts", () => getItems({
     collection: "posts", params: {
-        filter: {
-            project: {
-                slug: "inselbuehne"
-            }
-        }
+        filter: {}
     }
 }))
 
