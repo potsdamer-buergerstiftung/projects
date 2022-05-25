@@ -39,8 +39,8 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-6 gap-8 mt-12">
-                    <div class="col-span-6 md:col-span-3 lg:col-span-2">
-                        <ArticleCard v-for="post in posts" :post-id="post.id" :image-url="post.image"
+                    <div v-for="post in posts" class="col-span-6 md:col-span-3 lg:col-span-2">
+                        <ArticleCard :post-id="post.id" :image-url="post.image"
                             :title="post.title" :summary="post.excerpt" />
                     </div>
                 </div>
