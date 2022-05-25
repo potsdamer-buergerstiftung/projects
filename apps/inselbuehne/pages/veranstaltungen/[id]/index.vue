@@ -4,15 +4,15 @@
             <div class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:shadow-xl md:bg-white">
                 <div class="grid grid-cols-6">
                     <div
-                        class="relative h-64 overflow-hidden bg-green-500 bg-cover rounded-tl-lg rounded-br-lg md:rounded-none col-span-6 lg:col-span-3 lg:h-full">
+                        class="relative h-64 col-span-6 overflow-hidden bg-green-500 bg-cover rounded-tl-lg rounded-br-lg md:rounded-none lg:col-span-3 lg:h-full">
                         <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`" alt="test"
                             class="absolute object-cover w-full h-full">
                     </div>
-                    <div class="mt-8 col-span-6 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
+                    <div class="col-span-6 mt-8 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
                         <p class="text-sm font-bold tracking-widest text-green-500 uppercase">{{ longStart }}</p>
-                        <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ title }}</h1>
+                        <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ name }}</h1>
                         <button
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 transition hover:bg-gray-100">
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100">
                             Veranstaltung teilen
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
@@ -26,13 +26,13 @@
                         </button>
                     </div>
                 </div>
-                <div class="mt-8 grid grid-cols-3 gap-4 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-8">
+                <div class="grid grid-cols-3 gap-4 mt-8 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-8">
                     <div class="order-2 col-span-3 md:col-span-2 md:order-1">
                         <p class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase">
                             Beschreibung
                         </p>
                         <ClientOnly>
-                            <p class="mt-4 leading-relaxed text-md prose lg:prose-lg" v-html="description" />
+                            <p class="mt-4 leading-relaxed prose text-md lg:prose-lg" v-html="description" />
                         </ClientOnly>
                     </div>
                     <div class="order-1 col-span-3 md:col-span-1 lg:py-8 md:order-2">
@@ -101,5 +101,5 @@ const timeEnd = new
         hour: "2-digit", minute: "2-digit"
     })
 
-const { title, description, image, registration_needed } = props
+const { name, description, image, registration_needed } = props
 </script>

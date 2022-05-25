@@ -32,7 +32,7 @@ const posts = await getItems({
         </section>
         <section class="bg-gray-50">
             <div class="container flex flex-col px-4 pb-32 mx-auto space-y-10 text-center">
-                <EventCard v-for="event in posts" :title="event.title" :eventId="event.id" :summary="event.summary"
+                <EventCard v-for="event in posts" :title="event.name" :eventId="event.id.toString()" :summary="event.summary"
                     :start="event.start" :image="event.image" :registration_needed="event.registration_needed" />
             </div>
         </section>
