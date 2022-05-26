@@ -59,7 +59,7 @@ const route = useRoute();
 
 const { getItemById } = useDirectusItems();
 
-const { data: post } = await getItemById<any>({
+const post = await getItemById<any>({
     collection: "posts",
     id: route.params.postId as string,
     params: {
