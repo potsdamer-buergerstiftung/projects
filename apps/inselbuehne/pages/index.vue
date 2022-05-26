@@ -96,7 +96,7 @@ definePageMeta({
 
 const { getItems } = useDirectusItems();
 
-const { data: posts } = useAsyncData("posts", () => getItems({
+const { data: posts } = await useAsyncData("posts", () => getItems({
     collection: "posts", params: {
         filter: {}
     }

@@ -5,12 +5,12 @@
                 <div class="grid grid-cols-6">
                     <div
                         class="relative h-64 col-span-6 overflow-hidden bg-green-500 bg-cover rounded-tl-lg rounded-br-lg md:rounded-none lg:col-span-3 lg:h-full">
-                        <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`" alt="test"
-                            class="absolute object-cover w-full h-full">
+                        <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${event.image}?key=low-1000`"
+                            alt="test" class="absolute object-cover w-full h-full">
                     </div>
                     <div class="col-span-6 mt-8 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
                         <p class="text-sm font-bold tracking-widest text-green-500 uppercase">{{ longStart }}</p>
-                        <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ name }}</h1>
+                        <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ event.name }}</h1>
                         <button v-if="isShareSupported" @click="startShare()"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100">
                             Veranstaltung teilen
@@ -33,7 +33,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                         </button>
-                        <button v-if="registration_needed"
+                        <button v-if="event.registration_needed"
                             class="mt-4 w-full text-center shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-400">
                             Tickets
                         </button>
@@ -45,7 +45,7 @@
                             Beschreibung
                         </p>
                         <ClientOnly>
-                            <p class="mt-4 leading-relaxed prose text-md lg:prose-lg" v-html="description" />
+                            <p class="mt-4 leading-relaxed prose text-md lg:prose-lg" v-html="event.description" />
                         </ClientOnly>
                     </div>
                     <div class="order-1 col-span-3 md:col-span-1 md:order-2">
@@ -96,25 +96,29 @@ const route = useRoute()
 
 const { getItemById } = useDirectusItems();
 
-const props = await getItemById({ collection: "events", id: route.params.id as string }) as any
+const { data: event } = await useAsyncData(route.fullPath, () => getItemById<any>({ collection: "events", id: route.params.id as string }))
 
-const longStart = new
-    Date(props.start).toLocaleDateString("de", {
-        month: "long", day: "numeric", year:
-            "numeric", weekday: "long"
-    })
+const longStart = computed((event) => {
+    new
+        Date(event.start).toLocaleDateString("de", {
+            month: "long", day: "numeric", year:
+                "numeric", weekday: "long"
+        })
+})
 
-const timeStart = new
-    Date(props.start).toLocaleTimeString("de", {
-        hour: "2-digit", minute: "2-digit"
-    })
+const timeStart = computed((event) => {
+    new
+        Date(event.start).toLocaleTimeString("de", {
+            hour: "2-digit", minute: "2-digit"
+        })
+})
 
-const timeEnd = new
-    Date(props.end).toLocaleTimeString("de", {
-        hour: "2-digit", minute: "2-digit"
-    })
-
-const { name, description, image, registration_needed, summary } = props
+const timeEnd = computed((event) => {
+    new
+        Date(event.end).toLocaleTimeString("de", {
+            hour: "2-digit", minute: "2-digit"
+        })
+})
 
 const { share, isSupported: isShareSupported } = useShare()
 
@@ -128,8 +132,8 @@ function startCopy() {
 
 function startShare() {
     share({
-        title: name,
-        text: summary,
+        title: event.value.name,
+        text: event.value.summary,
         url: location.href,
     })
 }
