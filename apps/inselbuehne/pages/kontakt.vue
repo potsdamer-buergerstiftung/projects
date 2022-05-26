@@ -3,7 +3,7 @@
         <section class="bg-gray-50">
             <div class="px-4 lg:px-0 max-w-3xl pt-48 pb-24 mx-auto text-center">
                 <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">Kontakt</h4>
-                <h1 class="mt-6 font-serif text-6xl">Wie können wir dir helfen?</h1>
+                <h1 class="mt-6 font-serif text-5xl md:text-6xl">Wie können wir dir helfen?</h1>
                 <p class="pt-5 text-lg text-gray-600">
                     Hast Du Fragen bezüglich der Inselbühne oder möchtest Tickets bestellen? Dann kontaktiere uns doch
                     einfach!
@@ -11,8 +11,8 @@
             </div>
         </section>
         <section class="bg-gray-50">
-            <div class="max-w-3xl px-4 pb-32 mx-auto text-center">
-                <div class="grid grid-cols-3 gap-8">
+            <div class="max-w-3xl px-4 pb-24 lg:pb-32 mx-auto text-center">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
                     <div>
                         <svg class="inline-block text-green-500 h-14 w-14" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24">
