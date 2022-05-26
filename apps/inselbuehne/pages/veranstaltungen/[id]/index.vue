@@ -47,7 +47,7 @@
                             Beschreibung
                         </p>
                         <ClientOnly>
-                            <p class="mt-4 leading-relaxed prose text-md lg:prose-lg" v-html="description" />
+                            <p class="mt-4 leading-relaxed prose text-md lg:prose-lg prose-headings:font-serif prose-headings:font-normal" v-html="description" />
                         </ClientOnly>
                     </div>
                     <div class="order-1 col-span-3 md:col-span-1 md:order-2">
