@@ -1689,7 +1689,7 @@
 
 "@pinia/nuxt@^0.1.9":
   version "0.1.9"
-  resolved "https://registry.npmjs.org/@pinia/nuxt/-/nuxt-0.1.9.tgz"
+  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.1.9.tgz#96bd971ff5e280d401d1b2be1510b6ae4600a510"
   integrity sha512-5YmfBOxXHM5eA5pE4mq5opJnSmVYn2qYJ2ak01FrCww0esxfRLkmuu4emynu0Ar5eQ/DDz9wI3ukgRwAubXqmg==
   dependencies:
     vue-demi "*"
@@ -1827,7 +1827,7 @@
 
 "@tailwindcss/typography@^0.5.2":
   version "0.5.2"
-  resolved "https://registry.npmjs.org/@tailwindcss/typography/-/typography-0.5.2.tgz"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.2.tgz#24b069dab24d7a2467d01aca0dd432cb4b29f0ee"
   integrity sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==
   dependencies:
     lodash.castarray "^4.4.0"
@@ -2176,7 +2176,7 @@
 
 "@vueuse/nuxt@^8.5.0":
   version "8.5.0"
-  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-8.5.0.tgz"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-8.5.0.tgz#392617df38d56f87b705f5feef4af27544371f6c"
   integrity sha512-riGrDwlTQbjSDxyw46oc1catXpZwzzRrEk+PTy8NQZG6uevgJ8wNuAhPVx/5oG0jYG/t2orIFfc9xGEA6uytSg==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.2"
@@ -7404,7 +7404,7 @@ nuxi@^3.0.0-rc.3:
 
 nuxt-directus@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.npmjs.org/nuxt-directus/-/nuxt-directus-2.0.1.tgz"
+  resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-2.0.1.tgz#fd28d7dbb8b8ddad3e314dea72fde239744f1753"
   integrity sha512-Yt1fNYPKBFnUrreORFhRLH4ekKsBy5X0yHWrL2/5/E7g/WQ6xDRpi/CGkVOfM7jjU4HEgY36APmKcrAaAtMJ6A==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.3"
@@ -7971,7 +7971,7 @@ pify@^3.0.0:
 
 pinia@^2.0.14:
   version "2.0.14"
-  resolved "https://registry.npmjs.org/pinia/-/pinia-2.0.14.tgz"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.14.tgz#0837898c20291ebac982bbfca95c8d3c6099925f"
   integrity sha512-0nPuZR4TetT/WcLN+feMSjWJku3SQU7dBbXC6uw+R6FLQJCsg+/0pzXyD82T1FmAYe0lsx+jnEDQ1BLgkRKlxA==
   dependencies:
     "@vue/devtools-api" "^6.1.4"

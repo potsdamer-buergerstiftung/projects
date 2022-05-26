@@ -9,7 +9,13 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/motion/nuxt",
+    "nuxt-directus",
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+  ],
   css: [
     "@fontsource/space-grotesk/700.css",
     "@fontsource/space-grotesk/400.css",
@@ -17,4 +23,7 @@ export default defineNuxtConfig({
   experimental: {
     reactivityTransform: true,
   },
+  directus: {
+		url: "https://cms.potsdamer-buergerstiftung.org",
+	},
 });
