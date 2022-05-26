@@ -11,13 +11,26 @@
                     <div class="col-span-6 mt-8 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
                         <p class="text-sm font-bold tracking-widest text-green-500 uppercase">{{ longStart }}</p>
                         <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ name }}</h1>
-                        <button
+                        <button v-if="isShareSupported" @click="startShare()"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100">
                             Veranstaltung teilen
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                            </svg>
+                        </button>
+                        <button v-if="isClipboardSupported && !isShareSupported" @click="startCopy()"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100">
+                            {{ copied ? "Link kopiert" : "Veranstaltungslink kopieren" }}
+                            <svg v-if="!copied" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            <svg v-if="copied" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                         </button>
                         <button v-if="registration_needed"
@@ -101,5 +114,23 @@ const timeEnd = new
         hour: "2-digit", minute: "2-digit"
     })
 
-const { name, description, image, registration_needed } = props
+const { name, description, image, registration_needed, summary } = props
+
+const { share, isSupported: isShareSupported } = useShare()
+
+const shareButton = ref("")
+
+const { copy, copied, isSupported: isClipboardSupported } = useClipboard({ source: shareButton })
+
+function startCopy() {
+    copy(location.href)
+}
+
+function startShare() {
+    share({
+        title: name,
+        text: summary,
+        url: location.href,
+    })
+}
 </script>
