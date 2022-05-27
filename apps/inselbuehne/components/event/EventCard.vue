@@ -14,10 +14,10 @@
         <div
             class="flex flex-col items-start justify-between col-span-5 p-6 md:p-8 lg:col-span-3 lg:p-10 lg:flex-row lg:items-center lg:space-x-10">
             <div class="text-left">
-                <h1 class="font-serif text-2xl leading-tight md:text-3xl">
+                <h1 class="font-serif text-2xl leading-tight md:text-3xl line-clamp-4 lg:line-clamp-2">
                     {{ title }}
                 </h1>
-                <p class="mt-4 leading-relaxed text-md">
+                <p class="mt-4 leading-relaxed text-md line-clamp-6 lg:line-clamp-3">
                     {{ summary }}
                 </p>
             </div>
