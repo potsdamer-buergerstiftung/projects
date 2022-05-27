@@ -1,11 +1,11 @@
 <template>
     <div>
         <div class="container px-4 pt-20 mx-auto">
-            <h1 class="font-bold font-header text-7xl text-navy-900">Brücken bauen,<br /> Menschen verbinden</h1>
-            <p class="mt-8 text-navy-900">Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung
+            <h1 class="font-bold font-header text-7xl text-slate-800">Brücken bauen,<br /> Menschen verbinden</h1>
+            <p class="mt-8 text-slate-800">Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung
                 ehrenamtliches
                 Engagement.</p>
-            <p class="pt-1 font-bold text-green-500">Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
+            <p class="pt-1 font-bold text-emerald-600">Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
             </p>
         </div>
         <div class="container px-4 pt-20 mx-auto pb-16">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <button
-                class="mt-8 bg-green-100 text-navy-900 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                class="mt-12 bg-green-100 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
                 Alle Projekte
             </button>
         </div>

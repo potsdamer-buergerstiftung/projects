@@ -1,6 +1,6 @@
 <template>
     <button
-        class="bg-green-100 text-navy-900 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-        Unterstützen & mitmachen
+        class="bg-emerald-100 text-slate-800 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+        Unterstützen & engagieren
     </button>
 </template>
