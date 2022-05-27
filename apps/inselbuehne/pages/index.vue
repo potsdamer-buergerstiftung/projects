@@ -32,16 +32,16 @@
                         <h4 class="mt-2 text-lg text-gray-500">Und was alles passiert ist</h4>
                     </div>
                     <div>
-                        <button
+                        <NuxtLink to="/blog"
                             class="px-4 py-2.5 rounded-tl-lg shadow-md transition hover:bg-green-400 rounded-br-lg bg-green-500 text-white text-md font-medium">
                             Alle Beiträge
-                        </button>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="grid grid-cols-6 gap-8 mt-12">
                     <div v-for="post in posts" class="col-span-6 md:col-span-3 xl:col-span-2">
-                        <ArticleCard :post-id="post.id.toString()" :image-url="post.image"
-                            :title="post.title" :summary="post.excerpt" />
+                        <ArticleCard :post-id="post.id.toString()" :image-url="post.image" :title="post.title"
+                            :summary="post.excerpt" />
                     </div>
                 </div>
             </div>
@@ -98,7 +98,8 @@ const { getItems } = useDirectusItems();
 
 const { data: posts } = await useAsyncData("posts", () => getItems({
     collection: "posts", params: {
-        filter: {}
+        filter: {},
+        limit: 3,
     }
 }))
 
