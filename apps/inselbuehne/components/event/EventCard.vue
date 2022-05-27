@@ -2,7 +2,7 @@
     <NuxtLink :to="`/veranstaltungen/${eventId}`"
         class="grid w-full grid-cols-5 overflow-hidden transition duration-300 bg-white shadow-lg cursor-pointer rounded-tl-2xl rounded-br-2xl hover:shadow-xl hover:-translate-y-2 min-h-max lg:h-56">
         <div class="relative w-full h-64 col-span-5 lg:col-span-2 lg:h-full">
-            <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`" alt="test"
+            <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?width=1000&height=600&quality=40`" alt="test"
                 class="absolute object-cover w-full h-full">
             <div
                 class="absolute p-4 -translate-y-1/2 bg-white rounded-tl-lg rounded-br-lg shadow-md left-6 md:left-8 lg:left-auto lg:right-6 top-1/2">
