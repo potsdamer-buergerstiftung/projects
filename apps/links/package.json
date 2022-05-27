@@ -11,6 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/qrcode": "^1.4.2",
     "nitropack": "^0.4.2"
+  },
+  "dependencies": {
+    "@directus/sdk": "^9.11.1",
+    "hashids": "^2.2.10",
+    "qrcode": "^1.5.0"
   }
 }
