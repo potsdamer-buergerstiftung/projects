@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink to="/" class="p-2 -ml-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+    <NuxtLink to="/" class="p-2 -ml-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" tabindex="1">
         <svg viewBox="0 0 515.79 99.12" class="w-52">
             <g class="text-gray-800">
                 <path
