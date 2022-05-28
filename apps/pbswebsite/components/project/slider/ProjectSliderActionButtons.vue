@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row absolute bottom-0 right-8 z-50 gap-4 p-16">
+    <div class="flex flex-row absolute bottom-0 right-0 z-50 gap-4 px-12 py-16">
         <button @click="swiper.slidePrev()"
             class="rounded-full text-white p-4 border border-emerald-500 border-opacity-0 hover:border-opacity-100 transition bg-slate-900 bg-opacity-0 hover:bg-opacity-20">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"

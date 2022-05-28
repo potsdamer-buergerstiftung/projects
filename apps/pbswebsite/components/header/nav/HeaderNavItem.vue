@@ -19,7 +19,7 @@ const route = useRoute()
 <template>
     <NuxtLink :to="link" class="px-4 py-2 text-lg flex flex-col items-end group">
         <span class="text-xs font-bold leading-4 transition group-hover:text-emerald-500"
-            :class="{ 'text-slate-800': route.meta.headerColor !== 'white', 'text-slate-300': route.meta.headerColor === 'white' }">{{
+            :class="{ 'text-slate-500': route.meta.headerColor !== 'white', 'text-slate-300': route.meta.headerColor === 'white' }">{{
                     addZero(index)
             }}</span>
         <span class="transition leading-4 text-[16px] font-medium group-hover:text-emerald-500"

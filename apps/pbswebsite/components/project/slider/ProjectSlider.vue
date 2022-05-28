@@ -1,11 +1,12 @@
 <template>
-    <swiper :loop="true" :speed="900" class="w-full h-full" direction="vertical" :modules="modules"
-        :mousewheel="{ sensitivity: 80 } as any">
+    <swiper :loop="true" :preload-images="true" :speed="900" class="w-full h-full" direction="vertical"
+        :modules="modules" :lazy="{ loadOnTransitionStart: true } as any" :mousewheel="{ sensitivity: 80 } as any">
         <swiper-slide v-for="project in projects">
             <section class="relative w-full h-screen bg-red-200 snap-start">
                 <div class="absolute w-full h-full">
-                    <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${project.image}?width=2000&quality=80`"
-                        class="w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+                    <img :data-src="`https://cms.potsdamer-buergerstiftung.org/assets/${project.image}?width=2000&quality=80`"
+                        class="swiper-lazy w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-60" />
                 <div class="absolute w-full top-1/2 -translate-y-1/2">
@@ -26,17 +27,21 @@
             </section>
         </swiper-slide>
         <ProjectSliderActionButtons />
-        <ProjectSliderProgressIndicator :projects="projects" />
+        <!-- <ProjectSliderProgressIndicator :projects="projects" /> -->
     </swiper>
 </template>
 
 <script setup lang="ts">
 
-import { Swiper, SwiperSlide, useSwiper } from "swiper/vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
 
-import { Mousewheel } from "swiper";
+import { Mousewheel, Lazy } from "swiper";
 
-const modules = [Mousewheel]
+import "swiper/css";
+
+import "swiper/css/lazy";
+
+const modules = [Mousewheel, Lazy];
 
 const { getItems } = useDirectusItems();
 
