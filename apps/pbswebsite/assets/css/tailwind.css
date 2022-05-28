@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .page-enter-active {
-  animation: page-in 0.5s;
+  animation: page-in 0.75s;
 }
 .page-leave-active {
   animation: page-out 0.5s;

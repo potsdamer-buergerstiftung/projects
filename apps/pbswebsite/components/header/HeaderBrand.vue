@@ -1,7 +1,8 @@
 <template>
-    <NuxtLink to="/" class="p-2 -ml-2 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75" tabindex="1">
+    <NuxtLink to="/" class="p-2 -ml-2"
+        tabindex="1">
         <svg viewBox="0 0 515.79 99.12" class="w-52">
-            <g class="text-slate-800">
+            <g :class="{ 'text-white': route.meta.headerColor === 'white' }" class="transition">
                 <path
                     d="M2.6,125.9v10H.82V111.14H7.19c2.91,0,5.09.63,6.57,1.9A6.8,6.8,0,0,1,16,118.48a7.28,7.28,0,0,1-.6,3,6.87,6.87,0,0,1-1.74,2.36,8.14,8.14,0,0,1-2.77,1.53,11.28,11.28,0,0,1-3.67.55Zm0-1.43H7.19a8.9,8.9,0,0,0,2.94-.45,6.69,6.69,0,0,0,2.19-1.26,5.5,5.5,0,0,0,1.38-1.9,5.86,5.86,0,0,0,.49-2.38,5.52,5.52,0,0,0-1.76-4.39,7.73,7.73,0,0,0-5.24-1.54H2.6Z"
                     transform="translate(0.13 -37.05)" fill="currentColor" />
@@ -72,3 +73,7 @@
         </svg>
     </NuxtLink>
 </template>
+
+<script setup lang="ts">
+const route = useRoute()
+</script>

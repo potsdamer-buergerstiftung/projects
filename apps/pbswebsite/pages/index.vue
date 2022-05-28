@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container px-4 pt-20 mx-auto">
+        <div class="container px-4 pt-44 mx-auto">
             <h1 class="font-bold font-header text-7xl text-slate-800">Brücken bauen,<br /> Menschen verbinden</h1>
             <p class="mt-8 text-slate-800">Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung
                 ehrenamtliches
@@ -17,13 +17,13 @@
                         :image-id="project.image" :image-size="indexToColSpan(i) * 2 == 2 ? 'small' : 'large'" />
                 </div>
             </div>
-            <button
+            <NuxtLink to="/projekte"
                 class="inline-flex items-center mt-12 bg-green-100 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
                 Alle Projekte <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-            </button>
+            </NuxtLink>
         </div>
         <section>
             <div class="container mx-auto px-4 grid grid-cols-2 pb-16 pt-8">

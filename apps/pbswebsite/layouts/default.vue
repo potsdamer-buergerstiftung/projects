@@ -1,6 +1,10 @@
 <script setup>
 const route = useRoute()
 
+definePageMeta({
+    hideSideActions: false,
+})
+
 useHead({
     title: `${route.meta.title} - Potsdamer Bürgerstiftung`,
     meta: [{ name: 'og:title', content: `Potsdamer Bürgerstiftung - ${route.meta.title}` }, { name: 'description', content: 'Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung ehrenamtliches Engagement.' }],
@@ -16,9 +20,11 @@ useHead({
                 <ScrollProgressIndicator />
             </div>
         </ClientOnly>
-        <div class="sl">
-            <SocialMediaLinks size="large"/>
-        </div>
+        <Transition>
+            <div class="sl" v-if="!route.meta.hideSideActions">
+                <SocialMediaLinks size="large" />
+            </div>
+        </Transition>
         <Header />
         <slot />
         <Footer />
@@ -49,5 +55,16 @@ useHead({
     @apply align-middle;
     @apply items-center;
     @apply float-right;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: all 0.75s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    transform: rotate(-90deg) translate(40%, -100%);
+    opacity: 0;
 }
 </style>
