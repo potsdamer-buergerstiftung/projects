@@ -5,7 +5,8 @@
             <p class="mt-8 text-slate-800">Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung
                 ehrenamtliches
                 Engagement.</p>
-            <p class="pt-1 font-bold text-emerald-600">Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
+            <p class="pt-1 font-bold text-emerald-500">Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter
+                machen.
             </p>
         </div>
         <div class="container px-4 pt-20 mx-auto pb-16">
@@ -17,10 +18,33 @@
                 </div>
             </div>
             <button
-                class="mt-12 bg-green-100 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-                Alle Projekte
+                class="inline-flex items-center mt-12 bg-green-100 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                Alle Projekte <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
             </button>
         </div>
+        <section>
+            <div class="container mx-auto px-4 grid grid-cols-2 pb-16 pt-8">
+                <div>
+                    <h4 class="uppercase text-gray-600 font-semibold text-sm">Lebe deine Stadt</h4>
+                    <h1 class="font-header font-bold text-4xl mt-2">Ehrenamtlich, engagiert, miteinander</h1>
+                </div>
+                <div>
+                    <p>
+                        Alle sind eingeladen, sich mit Ideen, Zeit und Geld für eine
+                        <b>positive Entwicklung Potsdams einzubringen</b>. Wir vernetzen
+                        Gleichgesinnte, versammeln engagierte Menschen, bieten
+                        Unterstützung als Plattform für Ehrenamt und möchten es den
+                        Menschen in Potsdam leichter machen, das
+                        <b>Gemeinwohl zu stärken</b>, Gemeinschaftsgefühl zu erleben,
+                        ein <b>herzliches Miteinander</b> und eine starke Zukunft für Potsdam
+                        zu stiften.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 

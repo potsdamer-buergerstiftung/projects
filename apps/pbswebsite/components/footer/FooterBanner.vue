@@ -7,10 +7,12 @@
                     <h1 class="text-5xl font-header font-bold">Mach mit!</h1>
                 </div>
                 <div>
-                    <a
-                        href="mailto:ehrenamt@potsdamer-buergerstiftung.org"
-                        class="bg-slate-800 text-white py-3 px-5 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-                        Unserem Team schreiben
+                    <a href="mailto:ehrenamt@potsdamer-buergerstiftung.org"
+                        class="inline-flex items-center bg-slate-800 text-white py-3 px-5 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+                        Unserem Team schreiben <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
                     </a>
                 </div>
             </div>
