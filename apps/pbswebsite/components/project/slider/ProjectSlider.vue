@@ -1,7 +1,15 @@
 <template>
-    <swiper :loop="true" :preload-images="true" :speed="900" class="h-full w-full" direction="vertical"
-        :modules="modules" :lazy="{ loadOnTransitionStart: true, preloaderClass: 'lazy-preloader' } as any"
-        :mousewheel="{ sensitivity: 80 } as any">
+    <swiper :loop="true" :preload-images="true" :speed="900" class="h-full w-full bg-slate-900" direction="vertical"
+        :modules="modules"
+        :lazy="{ loadOnTransitionStart: true, preloaderClass: 'lazy-preloader', loadPrevNext: true } as any"
+        :mousewheel="{ sensitivity: 80 } as any" effect="creative" :creativeEffect="{
+            prev: {
+                translate: [0, '-100%', -400],
+            },
+            next: {
+                translate: [0, '100%', 0],
+            },
+        } as any" watchSlidesProgress>
         <swiper-slide v-for="project in projects">
             <section class="relative h-screen w-full snap-start bg-red-200">
                 <div class="absolute h-full w-full">
@@ -22,7 +30,8 @@
                             {{ project.title }}
                         </h1>
                         <ClientOnly>
-                            <div class="mt-4 text-slate-300 max-w-2xl" v-html="project.summary" v-if="project.summary" />
+                            <div class="mt-4 text-slate-300 max-w-2xl" v-html="project.summary"
+                                v-if="project.summary" />
                             <h4 v-else class="mt-4 text-lg text-slate-300">{{ project.sub_title }}</h4>
                         </ClientOnly>
                         <NuxtLink :to="`/projekte/${project.id}`"
@@ -46,9 +55,12 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-import { Mousewheel, Lazy } from "swiper";
+import { Mousewheel, Lazy, EffectCreative } from "swiper";
 
-const modules = [Mousewheel, Lazy];
+import "swiper/css";
+import "swiper/css/effect-creative";
+
+const modules = [Mousewheel, Lazy, EffectCreative];
 
 const { getItems } = useDirectusItems();
 
