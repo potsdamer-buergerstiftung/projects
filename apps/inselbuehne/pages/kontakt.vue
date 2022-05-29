@@ -1,8 +1,8 @@
 <template>
   <div>
     <section class="bg-gray-50">
-      <div class="px-4 lg:px-0 max-w-3xl pt-48 pb-24 mx-auto text-center">
-        <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">
+      <div class="mx-auto max-w-3xl px-4 pt-48 pb-24 text-center lg:px-0">
+        <h4 class="text-sm font-bold uppercase tracking-widest text-green-500">
           Kontakt
         </h4>
         <h1 class="mt-6 font-serif text-5xl md:text-6xl">
@@ -15,11 +15,11 @@
       </div>
     </section>
     <section class="bg-gray-50">
-      <div class="max-w-3xl px-4 pb-24 lg:pb-32 mx-auto text-center">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+      <div class="mx-auto max-w-3xl px-4 pb-24 text-center lg:pb-32">
+        <div class="grid grid-cols-1 gap-16 md:grid-cols-3 md:gap-8">
           <div>
             <svg
-              class="inline-block text-green-500 h-14 w-14"
+              class="inline-block h-14 w-14 text-green-500"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -33,12 +33,12 @@
                 fill="currentColor"
               ></path>
             </svg>
-            <h4 class="pt-3 font-bold tracking-widest uppercase">E-Mail</h4>
+            <h4 class="pt-3 font-bold uppercase tracking-widest">E-Mail</h4>
             <p class="text-gray-600">hallo@inselbuehne-potsdam.de</p>
           </div>
           <div>
             <svg
-              class="inline-block text-green-500 h-14 w-14"
+              class="inline-block h-14 w-14 text-green-500"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 256 256"
             >
@@ -56,12 +56,12 @@
                 <circle cx="180" cy="76" r="12" fill="currentColor" />
               </g>
             </svg>
-            <h4 class="pt-3 font-bold tracking-widest uppercase">Instagram</h4>
+            <h4 class="pt-3 font-bold uppercase tracking-widest">Instagram</h4>
             <p class="text-gray-600">@inselbuehne</p>
           </div>
           <div>
             <svg
-              class="inline-block text-green-500 h-14 w-14"
+              class="inline-block h-14 w-14 text-green-500"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -78,7 +78,7 @@
                 ></path>
               </g>
             </svg>
-            <h4 class="pt-3 font-bold tracking-widest uppercase">Telefon</h4>
+            <h4 class="pt-3 font-bold uppercase tracking-widest">Telefon</h4>
             <p class="text-gray-600">+49 331 23180309</p>
           </div>
         </div>

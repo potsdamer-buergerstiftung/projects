@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-4 py-12 mx-auto">
+  <div class="container mx-auto px-4 py-12">
     <div
       class="flex flex-col justify-between text-center md:text-left lg:flex-row lg:items-center lg:gap-4"
     >
@@ -22,7 +22,7 @@
         <a
           href="https://www.potsdamer-buergerstiftung.org"
           target="_blank"
-          class="block w-full lg:w-auto text-center lg:inline-flex mt-4 shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-300 text-teal-900 text-md font-medium transition hover:bg-green-200"
+          class="text-md mt-4 block w-full rounded-tl-lg rounded-br-lg bg-green-300 px-4 py-2.5 text-center font-medium text-teal-900 shadow-md transition hover:bg-green-200 lg:inline-flex lg:w-auto"
         >
           Mehr über uns
         </a>

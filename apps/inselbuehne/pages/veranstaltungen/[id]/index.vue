@@ -1,22 +1,22 @@
 <template>
   <section class="bg-gray-100">
-    <div class="container px-4 pt-40 pb-12 mx-auto">
+    <div class="container mx-auto px-4 pt-40 pb-12">
       <div
-        class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:shadow-xl md:bg-white"
+        class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:bg-white md:shadow-xl"
       >
         <div class="grid grid-cols-6">
           <div
-            class="relative h-64 col-span-6 overflow-hidden bg-green-500 bg-cover rounded-tl-lg rounded-br-lg md:rounded-none lg:col-span-3 lg:h-full"
+            class="relative col-span-6 h-64 overflow-hidden rounded-tl-lg rounded-br-lg bg-green-500 bg-cover md:rounded-none lg:col-span-3 lg:h-full"
           >
             <img
               :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`"
               alt="test"
-              class="absolute object-cover w-full h-full"
+              class="absolute h-full w-full object-cover"
             />
           </div>
-          <div class="col-span-6 mt-8 lg:col-span-3 lg:mt-0 lg:pt-8 md:px-8">
+          <div class="col-span-6 mt-8 md:px-8 lg:col-span-3 lg:mt-0 lg:pt-8">
             <p
-              class="text-sm font-bold tracking-widest text-green-500 uppercase"
+              class="text-sm font-bold uppercase tracking-widest text-green-500"
             >
               {{ longStart }}
             </p>
@@ -25,12 +25,12 @@
               <button
                 v-if="isShareSupported"
                 @click="startShare()"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100"
+                class="inline-flex items-center rounded-tl-lg rounded-br-lg bg-gray-50 px-3 py-2 text-sm font-medium shadow-md transition hover:bg-gray-100"
               >
                 Veranstaltung teilen
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-4 h-4 ml-1"
+                  class="ml-1 h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -46,13 +46,13 @@
               <button
                 v-if="isClipboardSupported && !isShareSupported"
                 @click="startCopy()"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium transition rounded-tl-lg rounded-br-lg shadow-md bg-gray-50 hover:bg-gray-100"
+                class="inline-flex items-center rounded-tl-lg rounded-br-lg bg-gray-50 px-3 py-2 text-sm font-medium shadow-md transition hover:bg-gray-100"
               >
                 {{ copied ? "Link kopiert" : "Veranstaltungslink kopieren" }}
                 <svg
                   v-if="!copied"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 ml-1"
+                  class="ml-1 h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -67,7 +67,7 @@
                 <svg
                   v-if="copied"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 ml-1"
+                  class="ml-1 h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -82,7 +82,7 @@
               </button>
               <button
                 v-if="registration_needed"
-                class="mt-4 w-full text-center shadow-md px-4 py-2.5 rounded-tl-lg rounded-br-lg bg-green-500 text-white text-md font-medium transition hover:bg-green-400"
+                class="text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
               >
                 Tickets
               </button>
@@ -90,25 +90,25 @@
           </div>
         </div>
         <div
-          class="grid grid-cols-3 gap-4 mt-8 lg:gap-16 md:px-8 lg:px-16 md:mt-0 md:py-16"
+          class="mt-8 grid grid-cols-3 gap-4 md:mt-0 md:px-8 md:py-16 lg:gap-16 lg:px-16"
         >
-          <div class="order-2 col-span-3 md:col-span-2 md:order-1">
+          <div class="order-2 col-span-3 md:order-1 md:col-span-2">
             <p
-              class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase"
+              class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
             >
               Beschreibung
             </p>
             <ClientOnly>
               <p
-                class="mt-4 leading-relaxed prose text-md lg:prose-lg prose-headings:font-serif prose-headings:font-normal"
+                class="text-md prose mt-4 leading-relaxed prose-headings:font-serif prose-headings:font-normal lg:prose-lg"
                 v-html="description"
               />
             </ClientOnly>
           </div>
-          <div class="order-1 col-span-3 md:col-span-1 md:order-2">
+          <div class="order-1 col-span-3 md:order-2 md:col-span-1">
             <div>
               <p
-                class="text-sm font-bold tracking-widest text-green-500 uppercase md:mt-4"
+                class="text-sm font-bold uppercase tracking-widest text-green-500 md:mt-4"
               >
                 Datum und Uhrzeit
               </p>
@@ -119,7 +119,7 @@
             </div>
             <div class="mt-8 md:mt-12 lg:mt-16">
               <p
-                class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase"
+                class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
               >
                 Veranstaltungsort
               </p>
@@ -128,7 +128,7 @@
             </div>
             <div class="mt-8 md:mt-12 lg:mt-16">
               <p
-                class="mt-4 text-sm font-bold tracking-widest text-green-500 uppercase"
+                class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
               >
                 Hinweise vom Veranstalter
               </p>

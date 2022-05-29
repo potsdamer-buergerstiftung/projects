@@ -5,7 +5,7 @@
         <div class="flex items-center">
           <NuxtLink
             to="/"
-            class="font-bold text-sm hover:text-emerald-500 transition"
+            class="text-sm font-bold transition hover:text-emerald-500"
           >
             Startseite
           </NuxtLink>
@@ -25,14 +25,14 @@
           </svg>
           <div
             v-if="index + 1 === items.length"
-            class="ml-2 text-sm cursor-default"
+            class="ml-2 cursor-default text-sm"
           >
             {{ item.text }}
           </div>
           <NuxtLink
             v-else
             :to="item.to"
-            class="ml-2 font-bold text-sm hover:text-emerald-500 transition"
+            class="ml-2 text-sm font-bold transition hover:text-emerald-500"
           >
             {{ item.text }}
           </NuxtLink>

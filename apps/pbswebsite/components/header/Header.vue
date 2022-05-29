@@ -1,6 +1,6 @@
 <template>
   <header
-    class="z-50 absolute w-full flex flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10"
+    class="absolute z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10"
   >
     <div>
       <HeaderBrand />

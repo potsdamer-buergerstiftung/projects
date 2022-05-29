@@ -6,13 +6,13 @@
       </template>
     </PageTitle>
     <section class="bg-slate-100">
-      <div class="container mx-auto px-4 grid grid-cols-4 py-20 gap-8">
+      <div class="container mx-auto grid grid-cols-4 gap-8 px-4 py-20">
         <div>
-          <h1 class="font-bold font-header text-3xl">Unsere Standorte</h1>
+          <h1 class="font-header text-3xl font-bold">Unsere Standorte</h1>
           <p class="mt-3">Komm einfach vorbei</p>
         </div>
         <div>
-          <h2 class="font-bold font-header text-xl">MAZ-Pyramide</h2>
+          <h2 class="font-header text-xl font-bold">MAZ-Pyramide</h2>
           <p class="mt-4">Friedrich-Engels-Straße 24</p>
           <p>14472 Potsdam</p>
           <p class="mt-1 font-bold">+49 331 23180300</p>
@@ -20,7 +20,7 @@
           <p>9 Uhr - 15 Uhr</p>
         </div>
         <div>
-          <h2 class="font-bold font-header text-xl">Inselbühne</h2>
+          <h2 class="font-header text-xl font-bold">Inselbühne</h2>
           <p class="mt-4">Burgstraße</p>
           <p>14467 Potsdam</p>
           <p class="mt-1 font-bold">+49 331 23180309</p>
@@ -30,22 +30,22 @@
       </div>
     </section>
     <section class="bg-slate-100">
-      <div class="container mx-auto px-4 grid grid-cols-4 py-16 gap-8">
+      <div class="container mx-auto grid grid-cols-4 gap-8 px-4 py-16">
         <div>
-          <h1 class="font-bold font-header text-3xl">Allgemeine Fragen</h1>
+          <h1 class="font-header text-3xl font-bold">Allgemeine Fragen</h1>
           <p class="mt-4">
             Füll' einfach das Formular aus oder <b>sende uns eine E-Mail</b>
           </p>
         </div>
         <div>
-          <h2 class="font-bold font-header text-xl">MAZ-Pyramide</h2>
+          <h2 class="font-header text-xl font-bold">MAZ-Pyramide</h2>
           <p class="mt-4">Friedrich-Engels-Straße 24, 14472 Potsdam</p>
           <p class="mt-1 font-bold">+49 331 23180300</p>
           <p class="mt-4">Arbeitszeiten: Montag - Freitag</p>
           <p>9 Uhr - 15 Uhr</p>
         </div>
         <div>
-          <h2 class="font-bold font-header text-xl">Inselbühne</h2>
+          <h2 class="font-header text-xl font-bold">Inselbühne</h2>
           <p class="mt-4">Burgstraße, 14467 Potsdam</p>
           <p class="mt-1 font-bold">+49 331 23180309</p>
           <p class="mt-4">Besuchszeiten: Freitag - Samstag</p>

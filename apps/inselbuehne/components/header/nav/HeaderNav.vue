@@ -1,9 +1,9 @@
 <template>
   <nav
-    class="container flex flex-row items-center justify-between w-full h-full px-4 mx-auto lg:px-0 lg:justify-center"
+    class="container mx-auto flex h-full w-full flex-row items-center justify-between px-4 lg:justify-center lg:px-0"
   >
     <div
-      class="flex-row items-center justify-end hidden w-full h-full lg:flex gap-x-3 xl:gap-x-5"
+      class="hidden h-full w-full flex-row items-center justify-end gap-x-3 lg:flex xl:gap-x-5"
     >
       <HeaderNavItem title="Veranstaltungen" link="/veranstaltungen" />
       <HeaderNavItem title="Blog" link="/blog" />
@@ -21,7 +21,7 @@
       <svg
         v-if="!headerState.isMobileMenuOpen"
         xmlns=" http://www.w3.org/2000/svg"
-        class="w-6 h-6 ml-1"
+        class="ml-1 h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -36,7 +36,7 @@
       <svg
         v-if="headerState.isMobileMenuOpen"
         xmlns=" http://www.w3.org/2000/svg"
-        class="w-6 h-6 ml-1"
+        class="ml-1 h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -50,7 +50,7 @@
       </svg>
     </button>
     <div
-      class="flex-row items-center justify-start hidden w-full h-full lg:flex gap-x-5"
+      class="hidden h-full w-full flex-row items-center justify-start gap-x-5 lg:flex"
     >
       <HeaderNavItem title="Presse" link="/presse" />
       <HeaderNavItem title="Unterstützen" link="/Unterstützen" />

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="z-50 absolute right-0 bottom-0 left-0 flex flex-row justify-between"
+    class="absolute right-0 bottom-0 left-0 z-50 flex flex-row justify-between"
   >
     <div
-      class="bg-slate-900 flex-1 px-4 text-white flex justify-center items-center"
+      class="flex flex-1 items-center justify-center bg-slate-900 px-4 text-white"
       :class="{
         'bg-opacity-100': index === activeIndex,
         'bg-opacity-20': index !== activeIndex,

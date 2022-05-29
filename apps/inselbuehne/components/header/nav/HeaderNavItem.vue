@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="link"
-    class="relative px-2 py-3 text-xl transition lg:p-2 lg:text-lg hover:text-green-500"
+    class="relative px-2 py-3 text-xl transition hover:text-green-500 lg:p-2 lg:text-lg"
     activeClass="text-green-500"
     @click="setMobileMenu()"
   >

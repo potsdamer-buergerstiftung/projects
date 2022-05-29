@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-row absolute bottom-0 right-0 z-50 gap-4 px-12 py-16">
+  <div class="absolute bottom-0 right-0 z-50 flex flex-row gap-4 px-12 py-16">
     <button
       @click="swiper.slidePrev()"
-      class="rounded-full text-white p-4 border border-emerald-500 border-opacity-0 hover:border-opacity-100 transition bg-slate-900 bg-opacity-0 hover:bg-opacity-20"
+      class="rounded-full border border-emerald-500 border-opacity-0 bg-slate-900 bg-opacity-0 p-4 text-white transition hover:border-opacity-100 hover:bg-opacity-20"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@
     </button>
     <button
       @click="swiper.slideNext()"
-      class="rounded-full text-white p-4 border border-emerald-500 border-opacity-0 hover:border-opacity-100 transition bg-slate-900 bg-opacity-0 hover:bg-opacity-20"
+      class="rounded-full border border-emerald-500 border-opacity-0 bg-slate-900 bg-opacity-0 p-4 text-white transition hover:border-opacity-100 hover:bg-opacity-20"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

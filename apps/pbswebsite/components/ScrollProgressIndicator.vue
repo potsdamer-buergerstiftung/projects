@@ -1,10 +1,10 @@
 <template>
   <button
-    class="flex flex-row items-center opacity-100 space-x-4 transition duration-500"
+    class="flex flex-row items-center space-x-4 opacity-100 transition duration-500"
     @click="scrollToTop"
     :class="{ 'opacity-0': progress < 20 }"
   >
-    <div class="w-14 h-[2px] bg-gray-200 relative rotate-180">
+    <div class="relative h-[2px] w-14 rotate-180 bg-gray-200">
       <div
         class="absolute h-full bg-slate-900"
         v-bind:style="{
@@ -12,7 +12,7 @@
         }"
       />
     </div>
-    <p class="text-sm font-bold hover:text-green-500 transition">
+    <p class="text-sm font-bold transition hover:text-green-500">
       Nach oben scrollen
     </p>
   </button>

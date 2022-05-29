@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="container px-4 pt-44 mx-auto">
-      <h1 class="font-bold font-header text-7xl text-slate-800">
+    <div class="container mx-auto px-4 pt-44">
+      <h1 class="font-header text-7xl font-bold text-slate-800">
         Brücken bauen,<br />
         Menschen verbinden
       </h1>
@@ -13,7 +13,7 @@
         Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
       </p>
     </div>
-    <div class="container px-4 pt-20 mx-auto pb-16">
+    <div class="container mx-auto px-4 pt-20 pb-16">
       <div class="grid grid-cols-6 gap-8">
         <div
           v-for="(project, i) in projects"
@@ -34,7 +34,7 @@
       </div>
       <NuxtLink
         to="/projekte"
-        class="inline-flex items-center mt-12 bg-green-100 py-1.5 px-4 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+        class="text-md mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-header font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
       >
         Alle Projekte
         <svg
@@ -54,12 +54,12 @@
       </NuxtLink>
     </div>
     <section>
-      <div class="container mx-auto px-4 grid grid-cols-2 pb-16 pt-8">
+      <div class="container mx-auto grid grid-cols-2 px-4 pb-16 pt-8">
         <div>
-          <h4 class="uppercase text-gray-600 font-semibold text-sm">
+          <h4 class="text-sm font-semibold uppercase text-gray-600">
             Lebe deine Stadt
           </h4>
-          <h1 class="font-header font-bold text-4xl mt-2">
+          <h1 class="mt-2 font-header text-4xl font-bold">
             Ehrenamtlich, engagiert, miteinander
           </h1>
         </div>

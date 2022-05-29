@@ -3,15 +3,15 @@
     <div class="container mx-auto px-4 pt-16 pb-4">
       <div class="flex flex-row items-center justify-between">
         <div>
-          <p class="uppercase text-sm mb-2 font-medium">
+          <p class="mb-2 text-sm font-medium uppercase">
             Unterstützen & engagieren
           </p>
-          <h1 class="text-5xl font-header font-bold">Mach mit!</h1>
+          <h1 class="font-header text-5xl font-bold">Mach mit!</h1>
         </div>
         <div>
           <a
             href="mailto:ehrenamt@potsdamer-buergerstiftung.org"
-            class="inline-flex items-center bg-slate-800 text-white py-3 px-5 font-header font-bold text-md rounded-md transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
+            class="text-md inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-header font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
           >
             Unserem Team schreiben
             <svg
@@ -31,9 +31,9 @@
           </a>
         </div>
       </div>
-      <hr class="mt-8 h-1 border-slate-800 w-full" />
+      <hr class="mt-8 h-1 w-full border-slate-800" />
     </div>
-    <div class="container mx-auto px-4 flex flex-row items-center">
+    <div class="container mx-auto flex flex-row items-center px-4">
       <p class="max-w-xl">
         Du hattest schon immer Lust auf Ehrenamt? Wir unterstützen dich dabei
         und zeigen dir, wie du dich bei uns und unseren Projekten engagieren

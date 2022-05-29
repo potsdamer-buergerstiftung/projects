@@ -10,7 +10,7 @@
       <li v-for="link in links">
         <NuxtLink
           to="/"
-          class="text-sm font-bold hover:text-emerald-500 transition"
+          class="text-sm font-bold transition hover:text-emerald-500"
           :class="[textColor]"
           >{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink
         >

@@ -16,8 +16,8 @@ const posts = await getItems({
 <template>
   <div>
     <section class="bg-gray-50">
-      <div class="px-4 lg:px-0 max-w-3xl pt-48 pb-24 mx-auto text-center">
-        <h4 class="text-sm font-bold tracking-widest text-green-500 uppercase">
+      <div class="mx-auto max-w-3xl px-4 pt-48 pb-24 text-center lg:px-0">
+        <h4 class="text-sm font-bold uppercase tracking-widest text-green-500">
           Veranstaltungen
         </h4>
         <h1 class="mt-6 font-serif text-5xl md:text-6xl">Bühne frei</h1>
@@ -34,7 +34,7 @@ const posts = await getItems({
     </section>
     <section class="bg-gray-50">
       <div
-        class="container flex flex-col px-4 pb-32 mx-auto space-y-10 text-center"
+        class="container mx-auto flex flex-col space-y-10 px-4 pb-32 text-center"
       >
         <EventCard
           v-for="event in posts"
