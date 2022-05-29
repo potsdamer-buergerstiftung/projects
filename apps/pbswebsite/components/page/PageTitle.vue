@@ -1,7 +1,7 @@
 <template>
     <section class="bg-white">
         <div class="container mx-auto px-4 pt-44 pb-8">
-            <h1 class="font-header text-5xl md:text-6xl lg:text-7xl font-bold">{{ title }}</h1>
+            <h1 class="font-header text-5xl font-bold md:text-6xl lg:text-7xl">{{ title }}</h1>
             <div class="mt-4" v-if="$slots.description">
                 <slot name="description" />
             </div>

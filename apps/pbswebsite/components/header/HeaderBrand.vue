@@ -1,5 +1,9 @@
 <template>
-    <NuxtLink to="/" class="-ml-2 p-2 focus:ring-2 ring-emerald-500 outline-none block" tabindex="1">
+    <NuxtLink
+        to="/"
+        class="-ml-2 block p-2 outline-none ring-emerald-500 focus:ring-2"
+        tabindex="1"
+    >
         <svg viewBox="0 0 515.79 99.12" class="w-52">
             <title>Logo der Bürgerstiftung</title>
             <g :class="{ 'text-white': route.meta.headerColor === 'white' }" class="transition">
