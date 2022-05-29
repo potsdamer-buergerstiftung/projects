@@ -1,45 +1,41 @@
 <template>
-  <div class="flex flex-row space-x-4">
-    <p class="text-sm font-bold text-emerald-500" v-if="size === 'large'">
-      Folg' uns
-    </p>
-    <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'"
-      >-</span
-    >
-    <ul class="flex flex-row space-x-4">
-      <li v-for="link in links">
-        <NuxtLink
-          to="/"
-          class="text-sm font-bold transition hover:text-emerald-500"
-          :class="[textColor]"
-          >{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink
-        >
-      </li>
-    </ul>
-  </div>
+    <div class="flex flex-row space-x-4">
+        <p class="text-sm font-bold text-emerald-500" v-if="size === 'large'">Folg' uns</p>
+        <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'">-</span>
+        <ul class="flex flex-row space-x-4">
+            <li v-for="link in links">
+                <NuxtLink
+                    to="/"
+                    class="text-sm font-bold transition hover:text-emerald-500"
+                    :class="[textColor]"
+                    >{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink
+                >
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  size: "compact" | "default" | "large";
+    size: "compact" | "default" | "large";
 }
 
 const links = [
-  {
-    text: "Facebook",
-    short: "Fb",
-    url: "https://www.facebook.com/PotsdamerBuergerstiftung/",
-  },
-  {
-    text: "Instagram",
-    short: "Ig",
-    url: "https://www.instagram.com/potsdamerbuergerstiftung/",
-  },
-  {
-    text: "YouTube",
-    short: "Yt",
-    url: "https://youtube.com",
-  },
+    {
+        text: "Facebook",
+        short: "Fb",
+        url: "https://www.facebook.com/PotsdamerBuergerstiftung/",
+    },
+    {
+        text: "Instagram",
+        short: "Ig",
+        url: "https://www.instagram.com/potsdamerbuergerstiftung/",
+    },
+    {
+        text: "YouTube",
+        short: "Yt",
+        url: "https://youtube.com",
+    },
 ];
 
 const { size = "default" } = defineProps<Props>();
@@ -47,8 +43,6 @@ const { size = "default" } = defineProps<Props>();
 const route = useRoute();
 
 const textColor = computed(() =>
-  route.meta.headerColor === "white" && size === "large"
-    ? "text-white"
-    : "text-slate-900"
+    route.meta.headerColor === "white" && size === "large" ? "text-white" : "text-slate-900"
 );
 </script>
