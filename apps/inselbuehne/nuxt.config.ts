@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     "@nuxtjs/dayjs",
     "nuxt-directus",
     "@pinia/nuxt",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
+    "@vueuse/motion/nuxt",
   ],
   css: [
     "@fontsource/dm-sans/400.css",

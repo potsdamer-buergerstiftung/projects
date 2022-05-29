@@ -10,10 +10,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md,vue}\""
   },
   "devDependencies": {
     "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
     "turbo": "^1.2.8"
   },
   "engines": {

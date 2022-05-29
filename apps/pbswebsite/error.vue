@@ -1,5 +1,5 @@
 <template>
-    <NuxtLayout name="default">
-        <Title>404</Title>
-    </NuxtLayout>
+  <NuxtLayout name="default">
+    <Title>404</Title>
+  </NuxtLayout>
 </template>

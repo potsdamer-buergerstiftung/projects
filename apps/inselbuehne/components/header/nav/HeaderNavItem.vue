@@ -1,19 +1,23 @@
 <template>
-    <NuxtLink :to="link" class="relative px-2 py-3 text-xl transition lg:p-2 lg:text-lg hover:text-green-500"
-        activeClass="text-green-500" @click="setMobileMenu()">
-        {{ title }}
-    </NuxtLink>
+  <NuxtLink
+    :to="link"
+    class="relative px-2 py-3 text-xl transition lg:p-2 lg:text-lg hover:text-green-500"
+    activeClass="text-green-500"
+    @click="setMobileMenu()"
+  >
+    {{ title }}
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import { useHeaderState } from "../state"
+import { useHeaderState } from "../state";
 
 interface Props {
-    title: string;
-    link: string;
+  title: string;
+  link: string;
 }
 
-const { title, link } = defineProps<Props>()
+const { title, link } = defineProps<Props>();
 
-const { setMobileMenu } = useHeaderState()
+const { setMobileMenu } = useHeaderState();
 </script>

@@ -2186,7 +2186,7 @@
   resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-8.5.0.tgz"
   integrity sha512-WxsD+Cd+bn+HcjpY6Dl9FJ8ywTRTT9pTwk3bCQpzEhXVYAyNczKDSahk50fCfIJKeWHhyI4B2+/ZEOxQAkUr0g==
 
-"@vueuse/motion@^2.0.0-beta.12", "@vueuse/motion@^2.0.0-beta.18":
+"@vueuse/motion@2.0.0-beta.18", "@vueuse/motion@^2.0.0-beta.18":
   version "2.0.0-beta.18"
   resolved "https://registry.npmjs.org/@vueuse/motion/-/motion-2.0.0-beta.18.tgz"
   integrity sha512-mPeXxuqZp13lqpcb+345TnEP7tEOjC/wTkwf8be1Obzt3913lPpZPXgwKafMoocKRNOnMZye8Y6PqQOEKztk9A==
@@ -8510,6 +8510,11 @@ prettier-bytes@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/prettier-bytes/-/prettier-bytes-1.0.4.tgz"
   integrity sha1-mUsCqkb2mcULYle1+qp/4lV+YtY=
+
+prettier-plugin-tailwindcss@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.11.tgz#6112da68d9d022b7f896d35c070464931c99c35f"
+  integrity sha512-a28+1jvpIZQdZ/W97wOXb6VqI762MKE/TxMMuibMEHhyYsSxQA8Ek30KObd5kJI2HF1ldtSYprFayXJXi3pz8Q==
 
 prettier@^2.5.1:
   version "2.6.2"

@@ -1,7 +1,18 @@
 <template>
-    <header class="z-50 absolute w-full flex flex-row items-center justify-between px-4 py-6 lg:px-12">
-        <HeaderBrand />
-        <HeaderNav />
-        <HeaderActions />
-    </header>
+  <header
+    class="z-50 absolute w-full flex flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10"
+  >
+    <div>
+      <HeaderBrand />
+    </div>
+    <div class="hidden lg:block">
+      <HeaderNav />
+    </div>
+    <div class="hidden md:block">
+      <HeaderActions />
+    </div>
+    <div class="block lg:hidden">
+      <HeaderMobileMenuButton />
+    </div>
+  </header>
 </template>

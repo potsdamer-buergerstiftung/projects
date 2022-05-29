@@ -1,12 +1,12 @@
 <script setup>
-import { TicketOrdering } from "@pbs/ui"
+import { TicketOrdering } from "@pbs/ui";
 
 definePageMeta({
-    layout: "empty",
-    title: "Tickets"
-})
+  layout: "empty",
+  title: "Tickets",
+});
 </script>
 
 <template>
-    <TicketOrdering />
+  <TicketOrdering />
 </template>
