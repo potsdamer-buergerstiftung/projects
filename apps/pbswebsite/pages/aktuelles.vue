@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <PageTitle title="Aktuelles">
+            <template #breadcrumb>
+                <PageTitleBreadcrumb :items="[{ text: 'Aktuelles' }]" />
+            </template>
+            <template #description>
+                <p>Hier hast du einen Überblick über die News all unserer Projekte.</p>
+            </template>
+        </PageTitle>
+        <section>
+            <div class="container mx-auto px-4 pb-20">
+                <MasonryGrid :items="posts" :ssr-columns="1" :column-width="400" :gap="16">
+                    <template #default="{ item: post, index }">
+                        <ArticleCard
+                            :title="post.title"
+                            :date="new Date(post.date)"
+                            :imageId="post.image"
+                            :project-title="post.project.title"
+                        />
+                    </template>
+                </MasonryGrid>
+            </div>
+        </section>
+    </div>
+</template>
+
+<script setup lang="ts">
+definePageMeta({
+    layout: "default",
+    title: "Blog",
+});
+
+const { getItems } = useDirectusItems();
+
+const posts = await getItems<any>({
+    collection: "posts",
+    params: {
+        fields: ["*", "project.*.title"],
+        filter: {},
+        sort: "-date",
+    },
+});
+</script>

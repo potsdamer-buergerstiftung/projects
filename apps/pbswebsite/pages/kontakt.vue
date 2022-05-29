@@ -1,6 +1,16 @@
 <template>
     <div>
-        <PageTitle>
+        <PageTitle title="Kontakt">
+            <template #description>
+                <p>Erzähl uns etwas über dich und wir melden uns anschließend bei dir.</p>
+            </template>
+            <template #actions>
+                <button
+                    class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
+                >
+                    info@potsdamer-buergerstiftung.org
+                </button>
+            </template>
             <template #breadcrumb>
                 <PageTitleBreadcrumb :items="[{ text: 'Kontakt', to: '/kontakt' }]" />
             </template>

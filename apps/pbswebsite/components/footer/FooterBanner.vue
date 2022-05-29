@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container mx-auto px-4 pt-16 pb-4">
+        <div class="container mx-auto px-4 pt-20 pb-4">
             <div class="flex flex-row items-center justify-between">
                 <div>
                     <p class="mb-2 text-sm font-medium uppercase">Unterstützen & engagieren</p>
