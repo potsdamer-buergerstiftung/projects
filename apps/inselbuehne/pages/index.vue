@@ -125,8 +125,8 @@ const { data: posts } = await useAsyncData("posts", () =>
         params: {
             filter: {
                 project: {
-                    id: "inselbuehne"
-                }
+                    id: "inselbuehne",
+                },
             },
             limit: 3,
         },

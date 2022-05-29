@@ -1,6 +1,16 @@
 <template>
-    <div class="py-32">
-        {{ project.title }}
+    <div>
+        <PageTitle :title="project.title">
+            <template #breadcrumb>
+                <PageTitleBreadcrumb
+                    :items="[{ text: 'Projekte', to: '/projekte' }, { text: project.title }]"
+                />
+            </template>
+            <template #description>
+                <p>{{ project.sub_title }}</p>
+            </template>
+        </PageTitle>
+        <Title>{{ project.title }}</Title>
     </div>
 </template>
 

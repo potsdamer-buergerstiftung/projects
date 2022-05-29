@@ -6,7 +6,7 @@ definePageMeta({
 });
 
 useHead({
-    title: `${route.meta.title} - Potsdamer Bürgerstiftung`,
+    titleTemplate: "%s - Potsdamer Bürgerstiftung",
     meta: [
         {
             name: "og:title",

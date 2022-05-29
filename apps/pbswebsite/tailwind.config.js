@@ -1,14 +1,16 @@
 module.exports = {
-  content: [],
-  theme: {
-    fontFamily: {
-      header: ["Space Grotesk", "sans-serif"],
+    content: [],
+    theme: {
+        fontFamily: {
+            header: ["Space Grotesk", "sans-serif"],
+        },
+        extend: {
+            colors: {},
+        },
     },
-    extend: {
-      colors: {
-        
-      },
-    },
-  },
-  plugins: [],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/line-clamp"),
+    ],
 };

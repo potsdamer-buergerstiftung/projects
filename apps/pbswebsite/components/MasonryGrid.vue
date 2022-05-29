@@ -1,7 +1,11 @@
 <template>
     <div ref="wall" class="masonry-wall flex gap-10">
-        <div v-for="(column, columnIndex) in columns" :key="columnIndex"
-            class="masonry-column flex flex-grow flex-col h-max gap-10 basis-0" :data-index="columnIndex">
+        <div
+            v-for="(column, columnIndex) in columns"
+            :key="columnIndex"
+            class="masonry-column flex h-max flex-grow basis-0 flex-col gap-10"
+            :data-index="columnIndex"
+        >
             <div v-for="itemIndex in column" :key="itemIndex" class="masonry-item">
                 <slot :item="items[itemIndex]" :index="itemIndex">
                     {{ items[itemIndex] }}

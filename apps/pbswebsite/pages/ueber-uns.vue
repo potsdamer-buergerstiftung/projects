@@ -6,5 +6,11 @@ definePageMeta({
 </script>
 
 <template>
-    <h1 class="py-32">Über uns</h1>
+    <div>
+        <PageTitle title="Wir sind die Bürgerstiftung">
+            <template #breadcrumb>
+                <PageTitleBreadcrumb :items="[{ text: 'Über uns' }]" />
+            </template>
+        </PageTitle>
+    </div>
 </template>
