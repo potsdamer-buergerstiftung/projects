@@ -123,7 +123,11 @@ const { data: posts } = await useAsyncData("posts", () =>
     getItems({
         collection: "posts",
         params: {
-            filter: {},
+            filter: {
+                project: {
+                    id: "inselbuehne"
+                }
+            },
             limit: 3,
         },
     })
