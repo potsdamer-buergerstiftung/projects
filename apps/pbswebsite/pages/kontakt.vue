@@ -2,7 +2,7 @@
     <div>
         <PageTitle title="Sie haben Fragen?">
             <template #description>
-                <p>Erzähl uns etwas über dich und wir melden uns anschließend bei dir.</p>
+                <p>Erzählen Sie uns kurz, worum es geht und wir melden uns bei Ihnen.</p>
             </template>
             <template #actions>
                 <button
