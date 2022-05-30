@@ -26,11 +26,13 @@ useHead({
 <template>
     <div class="antialiased">
         <ClientOnly>
-            <div class="sp">
+            <div class="origin-top-left left-[4vh] fixed top-[50%] z-50 inline-flex align-middle items-center"
+                style="transform: rotate(-90deg) translate(-50%, 0)">
                 <ScrollProgressIndicator />
             </div>
         </ClientOnly>
-        <div class="sl">
+        <div class="origin-top-right right-[4vh] fixed top-[50%] z-50 inline-flex align-middle items-center"
+            style="transform: rotate(-90deg) translate(50%, -100%)">
             <SocialMediaLinks size="large" />
         </div>
         <Header />
@@ -38,30 +40,3 @@ useHead({
         <Footer />
     </div>
 </template>
-
-<style lang="postcss">
-.sp {
-    @apply origin-top-left;
-    transform: rotate(-90deg) translate(-50%, 0);
-    @apply left-[4vh];
-    @apply fixed;
-    @apply top-[50%];
-    @apply z-50;
-    @apply inline-flex;
-    @apply align-middle;
-    @apply items-center;
-}
-
-.sl {
-    @apply origin-top-right;
-    transform: rotate(-90deg) translate(50%, -100%);
-    @apply right-10;
-    @apply fixed;
-    @apply top-[50%];
-    @apply z-50;
-    @apply inline-flex;
-    @apply align-middle;
-    @apply items-center;
-    @apply float-right;
-}
-</style>
