@@ -5,7 +5,6 @@
         >
             <HeaderMobileMenuButton variant="close" />
             <HeaderNav class="-ml-4" />
-            <HeaderActions />
             <SocialMediaLinks size="default" class="text-white" direction="vertical" />
         </div>
     </div>
