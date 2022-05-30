@@ -3,30 +3,31 @@
 @tailwind utilities;
 
 .page-enter-active {
-  animation: page-in 0.75s;
+    animation: page-in 0.75s;
 }
 .page-leave-active {
-  animation: page-out 0.5s;
+    animation: page-out 0.5s;
 }
 @keyframes page-in {
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @keyframes page-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 html {
-  @apply text-slate-800;
+    @apply text-slate-800;
+    @apply leading-relaxed;
 }
