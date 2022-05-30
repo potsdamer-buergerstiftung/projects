@@ -3,8 +3,10 @@
         <Title>{{ post.title }}</Title>
         <section class="relative">
             <div class="absolute h-full w-full">
-                <img class="h-full w-full object-cover"
-                    :src="`https://cdn.cms.potsdamer-buergerstiftung.org/${post.image}&width=1920&height=1080&quality=40`" />
+                <img
+                    class="h-full w-full object-cover"
+                    :src="`https://cdn.cms.potsdamer-buergerstiftung.org/${post.image}&width=1920&height=1080&quality=40`"
+                />
             </div>
             <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70" />
             <div class="relative mx-auto max-w-5xl px-4 pt-40">
@@ -25,8 +27,10 @@
                         <p class="font-bold text-white">Keine Kommentare</p>
                     </div>
                 </div>
-                <PageTitleBreadcrumb :items="[{ text: 'Aktuelles', to: '/aktuelles' }, { text: post.title }]"
-                    class="mt-20 pb-12 text-white" />
+                <PageTitleBreadcrumb
+                    :items="[{ text: 'Aktuelles', to: '/aktuelles' }, { text: post.title }]"
+                    class="mt-20 pb-12 text-white"
+                />
             </div>
         </section>
         <section>
