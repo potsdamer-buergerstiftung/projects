@@ -3,7 +3,7 @@
         <div class="relative aspect-[9/10] overflow-hidden">
             <img
                 class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-                :src="`https://cms.potsdamer-buergerstiftung.org/assets/${imageId}?$width=700&quality=40`"
+                :src="`https://cms.potsdamer-buergerstiftung.org/assets/${imageId}?width=700&height=700&quality=40`"
             />
             <div
                 class="absolute left-0 right-0 bottom-0 translate-y-3 bg-gradient-to-t from-slate-900 to-transparent p-6 opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
