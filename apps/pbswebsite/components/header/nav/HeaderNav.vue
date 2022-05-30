@@ -1,5 +1,5 @@
 <template>
-    <nav class="hidden lg:flex">
+    <nav class="flex flex-col lg:flex-row">
         <HeaderNavItem title="Über uns" index="1" link="/ueber-uns" />
         <HeaderNavItem title="Projekte" index="2" link="/projekte" />
         <HeaderNavItem title="Aktuelles" index="3" link="/aktuelles" />

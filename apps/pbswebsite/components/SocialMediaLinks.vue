@@ -43,6 +43,6 @@ const { size = "default" } = defineProps<Props>();
 const route = useRoute();
 
 const textColor = computed(() =>
-    route.meta.headerColor === "white" && size === "large" ? "text-white" : "text-slate-900"
+    route.meta.headerColor === "white" && size === "large" ? "text-white" : "inherit"
 );
 </script>
