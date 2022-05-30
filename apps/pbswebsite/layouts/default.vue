@@ -1,13 +1,18 @@
 <template>
     <div class="antialiased">
         <ClientOnly>
-            <div class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
-                v-if="lgAndUp" style="transform: rotate(-90deg) translate(-50%, 0)">
+            <div
+                class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
+                v-if="lgAndUp"
+                style="transform: rotate(-90deg) translate(-50%, 0)"
+            >
                 <ScrollProgressIndicator />
             </div>
         </ClientOnly>
-        <div class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
-            style="transform: rotate(-90deg) translate(50%, -100%)">
+        <div
+            class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
+            style="transform: rotate(-90deg) translate(50%, -100%)"
+        >
             <SocialMediaLinks size="large" />
         </div>
         <Header />

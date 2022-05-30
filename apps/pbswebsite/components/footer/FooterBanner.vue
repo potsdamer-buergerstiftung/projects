@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container mx-auto px-4 pt-20 pb-4">
-            <div class="flex flex-row items-center justify-between flex-wrap gap-8">
+            <div class="flex flex-row flex-wrap items-center justify-between gap-8">
                 <div>
                     <p class="mb-2 text-sm font-medium uppercase">Unterstützen & engagieren</p>
                     <h1 class="font-header text-5xl font-bold">Mach mit!</h1>

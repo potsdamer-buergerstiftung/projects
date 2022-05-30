@@ -6,7 +6,8 @@
             </template>
             <template #actions>
                 <button
-                    class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+                    class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
+                >
                     info@potsdamer-buergerstiftung.org
                 </button>
             </template>
@@ -50,38 +51,49 @@
                     <div class="grid grid-cols-3 gap-4">
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">Vorname (Erforderlich)</label>
-                            <input type="email"
+                            <input
+                                type="email"
                                 class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">Nachname (Erforderlich)</label>
-                            <input type="email"
+                            <input
+                                type="email"
                                 class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">Organisation</label>
-                            <input type="email"
+                            <input
+                                type="email"
                                 class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">E-Mail (Erforderlich)</label>
-                            <input type="email"
+                            <input
+                                type="email"
                                 class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">Telefon</label>
-                            <input type="email"
+                            <input
+                                type="email"
                                 class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3 md:col-span-1">
                             <label class="text-sm font-medium">Projektbezug</label>
                             <select
-                                class="mt-2 w-full appearance-none rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                                class="mt-2 w-full appearance-none rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            >
                                 <option value="none">Keine Angabe</option>
                                 <option v-for="project in projects" :value="project.id">
                                     {{ project.title }}
@@ -92,24 +104,30 @@
                             <label class="text-sm font-medium">Nachricht (Erforderlich)</label>
                             <textarea
                                 class="mt-2 h-40 min-h-max w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                                placeholder="Dein Name" />
+                                placeholder="Dein Name"
+                            />
                         </div>
                         <div class="col-span-3">
                             <div class="mb-6 flex items-start">
                                 <div class="flex h-5 items-center">
-                                    <input id="remember" type="checkbox"
+                                    <input
+                                        id="remember"
+                                        type="checkbox"
                                         class="focus:ring-3 h-4 w-4 rounded-sm border border-slate-300 bg-slate-100 accent-emerald-500 focus:ring-emerald-300"
-                                        required />
+                                        required
+                                    />
                                 </div>
-                                <label for="remember" class="ml-2 max-w-xl text-sm font-medium">Ich erkläre mich
-                                    einverstanden, dass die eingegebenen Daten zu
+                                <label for="remember" class="ml-2 max-w-xl text-sm font-medium"
+                                    >Ich erkläre mich einverstanden, dass die eingegebenen Daten zu
                                     Zwecken des Beantwortens meines Anliegens weiterverarbeitet
-                                    werden.</label>
+                                    werden.</label
+                                >
                             </div>
                         </div>
                         <div class="col-span-3">
                             <button
-                                class="text-md font-header inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+                                class="text-md font-header inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
+                            >
                                 Nachricht senden
                             </button>
                         </div>

@@ -2,7 +2,9 @@
     <footer class="bg-slate-100">
         <FooterBanner />
         <section>
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 pt-24 pb-16 gap-16 lg:gap-4">
+            <div
+                class="container mx-auto grid grid-cols-1 gap-16 px-4 pt-24 pb-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-4"
+            >
                 <div class="order-1">
                     <FooterBrand />
                     <div class="mt-6">
@@ -10,7 +12,7 @@
                     </div>
                 </div>
                 <div class="order-2 md:order-3 lg:order-2">
-                    <h4 class="font-header text-xl md:text-lg font-bold">Komm uns besuchen</h4>
+                    <h4 class="font-header text-xl font-bold md:text-lg">Komm uns besuchen</h4>
                     <p class="mt-6 font-bold">MAZ-Pyramide</p>
                     <p class="">Friedrich-Engels-Straße 24</p>
                     <p class="">14473, Potsdam</p>
@@ -19,7 +21,7 @@
                     <p class="">14467 Potsdam</p>
                 </div>
                 <div class="order-3 md:order-4 lg:order-3">
-                    <h4 class="font-header text-xl md:text-lg font-bold">Allgemeine Fragen</h4>
+                    <h4 class="font-header text-xl font-bold md:text-lg">Allgemeine Fragen</h4>
                     <p class="mt-6">E-Mail</p>
                     <p class="font-bold">info@potsdamer-buergerstiftung.org</p>
                     <p class="font-header mt-6 text-lg font-bold">Ehrenamt</p>
@@ -27,7 +29,9 @@
                     <p class="font-bold">ehrenamt@potsdamer-buergerstiftung.org</p>
                 </div>
                 <div class="order-4 md:order-2 lg:order-4">
-                    <h4 class="font-header text-xl md:text-lg font-bold">Für Newsletter anmelden</h4>
+                    <h4 class="font-header text-xl font-bold md:text-lg">
+                        Für Newsletter anmelden
+                    </h4>
                     <form>
                         <input
                             type="email"

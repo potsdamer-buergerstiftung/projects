@@ -3,7 +3,7 @@ const year = new Date().getFullYear();
 </script>
 
 <template>
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-between px-4 py-6">
+    <div class="container mx-auto grid grid-cols-1 justify-between gap-4 px-4 py-6 md:grid-cols-2">
         <p>© {{ year }} Potsdamer Bürgerstiftung und Mitwirkende</p>
         <ul class="flex flex-row space-x-4">
             <li>
