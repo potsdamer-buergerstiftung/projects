@@ -1,7 +1,7 @@
 <template>
     <div>
         <Title>Aktuelles</Title>
-        <PageTitle title="Was es Neues bei uns gibt">
+        <PageTitle title="Neues von uns">
             <template #breadcrumb>
                 <PageTitleBreadcrumb :items="[{ text: 'Aktuelles' }]" />
             </template>

@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-row space-x-4">
+    <div class="flex gap-4" :class="[directionClass]">
         <p class="text-sm font-bold text-emerald-500" v-if="size === 'large'">Folg' uns</p>
         <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'">-</span>
-        <ul class="flex flex-row space-x-4">
+        <ul class="flex gap-4" :class="[directionClass]">
             <li v-for="link in links">
                 <NuxtLink
                     to="/"
@@ -18,6 +18,7 @@
 <script setup lang="ts">
 interface Props {
     size: "compact" | "default" | "large";
+    direction?: "horizontal" | "vertical";
 }
 
 const links = [
@@ -38,7 +39,11 @@ const links = [
     },
 ];
 
-const { size = "default" } = defineProps<Props>();
+const { size = "default", direction = "horizontal" } = defineProps<Props>();
+
+const directionClass = computed((): string => {
+    return direction === "horizontal" ? "flex-row" : "flex-col";
+});
 
 const route = useRoute();
 

@@ -1,6 +1,8 @@
 <template>
     <header class="absolute z-40 w-full">
-        <div class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10">
+        <div
+            class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10"
+        >
             <HeaderBrand />
             <HeaderNav class="hidden lg:flex" />
             <div class="flex flex-row items-center gap-4">
