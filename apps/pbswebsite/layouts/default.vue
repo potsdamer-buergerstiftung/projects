@@ -26,13 +26,17 @@ useHead({
 <template>
     <div class="antialiased">
         <ClientOnly>
-            <div class="origin-top-left left-[4vh] fixed top-[50%] z-50 inline-flex align-middle items-center"
-                style="transform: rotate(-90deg) translate(-50%, 0)">
+            <div
+                class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
+                style="transform: rotate(-90deg) translate(-50%, 0)"
+            >
                 <ScrollProgressIndicator />
             </div>
         </ClientOnly>
-        <div class="origin-top-right right-[4vh] fixed top-[50%] z-50 inline-flex align-middle items-center"
-            style="transform: rotate(-90deg) translate(50%, -100%)">
+        <div
+            class="fixed right-[4vh] top-[50%] z-50 inline-flex origin-top-right items-center align-middle"
+            style="transform: rotate(-90deg) translate(50%, -100%)"
+        >
             <SocialMediaLinks size="large" />
         </div>
         <Header />
