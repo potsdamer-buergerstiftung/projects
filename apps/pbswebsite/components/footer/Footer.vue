@@ -27,7 +27,22 @@
                     <p class="font-bold">ehrenamt@potsdamer-buergerstiftung.org</p>
                 </div>
                 <div>
-                    <h4 class="font-header text-lg font-bold">Unser Newsletter</h4>
+                    <h4 class="font-header text-lg font-bold">Für Newsletter anmelden</h4>
+                    <form>
+                        <input type="email"
+                            class="mt-6 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                            placeholder="Deine E-Mail" />
+                        <div class="mt-6 flex items-start">
+                            <div class="flex h-5 items-center">
+                                <input id="accept-newsletter" type="checkbox"
+                                    class="focus:ring-3 h-4 w-4 rounded-sm border border-slate-300 bg-slate-100 focus:ring-emerald-300 accent-emerald-500"
+                                    required />
+                            </div>
+                            <label for="accept-newsletter" class="ml-2 max-w-xl text-sm font-medium">Ich
+                                erkläre mich einverstanden, dass die eingegebenen Daten für den Versand des Newsletters
+                                weiterverarbeitet werden.</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
