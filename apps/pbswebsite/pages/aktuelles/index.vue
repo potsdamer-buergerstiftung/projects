@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Title>Aktuelles</Title>
         <PageTitle title="Was es Neues bei uns gibt">
             <template #breadcrumb>
                 <PageTitleBreadcrumb :items="[{ text: 'Aktuelles' }]" />
@@ -30,7 +31,6 @@
 <script setup lang="ts">
 definePageMeta({
     layout: "default",
-    title: "Blog",
 });
 
 const { getItems } = useDirectusItems();

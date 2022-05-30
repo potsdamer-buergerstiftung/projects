@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Title>{{ post.title }}</Title>
         <section class="relative">
             <div class="absolute h-full w-full">
                 <img

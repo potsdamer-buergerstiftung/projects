@@ -1,15 +1,15 @@
 <script setup>
 definePageMeta({
     layout: "default",
-    title: "Über uns",
 });
 </script>
 
 <template>
     <div>
+        <Title>Die Stiftung</Title>
         <PageTitle title="Wir sind die Bürgerstiftung">
             <template #breadcrumb>
-                <PageTitleBreadcrumb :items="[{ text: 'Über uns' }]" />
+                <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung' }]" />
             </template>
         </PageTitle>
     </div>

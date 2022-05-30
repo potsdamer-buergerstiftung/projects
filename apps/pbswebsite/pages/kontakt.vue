@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Title>Kontakt</Title>
         <PageTitle title="Sie haben Fragen?">
             <template #description>
                 <p>Erzählen Sie uns kurz, worum es geht und wir melden uns bei Ihnen.</p>
@@ -139,10 +140,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    title: "Kontakt",
-});
-
 const { getItems } = useDirectusItems();
 
 const projects = await getItems<any>({

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Title>Projekte</Title>
         <div class="relative h-screen w-full">
             <ProjectSlider />
         </div>
@@ -8,7 +9,6 @@
 
 <script setup lang="ts">
 definePageMeta({
-    title: "Projekte",
     headerColor: "white",
     hideSideActions: true,
 });

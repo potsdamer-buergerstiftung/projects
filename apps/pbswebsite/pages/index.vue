@@ -14,7 +14,7 @@
                 Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
             </p>
         </div>
-        <div class="container mx-auto px-4 pt-16 md:pt-20 pb-16">
+        <div class="container mx-auto px-4 pt-16 pb-16 md:pt-20">
             <div class="grid grid-cols-6 gap-8">
                 <div
                     v-for="(project, i) in projects"

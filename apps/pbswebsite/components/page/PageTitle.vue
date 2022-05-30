@@ -1,6 +1,6 @@
 <template>
     <section class="bg-white">
-        <div class="container mx-auto px-4 pt-36 md:pt-44 pb-8">
+        <div class="container mx-auto px-4 pt-36 pb-8 md:pt-44">
             <h1 class="font-header text-5xl font-bold md:text-6xl lg:text-7xl">{{ title }}</h1>
             <div class="mt-4" v-if="$slots.description">
                 <slot name="description" />
