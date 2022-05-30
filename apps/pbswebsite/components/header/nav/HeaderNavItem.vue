@@ -1,3 +1,18 @@
+<template>
+    <NuxtLink @click="headerState.setMobileMenu()" :to="link"
+        class="group flex flex-row justify-start px-4 py-4 lg:py-2 lg:flex-col gap-2 lg:gap-0">
+        <span class="text-xs font-bold leading-4 transition group-hover:text-emerald-500" :class="{
+            'text-slate-500': route.meta.headerColor !== 'white',
+            'text-slate-300': route.meta.headerColor === 'white',
+        }">{{ addZero(index) }}</span>
+        <span
+            class="lg:text-[1rem] lg:leading-6 font-bold lg:font-medium text-4xl text-white transition group-hover:text-emerald-500"
+            :class="{ 'lg:text-white': route.meta.headerColor === 'white', 'lg:text-slate-900': route.meta.headerColor !== 'white' }">{{
+                    title
+            }}</span>
+    </NuxtLink>
+</template>
+
 <script setup lang="ts">
 interface Props {
     index: string;
@@ -14,16 +29,5 @@ function addZero(index: string): string {
 }
 
 const route = useRoute();
+const headerState = useHeaderState()
 </script>
-
-<template>
-    <NuxtLink :to="link" class="group flex flex-row justify-start px-4 py-4 lg:py-2 lg:flex-col gap-2 lg:gap-0">
-        <span class="text-xs font-bold leading-4 transition group-hover:text-emerald-500" :class="{
-            'text-slate-500': route.meta.headerColor !== 'white',
-            'text-slate-300': route.meta.headerColor === 'white',
-        }">{{ addZero(index) }}</span>
-        <span
-            class="lg:text-[1rem] lg:leading-6 font-bold lg:font-medium text-4xl text-white transition group-hover:text-emerald-500 lg:text-slate-900"
-            :class="{ 'text-white': route.meta.headerColor === 'white' }">{{ title }}</span>
-    </NuxtLink>
-</template>
