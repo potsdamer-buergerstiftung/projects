@@ -15,7 +15,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div v-for="post in posts">
                         <ArticleCard :title="post.title" :image-id="post.image" :date="new Date(post.date)"
-                            :post-id="post.id" />
+                            :post-id="post.id.toString()" />
                     </div>
                 </div>
                 <NuxtLink to="/projekte"

@@ -16,7 +16,7 @@
                 <PageTitleBreadcrumb :items="[{ text: 'Kontakt', to: '/kontakt' }]" />
             </template>
         </PageTitle>
-        <section class="bg-slate-100">
+        <section class="bg-white">
             <div class="container mx-auto grid grid-cols-4 gap-8 px-4 py-20">
                 <div class="col-span-4 lg:col-span-1">
                     <h1 class="font-header text-3xl font-bold">Unsere Standorte</h1>
@@ -25,7 +25,7 @@
                 <div class="col-span-4 md:col-span-2 lg:col-span-1">
                     <h2 class="font-header text-xl font-bold">MAZ-Pyramide</h2>
                     <p class="mt-4">Friedrich-Engels-Straße 24</p>
-                    <p>14472 Potsdam</p>
+                    <p>14473 Potsdam</p>
                     <p class="mt-1 font-bold">+49 331 23180300</p>
                     <p class="mt-4">Arbeitszeiten: Montag - Freitag</p>
                     <p>9 Uhr - 15 Uhr</p>
@@ -38,10 +38,17 @@
                     <p class="mt-4">Besuchszeiten: Freitag - Samstag</p>
                     <p>18 Uhr - 20 Uhr</p>
                 </div>
+                <div class="col-span-4 md:col-span-2 lg:col-span-1">
+                    <h2 class="font-header text-xl font-bold">Staudenhof</h2>
+                    <p class="mt-4">Am Alten Markt 10</p>
+                    <p>14467 Potsdam</p>
+                    <p class="mt-4">Öffnungszeiten: Freitag - Samstag</p>
+                    <p>18 Uhr - 23 Uhr</p>
+                </div>
             </div>
         </section>
         <section class="bg-slate-100">
-            <div class="container mx-auto grid grid-cols-4 gap-8 px-4 pb-16">
+            <div class="container mx-auto grid grid-cols-4 gap-8 px-4 py-16">
                 <div class="col-span-4 lg:col-span-1">
                     <h1 class="font-header text-3xl font-bold">Allgemeine Fragen</h1>
                     <p class="mt-4">
