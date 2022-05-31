@@ -4,8 +4,12 @@
         <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'">-</span>
         <ul class="flex gap-4" :class="[directionClass]">
             <li v-for="link in links">
-                <NuxtLink :to="link.url" class="text-sm font-bold transition hover:text-emerald-500"
-                    :class="[textColor]">{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink>
+                <NuxtLink
+                    :to="link.url"
+                    class="text-sm font-bold transition hover:text-emerald-500"
+                    :class="[textColor]"
+                    >{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink
+                >
             </li>
         </ul>
     </div>

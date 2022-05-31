@@ -3,7 +3,9 @@
         <Title>{{ project.title }}</Title>
         <PageTitle :title="project.title">
             <template #breadcrumb>
-                <PageTitleBreadcrumb :items="[{ text: 'Projekte', to: '/projekte' }, { text: project.title }]" />
+                <PageTitleBreadcrumb
+                    :items="[{ text: 'Projekte', to: '/projekte' }, { text: project.title }]"
+                />
             </template>
             <template #description>
                 <p>{{ project.sub_title }}</p>
@@ -11,19 +13,35 @@
         </PageTitle>
         <section class="bg-white">
             <div class="container mx-auto px-4 pt-8 pb-16">
-                <h1 class="font-header font-bold text-5xl mb-12">Aktuelles zum Projekt</h1>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <h1 class="font-header mb-12 text-5xl font-bold">Aktuelles zum Projekt</h1>
+                <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
                     <div v-for="post in posts">
-                        <ArticleCard :title="post.title" :image-id="post.image" :date="new Date(post.date)"
-                            :post-id="post.id.toString()" />
+                        <ArticleCard
+                            :title="post.title"
+                            :image-id="post.image"
+                            :date="new Date(post.date)"
+                            :post-id="post.id.toString()"
+                        />
                     </div>
                 </div>
-                <NuxtLink to="/projekte"
-                    class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+                <NuxtLink
+                    to="/projekte"
+                    class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+                >
                     Alle Beiträge des Projektes
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ml-1 h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
                     </svg>
                 </NuxtLink>
             </div>

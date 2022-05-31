@@ -7,10 +7,14 @@ const year = new Date().getFullYear();
         <p>© {{ year }} Potsdamer Bürgerstiftung - By Nöl & Lotte</p>
         <ul class="flex flex-row justify-start space-x-4 md:justify-end">
             <li>
-                <NuxtLink to="/impressum" class="text-navy-900 transition hover:text-green-500">Impressum</NuxtLink>
+                <NuxtLink to="/impressum" class="text-navy-900 transition hover:text-green-500"
+                    >Impressum</NuxtLink
+                >
             </li>
             <li>
-                <NuxtLink to="/datenschutz" class="text-navy-900 transition hover:text-green-500">Datenschutz</NuxtLink>
+                <NuxtLink to="/datenschutz" class="text-navy-900 transition hover:text-green-500"
+                    >Datenschutz</NuxtLink
+                >
             </li>
         </ul>
     </div>
