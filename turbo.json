@@ -1,4 +1,5 @@
 {
+    "$schema": "https://turborepo.org/schema.json",
     "pipeline": {
         "build": {
             "dependsOn": ["^build"],
@@ -26,5 +27,7 @@
         "dev": {
             "cache": false
         }
-    }
+    },
+    "baseBranch": "origin/main",
+    "globalDependencies": ["tsconfig.json"]
 }
