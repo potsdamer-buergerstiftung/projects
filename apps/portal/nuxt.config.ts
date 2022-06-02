@@ -10,12 +10,12 @@ export default defineNuxtConfig({
         },
     },
     modules: [
+        "@pbs/nuxtui",
         "@nuxtjs/tailwindcss",
         "@vueuse/motion/nuxt",
         "nuxt-directus",
         "@pinia/nuxt",
         "@vueuse/nuxt",
-        "@pbs/nuxtui",
     ],
     css: ["@fontsource/space-grotesk/700.css", "@fontsource/space-grotesk/400.css"],
     experimental: {
