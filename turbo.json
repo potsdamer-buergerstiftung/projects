@@ -4,6 +4,22 @@
             "dependsOn": ["^build"],
             "outputs": ["dist/**", ".next/**", ".output/**"]
         },
+        "pbswebsite#build": {
+            "dependsOn": ["^build"],
+            "outputs": [".output/**"]
+        },
+        "inselbuehne#build": {
+            "dependsOn": ["^build"],
+            "outputs": [".output/**"]
+        },
+        "portal#build": {
+            "dependsOn": ["^build"],
+            "outputs": [".output/**"]
+        },
+        "links#build": {
+            "dependsOn": ["^build"],
+            "outputs": [".output/**"]
+        },
         "lint": {
             "outputs": []
         },
