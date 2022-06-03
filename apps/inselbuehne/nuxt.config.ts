@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         "@pinia/nuxt",
         "@vueuse/nuxt",
         "@vueuse/motion/nuxt",
+        "nuxtui",
     ],
     css: [
         "@fontsource/dm-sans/400.css",

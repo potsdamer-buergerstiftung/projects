@@ -1,9 +1,10 @@
 import { defineNuxtConfig } from "nuxt";
-import PPBSUI from "../src/module";
+import Ui from "../src/module";
 
 export default defineNuxtConfig({
-    modules: [PPBSUI],
-    PBSUI: {
+    modules: [Ui],
+    ui: {
         addPlugin: true,
+        addComponents: true,
     },
 });

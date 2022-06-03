@@ -9,8 +9,8 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
     meta: {
-        name: "@pbs/nuxtui",
-        configKey: "PBSUI",
+        name: "nuxtui",
+        configKey: "ui",
     },
     defaults: {
         addPlugin: true,
