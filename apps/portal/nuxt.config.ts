@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-        "@pbs/nuxtui",
+        "nuxtui",
         "@nuxtjs/tailwindcss",
         "@vueuse/motion/nuxt",
         "nuxt-directus",

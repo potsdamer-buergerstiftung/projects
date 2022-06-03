@@ -26,6 +26,6 @@
         "nuxt-directus": "^2.0.1",
         "pinia": "^2.0.14",
         "swiper": "^8.1.6",
-        "@pbs/nuxtui": "*"
+        "nuxtui": "*"
     }
 }

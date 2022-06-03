@@ -21,7 +21,7 @@
         "@fontsource/dm-sans": "^4.5.7",
         "@fontsource/dm-serif-display": "^4.5.7",
         "@nuxtjs/dayjs": "^1.4.1",
-        "@pbs/nuxtui": "*",
+        "nuxtui": "*",
         "@pinia/nuxt": "^0.1.9",
         "@vueuse/motion": "^2.0.0-beta.18",
         "dayjs": "^1.11.2",

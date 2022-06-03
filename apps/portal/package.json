@@ -17,7 +17,7 @@
         "@vueuse/core": "^8.5.0",
         "@vueuse/nuxt": "^8.5.0",
         "nuxt": "3.0.0-rc.3",
-        "@pbs/nuxtui": "*"
+        "nuxtui": "*"
     },
     "dependencies": {
         "@fontsource/space-grotesk": "^4.5.8",
