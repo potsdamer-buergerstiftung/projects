@@ -17,7 +17,7 @@
             </template>
         </PageTitle>
         <section class="bg-white">
-            <div class="container mx-auto grid grid-cols-4 gap-8 px-4 py-20">
+            <div class="container mx-auto grid grid-cols-4 gap-8 px-4 pb-20 pt-8">
                 <div class="col-span-4 lg:col-span-1">
                     <h1 class="font-header text-3xl font-bold">Unsere Standorte</h1>
                     <p class="mt-3">Komm einfach vorbei</p>
