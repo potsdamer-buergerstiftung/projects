@@ -7,7 +7,7 @@
                 <div class="col-span-6 lg:col-span-3">
                     <h1 class="font-serif text-3xl text-white">Inselbühne Potsdam</h1>
                     <p class="mt-2 text-gray-300">Burgstraße, 14471 Potsdam</p>
-                    <PbsLogo class="w-40 text-white mt-6"/>
+                    <PbsLogo class="mt-6 w-40 text-white" />
                 </div>
                 <div class="col-span-6 md:col-span-2 lg:col-span-1">
                     <h4 class="text-sm font-bold uppercase tracking-widest text-white">

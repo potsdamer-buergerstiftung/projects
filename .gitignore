@@ -13,6 +13,13 @@ coverage
 out/
 build
 
+# nuxt.js
+.nuxt/
+.output/
+
+# nitro.js
+.nitro/
+
 # misc
 .DS_Store
 *.pem
@@ -24,7 +31,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env
 .env.local
 .env.development.local
 .env.test.local
@@ -32,6 +38,3 @@ yarn-error.log*
 
 # turbo
 .turbo
-.vercel
-.output
-.nitro

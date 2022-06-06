@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     modules: [
         "@nuxtjs/tailwindcss",
         "@vueuse/motion/nuxt",
-        "@nuxtjs/dayjs",
         "nuxt-directus",
         "@pinia/nuxt",
         "@vueuse/nuxt",

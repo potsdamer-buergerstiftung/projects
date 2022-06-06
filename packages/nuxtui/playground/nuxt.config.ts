@@ -1,10 +1,11 @@
-import { defineNuxtConfig } from "nuxt";
-import Ui from "../src/module";
+import { defineNuxtConfig } from 'nuxt'
+import MyModule from '..'
 
 export default defineNuxtConfig({
-    modules: [Ui],
-    ui: {
-        addPlugin: true,
-        addComponents: true,
-    },
-});
+  modules: [
+    MyModule
+  ],
+  myModule: {
+    addPlugin: true
+  }
+})

@@ -1,8 +1,4 @@
 {
-    "compilerOptions": {
-        "jsx": "preserve",
-        "types": ["@nuxt/image", "@pinia/nuxt"]
-    },
-    // https://v3.nuxtjs.org/concepts/typescript
-    "extends": "./.nuxt/tsconfig.json"
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }
