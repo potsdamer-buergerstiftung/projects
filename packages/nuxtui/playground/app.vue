@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-20">
     Nuxt module playground!
   </div>
 </template>

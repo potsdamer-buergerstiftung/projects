@@ -10,16 +10,11 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    "@nuxtjs/tailwindcss",
     "@vueuse/motion/nuxt",
     "nuxt-directus",
     "@pinia/nuxt",
     "@vueuse/nuxt",
     "nuxtui",
-  ],
-  css: [
-    "@fontsource/space-grotesk/700.css",
-    "@fontsource/space-grotesk/400.css",
   ],
   experimental: {
     reactivityTransform: true,

@@ -10,7 +10,6 @@ export default defineNuxtConfig({
         },
     },
     modules: [
-        "@nuxtjs/tailwindcss",
         "@vueuse/motion/nuxt",
         "nuxt-directus",
         "@pinia/nuxt",
@@ -18,6 +17,9 @@ export default defineNuxtConfig({
         "@vueuse/motion/nuxt",
         "nuxtui",
     ],
+    ui: {
+        addFonts: false,
+    },
     css: [
         "@fontsource/dm-sans/400.css",
         "@fontsource/dm-sans/500.css",
