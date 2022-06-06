@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "nitropack": "0.4.4"
+  },
+  "dependencies": {
+    "@directus/sdk": "^9.12.1"
   }
 }
