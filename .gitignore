@@ -16,6 +16,7 @@ build
 # nuxt.js
 .nuxt/
 .output/
+dist/
 
 # nitro.js
 .nitro/
