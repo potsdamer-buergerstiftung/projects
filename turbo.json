@@ -3,27 +3,31 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", ".output/**"],
-      "cache": false
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        ".output/**",
+        ".vercel_build_output/**"
+      ]
     },
     "nuxtui#build": {
       "outputs": ["dist/**"]
     },
     "pbswebsite#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel_build_output/**"]
     },
     "inselbuehne#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel_build_output/**"]
     },
     "portal#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel_build_output/**"]
     },
     "links#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel_build_output/**"]
     },
     "lint": {
       "outputs": []
