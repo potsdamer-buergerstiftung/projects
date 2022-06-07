@@ -3,7 +3,8 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**", ".output/**"]
+      "outputs": ["dist/**", ".next/**", ".output/**"],
+      "cache": false
     },
     "nuxtui#build": {
       "outputs": ["dist/**"]
