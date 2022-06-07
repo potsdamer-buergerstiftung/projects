@@ -1,6 +1,6 @@
 <template>
-    <NuxtLink :to="`/veranstaltungen/${eventId}`"
-        class="grid min-h-max w-full cursor-pointer grid-cols-5 overflow-hidden rounded-tl-2xl rounded-br-2xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl lg:h-56">
+    <NuxtLink :to="`/veranstaltungen/${eventId}`" :class="[canceled ? 'bg-red-50' : 'bg-white']"
+        class="grid min-h-max w-full cursor-pointer grid-cols-5 overflow-hidden rounded-tl-2xl rounded-br-2xl shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl lg:h-56">
         <div class="relative col-span-5 h-64 w-full lg:col-span-2 lg:h-full">
             <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?width=1000&height=600&quality=40`"
                 alt="test" class="absolute h-full w-full object-cover" />
@@ -18,6 +18,7 @@
         <div
             class="col-span-5 flex flex-col items-start justify-between p-6 md:p-8 lg:col-span-3 lg:flex-row lg:items-center lg:space-x-10 lg:p-10">
             <div class="text-left">
+                <p v-if="canceled" class="mb-2 text-sm font-bold uppercase tracking-widest text-red-500">Abgesagt</p>
                 <h1 class="line-clamp-4 lg:line-clamp-2 font-serif text-2xl leading-tight md:text-3xl">
                     {{ title }}
                 </h1>
@@ -43,6 +44,7 @@ const {
     summary,
     image,
     registration_needed = false,
+    canceled = false,
 } = defineProps<{
     eventId: string;
     title: string;
@@ -51,5 +53,6 @@ const {
     image: string;
     registration_needed?: boolean;
     external_ticket_url?: string;
+    canceled?: boolean;
 }>();
 </script>
