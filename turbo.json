@@ -11,7 +11,7 @@
       ]
     },
     "nuxtui#build": {
-      "outputs": ["dist/**"],
+      "outputs": ["dist/**", "playground/.nuxt/**"],
       "inputs": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.vue"]
     },
     "pbswebsite#build": {
