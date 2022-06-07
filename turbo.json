@@ -1,32 +1,35 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
-      "build": {
-          "dependsOn": ["^build"],
-          "outputs": ["dist/**", ".next/**", ".output/**"]
-      },
-      "pbswebsite#build": {
-          "dependsOn": ["^build"],
-          "outputs": [".output/**"]
-      },
-      "inselbuehne#build": {
-          "dependsOn": ["^build"],
-          "outputs": [".output/**"]
-      },
-      "portal#build": {
-          "dependsOn": ["^build"],
-          "outputs": [".output/**"]
-      },
-      "links#build": {
-          "dependsOn": ["^build"],
-          "outputs": [".output/**"]
-      },
-      "lint": {
-          "outputs": []
-      },
-      "dev": {
-          "cache": false
-      }
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", ".output/**"]
+    },
+    "nuxtui#build": {
+      "outputs": ["dist/**"]
+    },
+    "pbswebsite#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".output/**"]
+    },
+    "inselbuehne#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".output/**"]
+    },
+    "portal#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".output/**"]
+    },
+    "links#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".output/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
   },
   "baseBranch": "origin/main",
   "globalDependencies": ["tsconfig.json"]
