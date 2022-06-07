@@ -76,12 +76,14 @@
                                     />
                                 </svg>
                             </button>
-                            <button
+                            <NuxtLink
                                 v-if="registration_needed"
-                                class="text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
+                                :to="external_ticket_url"
+                                target="_blank"
+                                class="block text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
                             >
                                 Tickets
-                            </button>
+                            </NuxtLink>
                         </ClientOnly>
                     </div>
                 </div>
@@ -167,7 +169,7 @@ const timeEnd = new Date(props.end).toLocaleTimeString("de", {
     minute: "2-digit",
 });
 
-const { name, description, image, registration_needed, summary } = props;
+const { name, description, image, registration_needed, summary, external_ticket_url } = props;
 
 const { share, isSupported: isShareSupported } = useShare();
 
