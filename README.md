@@ -11,9 +11,10 @@ internally, all of the tools can be built just as we use them, directly from HEA
 ## Projects include:
 
 - [inselbuehne](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/inselbuehne):
-  A Nuxt 3 app used as a website for our open stage project
+  A Nuxt 3 app used as website for our open stage project
 - [pbswebsite](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/pbswebsite): A Nuxt 3 app used as our main public website
 - [cms](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/cms): A custom directus instance used internally for content management
+- [links](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/links): A node link shortener that works well with our CMS to generate QR-Codes as well as shortened links
 - [nuxtui](https://github.com/potsdamer-buergerstiftung/projects/tree/main/packages/nuxtui):
   A Nuxt 3 and Vue UI-Library with Tailwind used in our Nuxt projects
 - and others.
