@@ -1,17 +1,21 @@
-import { resolve } from "path";
 import { fileURLToPath } from "url";
 import {
   defineNuxtModule,
   addPlugin,
   addComponentsDir,
+  addAutoImportDir,
   installModule,
+  createResolver,
 } from "@nuxt/kit";
+
+const { resolve } = createResolver(import.meta.url);
 
 export interface ModuleOptions {
   /* addPlugin: boolean; */
   addComponents: boolean;
   addTailwind: boolean;
   addFonts: boolean;
+  addComposables: boolean;
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -24,13 +28,12 @@ export default defineNuxtModule<ModuleOptions>({
     addComponents: true,
     addTailwind: true,
     addFonts: true,
+    addComposables: true,
   },
   setup(options, nuxt) {
     if (options.addTailwind) {
-      const componentsDir = fileURLToPath(
-        new URL("./components", import.meta.url)
-      );
-      const tailwindDir = fileURLToPath(new URL("./tailwind", import.meta.url));
+      const componentsDir = resolve("./components");
+      const tailwindDir = resolve("./tailwind");
       installModule("@nuxtjs/tailwindcss", {
         viewer: false,
         config: {
@@ -64,12 +67,16 @@ export default defineNuxtModule<ModuleOptions>({
       addPlugin(resolve(runtimeDir, "plugin"));
     } */
 
+    /* if (options.addComposables) {
+      const composablesDir = resolve("./composables");
+      nuxt.options.build.transpile.push(composablesDir);
+      addAutoImportDir(composablesDir);
+    } */
+
     if (options.addComponents) {
-      const componentsDir = fileURLToPath(
-        new URL("./components", import.meta.url)
-      );
+      const componentsDir = resolve("./components");
       nuxt.options.build.transpile.push(componentsDir);
-      addComponentsDir({ watch: true, path: componentsDir, prefix: "pbs" });
+      addComponentsDir({ prefix: "pbs", watch: true, path: componentsDir });
     }
   },
 });
