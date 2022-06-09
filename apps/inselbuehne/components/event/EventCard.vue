@@ -4,8 +4,8 @@
         <div class="relative col-span-5 h-64 w-full lg:col-span-2 lg:h-full">
             <img :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?width=1000&height=600&quality=40`"
                 alt="test" class="absolute h-full w-full object-cover" />
-            <div
-                class="absolute left-6 top-1/2 -translate-y-1/2 rounded-tl-lg rounded-br-lg bg-white p-4 shadow-md md:left-8 lg:left-auto lg:right-6">
+            <div class="absolute left-6 top-1/2 -translate-y-1/2 rounded-tl-lg rounded-br-lg bg-white p-4 shadow-md md:left-8 lg:left-auto lg:right-6"
+                :class="[canceled ? 'bg-red-100' : 'bg-white']">
                 <p>
                     {{ new Date(start).toLocaleDateString("de", { month: "short" }) }}
                 </p>
