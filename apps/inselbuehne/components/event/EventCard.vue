@@ -22,7 +22,7 @@
                 <h1 class="line-clamp-4 lg:line-clamp-2 font-serif text-2xl leading-tight md:text-3xl">
                     {{ title }}
                 </h1>
-                <p class="text-md line-clamp-6 lg:line-clamp-3 mt-4 leading-relaxed">
+                <p class="text-md line-clamp-6 lg:line-clamp-2 mt-4 leading-relaxed">
                     {{ summary }}
                 </p>
             </div>
