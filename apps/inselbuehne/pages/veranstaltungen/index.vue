@@ -5,7 +5,7 @@ definePageMeta({
 
 const { getItems } = useDirectusItems();
 
-const posts = await getItems({
+const events = await getItems({
     collection: "events",
     params: {
         filter: {
@@ -50,7 +50,7 @@ const posts = await getItems({
         </section>
         <section class="bg-gray-50">
             <div class="container mx-auto flex flex-col space-y-10 px-4 pb-32 text-center">
-                <EventCard v-for="event in posts" :title="event.name" :eventId="event.id.toString()"
+                <EventCard v-for="event in events" :title="event.name" :eventId="event.id.toString()" :key="event.id"
                     :summary="event.summary" :start="event.start" :image="event.image"
                     :registration_needed="event.registration_needed" :external_ticket_url="event.external_ticket_url"
                     :canceled="event.status === 'canceled'" />
