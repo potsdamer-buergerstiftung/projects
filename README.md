@@ -16,7 +16,7 @@ internally, all of the tools can be built just as we use them, directly from HEA
 - [cms](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/cms): A custom directus instance used internally for content management
 - [links](https://github.com/potsdamer-buergerstiftung/projects/tree/main/apps/links): A node link shortener that works well with our CMS to generate QR-Codes as well as shortened links
 - [nuxtui](https://github.com/potsdamer-buergerstiftung/projects/tree/main/packages/nuxtui):
-  A Nuxt 3 and Vue UI-Library with Tailwind used in our Nuxt projects
+  A Nuxt 3 module with shared Tailwind configuration and components
 - and others.
 
 ## Requirements

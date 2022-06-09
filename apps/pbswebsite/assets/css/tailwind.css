@@ -26,8 +26,3 @@
         opacity: 0;
     }
 }
-
-html {
-    @apply text-slate-800;
-    @apply leading-relaxed;
-}
