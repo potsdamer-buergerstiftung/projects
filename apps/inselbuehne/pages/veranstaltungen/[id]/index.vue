@@ -111,7 +111,7 @@
                             <p class="mt-4">
                                 {{ longStart }}
                             </p>
-                            <p>{{ timeStart }} - {{ timeEnd }}</p>
+                            <p>{{ timeStart }}</p>
                         </div>
                         <div class="mt-8 md:mt-12 lg:mt-16">
                             <p
