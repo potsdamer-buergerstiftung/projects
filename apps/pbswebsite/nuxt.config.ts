@@ -22,4 +22,7 @@ export default defineNuxtConfig({
   directus: {
     url: "https://cms.potsdamer-buergerstiftung.org",
   },
+  runtimeConfig: {
+    directusAccessToken: "",
+  },
 });

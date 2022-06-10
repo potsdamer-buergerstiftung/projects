@@ -1,8 +1,5 @@
 <template>
-  <div class="mt-20">
-    Nuxt module playground!
-  </div>
+  <div class="mt-20">Nuxt module playground!</div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>

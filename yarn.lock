@@ -288,10 +288,28 @@
     "@directus/shared" "9.12.1"
     axios "^0.24.0"
 
+"@directus/sdk@^9.12.2":
+  version "9.12.2"
+  resolved "https://registry.yarnpkg.com/@directus/sdk/-/sdk-9.12.2.tgz#29cd9d36fce48718fec8853a330d09107160459f"
+  integrity sha512-BJZZf0hTEjs5j6sHjDuesys3dCzd6o5aEyQuv6GtMoLbge/XWHZdk389YC2jJ3XV3scce8JXNWttZ+RXxSXWxg==
+  dependencies:
+    "@directus/shared" "9.12.2"
+    axios "^0.24.0"
+
 "@directus/shared@9.12.1":
   version "9.12.1"
   resolved "https://registry.yarnpkg.com/@directus/shared/-/shared-9.12.1.tgz#cc573397a0afd1c5e9e470d45aa1c0a760cfcce9"
   integrity sha512-CKIlQpHBtgdlIbkmYxb/kIjz01zS0xMKmYDYSTgcvqcuRA/gDHuUw/uSlquaih7GJAPoy+Vj7zq+efFOI3aL6Q==
+  dependencies:
+    date-fns "2.24.0"
+    fs-extra "10.0.0"
+    joi "17.4.2"
+    lodash "4.17.21"
+
+"@directus/shared@9.12.2":
+  version "9.12.2"
+  resolved "https://registry.yarnpkg.com/@directus/shared/-/shared-9.12.2.tgz#faf884c6c84a1d0b236c9d42327f9ca3a098dfac"
+  integrity sha512-yX7dD0/dSD+evpTa8Wum/3Vras2dWOYep8dzOoYBgE1P3kDGOXN1x+cCM0wgQzB239NCbtoYc3edGJLowPbgAg==
   dependencies:
     date-fns "2.24.0"
     fs-extra "10.0.0"
@@ -4383,6 +4401,14 @@ nuxt-directus@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-2.0.2.tgz#1264dfd69203e778a26c9240a6274d94225c1465"
   integrity sha512-GpJALFZFoCGk/VkdfEFKjssearN5FY7P0MMALEKMjXUZvFcXnQS5ybqhiGU1F20z8a+u4oiSfJe39g6m4Z6p3g==
+  dependencies:
+    "@nuxt/kit" "^3.0.0-rc.3"
+    standard-version "^9.3.2"
+
+nuxt-directus@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-2.1.0.tgz#152d273e2483546964130b782f36cd11341200fa"
+  integrity sha512-lm1X5mOAOwFFFXmlHgqiX9eJ7wzGps7OXYymPsJZMw9nX0AOeJ7hr0zavxSKHdfMfYVLLSwzdjmj1SRqo35ZEw==
   dependencies:
     "@nuxt/kit" "^3.0.0-rc.3"
     standard-version "^9.3.2"

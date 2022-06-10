@@ -25,12 +25,14 @@
     "@nuxt/kit": "^3.0.0-rc.3"
   },
   "devDependencies": {
+    "@directus/sdk": "^9.12.2",
     "@nuxt/module-builder": "latest",
     "@nuxtjs/tailwindcss": "^5.1.2",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
-    "nuxt": "^3.0.0-rc.3"
+    "nuxt": "^3.0.0-rc.3",
+    "nuxt-directus": "^2.1.0"
   }
 }

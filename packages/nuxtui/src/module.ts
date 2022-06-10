@@ -7,6 +7,7 @@ import {
   installModule,
   createResolver,
 } from "@nuxt/kit";
+import tailwindConfig from "./tailwind/tailwind.config";
 
 const { resolve } = createResolver(import.meta.url);
 
@@ -32,25 +33,9 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(options, nuxt) {
     if (options.addTailwind) {
-      const componentsDir = resolve("./components");
-      const tailwindDir = resolve("./tailwind");
       installModule("@nuxtjs/tailwindcss", {
         viewer: false,
-        config: {
-          content: [resolve(componentsDir, "**/*.{vue,js,ts}")],
-          cssPath: resolve(tailwindDir, "tailwind.css"),
-          plugins: [
-            require("@tailwindcss/aspect-ratio"),
-            require("@tailwindcss/forms"),
-            require("@tailwindcss/line-clamp"),
-            require("@tailwindcss/typography"),
-          ],
-          theme: {
-            fontFamily: {
-              header: ["Space Grotesk", "sans-serif"],
-            },
-          },
-        },
+        config: tailwindConfig(nuxt.options),
       });
     }
 
