@@ -10,7 +10,7 @@
         ".vercel_build_output/**"
       ]
     },
-    "nuxtui#build": {
+    "nuxt-ui#build": {
       "outputs": ["dist/**", "playground/.nuxt/**"],
       "inputs": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.vue"]
     },

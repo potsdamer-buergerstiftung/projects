@@ -2,9 +2,10 @@ import { createResolver } from "@nuxt/kit";
 
 const { resolve } = createResolver(import.meta.url);
 const componentsDir = resolve("../components");
+const formkitDir = resolve("../formkit");
 const tailwindDir = resolve("./");
 
-export default ({ srcDir }) => ({
+export default ({ srcDir, rootDir }) => ({
   theme: {
     fontFamily: {
       header: ["Space Grotesk", "sans-serif"],
@@ -13,13 +14,14 @@ export default ({ srcDir }) => ({
   },
   cssPath: resolve(tailwindDir, "tailwind.css"),
   plugins: [
+    require("@formkit/themes/tailwindcss"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/typography"),
   ],
   content: [
-    resolve(componentsDir, "**/*.{vue,js,ts}"),
+    `${componentsDir}/**/*.{vue,js,ts}`,
     `${srcDir}/components/**/*.{vue,js,ts}`,
     `${srcDir}/layouts/**/*.vue`,
     `${srcDir}/pages/**/*.vue`,
@@ -29,9 +31,6 @@ export default ({ srcDir }) => ({
     `${srcDir}/app.{js,ts,vue}`,
     `${srcDir}/Error.{js,ts,vue}`,
     `${srcDir}/error.{js,ts,vue}`,
-    // TODO: This makes issues with import protection
-    // Split in two files to avoid watching issues (https://github.com/nuxt-community/tailwindcss-module/issues/359)
-    // `${rootDir}/nuxt.config.js`,
-    // `${rootDir}/nuxt.config.ts`
+    `${rootDir}/nuxt.config.ts`,
   ],
 });

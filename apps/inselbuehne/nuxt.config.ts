@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@vueuse/nuxt",
     "@vueuse/motion/nuxt",
-    "nuxtui",
+    "nuxt-ui",
   ],
   ui: {
     addFonts: false,

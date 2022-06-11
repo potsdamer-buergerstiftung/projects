@@ -9,12 +9,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {},
   modules: [
     "@vueuse/motion/nuxt",
     "nuxt-directus",
     "@pinia/nuxt",
     "@vueuse/nuxt",
-    "nuxtui",
+    "nuxt-ui",
   ],
   experimental: {
     reactivityTransform: true,
@@ -22,7 +23,7 @@ export default defineNuxtConfig({
   directus: {
     url: "https://cms.potsdamer-buergerstiftung.org",
   },
-  runtimeConfig: {
-    directusAccessToken: "",
+  ui: {
+    addTailwind: true,
   },
 });

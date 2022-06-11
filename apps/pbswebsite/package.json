@@ -12,16 +12,17 @@
     "@vueuse/core": "^8.5.0",
     "@vueuse/nuxt": "^8.5.0",
     "nuxt": "3.0.0-rc.3",
-    "nuxtui": "*"
+    "nuxt-ui": "*"
   },
   "dependencies": {
     "@directus/sdk": "^9.12.2",
     "@fontsource/space-grotesk": "^4.5.8",
     "@heroicons/vue": "^1.0.6",
     "@pinia/nuxt": "^0.1.9",
+    "@vue-stripe/vue-stripe": "^4.4.2",
     "@vueuse/motion": "2.0.0-beta.18",
     "nuxt-directus": "^2.0.1",
-    "nuxtui": "*",
+    "nuxt-ui": "*",
     "pinia": "^2.0.14",
     "swiper": "^8.1.6"
   }

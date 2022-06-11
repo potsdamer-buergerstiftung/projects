@@ -1,27 +1,25 @@
-import { fileURLToPath } from "url";
 import {
   defineNuxtModule,
-  addPlugin,
   addComponentsDir,
-  addAutoImportDir,
   installModule,
   createResolver,
 } from "@nuxt/kit";
 import tailwindConfig from "./tailwind/tailwind.config";
+import { de } from "@formkit/i18n";
 
 const { resolve } = createResolver(import.meta.url);
 
 export interface ModuleOptions {
-  /* addPlugin: boolean; */
   addComponents: boolean;
   addTailwind: boolean;
   addFonts: boolean;
   addComposables: boolean;
+  addFormkit: boolean;
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "nuxtui",
+    name: "nuxt-ui",
     configKey: "ui",
   },
   defaults: {
@@ -30,6 +28,7 @@ export default defineNuxtModule<ModuleOptions>({
     addTailwind: true,
     addFonts: true,
     addComposables: true,
+    addFormkit: true,
   },
   setup(options, nuxt) {
     if (options.addTailwind) {
@@ -44,6 +43,14 @@ export default defineNuxtModule<ModuleOptions>({
         "@fontsource/space-grotesk/700.css",
         "@fontsource/space-grotesk/400.css"
       );
+    }
+
+    if (options.addFormkit) {
+      const formkitDir = resolve("./formkit");
+      installModule("@formkit/nuxt", {
+        defaultConfig: true,
+        configFile: resolve(formkitDir, "formkit.config.ts"),
+      });
     }
 
     /* if (options.addPlugin) {

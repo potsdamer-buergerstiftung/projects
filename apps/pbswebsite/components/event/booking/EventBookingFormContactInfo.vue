@@ -14,38 +14,54 @@
     <div>
       <div class="grid grid-cols-2 gap-4 mt-8">
         <div>
-          <label class="text-sm font-medium">Vorname (Erforderlich)</label>
-          <input
-            type="email"
-            :value="store.contactInfo.firstName"
-            class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="Dein Name"
+          <FormKit
+            v-model="store.contactInfo.firstName"
+            type="text"
+            label="Vorname"
+            label-class="text-sm font-medium"
+            message-class="text-sm text-red-500"
+            validation="required"
+            placeholder="Dein Vorname"
+            input-class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+          focus:ring-emerald-500"
           />
         </div>
         <div>
-          <label class="text-sm font-medium">Nachname (Erforderlich)</label>
-          <input
-            type="email"
-            :value="store.contactInfo.lastName"
-            class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="Dein Name"
+          <FormKit
+            v-model="store.contactInfo.lastName"
+            type="text"
+            label="Nachname"
+            label-class="text-sm font-medium"
+            message-class="text-sm text-red-500"
+            validation="required"
+            placeholder="Dein Nachname"
+            input-class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+          focus:ring-emerald-500"
           />
         </div>
         <div>
-          <label class="text-sm font-medium">E-Mail (Erforderlich)</label>
-          <input
+          <FormKit
+            v-model="store.contactInfo.email"
             type="email"
-            :value="store.contactInfo.email"
-            class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="Dein Name"
+            label="E-Mail-Adresse"
+            label-class="text-sm font-medium"
+            message-class="text-sm text-red-500"
+            validation="required"
+            placeholder="Deine E-Mail"
+            input-class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+          focus:ring-emerald-500"
           />
         </div>
         <div>
-          <label class="text-sm font-medium">E-Mail bestätigen</label>
-          <input
+          <FormKit
             type="email"
-            class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            placeholder="Dein Name"
+            label="E-Mail bestätigen"
+            label-class="text-sm font-medium"
+            message-class="text-sm text-red-500"
+            validation="required"
+            placeholder="Deine E-Mail"
+            input-class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+          focus:ring-emerald-500"
           />
         </div>
       </div>

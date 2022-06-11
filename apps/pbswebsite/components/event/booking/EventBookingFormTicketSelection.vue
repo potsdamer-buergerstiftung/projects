@@ -13,22 +13,19 @@
           <p class="pt-4 text-sm">Der Verkauf endet am 17. Juli 2022</p>
         </div>
         <div>
-          <select
+          <FormKit
             @change="store.selectTicket(ticket.id, parseInt(($event.target as HTMLInputElement).value))"
             :value="store.getSelectedQuantity(ticket.id)"
-            class="mt-2 w-full appearance-none rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            type="select"
+            name="small_country"
+            :options="[
+              0,
+              ...range(ticket.minimum_quantity, ticket.maximum_quantity),
+            ]"
+            input-class="block rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+          focus:ring-emerald-500"
           >
-            <option value="0">0</option>
-            <option
-              :value="quantity"
-              v-for="quantity in range(
-                ticket.minimum_quantity,
-                ticket.maximum_quantity
-              )"
-            >
-              {{ quantity }}
-            </option>
-          </select>
+          </FormKit>
         </div>
       </li>
     </ul>
