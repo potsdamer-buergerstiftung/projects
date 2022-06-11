@@ -17,6 +17,7 @@ interface Event {
   end: string;
   tickets: any[];
   image: string;
+  location?: any;
 }
 
 interface ContactInfo {

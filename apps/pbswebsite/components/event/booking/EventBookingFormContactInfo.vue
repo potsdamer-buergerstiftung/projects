@@ -6,8 +6,8 @@
     >
       Zurück zur Ticketauswahl
     </button>
-    <h1 class="font-header text-3xl font-bold mt-4">Kontaktinformationen</h1>
-    <p class="mt-4">
+    <h1 class="font-header text-2xl font-bold mt-4">Kontaktinformationen</h1>
+    <p class="mt-2">
       Die angegebenen Informationen werden zur Rechnungsstellung und zur
       bereitstellung der Tickets benötigt.
     </p>

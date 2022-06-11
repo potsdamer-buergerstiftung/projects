@@ -1,12 +1,12 @@
 <template>
   <div class="px-8 py-8">
-    <h1 class="font-header text-3xl font-bold">{{ store.event.name }}</h1>
-    <p class="mt-2">
+    <p class="text-medium text-slate-600">
       {{ formattedDate
       }}<span v-if="store.event.location">
         - {{ store.event.location.name }}</span
       >
     </p>
+    <h1 class="mt-2 font-header text-4xl font-bold">{{ store.event.name }}</h1>
   </div>
 </template>
 

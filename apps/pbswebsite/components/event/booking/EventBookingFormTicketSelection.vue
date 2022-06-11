@@ -1,16 +1,30 @@
 <template>
   <div class="p-8">
-    <ul class="flex flex-col divide-y-2">
+    <h1 class="font-header text-2xl font-bold mt-4">Tickets</h1>
+    <p class="mt-2">
+      Bitte wählen Sie ein Ticket und dessen gewünschte Anzahl aus der Auswahl.
+    </p>
+    <ul class="grid grid-cols-2 gap-4 mt-8 relative">
       <li
-        class="flex flex-row flex-wrap justify-between items-center py-4"
+        class="bg-slate-100 p-8 rounded-lg flex flex-col justify-between"
         v-for="(ticket, index) in store.event.tickets"
       >
         <div>
-          <h4 class="font-bold text-lg">{{ ticket.name }}</h4>
-          <p v-if="ticket.pricing === 'paid'">{{ ticket.price }} €</p>
-          <p v-if="ticket.pricing === 'donation'">Gegen Spende</p>
-          <p v-if="ticket.pricing === 'free'">Kostenlos</p>
-          <p class="pt-4 text-sm">Der Verkauf endet am 17. Juli 2022</p>
+          <div class="inline-flex items-center mb-1">
+            <h4 class="font-bold text-lg">{{ ticket.name }}</h4>
+          </div>
+          <p v-if="ticket.pricing === 'paid'" class="text-slate-700">
+            Kostenpflichtig
+          </p>
+          <p v-if="ticket.pricing === 'paid'" class="font-bold text-4xl mt-8">
+            {{ ticket.price }} €
+          </p>
+          <p v-if="ticket.pricing === 'donation'" class="text-slate-700">
+            Erhalten Sie dieses Ticket gegen eine freiwillige Spende
+          </p>
+          <p v-if="ticket.pricing === 'free'" class="text-slate-700">
+            Kostenlos
+          </p>
         </div>
         <div>
           <FormKit
@@ -22,7 +36,7 @@
               0,
               ...range(ticket.minimum_quantity, ticket.maximum_quantity),
             ]"
-            input-class="block rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
+            input-class="w-20 mt-8 block rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2
           focus:ring-emerald-500"
           >
           </FormKit>
