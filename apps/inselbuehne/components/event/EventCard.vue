@@ -42,29 +42,23 @@
           {{ summary }}
         </p>
       </div>
-      <div class="w-full lg:w-auto lg:shrink-0" v-if="registration_needed">
-        <a
-          :href="external_ticket_url"
-          target="_blank"
-          class="text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-600 lg:inline-flex lg:w-auto"
-        >
-          Tickets
-        </a>
-      </div>
+      <ClientOnly>
+        <div class="w-full lg:w-auto lg:shrink-0" v-if="registration_needed">
+          <a
+            :href="external_ticket_url"
+            target="_blank"
+            class="z-30 text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-600 lg:inline-flex lg:w-auto"
+          >
+            Tickets
+          </a>
+        </div>
+      </ClientOnly>
     </div>
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const {
-  title,
-  eventId,
-  start,
-  summary,
-  image,
-  registration_needed = false,
-  canceled = false,
-} = defineProps<{
+defineProps<{
   eventId: string;
   title: string;
   summary: string;
