@@ -60,21 +60,12 @@
             Kreditkarte / PayPal / Klarna
           </h4>
           <div class="mt-4 flex flex-col gap-y-4 gap-x-2 md:flex-row">
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-blue-800 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
+            <a
+              href="https://donorbox.org/potsdamer-buergerstiftung"
+              class="text-md font-header inline-flex items-center justify-center rounded-md bg-emerald-500 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
             >
-              PayPal
-            </button>
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-slate-900 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-            >
-              Kreditkarte
-            </button>
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-rose-300 py-1.5 px-4 text-center font-bold text-slate-900 transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-            >
-              Klarna
-            </button>
+              Jetzt spenden
+            </a>
           </div>
         </div>
       </div>
@@ -131,21 +122,14 @@
             Kreditkarte / PayPal / Klarna
           </h4>
           <div class="mt-4 flex flex-col gap-y-4 gap-x-2 md:flex-row">
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-blue-800 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-            >
-              PayPal
-            </button>
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-slate-900 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-            >
-              Kreditkarte
-            </button>
-            <button
-              class="text-md font-header inline-flex w-full items-center justify-center rounded-md bg-rose-300 py-1.5 px-4 text-center font-bold text-slate-900 transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-            >
-              Klarna
-            </button>
+            <div class="flex flex-col gap-y-4 gap-x-2 md:flex-row">
+              <a
+                href="https://donorbox.org/freundeskreis-burgerstiftung"
+                class="text-md font-header inline-flex items-center justify-center rounded-md bg-emerald-500 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
+              >
+                Jetzt spenden
+              </a>
+            </div>
           </div>
         </div>
       </div>
