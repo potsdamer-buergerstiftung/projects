@@ -27,7 +27,6 @@ interface ContactInfo {
 }
 
 export const useStore = defineStore("eventBookingForm", () => {
-
   const event = ref<Event | null>(null);
   const formProgress = ref<FormProgress>("TICKET_SELECTION");
   const selectedTickets = ref<SelectedTickets>(new Map());
@@ -118,8 +117,7 @@ export const useStore = defineStore("eventBookingForm", () => {
   async function createOrder() {
     const createdOrder = await $fetch("/api/orders", {
       method: "POST",
-      
-    })
+    });
   }
 
   return {
