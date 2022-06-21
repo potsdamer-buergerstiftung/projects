@@ -1426,6 +1426,11 @@ ajv@^8.0.1:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+angger-sticky-sidebar-v2@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/angger-sticky-sidebar-v2/-/angger-sticky-sidebar-v2-1.0.0.tgz#5ae60c27813e9e588a16f1a5b9109e778f627b4e"
+  integrity sha512-689Fc8CHca86SNK70tNnAelYaIviXw6kjPM4bhgCIsS0t5tfnHyf8PUafbKZwSUXh3ZDVNJoobNF4piiT6c5Vg==
+
 ansi-escapes@^4.2.1, ansi-escapes@^4.3.0:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
@@ -6691,6 +6696,11 @@ std-env@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.1.1.tgz#1f19c4d3f6278c52efd08a94574a2a8d32b7d092"
   integrity sha512-/c645XdExBypL01TpFKiG/3RAa/Qmu+zRi0MwAmrdEkwHNuN0ebo8ccAXBBDa5Z0QOJgBskUIbuCK91x0sCVEw==
+
+sticky-sidebar-v2@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/sticky-sidebar-v2/-/sticky-sidebar-v2-1.1.1.tgz#809a7467ffac46b14ed61d5428225cea0f46a3b1"
+  integrity sha512-AcwFftcYLhSMcXVimMN/peCnraoqU+pnRpvFhO5rcoIdvgPRFNf1Y38126CeKEuRgJffVYRCy9Mdyx4vuqkUqQ==
 
 strict-uri-encode@^2.0.0:
   version "2.0.0"

@@ -21,9 +21,11 @@
     "@pinia/nuxt": "^0.1.9",
     "@vue-stripe/vue-stripe": "^4.4.2",
     "@vueuse/motion": "2.0.0-beta.18",
+    "angger-sticky-sidebar-v2": "^1.0.0",
     "nuxt-directus": "^2.0.1",
     "nuxt-ui": "*",
     "pinia": "^2.0.14",
+    "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^8.1.6"
   }
 }
