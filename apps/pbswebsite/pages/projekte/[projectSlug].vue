@@ -17,7 +17,7 @@
                 <BlockRenderer :data="project.content" class="mt-16"/>
             </div>
         </section>
-        <section class="bg-white">
+        <section class="bg-white" v-if="posts.length">
             <div class="container mx-auto px-4 pt-8 pb-16">
                 <h1 class="font-header mb-12 text-5xl font-bold">Aktuelles zum Projekt</h1>
                 <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
