@@ -75,6 +75,16 @@ const transforms: transforms = {
     });
   },
 
+  nestedlist: ({ data }) => {
+    return h("ul", {
+      class: "list-disc mb-8 ml-4",
+    }, data.items.map((item) => {
+      return h("li", {
+        class: "mb-4",
+      }, item.content);
+    }));
+  },
+
   list: ({ data }) => {
     const listStyle = data.style === "unordered" ? "ul" : "ol";
 
