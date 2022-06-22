@@ -6,7 +6,7 @@ const year = new Date().getFullYear();
   <div
     class="container mx-auto grid grid-cols-1 justify-between gap-4 px-4 py-6 md:grid-cols-2"
   >
-    <p>© {{ year }} Potsdamer Bürgerstiftung - By Nöl & Lotte</p>
+    <p>© {{ year }} Potsdamer Bürgerstiftung - By Nöl & Johann</p>
     <ul class="flex flex-row justify-start space-x-4 md:justify-end">
       <li>
         <NuxtLink
