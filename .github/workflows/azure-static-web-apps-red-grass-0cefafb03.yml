@@ -30,6 +30,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "apps/pbswebsite/.output/server" # Api source code path - optional
           output_location: "apps/pbswebsite/.output/public" # Built app content directory - optional
+          skip_api_build: true
           app_build_command: "npx turbo run build --scope=pbswebsite --include-dependencies --no-deps"
           ###### End of Repository/Build Configurations ######
 
