@@ -27,9 +27,5 @@
     "pinia": "^2.0.14",
     "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^8.1.6"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "yarn": ">=1.22.0"
   }
 }
