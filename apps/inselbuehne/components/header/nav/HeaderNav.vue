@@ -9,7 +9,7 @@
       <HeaderNavItem title="Blog" link="/blog" />
       <HeaderNavItem
         title="Über uns"
-        link="https://www.potsdamer-buergerstiftung.com"
+        link="https://www.potsdamer-buergerstiftung.org"
       />
     </div>
     <HeaderNavBrand />
@@ -53,7 +53,7 @@
       class="hidden h-full w-full flex-row items-center justify-start gap-x-5 lg:flex"
     >
       <HeaderNavItem title="Presse" link="/presse" />
-      <HeaderNavItem title="Unterstützen" link="/Unterstützen" />
+      <HeaderNavItem title="Auftreten" link="/auftreten" />
       <HeaderNavItem title="Kontakt" link="/kontakt" />
     </div>
   </nav>

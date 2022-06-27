@@ -9,10 +9,10 @@
       <HeaderNavItem title="Blog" link="/blog" />
       <HeaderNavItem
         title="Über uns"
-        link="https://www.potsdamer-buergerstiftung.com"
+        link="https://www.potsdamer-buergerstiftung.org"
       />
       <HeaderNavItem title="Presse" link="/presse" />
-      <HeaderNavItem title="Unterstützen" link="/Unterstützen" />
+      <HeaderNavItem title="Auftreten" link="/auftreten" />
       <HeaderNavItem title="Kontakt" link="/kontakt" />
     </div>
   </div>
