@@ -4,7 +4,7 @@
     class="block w-full cursor-pointer overflow-hidden rounded-tl-xl rounded-br-xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl"
   >
     <img
-      :src="`https://cms.potsdamer-buergerstiftung.org/assets/${imageUrl}?width=800&height=450&quality=40`"
+      :src="`https://cdn.potsdamer-buergerstiftung.org/${imageUrl}?width=800&height=450&quality=40`"
       alt="test"
       class="w-full object-cover"
     />

@@ -5,7 +5,7 @@
       <div class="absolute h-full w-full">
         <img
           class="h-full w-full object-cover"
-          :src="`https://cdn.cms.potsdamer-buergerstiftung.org/${post.image}?width=1920&height=1080&quality=40`"
+          :src="`https://cdn.potsdamer-buergerstiftung.org/${post.image}?width=1920&height=1080&quality=40`"
         />
       </div>
       <div

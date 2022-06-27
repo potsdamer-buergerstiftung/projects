@@ -21,7 +21,7 @@
         </div>
         <div class="col-span-2 lg:col-span-1">
           <img
-            :src="`https://cms.potsdamer-buergerstiftung.org/assets/${post.image}?width=700&quality=60&height=600`"
+            :src="`https://cdn.potsdamer-buergerstiftung.org/${post.image}?width=700&quality=60&height=600`"
             alt="test"
             class="-mb-24 w-full"
           />

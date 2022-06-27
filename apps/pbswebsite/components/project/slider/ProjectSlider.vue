@@ -23,7 +23,7 @@
       <section class="relative h-screen w-full snap-start bg-red-200">
         <div class="absolute h-full w-full">
           <img
-            :data-src="`https://cms.potsdamer-buergerstiftung.org/assets/${project.image}?width=2000&quality=30`"
+            :data-src="`https://cdn.potsdamer-buergerstiftung.org/${project.image}?width=2000&quality=30`"
             class="swiper-lazy h-full w-full object-cover"
           />
         </div>

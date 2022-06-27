@@ -4,7 +4,7 @@
     class="group relative block h-96 w-full cursor-pointer overflow-hidden rounded-lg"
   >
     <img
-      :src="`https://cms.potsdamer-buergerstiftung.org/assets/${imageId}?${imageProps}&quality=40`"
+      :src="`https://cdn.potsdamer-buergerstiftung.org/${imageId}?${imageProps}&quality=40`"
       class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
       :alt="`Bild von ${title}`"
     />

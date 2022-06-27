@@ -6,7 +6,7 @@
   >
     <div class="relative col-span-5 h-64 w-full lg:col-span-2 lg:h-full">
       <img
-        :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?width=1000&height=600&quality=40`"
+        :src="`https://cdn.potsdamer-buergerstiftung.org/${image}?width=1000&height=600&quality=40`"
         alt="test"
         class="absolute h-full w-full object-cover"
       />

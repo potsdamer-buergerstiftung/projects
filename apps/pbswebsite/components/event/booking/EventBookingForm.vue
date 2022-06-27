@@ -31,7 +31,7 @@
       </div>
       <div class="col-span-1">
         <img
-          :src="`https://cdn.cms.potsdamer-buergerstiftung.org/${store.event.image}?width=700&quality=30`"
+          :src="`https://cdn.potsdamer-buergerstiftung.org/${store.event.image}?width=700&quality=30`"
           alt="Event"
           class="w-full h-64 object-cover"
         />

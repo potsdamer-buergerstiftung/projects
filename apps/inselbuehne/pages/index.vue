@@ -22,7 +22,7 @@
         </div>
         <div class="col-span-6 md:col-span-3">
           <img
-            :src="`https://cms.potsdamer-buergerstiftung.org/assets/9fbafc25-4d32-4964-9f05-a4ac15234fa1?width=700&quality=60&height=450`"
+            :src="`https://cdn.potsdamer-buergerstiftung.org/9fbafc25-4d32-4964-9f05-a4ac15234fa1?width=700&quality=60&height=450`"
             alt="test"
             class="w-full"
           />
@@ -73,7 +73,7 @@
       >
         <div class="order-2 col-span-2 lg:order-1 lg:col-span-1">
           <img
-            :src="`https://cms.potsdamer-buergerstiftung.org/assets/bca18d03-b2f2-4d7b-b277-c296899cb06f?width=700&quality=60&height=500`"
+            :src="`https://cdn.potsdamer-buergerstiftung.org/bca18d03-b2f2-4d7b-b277-c296899cb06f?width=700&quality=60&height=500`"
             alt="test"
             class="w-full"
           />

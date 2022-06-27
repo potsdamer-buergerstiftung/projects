@@ -1,6 +1,6 @@
 import { Directus } from "@directus/sdk";
 
-const api = new Directus<any>("https://cms.potsdamer-buergerstiftung.org");
+const api = new Directus<any>("https://portal.potsdamer-buergerstiftung.org");
 
 export default eventHandler(async (event) => {
   const id = event.context.params.link;

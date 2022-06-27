@@ -31,6 +31,6 @@ export default defineNuxtConfig({
     defaultLocale: "de",
   },
   directus: {
-    url: "https://cms.potsdamer-buergerstiftung.org",
+    url: "https://portal.potsdamer-buergerstiftung.org",
   },
 });

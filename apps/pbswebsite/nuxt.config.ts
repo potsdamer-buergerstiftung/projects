@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
   },
   directus: {
-    url: "https://cms.potsdamer-buergerstiftung.org",
+    url: "https://portal.potsdamer-buergerstiftung.org",
   },
   ui: {
     addTailwind: true,

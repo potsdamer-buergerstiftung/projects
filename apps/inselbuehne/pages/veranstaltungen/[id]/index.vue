@@ -9,7 +9,7 @@
             class="relative col-span-6 h-64 overflow-hidden rounded-tl-lg rounded-br-lg bg-green-500 bg-cover md:rounded-none lg:col-span-3 lg:h-full"
           >
             <img
-              :src="`https://cms.potsdamer-buergerstiftung.org/assets/${image}?key=low-1000`"
+              :src="`https://cdn.potsdamer-buergerstiftung.org/${image}?key=low-1000`"
               alt="test"
               class="absolute h-full w-full object-cover"
             />
