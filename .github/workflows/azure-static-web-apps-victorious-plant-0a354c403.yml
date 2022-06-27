@@ -1,13 +1,21 @@
-name: Azure Static Web Apps CI/CD
+name: Inselbühne CI/CD
 
 on:
   push:
     branches:
       - main
+    paths:
+      - apps/inselbuehne/**
+      - packages/nuxtui/**
+      - .github/workflows/azure-static-web-apps-victorious-plant-0a354c403.yml
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    paths:
+      - apps/inselbuehne/**
+      - packages/nuxtui/**
+      - .github/workflows/azure-static-web-apps-victorious-plant-0a354c403.yml
 
 jobs:
   build_and_deploy_job:
@@ -27,9 +35,11 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/apps/inselbuehne" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          app_location: "apps/inselbuehne" # App source code path
+          api_location: "apps/inselbuehne/.output/server" # Api source code path - optional
+          output_location: ".output/public" # Built app content directory - optional
+          skip_api_build: true
+          app_build_command: "cd ../.. && yarn install && npx turbo run build --scope=inselbuehne --include-dependencies --no-deps"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
