@@ -13,6 +13,7 @@
 
 <script setup lang="ts">
 const durl = useDirectusUrl();
+const websiteUrl = useWebsiteUrl();
 
 const { fetchUser, setToken, logout } = useDirectusAuth()
 
@@ -31,6 +32,5 @@ watch(data, (newData) => {
     }
 })
 
-
-const url = durl + "/auth/login/microsoft?redirect=http://dev.potsdamer-buergerstiftung.org:3000/portal";
+const url = durl + "/auth/login/microsoft?redirect=" + websiteUrl;
 </script>
