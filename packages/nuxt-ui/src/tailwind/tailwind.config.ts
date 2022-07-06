@@ -31,6 +31,6 @@ export default ({ srcDir, rootDir }) => ({
     `${srcDir}/app.{js,ts,vue}`,
     `${srcDir}/Error.{js,ts,vue}`,
     `${srcDir}/error.{js,ts,vue}`,
-    `${rootDir}/nuxt.config.ts`,
+    /* `${rootDir}/nuxt.config.ts`, */
   ],
 });

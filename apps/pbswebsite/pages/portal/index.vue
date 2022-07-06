@@ -6,16 +6,23 @@
             <PortalAdminRedirectButton />
             <button class="p-4 bg-emerald-500" @click="logout()">Logout</button>
         </h1>
-        <a :href="url" class="p-4 bg-green-500" v-else>Log-in</a>
+        <div v-else>
+            <a v-for="provider in providers.data" :href="loginUrl(provider.name).toString()"
+                class="p-4 bg-green-500">Einloggen mit {{
+                        provider.name
+                }}</a>
+        </div>
     </div>
 
 </template>
 
 <script setup lang="ts">
-const durl = useDirectusUrl();
+const directusUrl = useDirectusUrl();
 const websiteUrl = useWebsiteUrl();
 
-const { fetchUser, setToken, logout } = useDirectusAuth()
+const { fetchUser, setToken, logout, listAuthProviders } = useDirectusAuth()
+
+const providers = await listAuthProviders();
 
 const user: any = await fetchUser();
 
@@ -32,5 +39,10 @@ watch(data, (newData) => {
     }
 })
 
-const url = durl + "/auth/login/microsoft?redirect=" + websiteUrl;
+const redirectUrl = new URL("/portal", websiteUrl);
+const loginUrl = (provider: string) => {
+    let url = new URL(`/auth/login/${provider}`, directusUrl);
+    url.searchParams.append("redirect", redirectUrl.toString());
+    return url;
+}
 </script>

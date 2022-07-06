@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      websiteUrl: "http://dev.potsdamer-buergerstiftung.org",
+      websiteUrl: "",
     },
   },
   modules: [
@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
   },
   directus: {
+    autoFetch: true,
     url: "https://portal.potsdamer-buergerstiftung.org",
   },
   ui: {

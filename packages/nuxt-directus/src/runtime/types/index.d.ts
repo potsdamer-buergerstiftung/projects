@@ -1,5 +1,14 @@
 export type DirectusUser = object | null;
 
+export interface DirectusAuthProvidersResponse {
+  data: {
+    name: string;
+    driver: string;
+    icon: string;
+  }[];
+  disableDefault: boolean;
+}
+
 export interface DirectusAuthCredentials {
   email: string;
   password: string;

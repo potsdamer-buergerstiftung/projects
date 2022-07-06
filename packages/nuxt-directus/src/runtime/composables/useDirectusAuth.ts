@@ -6,6 +6,7 @@ import type {
   DirectusPasswordForgotCredentials,
   DirectusPasswordResetCredentials,
   DirectusRegisterCredentials,
+  DirectusAuthProvidersResponse,
 } from "../types";
 import { useDirectus } from "./useDirectus";
 import { useDirectusUser } from "./useDirectusUser";
@@ -26,6 +27,10 @@ export const useDirectusAuth = () => {
 
   const setUser = (value: DirectusUser) => {
     user.value = value;
+  };
+
+  const listAuthProviders = async () => {
+    return directus<DirectusAuthProvidersResponse>("/auth", { method: "GET" });
   };
 
   const fetchUser = async (): Promise<Ref<DirectusUser>> => {
@@ -130,5 +135,6 @@ export const useDirectusAuth = () => {
     logout,
     createUser,
     register,
+    listAuthProviders,
   };
 };
