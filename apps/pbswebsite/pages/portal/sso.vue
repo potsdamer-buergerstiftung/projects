@@ -8,7 +8,7 @@
 definePageMeta({
     layout: "portal"
 })
-const { setToken } = useDirectusAuth();
+const { setToken, fetchUser } = useDirectusAuth();
 const directusUrl = useDirectusUrl();
 const router = useRouter();
 const { data: res } = await useLazyFetch<any>(new URL("/auth/refresh", directusUrl).toString(), {
@@ -17,9 +17,10 @@ const { data: res } = await useLazyFetch<any>(new URL("/auth/refresh", directusU
     headers: useRequestHeaders(["cookie"]),
     server: false,
 })
-watch(res, (newRes) => {
+watch(res, async (newRes) => {
     if (newRes) {
         setToken(newRes.data.access_token);
+        await fetchUser();
         router.replace("/portal");
     }
 })
