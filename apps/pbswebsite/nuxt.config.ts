@@ -9,7 +9,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig: {},
+  runtimeConfig: {
+    public: {
+      websiteUrl: "http://dev.potsdamer-buergerstiftung.org",
+    },
+  },
   modules: [
     "@vueuse/motion/nuxt",
     "nuxt-directus",
