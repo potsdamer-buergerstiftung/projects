@@ -9,8 +9,8 @@
           <h1 class="font-header text-5xl font-bold">Mach mit!</h1>
         </div>
         <div>
-          <a
-            href="mailto:ehrenamt@potsdamer-buergerstiftung.org"
+          <NuxtLink
+            to="/portal"
             class="text-md font-header inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75"
           >
             Zum Freiwilligenportal
@@ -28,7 +28,7 @@
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </NuxtLink>
         </div>
       </div>
       <hr class="mt-8 h-1 w-full border-slate-800" />
