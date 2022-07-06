@@ -27,23 +27,6 @@ export const useDirectusAuth = () => {
     user.value = value;
   };
 
-  const refreshToken = async () => {
-    try {
-      const res = await directus<any>("/auth/refresh", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      console.log("testchen", res);
-
-      setToken(undefined);
-    } catch (e) {
-      console.log(e);
-      setToken(null);
-      setUser(null);
-    }
-  };
-
   const listAuthProviders = async () => {
     return directus<DirectusAuthProvidersResponse>("/auth", { method: "GET" });
   };
@@ -148,7 +131,6 @@ export const useDirectusAuth = () => {
     setToken,
     setUser,
     fetchUser,
-    refreshToken,
     login,
     requestPasswordReset,
     resetPassword,

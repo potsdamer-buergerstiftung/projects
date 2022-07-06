@@ -1,11 +1,27 @@
 <template>
-    <h1>Weiterleitung erfolgt...</h1>
+    <div class="container mx-auto px-4 py-40">
+        <h1>Du wirst weitergeleitet...</h1>
+    </div>
 </template>
 
 <script setup lang="ts">
-const { refreshToken } = useDirectusAuth();
+definePageMeta({
+    layout: "portal"
+})
+const { setToken } = useDirectusAuth();
+const directusUrl = useDirectusUrl();
 const router = useRouter();
-refreshToken().then(() => {
-    router.replace("/portal");
-});
+const { data: res } = await useLazyFetch<any>(new URL("/auth/refresh", directusUrl).toString(), {
+    method: "POST",
+    credentials: "include",
+    headers: useRequestHeaders(["cookie"]),
+    server: false,
+})
+watch(res, (newRes) => {
+    if (newRes) {
+        setToken(newRes.data.access_token);
+        router.replace("/portal");
+    }
+})
+
 </script>
