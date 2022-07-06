@@ -8,6 +8,7 @@
     />
     <HeaderNavItem title="Projekte" index="2" link="/projekte" tabindex="3" />
     <HeaderNavItem title="Aktuelles" index="3" link="/aktuelles" tabindex="4" />
+    <HeaderNavItem title="Unterstützen" index="5" link="/mitstiften" tabindex="6" />
     <HeaderNavItem title="Kontakt" index="4" link="/kontakt" tabindex="5" />
     <ClientOnly>
       <HeaderNavItem
@@ -23,7 +24,6 @@
         v-if="mdAndSmaller"
       />
     </ClientOnly>
-    <HeaderNavItem title="Shop" index="5" link="/shop" tabindex="6" />
   </nav>
 </template>
 
