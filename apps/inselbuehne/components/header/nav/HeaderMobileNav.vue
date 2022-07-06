@@ -12,7 +12,7 @@
         link="https://www.potsdamer-buergerstiftung.org"
       />
       <HeaderNavItem title="Presse" link="/presse" />
-      <HeaderNavItem title="Auftreten" link="/auftreten" />
+      <HeaderNavItem title="Spenden" link="https://donorbox.org/inselbuhne-potsdam" />
       <HeaderNavItem title="Kontakt" link="/kontakt" />
     </div>
   </div>

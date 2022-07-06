@@ -53,7 +53,7 @@
       class="hidden h-full w-full flex-row items-center justify-start gap-x-5 lg:flex"
     >
       <HeaderNavItem title="Presse" link="/presse" />
-      <HeaderNavItem title="Auftreten" link="/auftreten" />
+      <HeaderNavItem title="Spenden" link="https://donorbox.org/inselbuhne-potsdam" />
       <HeaderNavItem title="Kontakt" link="/kontakt" />
     </div>
   </nav>
