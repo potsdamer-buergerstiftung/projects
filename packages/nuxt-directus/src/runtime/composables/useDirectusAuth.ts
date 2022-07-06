@@ -10,12 +10,10 @@ import type {
 } from "../types";
 import { useDirectus } from "./useDirectus";
 import { useDirectusUser } from "./useDirectusUser";
-import { useDirectusUrl } from "./useDirectusUrl";
 import { useDirectusToken } from "./useDirectusToken";
 import { useRuntimeConfig } from "#app";
 
 export const useDirectusAuth = () => {
-  const url = useDirectusUrl();
   const config = useRuntimeConfig();
   const directus = useDirectus();
   const user = useDirectusUser();
@@ -27,6 +25,23 @@ export const useDirectusAuth = () => {
 
   const setUser = (value: DirectusUser) => {
     user.value = value;
+  };
+
+  const refreshToken = async () => {
+    try {
+      const res = await directus<any>("/auth/refresh", {
+        method: "POST",
+        credentials: "include",
+      });
+
+      console.log("testchen", res);
+
+      setToken(undefined);
+    } catch (e) {
+      console.log(e);
+      setToken(null);
+      setUser(null);
+    }
   };
 
   const listAuthProviders = async () => {
@@ -119,8 +134,12 @@ export const useDirectusAuth = () => {
     });
   };
 
-  const logout = (): void => {
-    // https://docs.directus.io/reference/authentication/#logout todo: implement this
+  const logout = async () => {
+    await directus("/auth/logout", {
+      method: "POST",
+      credentials: "include",
+      headers: useRequestHeaders(["cookie"]),
+    });
     setToken(null);
     setUser(null);
   };
@@ -129,6 +148,7 @@ export const useDirectusAuth = () => {
     setToken,
     setUser,
     fetchUser,
+    refreshToken,
     login,
     requestPasswordReset,
     resetPassword,

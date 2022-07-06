@@ -20,26 +20,13 @@
 const directusUrl = useDirectusUrl();
 const websiteUrl = useWebsiteUrl();
 
-const { fetchUser, setToken, logout, listAuthProviders } = useDirectusAuth()
+const { logout, listAuthProviders, fetchUser } = useDirectusAuth()
 
 const providers = await listAuthProviders();
 
-const user: any = await fetchUser();
+const user = await fetchUser() as any;
 
-const { data } = await useLazyFetch<any>('https://portal.potsdamer-buergerstiftung.org/auth/refresh', {
-    method: 'POST',
-    credentials: 'include',
-    headers: useRequestHeaders(['cookie']),
-    server: false,
-})
-
-watch(data, (newData) => {
-    if (newData) {
-        setToken(newData.data.access_token)
-    }
-})
-
-const redirectUrl = new URL("/portal", websiteUrl);
+const redirectUrl = new URL("/portal/sso", websiteUrl);
 const loginUrl = (provider: string) => {
     let url = new URL(`/auth/login/${provider}`, directusUrl);
     url.searchParams.append("redirect", redirectUrl.toString());
