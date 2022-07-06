@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.layout-enter-active {
+    animation: layout-in 0.75s;
+}
+
+.layout-leave-active {
+    animation: layout-out 0.5s;
+}
+
+@keyframes layout-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes layout-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .page-enter-active {
     animation: page-in 0.75s;
 }
