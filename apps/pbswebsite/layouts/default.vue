@@ -1,5 +1,6 @@
 <template>
   <div class="antialiased">
+    <PageLoadingBar />
     <Header />
     <slot />
     <Footer />
