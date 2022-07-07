@@ -12,7 +12,7 @@
         <section class="bg-white pb-16">
             <div class="container mx-auto px-4 grid grid-cols-1 gap-16 lg:grid-cols-2">
                 <StickySidebar containerSelector=".container" :top-spacing="40">
-                    <img :src="`https://cdn.potsdamer-buergerstiftung.org/${project.image}?quality=50&width=800`" class="w-full" />
+                    <DirectusImage :asset-id="project.image" :quality="50" :width="800" class="w-full" />
                 </StickySidebar>
                 <BlockRenderer :data="project.content" class="mt-16"/>
             </div>

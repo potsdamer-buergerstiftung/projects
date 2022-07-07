@@ -4,9 +4,9 @@
     class="group block w-full overflow-hidden rounded-md"
   >
     <div class="relative aspect-[1/1] overflow-hidden">
-      <img
+      <DirectusImage
+        :asset-id="imageId" :width="700" :height="700" :quality="40"
         class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-        :src="`https://cdn.potsdamer-buergerstiftung.org/${imageId}?width=700&height=700&quality=40`"
       />
       <div
         class="absolute left-0 right-0 bottom-0 translate-y-3 bg-gradient-to-t from-slate-900 to-transparent p-6 opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100"
