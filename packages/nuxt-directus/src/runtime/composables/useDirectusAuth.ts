@@ -10,12 +10,10 @@ import type {
 } from "../types";
 import { useDirectus } from "./useDirectus";
 import { useDirectusUser } from "./useDirectusUser";
-import { useDirectusUrl } from "./useDirectusUrl";
 import { useDirectusToken } from "./useDirectusToken";
 import { useRuntimeConfig } from "#app";
 
 export const useDirectusAuth = () => {
-  const url = useDirectusUrl();
   const config = useRuntimeConfig();
   const directus = useDirectus();
   const user = useDirectusUser();
@@ -119,8 +117,12 @@ export const useDirectusAuth = () => {
     });
   };
 
-  const logout = (): void => {
-    // https://docs.directus.io/reference/authentication/#logout todo: implement this
+  const logout = async () => {
+    await directus("/auth/logout", {
+      method: "POST",
+      credentials: "include",
+      headers: useRequestHeaders(["cookie"]),
+    });
     setToken(null);
     setUser(null);
   };

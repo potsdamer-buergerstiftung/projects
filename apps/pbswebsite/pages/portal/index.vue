@@ -1,48 +1,45 @@
 <template>
-
-    <div class="py-40">
-        <h1 class="pt-40" v-if="user">
-            {{ user.first_name }} {{ user.last_name }}
-            <PortalAdminRedirectButton />
-            <button class="p-4 bg-emerald-500" @click="logout()">Logout</button>
-        </h1>
-        <div v-else>
-            <a v-for="provider in providers.data" :href="loginUrl(provider.name).toString()"
-                class="p-4 bg-green-500">Einloggen mit {{
-                        provider.name
-                }}</a>
-        </div>
+    <div>
+        <PageTitle :title="user ? `${greetingMessage()}, ${user.first_name}.` : 'Freiwilligenportal'">
+            <template #description>
+                <p class="max-w-2xl">
+                    Unser Freilligenportal vernetzt Dich und bietet Dir einen Überblick über alles, was in der
+                    Bürgerstiftung passiert und über die Sachen, für die Du Dich engagieren kannst.
+                </p>
+            </template>
+            <template #actions>
+                <NuxtLink v-if="!user" to="/portal/login"
+                    class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+                    Log-in
+                </NuxtLink>
+                <button @click="logout()" v-else
+                    class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+                    Log-out
+                </button>
+            </template>
+        </PageTitle>
     </div>
-
 </template>
 
 <script setup lang="ts">
-const directusUrl = useDirectusUrl();
-const websiteUrl = useWebsiteUrl();
-
-const { fetchUser, setToken, logout, listAuthProviders } = useDirectusAuth()
-
-const providers = await listAuthProviders();
-
-const user: any = await fetchUser();
-
-const { data } = await useLazyFetch<any>('https://portal.potsdamer-buergerstiftung.org/auth/refresh', {
-    method: 'POST',
-    credentials: 'include',
-    headers: useRequestHeaders(['cookie']),
-    server: false,
+definePageMeta({
+    layout: "portal"
 })
+const { logout } = useDirectusAuth();
+const user = useDirectusUser() as any;
 
-watch(data, (newData) => {
-    if (newData) {
-        setToken(newData.data.access_token)
+const greetingMessage = () => {
+    const dayTime = new Date().getHours()
+
+    if (dayTime > 18) {
+        return "Guten Abend";
     }
-})
-
-const redirectUrl = new URL("/portal", websiteUrl);
-const loginUrl = (provider: string) => {
-    let url = new URL(`/auth/login/${provider}`, directusUrl);
-    url.searchParams.append("redirect", redirectUrl.toString());
-    return url;
+    if (dayTime > 10) {
+        return "Guten Tag"
+    }
+    if (dayTime > 6) {
+        return "Guten Morgen"
+    }
+    return "Hallo"
 }
 </script>
