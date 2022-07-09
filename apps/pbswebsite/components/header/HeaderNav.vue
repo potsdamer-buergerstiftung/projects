@@ -6,10 +6,9 @@
       link="/ueber-uns"
       tabindex="2"
     />
-    <HeaderNavItem title="Projekte" index="2" link="/projekte" tabindex="3" />
-    <HeaderNavItem title="Aktuelles" index="3" link="/aktuelles" tabindex="4" />
-    <HeaderNavItem title="Unterstützen" index="5" link="/mitstiften" tabindex="6" />
-    <HeaderNavItem title="Kontakt" index="4" link="/kontakt" tabindex="5" />
+    <HeaderNavItem title="Projekte & Programme" index="2" link="/projekte" tabindex="3" />
+    <HeaderNavItem title="Unterstützen & engagieren" index="3" link="/aktuelles" tabindex="4" />
+    <HeaderNavItem title="Shop" index="4" link="/kontakt" tabindex="5" />
     <ClientOnly>
       <HeaderNavItem
         title="Spenden"
