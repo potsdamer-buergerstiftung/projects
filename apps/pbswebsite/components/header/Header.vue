@@ -24,8 +24,8 @@
             </div>
         </div>
         <div class="invisible lg:visible fixed top-0 right-0 left-0 bottom-0 bg-slate-900 transition duration-500 -z-[1] pointer-events-none"
-            :class="[store.isSubMenuOpen ? 'opacity-80' : 'opacity-0']" />
-        <div class="invisible lg:visible h-80 bg-white absolute top-0 left-0 w-full transition duration-300 -z-[1]"
+            :class="[store.isSubMenuOpen ? 'opacity-70' : 'opacity-0']" />
+        <div class="invisible lg:visible h-72 bg-white absolute top-0 left-0 w-full transition duration-300 -z-[1]"
             :class="[store.isSubMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-24 opacity-0']" />
     </header>
 </template>
