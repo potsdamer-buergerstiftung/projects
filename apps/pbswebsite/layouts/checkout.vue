@@ -1,6 +1,6 @@
 <template>
-  <div class="antialiased bg-slate-50 min-h-screen">
-    <header class="container mx-auto px-4 p-4">
+  <div class="min-h-screen bg-slate-50 antialiased">
+    <header class="container mx-auto p-4 px-4">
       <HeaderBrand />
     </header>
     <slot />

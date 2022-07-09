@@ -84,7 +84,7 @@
                 v-if="registration_needed"
                 :to="external_ticket_url"
                 target="_blank"
-                class="block text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
+                class="text-md mt-4 block w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
               >
                 Tickets
               </NuxtLink>

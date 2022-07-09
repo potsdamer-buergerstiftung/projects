@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 mt-8">
+  <div class="container mx-auto mt-8 px-4">
     <EventBookingForm :event-id="route.params.eventId" />
   </div>
 </template>

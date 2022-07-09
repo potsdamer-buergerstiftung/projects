@@ -3,9 +3,9 @@
     <div
       class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-6 lg:px-10"
     >
-      <div class="flex flex-row justify-center items-center divide-x-2">
+      <div class="flex flex-row items-center justify-center divide-x-2">
         <HeaderBrand class="pr-4" />
-        <h1 class="font-bold font-header pl-4">Freiwilligenportal</h1>
+        <h1 class="font-header pl-4 font-bold">Freiwilligenportal</h1>
       </div>
       <PortalHeaderNav class="hidden lg:flex" />
       <div class="flex flex-row items-center gap-4">

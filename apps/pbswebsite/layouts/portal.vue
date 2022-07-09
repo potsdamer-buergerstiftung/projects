@@ -3,10 +3,10 @@
     <Header :is-dark="(route.meta.isDark as boolean)">
       <template #brand>
         <div
-          class="flex flex-col md:flex-row justify-center divide-y-2 md:divide-y-0 md:items-center md:divide-x-2"
+          class="flex flex-col justify-center divide-y-2 md:flex-row md:items-center md:divide-y-0 md:divide-x-2"
         >
           <HeaderBrand class="pb-2 md:pb-0 md:pr-4 lg:pr-2 xl:pr-4" />
-          <h1 class="font-bold font-header md:pl-4 lg:pl-2 xl:pl-4">
+          <h1 class="font-header font-bold md:pl-4 lg:pl-2 xl:pl-4">
             Freiwilligenportal
           </h1>
         </div>
@@ -35,7 +35,7 @@
       <template #actions>
         <NuxtLink
           to="/"
-          class="bg-emerald-100 text-slate-800 hover:bg-emerald-200 text-md font-header inline-flex rounded-md py-1.5 px-4 font-bold transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
+          class="text-md font-header inline-flex rounded-md bg-emerald-100 py-1.5 px-4 font-bold text-slate-800 transition ease-in-out hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
         >
           Zurück zur Website
         </NuxtLink>

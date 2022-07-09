@@ -16,7 +16,7 @@
     </PageTitle>
     <section class="bg-white pb-16">
       <div
-        class="container mx-auto px-4 grid grid-cols-1 gap-16 lg:grid-cols-2"
+        class="container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2"
       >
         <StickySidebar containerSelector=".container" :top-spacing="40">
           <DirectusImage

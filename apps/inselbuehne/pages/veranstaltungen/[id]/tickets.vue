@@ -1,5 +1,5 @@
 <template>
-  <div class="py-28 container mx-auto px-4">
+  <div class="container mx-auto py-28 px-4">
     <EventBookingForm event-id="1" />
   </div>
 </template>

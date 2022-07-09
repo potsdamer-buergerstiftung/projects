@@ -47,7 +47,7 @@
           <a
             :href="external_ticket_url"
             target="_blank"
-            class="z-30 text-md mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-600 lg:inline-flex lg:w-auto"
+            class="text-md z-30 mt-4 w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-600 lg:inline-flex lg:w-auto"
           >
             Tickets
           </a>

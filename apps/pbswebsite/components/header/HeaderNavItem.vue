@@ -4,14 +4,14 @@
     @mouseleave="onLeave()"
     ref="node"
     @click="onClick()"
-    class="group flex justify-start flex-col relative"
+    class="group relative flex flex-col justify-start"
   >
     <NuxtLink
-      class="group flex flex-row justify-start gap-1 px-4 lg:px-3 xl:px-4 py-4 outline-none lg:flex-col lg:gap-0 lg:py-2"
+      class="group flex flex-row justify-start gap-1 px-4 py-4 outline-none lg:flex-col lg:gap-0 lg:px-3 lg:py-2 xl:px-4"
       :to="link"
     >
       <span
-        class="text-xs font-bold leading-4 transition group-hover:text-emerald-500 group-focus:text-emerald-500 text-slate-500"
+        class="text-xs font-bold leading-4 text-slate-500 transition group-hover:text-emerald-500 group-focus:text-emerald-500"
         >{{ addZero(index.toString()) }}</span
       >
       <span
@@ -21,7 +21,7 @@
       >
     </NuxtLink>
     <ul
-      class="relative lg:absolute px-9 lg:px-4 mb-4 lg:mb-0 lg:py-20 flex-col w-auto whitespace-nowrap"
+      class="relative mb-4 w-auto flex-col whitespace-nowrap px-9 lg:absolute lg:mb-0 lg:px-4 lg:py-20"
       ref="subMenu"
       :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'flex' : 'hidden']"
       v-if="$slots.default"

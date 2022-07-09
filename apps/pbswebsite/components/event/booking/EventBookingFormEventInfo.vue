@@ -6,7 +6,7 @@
         - {{ store.event.location.name }}</span
       >
     </p>
-    <h1 class="mt-2 font-header text-4xl font-bold">{{ store.event.name }}</h1>
+    <h1 class="font-header mt-2 text-4xl font-bold">{{ store.event.name }}</h1>
   </div>
 </template>
 

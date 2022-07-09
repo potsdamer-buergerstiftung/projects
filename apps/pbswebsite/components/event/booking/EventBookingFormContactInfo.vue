@@ -1,18 +1,18 @@
 <template>
   <div class="p-8">
     <button
-      class="font-bold text-emerald-500 text-sm"
+      class="text-sm font-bold text-emerald-500"
       @click="store.goToTicketSelection()"
     >
       Zurück zur Ticketauswahl
     </button>
-    <h1 class="font-header text-2xl font-bold mt-4">Kontaktinformationen</h1>
+    <h1 class="font-header mt-4 text-2xl font-bold">Kontaktinformationen</h1>
     <p class="mt-2">
       Die angegebenen Informationen werden zur Rechnungsstellung und zur
       bereitstellung der Tickets benötigt.
     </p>
     <div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
+      <div class="mt-8 grid grid-cols-2 gap-4">
         <div>
           <FormKit
             v-model="store.contactInfo.firstName"
@@ -71,7 +71,7 @@
     </p>
     <button
       @click="store.goToCheckout()"
-      class="text-white text-md font-header mt-12 inline-flex items-center rounded-md bg-emerald-500 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
+      class="text-md font-header mt-12 inline-flex items-center rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
     >
       Weiter zur Zahlung
     </button>

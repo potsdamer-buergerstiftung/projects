@@ -1,10 +1,10 @@
 <template>
   <div class="p-8">
-    <h1 class="font-bold font-header text-2xl">Bestellübersicht</h1>
+    <h1 class="font-header text-2xl font-bold">Bestellübersicht</h1>
     <ul class="divide-y-2">
       <li
         v-for="item in store.getSelectedTickets"
-        class="flex flex-row flex-wrap py-4 justify-between"
+        class="flex flex-row flex-wrap justify-between py-4"
       >
         <div>{{ item.quantity }}x {{ item.ticket.name }}</div>
         <div v-if="item.ticket.pricing === 'paid'">

@@ -24,7 +24,7 @@
           <a
             href="https://eventbikezero.de/"
             target="_blank"
-            class="text-emerald-500 font-bold"
+            class="font-bold text-emerald-500"
             >eventbike_zero</a
           >
         </p>
@@ -33,7 +33,7 @@
         <img
           :src="`https://cdn.potsdamer-buergerstiftung.org/${store.event.image}?width=700&quality=30`"
           alt="Event"
-          class="w-full h-64 object-cover"
+          class="h-64 w-full object-cover"
         />
         <EventBookingFormOrderOverview v-if="store.hasTickets" />
       </div>

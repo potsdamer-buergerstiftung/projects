@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="link"
-    class="text-xl text-slate-400 lg:text-slate-900 transition hover:text-emerald-500 py-2 lg:py-1 lg:text-lg font-medium"
+    class="py-2 text-xl font-medium text-slate-400 transition hover:text-emerald-500 lg:py-1 lg:text-lg lg:text-slate-900"
     @click="onClick()"
   >
     {{ title }}

@@ -1,16 +1,16 @@
 <template>
   <div class="flex flex-col gap-4">
-    <ul class="flex flex-row gap-6 mb-8">
+    <ul class="mb-8 flex flex-row gap-6">
       <li class="relative">
         <button
-          class="font-bold font-header after:h-0.5 after:bg-slate-900 after:w-full after:absolute after:-bottom-2 after:left-0"
+          class="font-header font-bold after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-slate-900"
         >
           Log-in
         </button>
       </li>
       <li class="relative">
         <button
-          class="after:opacity-0 font-bold font-header after:h-0.5 after:bg-slate-900 after:w-full after:absolute after:-bottom-2 after:left-0"
+          class="font-header font-bold after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-slate-900 after:opacity-0"
         >
           Registrieren
         </button>
@@ -18,7 +18,7 @@
       <li class="relative" v-for="provider in providers.data">
         <a
           :href="loginUrl(provider.name).toString()"
-          class="after:opacity-0 font-bold font-header after:h-0.5 after:bg-slate-900 after:w-full after:absolute after:-bottom-2 after:left-0"
+          class="font-header font-bold after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-slate-900 after:opacity-0"
           >Log-in mit {{ capitalizeFirstLetter(provider.name) }}</a
         >
       </li>

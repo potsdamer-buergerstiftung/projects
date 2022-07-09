@@ -1,7 +1,7 @@
 <template>
   <header class="absolute z-40 w-full">
     <div
-      class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-4 py-2 md:py-4 lg:py-6 xl:px-10"
+      class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-2 md:px-8 md:py-4 lg:px-4 lg:py-6 xl:px-10"
     >
       <NuxtLink
         to="/"
@@ -12,22 +12,22 @@
         <slot name="brand" />
       </NuxtLink>
       <nav
-        class="overflow-y-auto lg:overflow-y-visible absolute top-0 bottom-0 left-0 right-0 md:right-1/4 bg-slate-900 min-h-screen h-screen lg:h-auto lg:min-h-0 lg:bg-transparent flex flex-col lg:flex-row lg:relative lg:translate-x-0 transition-transform duration-500 lg:transition-none"
+        class="absolute top-0 bottom-0 left-0 right-0 flex h-screen min-h-screen flex-col overflow-y-auto bg-slate-900 transition-transform duration-500 md:right-1/4 lg:relative lg:h-auto lg:min-h-0 lg:translate-x-0 lg:flex-row lg:overflow-y-visible lg:bg-transparent lg:transition-none"
         :class="[
           store.isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full',
         ]"
         v-if="$slots.navigation"
       >
-        <div class="block lg:hidden px-4 py-8 mb-8">
+        <div class="mb-8 block px-4 py-8 lg:hidden">
           <HeaderMobileMenuButton variant="close" />
         </div>
         <slot name="navigation" />
-        <div class="flex flex-col items-start lg:hidden px-4 py-8 mb-8">
+        <div class="mb-8 flex flex-col items-start px-4 py-8 lg:hidden">
           <slot name="actions" />
         </div>
       </nav>
-      <div class="flex flex-row gap-4 items-center py-3" v-if="$slots.actions">
-        <div class="hidden md:flex flex-row">
+      <div class="flex flex-row items-center gap-4 py-3" v-if="$slots.actions">
+        <div class="hidden flex-row md:flex">
           <slot name="actions" />
         </div>
         <div class="block lg:hidden">
@@ -36,11 +36,11 @@
       </div>
     </div>
     <div
-      class="invisible lg:visible fixed top-0 right-0 left-0 bottom-0 bg-slate-900 transition duration-500 -z-[1] pointer-events-none"
+      class="pointer-events-none invisible fixed top-0 right-0 left-0 bottom-0 -z-[1] bg-slate-900 transition duration-500 lg:visible"
       :class="[store.isSubMenuOpen ? 'opacity-70' : 'opacity-0']"
     />
     <div
-      class="invisible lg:visible bg-white absolute top-0 left-0 w-full duration-500 -z-[1] transition-[height, opacity]"
+      class="transition-[height, opacity] invisible absolute top-0 left-0 -z-[1] w-full bg-white duration-500 lg:visible"
       :class="[
         store.isSubMenuOpen
           ? 'translate-y-0 opacity-100'
