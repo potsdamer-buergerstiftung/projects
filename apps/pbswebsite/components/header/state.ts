@@ -4,6 +4,7 @@ export const useStore = defineStore("eventBookingForm", () => {
   const isSubMenuOpen = ref(false);
   const isMobileMenuOpen = ref(false);
   const isSubMenuOpenDebounced = ref(false);
+  const headerOverlayHight = ref(0);
 
   watch(isSubMenuOpen, (newVal) => {
     if (newVal === true) isSubMenuOpenDebounced.value = true;
@@ -16,6 +17,10 @@ export const useStore = defineStore("eventBookingForm", () => {
     },
     { debounce: 50, maxWait: 5000 }
   );
+
+  function setHeaderOverlayHight(height: number) {
+    headerOverlayHight.value = height;
+  }
 
   function toggleSubMenuOpen() {
     isSubMenuOpen.value = !isSubMenuOpen.value;
@@ -45,5 +50,7 @@ export const useStore = defineStore("eventBookingForm", () => {
     closeSubMenu,
     openSubMenu,
     closeMobileMenu,
+    setHeaderOverlayHight,
+    headerOverlayHight,
   };
 });

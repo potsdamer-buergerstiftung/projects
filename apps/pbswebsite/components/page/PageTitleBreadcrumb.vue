@@ -31,7 +31,7 @@
           </div>
           <NuxtLink
             v-else
-            :to="item.to"
+            :to="item.link"
             class="ml-2 text-sm font-bold transition hover:text-emerald-500"
           >
             {{ item.text }}
@@ -45,7 +45,7 @@
 <script setup lang="ts">
 interface Item {
   text: string;
-  to?: string;
+  link?: string;
   disabled?: boolean;
 }
 

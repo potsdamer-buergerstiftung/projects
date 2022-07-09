@@ -14,8 +14,8 @@
             title
         }}</span>
     </NuxtLink>
-    <ul class="relative lg:absolute px-9 lg:px-4 mb-4 lg:mb-0 lg:py-20 flex-col w-auto whitespace-nowrap"
-      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'flex' : 'hidden']">
+    <ul class="relative lg:absolute px-9 lg:px-4 mb-4 lg:mb-0 lg:py-20 flex-col w-auto whitespace-nowrap" ref="subMenu"
+      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'flex' : 'hidden']" v-if="$slots.default">
       <slot />
     </ul>
   </div>
@@ -47,6 +47,7 @@ const index = ref(0);
 const slots = useSlots();
 const itemSubMenuOpen = ref(false);
 const isDark = inject<boolean>("isDark");
+const subMenu = ref(null);
 
 function toggleItemSubMenuOpen() {
   itemSubMenuOpen.value = !itemSubMenuOpen.value;
@@ -54,6 +55,7 @@ function toggleItemSubMenuOpen() {
 
 function onHover() {
   if (slots.default && lgAndGreater.value) {
+    store.setHeaderOverlayHight(subMenu.value.childElementCount * 2.2 + 10);
     store.openSubMenu();
     itemSubMenuOpen.value = true;
   }
