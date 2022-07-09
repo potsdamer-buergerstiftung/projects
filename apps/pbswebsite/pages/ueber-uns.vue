@@ -7,7 +7,7 @@ definePageMeta({
 <template>
   <div>
     <Title>Die Stiftung</Title>
-    <PageTitle title="Wir sind die Bürgerstiftung">
+    <PageTitle title="Wer wir sind">
       <template #breadcrumb>
         <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung' }]" />
       </template>
