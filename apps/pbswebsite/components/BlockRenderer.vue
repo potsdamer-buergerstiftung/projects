@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { VNode } from 'vue';
+import { VNode } from "vue";
 
-const { data } = defineProps<{ data: any }>()
+const { data } = defineProps<{ data: any }>();
 
 function ParseFunctionError(type: string) {
   return new Error(`\x1b[31m The Parser function of type "${type}" is not defined. \n
@@ -55,17 +55,19 @@ type ListItem = {
   items: Array<ListItem>;
 };
 
-
-
 const transforms: transforms = {
   delimiter: () => {
     return h("hr");
   },
 
   header: ({ data }) => {
-    return h("h" + data.level, {
-      class: "font-header text-4xl font-bold mb-4",
-    }, data.text);
+    return h(
+      "h" + data.level,
+      {
+        class: "font-header text-4xl font-bold mb-4",
+      },
+      data.text
+    );
   },
 
   paragraph: ({ data }) => {
@@ -76,13 +78,21 @@ const transforms: transforms = {
   },
 
   nestedlist: ({ data }) => {
-    return h("ul", {
-      class: "list-disc mb-8 ml-4",
-    }, data.items.map((item) => {
-      return h("li", {
-        class: "mb-4",
-      }, item.content);
-    }));
+    return h(
+      "ul",
+      {
+        class: "list-disc mb-8 ml-4",
+      },
+      data.items.map((item) => {
+        return h(
+          "li",
+          {
+            class: "mb-4",
+          },
+          item.content
+        );
+      })
+    );
   },
 
   list: ({ data }) => {
@@ -166,14 +176,15 @@ const parser = (plugins = {}): Parser => {
       const parserFreeBlocks = parser(parsers).validate({ blocks });
 
       if (parserFreeBlocks.length) {
-        throw new Error(`Parser Functions missing for blocks: ${parserFreeBlocks.toString()}`);
+        throw new Error(
+          `Parser Functions missing for blocks: ${parserFreeBlocks.toString()}`
+        );
       }
 
       const parsed = [];
 
       for (let i = 0; i < blocks.length; i++) {
-        if (!parsers[blocks[i].type])
-          throw ParseFunctionError(blocks[i].type);
+        if (!parsers[blocks[i].type]) throw ParseFunctionError(blocks[i].type);
 
         parsed.push(parsers[blocks[i].type](blocks[i]));
       }
@@ -200,5 +211,5 @@ const edjsParser = parser();
 
 const parseData = () => {
   return edjsParser.parse(data);
-}
+};
 </script>

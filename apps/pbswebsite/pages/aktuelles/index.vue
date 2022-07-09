@@ -11,11 +11,22 @@
     </PageTitle>
     <section>
       <div class="container mx-auto px-4 pb-20">
-        <MasonryGrid :items="posts" :ssr-columns="1" :column-width="400" :gap="16">
+        <MasonryGrid
+          :items="posts"
+          :ssr-columns="1"
+          :column-width="400"
+          :gap="16"
+        >
           <template #default="{ item: post }: any">
-            <ArticleCard :post-id="post.id.toString()" :title="post.title" :date="new Date(post.date)"
-              :imageId="post.image" :project-title="post.project.title"
-              :author="`${post.user_created.first_name} ${post.user_created.last_name}`" :tags="post.tags" />
+            <ArticleCard
+              :post-id="post.id.toString()"
+              :title="post.title"
+              :date="new Date(post.date)"
+              :imageId="post.image"
+              :project-title="post.project.title"
+              :author="`${post.user_created.first_name} ${post.user_created.last_name}`"
+              :tags="post.tags"
+            />
           </template>
         </MasonryGrid>
       </div>

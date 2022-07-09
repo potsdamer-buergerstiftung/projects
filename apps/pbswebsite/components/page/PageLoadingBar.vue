@@ -78,17 +78,22 @@ const startTimer = () => {
 // Hooks
 const nuxtApp = useNuxtApp();
 
-nuxtApp.hook('page:start', start);
-nuxtApp.hook('page:finish', finish);
+nuxtApp.hook("page:start", start);
+nuxtApp.hook("page:finish", finish);
 
 onBeforeUnmount(() => clear);
 </script>
 
 <template>
   <Transition name="fade">
-    <div class="z-30 w-screen h-full flex justify-center absolute bg-slate-50" v-if="data.show">
+    <div
+      class="z-30 w-screen h-full flex justify-center absolute bg-slate-50"
+      v-if="data.show"
+    >
       <div class="container mx-auto translate-y-1/2">
-        <h1 class="text-slate-900 text-center text-3xl font-bold font-header">Seite wird geladen...</h1>
+        <h1 class="text-slate-900 text-center text-3xl font-bold font-header">
+          Seite wird geladen...
+        </h1>
       </div>
     </div>
   </Transition>

@@ -9,12 +9,18 @@
         <HeaderNavItem title="Die Stiftung">
           <HeaderSubNavItem title="Wer wir sind" link="/ueber-uns" />
           <HeaderSubNavItem title="Unsere Gremien" link="/gremien" />
-          <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/aktuelles" />
+          <HeaderSubNavItem
+            title="Aktuelles & Veranstaltungen"
+            link="/aktuelles"
+          />
           <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
         </HeaderNavItem>
         <HeaderNavItem title="Projekte & Programme">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
-          <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
+          <HeaderSubNavItem
+            title="Ein Projekt mit uns starten"
+            link="/projekte"
+          />
         </HeaderNavItem>
         <HeaderNavItem title="Unterstützen & engagieren">
           <HeaderSubNavItem title="Ehrenamt" link="/" />
@@ -31,13 +37,18 @@
     <slot />
     <Footer />
     <ClientOnly>
-      <div class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle" v-if="lgAndUp"
-        style="transform: rotate(-90deg) translate(-50%, 0)">
+      <div
+        class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
+        v-if="lgAndUp"
+        style="transform: rotate(-90deg) translate(-50%, 0)"
+      >
         <ScrollProgressIndicator />
       </div>
     </ClientOnly>
-    <div class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
-      style="transform: rotate(-90deg) translate(50%, -100%)">
+    <div
+      class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
+      style="transform: rotate(-90deg) translate(50%, -100%)"
+    >
       <SocialMediaLinks size="large" />
     </div>
   </div>

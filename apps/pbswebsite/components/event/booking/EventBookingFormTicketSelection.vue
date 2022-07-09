@@ -28,7 +28,12 @@
         </div>
         <div>
           <FormKit
-            @change="store.selectTicket(ticket.id, parseInt(($event.target as HTMLInputElement).value))"
+            @change="
+              store.selectTicket(
+                ticket.id,
+                parseInt(($event.target as HTMLInputElement).value)
+              )
+            "
             :value="store.getSelectedQuantity(ticket.id)"
             type="select"
             name="small_country"

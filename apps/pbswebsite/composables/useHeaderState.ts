@@ -13,6 +13,6 @@ export default defineStore("header", {
     },
     toggleSubMenuOpen() {
       this.isSubMenuOpen = !this.isSubMenuOpen;
-    }
+    },
   },
 });

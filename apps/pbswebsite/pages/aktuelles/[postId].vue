@@ -4,7 +4,10 @@
     <section class="relative">
       <div class="absolute h-full w-full">
         <DirectusImage
-          :asset-id="post.image" :width="1920" :height="1080" :quality="40"
+          :asset-id="post.image"
+          :width="1920"
+          :height="1080"
+          :quality="40"
           class="h-full w-full object-cover"
         />
       </div>
