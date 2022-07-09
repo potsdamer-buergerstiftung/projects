@@ -1,6 +1,6 @@
 <template>
     <header class="absolute z-40 w-full">
-        <div class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-4 py-6 xl:px-10">
+        <div class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 md:px-8 lg:px-4 py-2 md:py-4 lg:py-6 xl:px-10">
             <NuxtLink to="/" class="group -ml-2 block p-2 outline-none" tabindex="1" v-if="$slots.brand">
                 <slot name="brand" />
             </NuxtLink>

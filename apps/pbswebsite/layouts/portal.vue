@@ -2,9 +2,9 @@
     <div class="antialiased">
         <Header :is-dark="(route.meta.isDark as boolean)">
             <template #brand>
-                <div class="flex flex-row justify-center items-center divide-x-2">
-                    <HeaderBrand class="pr-4" />
-                    <h1 class="font-bold font-header pl-4">Freiwilligenportal</h1>
+                <div class="flex flex-col md:flex-row justify-center divide-y-2 md:divide-y-0 md:items-center md:divide-x-2">
+                    <HeaderBrand class="pb-2 md:pb-0 md:pr-4 lg:pr-2 xl:pr-4" />
+                    <h1 class="font-bold font-header md:pl-4 lg:pl-2 xl:pl-4">Freiwilligenportal</h1>
                 </div>
             </template>
             <template #navigation>
