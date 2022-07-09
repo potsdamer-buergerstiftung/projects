@@ -12,6 +12,7 @@ const store = useStore();
 
 function onClick() {
     store.closeSubMenu();
+    store.closeMobileMenu();
     navItemState.value = false;
 }
 

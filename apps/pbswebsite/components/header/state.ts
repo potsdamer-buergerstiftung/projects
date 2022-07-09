@@ -33,6 +33,10 @@ export const useStore = defineStore("eventBookingForm", () => {
     isSubMenuOpen.value = false;
   }
 
+  function closeMobileMenu() {
+    isMobileMenuOpen.value = false;
+  }
+
   return {
     toggleSubMenuOpen,
     toggleMobileMenuOpen,
@@ -40,5 +44,6 @@ export const useStore = defineStore("eventBookingForm", () => {
     isMobileMenuOpen,
     closeSubMenu,
     openSubMenu,
+    closeMobileMenu,
   };
 });

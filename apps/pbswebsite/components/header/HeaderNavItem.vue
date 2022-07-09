@@ -15,7 +15,7 @@
         }}</span>
     </NuxtLink>
     <ul class="relative lg:absolute px-9 lg:px-4 mb-4 lg:mb-0 lg:py-20 flex-col w-auto whitespace-nowrap"
-      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'lg:flex' : 'lg:hidden', itemSubMenuOpen ? 'flex' : 'hidden']">
+      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'flex' : 'hidden']">
       <slot />
     </ul>
   </div>
@@ -26,7 +26,7 @@ import { useStore } from "./state";
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 
 const breakpoints = useBreakpoints(breakpointsTailwind, {});
-const lgAndGreater = breakpoints.greater("md");
+const lgAndGreater = breakpoints.greater("lg");
 
 interface Props {
   title: string;
@@ -67,9 +67,12 @@ function onLeave() {
 }
 
 function onClick() {
-  if (slots.default && !lgAndGreater) {
+  if (slots.default) {
     store.openSubMenu();
     toggleItemSubMenuOpen();
+  }
+  if (!slots.default && !lgAndGreater) {
+    store.closeMobileMenu();
   }
 }
 
