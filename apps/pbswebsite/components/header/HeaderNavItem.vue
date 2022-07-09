@@ -15,7 +15,7 @@
         }}</span>
     </NuxtLink>
     <ul class="relative lg:absolute px-9 lg:px-4 mb-4 lg:mb-0 lg:py-20 flex-col w-auto whitespace-nowrap"
-      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'flex' : 'hidden', itemSubMenuOpen ? 'block' : 'hidden']">
+      :class="[store.isSubMenuOpen && itemSubMenuOpen ? 'lg:flex' : 'lg:hidden', itemSubMenuOpen ? 'flex' : 'hidden']">
       <slot />
     </ul>
   </div>
@@ -67,7 +67,7 @@ function onLeave() {
 }
 
 function onClick() {
-  if (slots.default) {
+  if (slots.default && !lgAndGreater) {
     store.openSubMenu();
     toggleItemSubMenuOpen();
   }
