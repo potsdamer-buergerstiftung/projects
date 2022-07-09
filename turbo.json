@@ -30,6 +30,9 @@
       "dependsOn": ["^build"],
       "outputs": [".output/**", ".vercel_build_output/**"]
     },
+    "portal#dev": {
+      "dependsOn": ["^dev"]
+    },
     "lint": {
       "outputs": []
     },

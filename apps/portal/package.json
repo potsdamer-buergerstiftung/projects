@@ -1,0 +1,20 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "directus start",
+    "start": "directus start",
+    "bootstrap": "directus bootstrap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directus": "^9.14.1",
+    "directus-extension-editorjs": "*",
+    "sqlite3": "^5.0.8"
+  }
+}
