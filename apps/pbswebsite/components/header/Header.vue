@@ -4,7 +4,7 @@
             <NuxtLink to="/" class="group -ml-2 block p-2 outline-none" tabindex="1" v-if="$slots.brand">
                 <slot name="brand" />
             </NuxtLink>
-            <nav class="absolute top-0 bottom-0 left-0 right-0 md:right-1/4 bg-slate-900 min-h-screen lg:min-h-0 lg:bg-transparent flex flex-col lg:flex-row lg:relative lg:translate-x-0 transition-transform duration-500 lg:transition-none"
+            <nav class="overflow-y-auto absolute top-0 bottom-0 left-0 right-0 md:right-1/4 bg-slate-900 min-h-screen h-screen lg:min-h-0 lg:bg-transparent flex flex-col lg:flex-row lg:relative lg:translate-x-0 transition-transform duration-500 lg:transition-none"
                 :class="[store.isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full']" v-if="$slots.navigation">
                 <div class="block lg:hidden px-4 py-8 mb-8">
                     <HeaderMobileMenuButton variant="close" />
