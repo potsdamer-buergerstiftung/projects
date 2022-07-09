@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  headerColor: "white",
+  isDark: true,
   hideSideActions: true,
 });
 </script>
