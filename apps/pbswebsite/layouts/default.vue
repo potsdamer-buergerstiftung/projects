@@ -49,7 +49,7 @@
       class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
       style="transform: rotate(-90deg) translate(50%, -100%)"
     >
-      <SocialMediaLinks size="large" />
+      <SocialMediaLinks size="large" :is-dark="(route.meta.isDark as boolean)"/>
     </div>
   </div>
 </template>

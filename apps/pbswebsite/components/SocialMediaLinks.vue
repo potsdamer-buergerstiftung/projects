@@ -3,17 +3,12 @@
     <p class="text-sm font-bold text-emerald-500" v-if="size === 'large'">
       Folg' uns
     </p>
-    <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'"
-      >-</span
-    >
+    <span class="text-sm font-bold" :class="[textColor]" v-if="size === 'large'">-</span>
     <ul class="flex gap-4" :class="[directionClass]">
       <li v-for="link in links">
-        <NuxtLink
-          :to="link.url"
-          class="text-sm font-bold transition hover:text-emerald-500"
-          :class="[textColor]"
-          >{{ size === "compact" ? link.short + "." : link.text }}</NuxtLink
-        >
+        <NuxtLink :to="link.url" class="text-sm font-bold transition hover:text-emerald-500" :class="[textColor]">{{
+            size === "compact" ? link.short + "." : link.text
+        }}</NuxtLink>
       </li>
     </ul>
   </div>
@@ -23,6 +18,7 @@
 interface Props {
   size: "compact" | "default" | "large";
   direction?: "horizontal" | "vertical";
+  isDark?: boolean;
 }
 
 const links = [
@@ -43,16 +39,14 @@ const links = [
   },
 ];
 
-const { size = "default", direction = "horizontal" } = defineProps<Props>();
+const { size = "default", direction = "horizontal", isDark = false } = defineProps<Props>();
 
 const directionClass = computed((): string => {
   return direction === "horizontal" ? "flex-row" : "flex-col";
 });
 
-const route = useRoute();
-
 const textColor = computed(() =>
-  route.meta.headerColor === "white" && size === "large"
+  isDark && size === "large"
     ? "text-white"
     : "inherit"
 );
