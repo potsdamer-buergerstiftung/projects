@@ -29,7 +29,7 @@
           </div>
         </div>
         <PageTitleBreadcrumb :items="[
-          { text: 'Aktuelles', to: '/aktuelles' },
+          { text: 'Aktuelles', link: '/aktuelles' },
           { text: post.title },
         ]" class="mt-20 pb-12 text-white" />
       </div>
