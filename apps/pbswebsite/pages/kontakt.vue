@@ -15,7 +15,7 @@
         </button>
       </template>
       <template #breadcrumb>
-        <PageTitleBreadcrumb :items="[{ text: 'Kontakt', to: '/kontakt' }]" />
+        <PageTitleBreadcrumb :items="[{ text: 'Kontakt', link: '/kontakt' }]" />
       </template>
     </PageTitle>
     <section class="bg-white">
