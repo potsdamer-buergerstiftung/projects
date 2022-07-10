@@ -23,12 +23,12 @@
           />
         </HeaderNavItem>
         <HeaderNavItem title="Unterstützen & engagieren">
-          <HeaderSubNavItem title="Ehrenamt" link="/" />
-          <HeaderSubNavItem title="Spenden" link="/" />
-          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/" />
-          <HeaderSubNavItem title="Partner werden" link="/" />
+          <HeaderSubNavItem title="Ehrenamt" link="/mitstiften" />
+          <HeaderSubNavItem title="Spenden" link="/mitstiften" />
+          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
+          <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
         </HeaderNavItem>
-        <HeaderNavItem title="Shop" link="/kontakt" />
+        <HeaderNavItem title="Kontakt" link="/kontakt" />
       </template>
       <template #actions>
         <HeaderActions />
