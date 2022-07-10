@@ -3,7 +3,8 @@
     <Title>Aktuelles & Veranstaltungen</Title>
     <PageTitle title="Aktuelles & Veranstaltungen">
       <template #breadcrumb>
-        <PageTitleBreadcrumb :items="[{ text: 'Aktuelles' }]" />
+        <PageTitleBreadcrumb
+          :items="[{ text: 'Die Stiftung', href: '/stiftung' }, { text: 'Aktuelles & Veranstaltungen' }]" />
       </template>
       <template #description>
         <p>Verfolgen Sie die Entwicklung unserer Projekte, die dank Ihrer großzügigen Beiträge
