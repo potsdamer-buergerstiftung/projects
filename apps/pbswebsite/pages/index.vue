@@ -147,7 +147,7 @@ const priorities = [{
 },
 {
   subTitle: 'Begegnung & Toleranz',
-  title: 'Menschen aus aller Welt zusammenbringen',
+  title: 'Menschen aus der Welt zusammenbringen',
   assetId: 'db74ab6f-0e47-415d-8686-a3a6afa2b6a1',
   description: `Menschen in Potsdam kennenlernen, zusammen leben und Spaß haben. Wir organisieren Zusammentreffen aller Art und vereinfachen Begegnung durch gemeinsame Interessen.`,
 },
