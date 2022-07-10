@@ -65,7 +65,7 @@
             <DirectusImage :asset-id="priority.assetId" class="object-cover w-full h-full" :width="500" :height="700"
               :quality="30" v-if="priority.assetId" />
           </div>
-          <div class="container mx-auto px-4 lg:max-w-none py-16 lg:py-8 lg:px-8 flex flex-col justify-between h-full">
+          <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-6 flex flex-col justify-between h-full">
             <div class="mb-36">
               <h1 class="text-sm font-semibold uppercase text-slate-200 mb-1">{{ priority.subTitle }}</h1>
               <h2 class="text-white font-header font-bold text-3xl">{{ priority.title }}</h2>
@@ -79,7 +79,7 @@
           <div class="z-[-1] absolute h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900" />
           </div>
-          <div class="container mx-auto px-4 lg:max-w-none py-16 lg:py-8 lg:px-8 flex flex-col justify-end h-full">
+          <div class="container mx-auto px-4 lg:max-w-none py-16 lg:py-6 lg:px-6 flex flex-col justify-end h-full">
             <div>
               <NuxtLink to="/mitstiften"
                 class="mb-6 text-md font-header inline-flex items-center rounded-md text-emerald-500 font-bold transition ease-in-out hover:text-emerald-200">
@@ -90,7 +90,7 @@
                 </svg>
               </NuxtLink>
               <p class="text-white">
-                Ermögliche mit Deiner Spende und einem von Dir bestimmten Spendenzweck, welche unserer
+                Mit Deiner Spende und einem von Dir bestimmten Spendenzweck kannst Du bestimmen, welche unserer
                 Projekte und Projektkategorien Du unterstützen möchtest.
               </p>
             </div>
@@ -143,7 +143,7 @@ const priorities = [{
   subTitle: 'Kultur',
   title: 'Chancengleichheit und Zugang zu Kultur schaffen',
   assetId: '72baf604-4397-4f22-9ac7-195df8b1a591',
-  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung ist besonders wegen der Pandemiemaßnahmen wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und jedem, Teil des Publikums zu sein.`,
+  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und jedem, Teil des Publikums zu sein.`,
 },
 {
   subTitle: 'Begegnung & Toleranz',
