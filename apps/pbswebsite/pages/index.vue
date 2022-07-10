@@ -143,7 +143,7 @@ const priorities = [{
   subTitle: 'Kultur',
   title: 'Chancengleichheit und Zugang für Kultur schaffen',
   assetId: '72baf604-4397-4f22-9ac7-195df8b1a591',
-  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und jedem, Teil des Publikums zu sein.`,
+  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und allen, Teil des Publikums zu sein.`,
 },
 {
   subTitle: 'Begegnung & Toleranz',
