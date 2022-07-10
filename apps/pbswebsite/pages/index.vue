@@ -107,17 +107,17 @@ const posts = await getItems<any>({
   collection: "posts",
   params: {
     fields: [
-      "*",
+      "title",
+      "date",
+      "id",
+      "image",
+      "tags",
       "project.*.title",
-      "user_created.first_name",
-      "user_created.last_name",
     ],
     limit: 4,
     sort: "-date",
   }
 })
-
-console.log(posts)
 
 const indexToColSpan = useGridSpanLayout();
 </script>
