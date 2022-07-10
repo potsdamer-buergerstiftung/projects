@@ -4,7 +4,7 @@
     @click="scrollToTop"
     :class="{ 'opacity-0': progress < 20 }"
   >
-    <div class="relative h-[2px] w-14 rotate-180 bg-gray-200">
+    <div class="relative h-[2px] w-14 rotate-180 bg-black bg-opacity-10">
       <div
         class="absolute h-full bg-slate-900 transition group-hover:bg-emerald-500"
         v-bind:style="{
