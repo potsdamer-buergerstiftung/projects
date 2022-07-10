@@ -7,8 +7,8 @@
       </template>
       <template #navigation>
         <HeaderNavItem title="Die Stiftung">
-          <HeaderSubNavItem title="Wer wir sind" link="/ueber-uns" />
-          <HeaderSubNavItem title="Unsere Gremien" link="/gremien" />
+          <HeaderSubNavItem title="Wer wir sind" link="/stiftung" />
+          <HeaderSubNavItem title="Unsere Gremien" link="/stiftung/gremien" />
           <HeaderSubNavItem
             title="Aktuelles & Veranstaltungen"
             link="/stiftung/aktuelles"
