@@ -71,9 +71,6 @@ function onClick() {
     store.openSubMenu();
     toggleItemSubMenuOpen();
   }
-  if (!slots.default && !lgAndGreater) {
-    store.closeMobileMenu();
-  }
 }
 
 watch(node, (newVal) => {

@@ -5,7 +5,7 @@
       <template #breadcrumb>
         <PageTitleBreadcrumb
           :items="[
-            { text: 'Projekte', to: '/projekte' },
+            { text: 'Projekte', link: '/projekte' },
             { text: project.title },
           ]"
         />

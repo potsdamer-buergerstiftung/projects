@@ -8,10 +8,10 @@
       </div>
       <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70" />
       <div class="relative mx-auto max-w-5xl px-4 pt-40">
-        <h1 class="font-header text-7xl font-bold text-white">
+        <h1 class="font-header text-3xl md:text-7xl font-bold text-white">
           {{ post.title }}
         </h1>
-        <div class="mt-8 flex flex-row gap-8">
+        <div class="mt-8 flex flex-row gap-8 flex-wrap">
           <div>
             <p class="text-slate-300">Autor</p>
             <p class="font-bold text-white">

@@ -8,6 +8,12 @@ export const useStore = defineStore("eventBookingForm", () => {
   const headerOverlayHight = ref(0);
   const breakpoints = useBreakpoints(breakpointsTailwind);
   const lgAndLarger = breakpoints.greater("md");
+  const router = useRouter();
+
+  router.afterEach(() => {
+    closeSubMenu();
+    closeMobileMenu();
+  });
 
   watch(lgAndLarger, () => {
     isMobileMenuOpen.value = false;
