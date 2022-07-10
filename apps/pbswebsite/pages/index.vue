@@ -62,7 +62,7 @@
         <div class="relative col-span-6 md:col-span-3 lg:col-span-2" v-for="priority in priorities">
           <div class="z-[-1] absolute h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900 opacity-60" />
-            <DirectusImage :asset-id="priority.assetId" class="object-cover w-full h-full" :width="500" :height="700"
+            <DirectusImage :asset-id="priority.assetId" class="object-cover w-full h-full" :width="700" :height="500"
               :quality="30" v-if="priority.assetId" />
           </div>
           <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-10 flex flex-col justify-between h-full">
