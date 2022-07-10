@@ -11,7 +11,7 @@
           <HeaderSubNavItem title="Unsere Gremien" link="/gremien" />
           <HeaderSubNavItem
             title="Aktuelles & Veranstaltungen"
-            link="/aktuelles"
+            link="/stiftung/aktuelles"
           />
           <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
         </HeaderNavItem>

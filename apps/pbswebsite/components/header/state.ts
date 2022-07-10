@@ -1,3 +1,4 @@
+import { breakpointsTailwind } from "@vueuse/core";
 import { defineStore } from "pinia";
 
 export const useStore = defineStore("eventBookingForm", () => {
@@ -5,6 +6,13 @@ export const useStore = defineStore("eventBookingForm", () => {
   const isMobileMenuOpen = ref(false);
   const isSubMenuOpenDebounced = ref(false);
   const headerOverlayHight = ref(0);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
+  const lgAndLarger = breakpoints.greater("md");
+
+  watch(lgAndLarger, () => {
+    isMobileMenuOpen.value = false;
+    isSubMenuOpen.value = false;
+  });
 
   watch(isSubMenuOpen, (newVal) => {
     if (newVal === true) isSubMenuOpenDebounced.value = true;

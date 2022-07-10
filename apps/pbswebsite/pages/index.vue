@@ -2,9 +2,7 @@
   <div>
     <Title>Brücken bauen, Menschen verbinden</Title>
     <div class="container mx-auto px-4 pt-36 md:pt-44">
-      <h1
-        class="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl"
-      >
+      <h1 class="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl">
         Brücken bauen,<br />
         Menschen verbinden
       </h1>
@@ -18,48 +16,25 @@
     </div>
     <div class="container mx-auto px-4 pt-16 pb-16 md:pt-20">
       <div class="grid grid-cols-6 gap-8">
-        <div
-          v-for="(project, i) in projects"
-          class="col-span-6 lg:col-span-3"
-          :class="{
-            'xl:col-span-2': indexToColSpan(i) * 2 == 2,
-            'xl:col-span-4': indexToColSpan(i) * 2 == 4,
-          }"
-        >
-          <ProjectCard
-            :title="project.title"
-            :sub-title="project.sub_title"
-            :project-id="project.id"
-            :image-id="project.image"
-            :image-size="indexToColSpan(i) * 2 == 2 ? 'small' : 'large'"
-          />
+        <div v-for="(project, i) in projects" class="col-span-6 lg:col-span-3" :class="{
+          'xl:col-span-2': indexToColSpan(i) * 2 == 2,
+          'xl:col-span-4': indexToColSpan(i) * 2 == 4,
+        }">
+          <ProjectCard :title="project.title" :sub-title="project.sub_title" :project-id="project.id"
+            :image-id="project.image" :image-size="indexToColSpan(i) * 2 == 2 ? 'small' : 'large'" />
         </div>
       </div>
-      <NuxtLink
-        to="/projekte"
-        class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-      >
+      <NuxtLink to="/projekte"
+        class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
         Alle Projekte
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="ml-1 h-4 w-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </NuxtLink>
     </div>
-    <section>
-      <div
-        class="container mx-auto grid grid-cols-1 gap-8 px-4 pb-16 pt-8 lg:grid-cols-2"
-      >
+    <section class="bg-slate-100 py-24">
+      <div class="container mx-auto grid grid-cols-1 gap-8 px-4 lg:grid-cols-2">
         <div>
           <h4 class="text-sm font-semibold uppercase text-gray-600">
             Lebe deine Stadt
@@ -82,6 +57,33 @@
         </div>
       </div>
     </section>
+    <section class="py-24">
+      <div class="container mx-auto grid gap-8 px-4 grid-cols-6">
+        <div class="col-span-6 lg:col-span-4">
+          <h4 class="text-sm font-semibold uppercase text-gray-600">
+            Von unserem Blog
+          </h4>
+          <h1 class="font-header mt-2 text-4xl font-bold">
+            Aktuelles & Neuigkeiten
+          </h1>
+          <p class="mt-4 max-w-2xl">Verfolgen Sie die Entwicklung unserer Projekte, die dank Ihrer großzügigen Beiträge
+            und ihrer Unterstützung möglich wurden.</p>
+          <NuxtLink to="/stiftung/aktuelles"
+            class="text-md font-header mt-12 mb-4 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Alle Beiträge
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </NuxtLink>
+        </div>
+        <div v-for="post in posts" class="min-h-max col-span-6 lg:col-span-3 xl:col-span-2">
+          <ArticleCard :title="post.title" :date="new Date(post.date)" :post-id="post.id.toString()"
+            :image-id="post.image" :project-title="post.project.title" :tags="post.tags" compact
+            :link="`/stiftung/aktuelles/${post.id}`" />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -100,6 +102,22 @@ const projects = await getItems<any>({
     fields: ["title", "sub_title", "image", "id"],
   },
 });
+
+const posts = await getItems<any>({
+  collection: "posts",
+  params: {
+    fields: [
+      "*",
+      "project.*.title",
+      "user_created.first_name",
+      "user_created.last_name",
+    ],
+    limit: 4,
+    sort: "-date",
+  }
+})
+
+console.log(posts)
 
 const indexToColSpan = useGridSpanLayout();
 </script>
