@@ -58,14 +58,14 @@
       </div>
     </section>
     <section>
-      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 overflow-hidden">
-        <div class="relative" v-for="priority in priorities">
+      <div class="grid grid-cols-6 overflow-hidden">
+        <div class="relative col-span-6 md:col-span-3 lg:col-span-2" v-for="priority in priorities">
           <div class="z-[-1] absolute h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900 opacity-60" />
             <DirectusImage :asset-id="priority.assetId" class="object-cover w-full h-full" :width="500" :height="700"
               :quality="30" v-if="priority.assetId" />
           </div>
-          <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-6 flex flex-col justify-between h-full">
+          <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-10 flex flex-col justify-between h-full">
             <div class="mb-36">
               <h1 class="text-sm font-semibold uppercase text-slate-200 mb-1">{{ priority.subTitle }}</h1>
               <h2 class="text-white font-header font-bold text-3xl">{{ priority.title }}</h2>
@@ -75,11 +75,11 @@
             </div>
           </div>
         </div>
-        <div class="relative">
+        <div class="relative col-span-6 md:col-span-3 lg:col-span-6">
           <div class="z-[-1] absolute h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900" />
           </div>
-          <div class="container mx-auto px-4 lg:max-w-none py-16 lg:py-6 lg:px-6 flex flex-col justify-end h-full">
+          <div class="container mx-auto px-4 py-16 md:px-8 lg:px-4 md:py-8 lg:py-16 flex flex-col justify-end h-full">
             <div>
               <NuxtLink to="/mitstiften"
                 class="mb-6 text-md font-header inline-flex items-center rounded-md text-emerald-500 font-bold transition ease-in-out hover:text-emerald-200">
@@ -89,7 +89,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </NuxtLink>
-              <p class="text-white">
+              <p class="text-white max-w-2xl">
                 Mit Deiner Spende und einem von Dir bestimmten Spendenzweck kannst Du bestimmen, welche unserer
                 Projekte und Projektkategorien Du unterstützen möchtest.
               </p>
