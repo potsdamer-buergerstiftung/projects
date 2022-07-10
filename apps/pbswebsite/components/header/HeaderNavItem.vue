@@ -5,7 +5,7 @@
       class="group flex flex-row justify-start gap-1 px-4 py-4 outline-none lg:flex-col lg:gap-0 lg:px-3 lg:py-2 xl:px-4"
       :to="link">
       <span
-        class="text-xs font-bold leading-4 text-slate-500 transition group-hover:text-emerald-500 group-focus:text-emerald-500">{{
+        class="text-xs font-bold leading-4 transition group-hover:text-emerald-500 group-focus:text-emerald-500" :class="[isDark ? 'text-slate-400' : 'text-slate-500']">{{
             addZero(index.toString())
         }}</span>
       <span
