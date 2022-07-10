@@ -33,7 +33,7 @@
         </svg>
       </NuxtLink>
     </div>
-    <section class="bg-slate-100 py-24">
+    <section class="bg-slate-100 py-16 lg:py-24">
       <div class="container mx-auto grid grid-cols-1 gap-8 px-4 lg:grid-cols-2">
         <div>
           <h4 class="text-sm font-semibold uppercase text-gray-600">
