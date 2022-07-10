@@ -82,9 +82,9 @@
           <div class="container mx-auto px-4 py-16 md:px-8 lg:px-4 md:py-8 lg:py-16 flex flex-col justify-end h-full">
             <div>
               <NuxtLink to="/mitstiften"
-                class="mb-6 text-md font-header inline-flex items-center rounded-md text-emerald-500 lg:text-slate-900 lg:text-xl font-bold transition ease-in-out hover:text-emerald-200 lg:hover:text-emerald-500">
+                class="mb-6 text-md font-header inline-flex items-center rounded-md text-emerald-500 lg:text-slate-900 font-bold transition ease-in-out hover:text-emerald-200 lg:hover:text-emerald-500">
                 Unterstütze uns
-                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 lg:h-5 lg:w-5" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -143,7 +143,7 @@ const priorities = [{
   subTitle: 'Kultur',
   title: 'Chancengleichheit und Zugang für Kultur schaffen',
   assetId: '72baf604-4397-4f22-9ac7-195df8b1a591',
-  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und jedem, Teil des Publikums zu sein.`,
+  description: `Finanzierbarer Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und jedem, Teil des Publikums zu sein.`,
 },
 {
   subTitle: 'Begegnung & Toleranz',
