@@ -24,8 +24,9 @@
         </li>
       </ul>
       <h2 class="font-header mt-3 text-3xl font-bold" :class="{ 'group-hover:text-white': compact }">{{ title }}</h2>
-      <ul v-if="tags" class="mt-4 flex flex-wrap gap-2">
-        <ClientOnly>
+      <ClientOnly>
+        <ul v-if="tags" class="mt-4 flex flex-wrap gap-2">
+
           <li v-for="tag in tags">
             <NuxtLink to="/aktuelles"
               class="rounded-md bg-slate-200 py-1 px-2 text-sm font-medium transition hover:bg-slate-300"
@@ -33,8 +34,8 @@
               {{ tag }}
             </NuxtLink>
           </li>
-        </ClientOnly>
-      </ul>
+        </ul>
+      </ClientOnly>
     </div>
   </NuxtLink>
 </template>
