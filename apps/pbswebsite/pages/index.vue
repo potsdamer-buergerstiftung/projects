@@ -112,7 +112,7 @@ const posts = await getItems<any>({
       "id",
       "image",
       "tags",
-      "project.*.title",
+      "project.title",
     ],
     limit: 4,
     sort: "-date",
