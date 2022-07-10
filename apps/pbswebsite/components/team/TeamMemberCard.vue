@@ -8,7 +8,7 @@
         <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-10 flex flex-col justify-end h-full">
             <div class="mt-60">
                 <h1 class="text-sm font-semibold uppercase text-slate-200 mb-1">{{ title }}</h1>
-                <h2 class="text-white font-header font-bold text-3xl">{{ name }}</h2>
+                <h2 class="text-white font-header font-bold text-2xl">{{ name }}</h2>
             </div>
         </div>
     </div>
