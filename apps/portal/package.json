@@ -15,7 +15,6 @@
   "dependencies": {
     "directus": "^9.14.1",
     "directus-extension-editorjs": "*",
-    "directus-extension-filepreview": "*",
     "sqlite3": "^5.0.8"
   }
 }
