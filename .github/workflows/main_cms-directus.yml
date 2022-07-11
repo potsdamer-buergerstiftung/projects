@@ -9,15 +9,15 @@ on:
       - main
     paths:
       - apps/portal/**
-      - packages/directus-extensions/**
+      - packages/**
       - .github/workflows/main_cms-directus.yml
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
     paths:
-      - apps/pbswebsite/**
-      - packages/nuxtui/**
+      - apps/portal/**
+      - packages/**
       - .github/workflows/main_cms-directus.yml
   workflow_dispatch:
 
