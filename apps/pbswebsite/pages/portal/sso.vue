@@ -24,7 +24,7 @@ watch(res, async (newRes) => {
   if (newRes) {
     setToken(newRes.data.access_token);
     await fetchUser();
-    router.replace("/portal");
+    return router.replace("/portal");
   }
 });
 </script>

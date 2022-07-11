@@ -35,25 +35,5 @@ definePageMeta({
 const greetingMessage = useGreetingMessage();
 const user = useDirectusUser() as any;
 
-const { setToken, fetchUser, logout } = useDirectusAuth();
-const directusUrl = useDirectusUrl();
-const router = useRouter();
-
-const { data: res } = await useLazyFetch<any>(
-  new URL("/auth/refresh", directusUrl).toString(),
-  {
-    method: "POST",
-    credentials: "include",
-    headers: useRequestHeaders(["cookie"]),
-    server: false,
-  }
-);
-
-watch(res, async (newRes) => {
-  if (newRes) {
-    setToken(newRes.data.access_token);
-    await fetchUser();
-    router.replace("/portal");
-  }
-});
+const { logout } = useDirectusAuth();
 </script>
