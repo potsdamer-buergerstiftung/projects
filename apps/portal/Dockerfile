@@ -1,4 +1,4 @@
-FROM node:16 as buld
+FROM node:lts as build
 
 WORKDIR /fe
 COPY package.json .
