@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Title>Freiwilligenportal</Title>
     <PageTitle :title="
       user
         ? `${greetingMessage}, ${user.first_name}.`
