@@ -25,7 +25,10 @@
         <HeaderNavItem title="Unterstützen & engagieren">
           <HeaderSubNavItem title="Ehrenamt" link="/mitstiften" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
-          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
+          <HeaderSubNavItem
+            title="Unsere Förderer und Partner"
+            link="/mitstiften"
+          />
           <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
         </HeaderNavItem>
         <HeaderNavItem title="Kontakt" link="/kontakt" />
@@ -49,7 +52,10 @@
       class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
       style="transform: rotate(-90deg) translate(50%, -100%)"
     >
-      <SocialMediaLinks size="large" :is-dark="(route.meta.isDark as boolean)"/>
+      <SocialMediaLinks
+        size="large"
+        :is-dark="(route.meta.isDark as boolean)"
+      />
     </div>
   </div>
 </template>

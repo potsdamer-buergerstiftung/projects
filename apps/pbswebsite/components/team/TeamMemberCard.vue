@@ -1,24 +1,36 @@
 <template>
-    <div class="h-full relative">
-        <div class="z-[-1] absolute h-full w-full">
-            <div class="absolute bottom-0 top-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent" />
-            <DirectusImage :asset-id="image" class="object-cover w-full h-full" :width="500" :height="700" :quality="30"
-                v-if="image" />
-        </div>
-        <div class="container mx-auto px-4 lg:max-w-none py-16 md:p-8 xl:p-10 flex flex-col justify-end h-full">
-            <div class="mt-60">
-                <h1 class="text-sm font-semibold uppercase text-slate-200 mb-1">{{ title }}</h1>
-                <h2 class="text-white font-header font-bold text-2xl">{{ name }}</h2>
-            </div>
-        </div>
+  <div class="relative h-full">
+    <div class="absolute z-[-1] h-full w-full">
+      <div
+        class="absolute bottom-0 top-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent"
+      />
+      <DirectusImage
+        :asset-id="image"
+        class="h-full w-full object-cover"
+        :width="500"
+        :height="700"
+        :quality="30"
+        v-if="image"
+      />
     </div>
+    <div
+      class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:p-8 lg:max-w-none xl:p-10"
+    >
+      <div class="mt-60">
+        <h1 class="mb-1 text-sm font-semibold uppercase text-slate-200">
+          {{ title }}
+        </h1>
+        <h2 class="font-header text-2xl font-bold text-white">{{ name }}</h2>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-    title: string;
-    name: string;
-    description?: string;
-    image?: string;
-}>()
+  title: string;
+  name: string;
+  description?: string;
+  image?: string;
+}>();
 </script>

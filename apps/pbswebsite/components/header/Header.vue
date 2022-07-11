@@ -31,7 +31,7 @@
           <slot name="actions" />
         </div>
         <div class="block lg:hidden">
-          <HeaderMobileMenuButton :is-dark="isDark"/>
+          <HeaderMobileMenuButton :is-dark="isDark" />
         </div>
       </div>
     </div>

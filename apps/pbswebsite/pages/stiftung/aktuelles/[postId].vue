@@ -3,15 +3,22 @@
     <Title>{{ post.title }}</Title>
     <section class="relative">
       <div class="absolute h-full w-full">
-        <DirectusImage :asset-id="post.image" :width="1920" :height="1080" :quality="40"
-          class="h-full w-full object-cover" />
+        <DirectusImage
+          :asset-id="post.image"
+          :width="1920"
+          :height="1080"
+          :quality="40"
+          class="h-full w-full object-cover"
+        />
       </div>
-      <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70" />
+      <div
+        class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70"
+      />
       <div class="relative mx-auto max-w-5xl px-4 pt-40">
-        <h1 class="font-header text-3xl md:text-7xl font-bold text-white">
+        <h1 class="font-header text-3xl font-bold text-white md:text-7xl">
           {{ post.title }}
         </h1>
-        <div class="mt-8 flex flex-row gap-8 flex-wrap">
+        <div class="mt-8 flex flex-row flex-wrap gap-8">
           <div>
             <p class="text-slate-300">Autor</p>
             <p class="font-bold text-white">
@@ -28,10 +35,13 @@
             <p class="font-bold text-white">Keine Kommentare</p>
           </div>
         </div>
-        <PageTitleBreadcrumb :items="[
-          { text: 'Aktuelles', link: '/aktuelles' },
-          { text: post.title },
-        ]" class="mt-20 pb-12 text-white" />
+        <PageTitleBreadcrumb
+          :items="[
+            { text: 'Aktuelles', link: '/aktuelles' },
+            { text: post.title },
+          ]"
+          class="mt-20 pb-12 text-white"
+        />
       </div>
     </section>
     <section>
