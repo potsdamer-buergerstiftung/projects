@@ -1,6 +1,6 @@
-FROM node:lts-alpine
+FROM node:16 as buld
 
-WORKDIR /home/node/app/
+WORKDIR /fe
 COPY package.json .
 COPY yarn.lock .
 COPY turbo.json .
@@ -10,4 +10,4 @@ RUN yarn install
 RUN yarn build --filter=portal
 
 FROM directus/directus
-COPY --from=0 /home/node/app/packages/.output/extensions /directus/
+COPY --from=build /fe/packages/.output/extensions /directus/
