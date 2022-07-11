@@ -19,7 +19,7 @@
           <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
         </HeaderNavItem>
         <HeaderNavItem title="Unterstützen & engagieren">
-          <HeaderSubNavItem title="Ehrenamt" link="/mitstiften" />
+          <HeaderSubNavItem title="Ehrenamt" link="/portal" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
           <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
           <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
