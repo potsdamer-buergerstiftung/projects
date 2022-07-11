@@ -3,9 +3,7 @@
     <Title>Presse & Dokumente</Title>
     <PageTitle title="Presse & Dokumente">
       <template #breadcrumb>
-        <PageTitleBreadcrumb
-          :items="[{ text: 'Die Stiftung' }, { text: 'Presse & Dokumente' }]"
-        />
+        <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung', link: '/stiftung' }, { text: 'Presse & Dokumente' }]" />
       </template>
       <template #description>
         <p>
@@ -16,20 +14,10 @@
     </PageTitle>
     <section>
       <div class="container mx-auto px-4 pb-20">
-        <MasonryGrid
-          :items="posts"
-          :ssr-columns="1"
-          :column-width="400"
-          :gap="16"
-        >
+        <MasonryGrid :items="posts" :ssr-columns="1" :column-width="400" :gap="16">
           <template #default="{ item: post }: any">
-            <ArticleCard
-              :post-id="post.id.toString()"
-              :title="post.title"
-              :date="new Date(post.date)"
-              :project-title="post.project.title"
-              :tags="[post.publisher]"
-            />
+            <ArticleCard :post-id="post.id.toString()" :title="post.title" :date="new Date(post.date)"
+              :project-title="post.project.title" :tags="[post.publisher]" />
           </template>
         </MasonryGrid>
       </div>
