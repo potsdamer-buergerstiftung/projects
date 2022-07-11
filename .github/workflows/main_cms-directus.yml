@@ -9,7 +9,7 @@ on:
       - main
     paths:
       - apps/portal/**
-      - packages/**
+      - packages/directus-extensions/**
       - .github/workflows/main_cms-directus.yml
   pull_request:
     types: [opened, synchronize, reopened, closed]
@@ -17,7 +17,7 @@ on:
       - main
     paths:
       - apps/portal/**
-      - packages/**
+      - packages/directus-extensions/**
       - .github/workflows/main_cms-directus.yml
   workflow_dispatch:
 
