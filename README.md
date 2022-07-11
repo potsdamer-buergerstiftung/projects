@@ -24,7 +24,7 @@ internally, all of the tools can be built just as we use them, directly from HEA
 
 - Node.js 14
 - Yarn 1.22
-- postgresql (Optional for CMS)
+- sqlite (To spinn up local Directus instance)
 
 ## License
 
