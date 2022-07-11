@@ -8,17 +8,16 @@
         </NuxtLink>
       </template>
       <template #navigation>
-        <HeaderNavItem title="Die Stiftung">
+        <HeaderNavItem title="Die Stiftung" link="/stiftung">
           <HeaderSubNavItem title="Wer wir sind" link="/stiftung" />
           <HeaderSubNavItem title="Unsere Gremien" link="/stiftung/gremien" />
           <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/stiftung/aktuelles" />
           <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
         </HeaderNavItem>
-        <HeaderNavItem title="Projekte & Programme">
+        <HeaderNavItem title="Projekte & Programme" link="/projekte">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
-          <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
         </HeaderNavItem>
-        <HeaderNavItem title="Unterstützen & engagieren">
+        <HeaderNavItem title="Unterstützen & engagieren" link="/mitstiften">
           <HeaderSubNavItem title="Ehrenamt" link="/portal" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
           <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
