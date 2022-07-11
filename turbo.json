@@ -6,8 +6,7 @@
       "outputs": [
         "dist/**",
         ".next/**",
-        ".output/**",
-        ".vercel_build_output/**"
+        ".output/**"
       ]
     },
     "nuxt-ui#build": {
@@ -16,22 +15,23 @@
     },
     "pbswebsite#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**", ".vercel_build_output/**"]
+      "outputs": [".output/**"]
     },
     "inselbuehne#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**", ".vercel_build_output/**"]
+      "outputs": [".output/**"]
     },
     "portal#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**", ".vercel_build_output/**"]
+      "outputs": [".output/**"]
     },
     "links#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**", ".vercel_build_output/**"]
+      "outputs": [".output/**"]
     },
     "portal#dev": {
-      "dependsOn": ["^dev"]
+      "dependsOn": ["^dev"],
+      "outputs": [".output/**"]
     },
     "lint": {
       "outputs": []
