@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: potsdamerbuergerstiftung.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_fcc6df26286044aca3025880c3e04858 }}/potsdamerbuergerstiftung/portal:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./apps/portal/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
