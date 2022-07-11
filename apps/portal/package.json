@@ -15,7 +15,7 @@
   "dependencies": {
     "directus": "^9.14.1",
     "directus-extension-editorjs": "*",
-    "nuxt-ui": "*",
+    "directus-extension-filepreview": "*",
     "sqlite3": "^5.0.8"
   }
 }

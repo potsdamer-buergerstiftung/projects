@@ -1,0 +1,22 @@
+{
+  "name": "directus-extension-filepreview",
+  "version": "1.0.0",
+  "directus:extension": {
+    "type": "interface",
+    "path": "../.output/extensions/interfaces/filepreview/index.js",
+    "source": "src/index.js",
+    "host": "^9.9.0",
+    "hidden": false
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "9.8.0",
+    "vue": "^3.2.31"
+  }
+}
