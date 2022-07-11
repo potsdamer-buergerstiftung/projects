@@ -4,7 +4,7 @@
   "directus:extension": {
     "type": "interface",
     "path": "../.output/extensions/interfaces/filepreview/index.js",
-    "source": "src/index.js",
+    "source": "src/index.ts",
     "host": "^9.9.0",
     "hidden": false
   },
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@directus/extensions-sdk": "9.8.0",
+    "typescript": "^4.7.4",
     "vue": "^3.2.31"
   }
 }
