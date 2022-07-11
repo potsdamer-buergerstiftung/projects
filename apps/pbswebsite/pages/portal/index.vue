@@ -1,12 +1,10 @@
 <template>
   <div>
-    <PageTitle
-      :title="
-        user
-          ? `${greetingMessage()}, ${user.first_name}.`
-          : 'Freiwilligenportal'
-      "
-    >
+    <PageTitle :title="
+      user
+        ? `${greetingMessage}, ${user.first_name}.`
+        : 'Freiwilligenportal'
+    " v-if="user">
       <template #description>
         <p class="max-w-2xl">
           Unser Freilligenportal vernetzt Dich und bietet Dir einen Überblick
@@ -15,22 +13,18 @@
         </p>
       </template>
       <template #actions>
-        <NuxtLink
-          v-if="!user"
-          to="/portal/login"
-          class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-        >
-          Log-in
-        </NuxtLink>
         <button
           @click="logout()"
-          v-else
-          class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-        >
+          class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
           Log-out
         </button>
       </template>
     </PageTitle>
+    <section class="py-28 md:py-32" v-else>
+      <div class="container px-4 mx-auto">
+        <PortalInstructions />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -38,21 +32,28 @@
 definePageMeta({
   layout: "portal",
 });
-const { logout } = useDirectusAuth();
+const greetingMessage = useGreetingMessage();
 const user = useDirectusUser() as any;
 
-const greetingMessage = () => {
-  const dayTime = new Date().getHours();
+const { setToken, fetchUser, logout } = useDirectusAuth();
+const directusUrl = useDirectusUrl();
+const router = useRouter();
 
-  if (dayTime > 18) {
-    return "Guten Abend";
+const { data: res } = await useLazyFetch<any>(
+  new URL("/auth/refresh", directusUrl).toString(),
+  {
+    method: "POST",
+    credentials: "include",
+    headers: useRequestHeaders(["cookie"]),
+    server: false,
   }
-  if (dayTime > 10) {
-    return "Guten Tag";
+);
+
+watch(res, async (newRes) => {
+  if (newRes) {
+    setToken(newRes.data.access_token);
+    await fetchUser();
+    router.replace("/portal");
   }
-  if (dayTime > 6) {
-    return "Guten Morgen";
-  }
-  return "Hallo";
-};
+});
 </script>
