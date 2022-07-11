@@ -21,7 +21,7 @@
           <HeaderSubNavItem title="Ehrenamt" link="/portal" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
           <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften/partner" />
-          <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
+          <HeaderSubNavItem title="Partner werden" link="/mitstiften/partner-werden" />
         </HeaderNavItem>
         <HeaderNavItem title="Kontakt" link="/kontakt" />
       </template>
