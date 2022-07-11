@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "directus": "^9.14.1",
+    "directus-extension-filepreview": "*",
     "directus-extension-editorjs": "*",
     "sqlite3": "^5.0.8"
   }
