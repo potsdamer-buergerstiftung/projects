@@ -1,7 +1,7 @@
 import { breakpointsTailwind } from "@vueuse/core";
 import { defineStore } from "pinia";
 
-export const useStore = defineStore("eventBookingForm", () => {
+export const useStore = defineStore("header", () => {
   const isSubMenuOpen = ref(false);
   const isMobileMenuOpen = ref(false);
   const isSubMenuOpenDebounced = ref(false);
@@ -10,9 +10,9 @@ export const useStore = defineStore("eventBookingForm", () => {
   const lgAndLarger = breakpoints.greater("md");
   const router = useRouter();
 
-  router.afterEach(() => {
-    closeSubMenu();
+  router.beforeEach(() => {
     closeMobileMenu();
+    isSubMenuOpenDebounced.value = false;
   });
 
   watch(lgAndLarger, () => {
