@@ -4,8 +4,8 @@ WORKDIR /home/node/app/
 COPY package.json .
 COPY yarn.lock .
 COPY turbo.json .
-COPY apps/portal ./apps/portal
-COPY packages/directus-extensions ./packages/directus-extensions
+COPY apps/portal/ ./apps/portal
+COPY packages/directus-extensions/ ./packages/directus-extensions
 RUN yarn install
 RUN yarn build --filter=portal
 
