@@ -102,7 +102,7 @@
           <div
             class="container mx-auto flex h-full flex-col justify-between px-4 py-16 md:p-8 lg:max-w-none xl:p-10"
           >
-            <div class="mb-36">
+            <div class="mb-20 md:mb-36">
               <h1 class="mb-1 text-sm font-semibold uppercase text-slate-200">
                 {{ priority.subTitle }}
               </h1>
