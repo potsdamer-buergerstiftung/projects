@@ -12,7 +12,7 @@
           <HeaderSubNavItem title="Wer wir sind" link="/stiftung" />
           <HeaderSubNavItem title="Unsere Gremien" link="/stiftung/gremien" />
           <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/stiftung/aktuelles" />
-          <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
+          <HeaderSubNavItem title="Presse & Dokumente" link="/stiftung/presse" />
         </HeaderNavItem>
         <HeaderNavItem title="Projekte & Programme" link="/projekte">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
@@ -20,7 +20,7 @@
         <HeaderNavItem title="Unterstützen & engagieren" link="/mitstiften">
           <HeaderSubNavItem title="Ehrenamt" link="/portal" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
-          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
+          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften/partner" />
           <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
         </HeaderNavItem>
         <HeaderNavItem title="Kontakt" link="/kontakt" />
