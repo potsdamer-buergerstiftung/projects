@@ -11,8 +11,7 @@
   "devDependencies": {
     "@vueuse/core": "^8.5.0",
     "@vueuse/nuxt": "^8.5.0",
-    "nuxt": "3.0.0-rc.4",
-    "nuxt-ui": "*"
+    "nuxt": "3.0.0-rc.4"
   },
   "dependencies": {
     "@directus/sdk": "^9.12.2",

@@ -19,7 +19,7 @@
         v-if="$slots.navigation"
       >
         <div class="mb-8 block px-4 py-8 lg:hidden">
-          <HeaderMobileMenuButton variant="close" />
+          <HeaderMobileMenuButton variant="close" is-dark />
         </div>
         <slot name="navigation" />
         <div class="mb-8 flex flex-col items-start px-4 py-8 lg:hidden">
@@ -31,7 +31,7 @@
           <slot name="actions" />
         </div>
         <div class="block lg:hidden">
-          <HeaderMobileMenuButton />
+          <HeaderMobileMenuButton :is-dark="isDark"/>
         </div>
       </div>
     </div>
@@ -52,7 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 import { useStore } from "./state";
 
 const store = useStore();
@@ -62,6 +61,4 @@ const isDark = computed(() => propsIsDark && !store.isSubMenuOpen);
 const { isDark: propsIsDark = false } = defineProps<{ isDark?: boolean }>();
 
 provide("isDark", isDark);
-
-const breakpoints = useBreakpoints(breakpointsTailwind, {});
 </script>
