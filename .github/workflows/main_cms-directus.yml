@@ -39,8 +39,9 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_e852bbbc0ae44e77a5dc1ee5121bb399 }}
 
     - name: Build and push container image to registry
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v3
       with:
+        context: .
         push: true
         tags: potsdamerbuergerstiftung.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_fcc6df26286044aca3025880c3e04858 }}/potsdamerbuergerstiftung/portal:${{ github.sha }}
         file: ./apps/portal/Dockerfile
