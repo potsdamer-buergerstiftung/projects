@@ -6,8 +6,8 @@
         <h1 class="text-center font-header text-4xl font-bold">Du möchtest Dich engagieren? <br /> Es ist enfacher als
             Du denkst.</h1>
         <p class="text-center max-w-xl mx-auto mt-4">
-            Wir haben eine Anwendung entwickelt, mit der Du Dich über die Möglichkeiten, Dich bei unseren Projekten zu
-            engagieren, informieren kannst.
+            Unser Freilligenportal vernetzt Dich und bietet Dir einen Überblick über alles, was in der Bürgerstiftung
+            passiert und über die Sachen, für die Du Dich engagieren kannst.
         </p>
         <div class="flex flex-row mt-16 gap-10">
             <ul class="flex flex-col items-end shrink-0">
