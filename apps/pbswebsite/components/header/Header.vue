@@ -3,14 +3,13 @@
     <div
       class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-2 md:px-8 md:py-4 lg:px-4 lg:py-6 xl:px-10"
     >
-      <NuxtLink
+      <div
         to="/"
         class="group -ml-2 block p-2 outline-none"
-        tabindex="1"
         v-if="$slots.brand"
       >
         <slot name="brand" />
-      </NuxtLink>
+      </div>
       <nav
         class="absolute top-0 bottom-0 left-0 right-0 flex h-screen min-h-screen flex-col overflow-y-auto bg-slate-900 transition-transform duration-500 md:right-1/4 lg:relative lg:h-auto lg:min-h-0 lg:translate-x-0 lg:flex-row lg:overflow-y-visible lg:bg-transparent lg:transition-none"
         :class="[

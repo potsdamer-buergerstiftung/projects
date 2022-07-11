@@ -2,52 +2,34 @@
   <div class="antialiased">
     <Header :is-dark="(route.meta.isDark as boolean)">
       <template #brand>
-        <div
-          class="flex flex-col justify-center divide-y-2 md:flex-row md:items-center md:divide-y-0 md:divide-x-2"
-        >
+        <NuxtLink to="/portal" class="flex flex-col justify-center divide-y-2 md:flex-row md:items-center md:divide-y-0 md:divide-x-2">
           <HeaderBrand class="pb-2 md:pb-0 md:pr-4 lg:pr-2 xl:pr-4" />
           <h1 class="font-header font-bold md:pl-4 lg:pl-2 xl:pl-4">
             Freiwilligenportal
           </h1>
-        </div>
+        </NuxtLink>
       </template>
       <template #navigation>
-        <HeaderNavItem title="Engagieren">
-          <HeaderSubNavItem title="Wer sind wir?" link="/ueber-uns" />
-          <HeaderSubNavItem title="Unsere Gremien" link="/gremien" />
-          <HeaderSubNavItem
-            title="Aktuelles & Veranstaltungen"
-            link="/aktuelles"
-          />
-          <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
-        </HeaderNavItem>
+        <HeaderNavItem title="Log-in" link="/portal/login" v-if="!user" />
+        <HeaderNavItem title="Engagieren" />
         <HeaderNavItem title="Hilfe">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
-          <HeaderSubNavItem
-            title="Ein Projekt mit uns starten"
-            link="/projekte"
-          />
+          <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
         </HeaderNavItem>
-        <HeaderNavItem title="Log-in" link="/portal/login" />
-        <HeaderNavItem title="Admin-Bereich" link="/kontakt" />
-        <HeaderNavItem title="Mein Profil" link="/kontakt" />
+        <HeaderNavItem title="Admin-Bereich" link="/kontakt" v-if="user" />
+        <HeaderNavItem title="Mein Profil" link="/kontakt" v-if="user" />
       </template>
       <template #actions>
-        <NuxtLink
-          to="/"
-          class="text-md font-header inline-flex rounded-md bg-emerald-100 py-1.5 px-4 font-bold text-slate-800 transition ease-in-out hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
-        >
+        <NuxtLink to="/"
+          class="text-md font-header inline-flex rounded-md bg-emerald-100 py-1.5 px-4 font-bold text-slate-800 transition ease-in-out hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
           Zurück zur Website
         </NuxtLink>
       </template>
     </Header>
     <slot />
     <ClientOnly>
-      <div
-        class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
-        v-if="lgAndUp"
-        style="transform: rotate(-90deg) translate(-50%, 0)"
-      >
+      <div class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle" v-if="lgAndUp"
+        style="transform: rotate(-90deg) translate(-50%, 0)">
         <ScrollProgressIndicator />
       </div>
     </ClientOnly>
@@ -59,6 +41,7 @@
 import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
 
 const route = useRoute();
+const user = useDirectusUser();
 
 useHead({
   titleTemplate: "%s - Potsdamer Bürgerstiftung",

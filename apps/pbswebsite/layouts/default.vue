@@ -3,32 +3,25 @@
     <PageLoadingBar />
     <Header :is-dark="(route.meta.isDark as boolean)">
       <template #brand>
-        <HeaderBrand />
+        <NuxtLink to="/">
+          <HeaderBrand />
+        </NuxtLink>
       </template>
       <template #navigation>
         <HeaderNavItem title="Die Stiftung">
           <HeaderSubNavItem title="Wer wir sind" link="/stiftung" />
           <HeaderSubNavItem title="Unsere Gremien" link="/stiftung/gremien" />
-          <HeaderSubNavItem
-            title="Aktuelles & Veranstaltungen"
-            link="/stiftung/aktuelles"
-          />
+          <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/stiftung/aktuelles" />
           <HeaderSubNavItem title="Presse & Dokumente" link="/presse" />
         </HeaderNavItem>
         <HeaderNavItem title="Projekte & Programme">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
-          <HeaderSubNavItem
-            title="Ein Projekt mit uns starten"
-            link="/projekte"
-          />
+          <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
         </HeaderNavItem>
         <HeaderNavItem title="Unterstützen & engagieren">
           <HeaderSubNavItem title="Ehrenamt" link="/mitstiften" />
           <HeaderSubNavItem title="Spenden" link="/mitstiften" />
-          <HeaderSubNavItem
-            title="Unsere Förderer und Partner"
-            link="/mitstiften"
-          />
+          <HeaderSubNavItem title="Unsere Förderer und Partner" link="/mitstiften" />
           <HeaderSubNavItem title="Partner werden" link="/mitstiften" />
         </HeaderNavItem>
         <HeaderNavItem title="Kontakt" link="/kontakt" />
@@ -40,22 +33,14 @@
     <slot />
     <Footer />
     <ClientOnly>
-      <div
-        class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle"
-        v-if="lgAndUp"
-        style="transform: rotate(-90deg) translate(-50%, 0)"
-      >
+      <div class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle" v-if="lgAndUp"
+        style="transform: rotate(-90deg) translate(-50%, 0)">
         <ScrollProgressIndicator />
       </div>
     </ClientOnly>
-    <div
-      class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
-      style="transform: rotate(-90deg) translate(50%, -100%)"
-    >
-      <SocialMediaLinks
-        size="large"
-        :is-dark="(route.meta.isDark as boolean)"
-      />
+    <div class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
+      style="transform: rotate(-90deg) translate(50%, -100%)">
+      <SocialMediaLinks size="large" :is-dark="(route.meta.isDark as boolean)" />
     </div>
   </div>
 </template>
