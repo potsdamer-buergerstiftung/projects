@@ -12,6 +12,7 @@ export const useStore = defineStore("header", () => {
 
   router.beforeEach(() => {
     closeMobileMenu();
+    isSubMenuOpen.value = false;
     isSubMenuOpenDebounced.value = false;
   });
 
@@ -45,7 +46,7 @@ export const useStore = defineStore("header", () => {
   }
 
   function openSubMenu() {
-    isSubMenuOpenDebounced.value = true;
+    isSubMenuOpen.value = true;
   }
 
   function closeSubMenu() {
