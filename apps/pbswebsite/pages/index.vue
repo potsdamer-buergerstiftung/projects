@@ -1,7 +1,7 @@
 <template>
   <div>
     <Title>Brücken bauen, Menschen verbinden</Title>
-    <div class="container mx-auto px-4 pt-36 md:pt-44">
+    <div class="container mx-auto px-4 pt-32 md:pt-44">
       <h1
         class="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl"
       >
@@ -16,7 +16,7 @@
         Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
       </p>
     </div>
-    <div class="container mx-auto px-4 pt-16 pb-16 md:pt-20">
+    <div class="container mx-auto px-4 pt-10 pb-16 md:pt-20">
       <div class="grid grid-cols-6 gap-8">
         <div
           v-for="(project, i) in projects"
@@ -153,7 +153,7 @@
         </div>
       </div>
     </section>
-    <section class="py-24">
+    <section class="py-16 md:py-24">
       <div class="container mx-auto grid grid-cols-6 gap-8 px-4">
         <div class="col-span-6 lg:col-span-4">
           <h4 class="text-sm font-semibold uppercase text-gray-600">
