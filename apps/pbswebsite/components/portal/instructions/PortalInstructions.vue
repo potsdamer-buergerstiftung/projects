@@ -11,39 +11,39 @@
         </p>
         <div class="flex flex-row mt-16 gap-10">
             <ul class="flex flex-col items-end shrink-0">
-                <li class="font-bold font-header py-2">Wie Du anfangen kannst</li>
-                <li class="font-bold font-header py-2">Über Events informieren</li>
-                <li class="font-bold font-header py-2">Die App installieren</li>
-                <li class="font-bold font-header py-2">Anfangen, Dich einzubringen</li>
+                <button class="group font-bold font-header py-2 relative" v-for="item in navItems"
+                    @click="store.setActiveTab(item.key as any)">{{ item.text }}
+                    <span class="absolute top-0 -right-5 bottom-0 w-0.5 bg-emerald-500 transition"
+                        :class="[item.key === store.activeTab ? 'opacity-100' : 'opacity-0 group-hover:opacity-100']" />
+                </button>
             </ul>
-            <div class="grid grid-cols-3 gap-10">
-                <div class="col-span-1">
-                    <div class="bg-white rounded-lg p-8">
-                        <img
-                            src="https://colabrio.ams3.cdn.digitaloceanspaces.com/ohio-stage-demo-26/oh__demo26__4a-min.png" />
-                    </div>
-                </div>
-                <div class="col-span-2">
-                    <h1 class="font-header font-bold text-3xl">
-                        Wesentliche Schritte
-                    </h1>
-                    <hr class="mt-1 mb-8" />
-                    <h1 class="font-header font-bold text-xl">
-                        1. Erstelle Dir einen kostenlosen Account
-                    </h1>
-                    <p class="mt-2">Das erstellen eines Accounts ist nicht notwendig, ermöglicht uns jedoch, dass wir
-                        Dich besser
-                        über Möglichkeiten, Dich einzubringen, informieren können. Du kannst Dich gleichzeitig mit
-                        anderen Freiwilligen abstimmen und erhälst Zugriff auf interne Ressourcen.</p>
-                    <h1 class="font-header font-bold text-xl mt-8">
-                        2. Wähle deine Interessen
-                    </h1>
-                    <p class="mt-2">Möchtest Du dich nur an bestimmten Projekten beteiligen, kannst Du diese auswählen.
-                        Du kannst zusätzlich Angaben über deine Kenntnisse und Fähigkeiten machen, damit wir besser
-                        wissen, wir
-                        wir Dich einbringen können.</p>
-                </div>
-            </div>
+            <PortalInstructionsGettingStarted v-if="store.activeTab === 'GETTING_STARTED'" />
+            <PortalInstructionsCreateAccount v-if="store.activeTab === 'CREATE_ACCOUNT'" />
+            <PortalInstructionsInstallApp v-if="store.activeTab === 'INSTALL_APP'" />
+            <PortalInstructionsEngage v-if="store.activeTab === 'ENGAGE'" />
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import useStore from "./state";
+const store = useStore()
+const navItems = [
+    {
+        key: "GETTING_STARTED",
+        text: "Wie Du anfangen kannst"
+    },
+    {
+        key: "CREATE_ACCOUNT",
+        text: "Einen Account erstellen"
+    },
+    {
+        key: "INSTALL_APP",
+        text: "Die App installieren"
+    },
+    {
+        key: "ENGAGE",
+        text: "Anfangen, Dich einzubringen"
+    }
+]
+</script>

@@ -11,7 +11,7 @@
       </template>
       <template #navigation>
         <HeaderNavItem title="Log-in" link="/portal/login" v-if="!user" />
-        <HeaderNavItem title="Engagieren" />
+        <HeaderNavItem title="Engagieren" link="/portal/engagieren" />
         <HeaderNavItem title="Hilfe">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
           <HeaderSubNavItem title="Ein Projekt mit uns starten" link="/projekte" />
