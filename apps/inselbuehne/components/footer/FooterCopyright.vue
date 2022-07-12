@@ -8,14 +8,14 @@
     <ul class="mt-4 flex flex-row space-x-4 lg:mt-0">
       <li>
         <NuxtLink
-          to="/impressum"
+          to="https://www.potsdamer-buergerstiftung.org/impressum"
           class="text-gray-500 transition hover:text-green-300"
           >Impressum</NuxtLink
         >
       </li>
       <li>
         <NuxtLink
-          to="/datenschutz"
+          to="https://www.potsdamer-buergerstiftung.org/datenschutz"
           class="text-gray-500 transition hover:text-green-300"
           >Datenschutz</NuxtLink
         >
