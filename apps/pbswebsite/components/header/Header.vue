@@ -21,7 +21,7 @@
           <HeaderMobileMenuButton variant="close" is-dark />
         </div>
         <slot name="navigation" />
-        <div class="mb-8 flex flex-col items-start px-4 py-8 lg:hidden">
+        <div class="mb-8 flex flex-col items-start px-4 pt-8 pb-20 lg:hidden">
           <slot name="actions" />
         </div>
       </nav>
