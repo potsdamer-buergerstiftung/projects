@@ -45,7 +45,7 @@ export const useStore = defineStore("header", () => {
   }
 
   function openSubMenu() {
-    isSubMenuOpen.value = true;
+    isSubMenuOpenDebounced.value = true;
   }
 
   function closeSubMenu() {
