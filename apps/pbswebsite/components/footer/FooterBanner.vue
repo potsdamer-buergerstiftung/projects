@@ -35,8 +35,8 @@
     </div>
     <div class="container mx-auto flex flex-row items-center px-4">
       <p class="max-w-xl">
-        Du hattest schon immer Lust auf Ehrenamt? Wir unterstützen dich dabei
-        und zeigen dir, wie du dich bei uns und unseren Projekten engagieren
+        Du hattest schon immer Lust auf Ehrenamt? Wir unterstützen Dich dabei
+        und zeigen Dir, wie Du Dich bei uns und unseren Projekten engagieren
         kannst.
       </p>
     </div>
