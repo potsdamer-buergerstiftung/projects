@@ -70,7 +70,7 @@ function onLeave() {
 }
 
 function onClick() {
-  if (slots.default) {
+  if (slots.default && !lgAndGreater.value) {
     store.openSubMenu();
     toggleItemSubMenuOpen();
   }
