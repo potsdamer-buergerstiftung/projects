@@ -12,7 +12,7 @@
         }"
       />
     </div>
-    <p class="text-sm font-bold transition group-hover:text-green-500">
+    <p class="text-sm font-bold transition group-hover:text-emerald-500">
       Zurück nach oben
     </p>
   </button>
