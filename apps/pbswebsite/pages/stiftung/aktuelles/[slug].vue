@@ -3,17 +3,10 @@
     <Title>{{ post.title }}</Title>
     <section class="relative">
       <div class="absolute h-full w-full">
-        <DirectusImage
-          :asset-id="post.image"
-          :width="1920"
-          :height="1080"
-          :quality="40"
-          class="h-full w-full object-cover"
-        />
+        <DirectusImage :asset-id="post.image" :width="1920" :height="1080" :quality="40"
+          class="h-full w-full object-cover" />
       </div>
-      <div
-        class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70"
-      />
+      <div class="absolute top-0 left-0 bottom-0 right-0 bg-slate-900 opacity-70" />
       <div class="relative mx-auto max-w-5xl px-4 pt-40">
         <h1 class="font-header text-3xl font-bold text-white md:text-7xl">
           {{ post.title }}
@@ -35,13 +28,11 @@
             <p class="font-bold text-white">Keine Kommentare</p>
           </div>
         </div>
-        <PageTitleBreadcrumb
-          :items="[
-            { text: 'Aktuelles', link: '/aktuelles' },
-            { text: post.title },
-          ]"
-          class="mt-20 pb-12 text-white"
-        />
+        <PageTitleBreadcrumb :items="[
+          { text: 'Die Stiftung', link: '/stiftung' },
+          { text: 'Aktuelles', link: '/stiftung/aktuelles' },
+          { text: post.title },
+        ]" class="mt-20 pb-12 text-white" />
       </div>
     </section>
     <section>
@@ -53,17 +44,23 @@
 </template>
 
 <script setup lang="ts">
-const { getItemById } = useDirectusItems();
+const { getItems } = useDirectusItems();
 
 const route = useRoute();
 
-const { date, ...post } = await getItemById<any>({
+const posts = await getItems<any>({
   collection: "posts",
-  id: route.params.postId as string,
   params: {
     fields: ["*", "user_created.*"],
+    filter: {
+      slug: route.params.slug,
+    }
   },
 });
+
+if (!posts) throw ({ statusCode: 404 })
+
+const { date, ...post } = posts[0];
 
 const formattedDate = computed(() =>
   new Date(date).toLocaleDateString("de", {

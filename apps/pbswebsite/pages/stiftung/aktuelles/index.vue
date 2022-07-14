@@ -34,7 +34,7 @@
               :project-title="post.project.title"
               :author="`${post.user_created.first_name} ${post.user_created.last_name}`"
               :tags="post.tags"
-              :link="`/stiftung/aktuelles/${post.id}`"
+              :link="`/stiftung/aktuelles/${post.slug}`"
             />
           </template>
         </MasonryGrid>

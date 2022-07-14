@@ -84,7 +84,6 @@
 <script setup lang="ts">
 // Article Card Props
 const { date, compact = false } = defineProps<{
-  postId: string;
   title: string;
   date: Date;
   imageId?: string;

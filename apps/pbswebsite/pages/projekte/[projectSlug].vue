@@ -3,28 +3,19 @@
     <Title>{{ project.title }}</Title>
     <PageTitle :title="project.title">
       <template #breadcrumb>
-        <PageTitleBreadcrumb
-          :items="[
-            { text: 'Projekte', link: '/projekte' },
-            { text: project.title },
-          ]"
-        />
+        <PageTitleBreadcrumb :items="[
+          { text: 'Projekte', link: '/projekte' },
+          { text: project.title },
+        ]" />
       </template>
       <template #description>
         <p>{{ project.sub_title }}</p>
       </template>
     </PageTitle>
     <section class="bg-white pb-16">
-      <div
-        class="container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2"
-      >
+      <div class="container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2">
         <StickySidebar containerSelector=".container" :top-spacing="40">
-          <DirectusImage
-            :asset-id="project.image"
-            :quality="50"
-            :width="800"
-            class="w-full"
-          />
+          <DirectusImage :asset-id="project.image" :quality="50" :width="800" class="w-full" />
         </StickySidebar>
         <BlockRenderer :data="project.content" class="mt-16" />
       </div>
@@ -36,32 +27,16 @@
         </h1>
         <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div v-for="post in posts">
-            <ArticleCard
-              :title="post.title"
-              :image-id="post.image"
-              :date="new Date(post.date)"
-              :post-id="post.id.toString()"
-            />
+            <ArticleCard :title="post.title" :image-id="post.image" :date="new Date(post.date)"
+              :link="`/stiftung/aktuelles/${post.slug}`" />
           </div>
         </div>
-        <NuxtLink
-          to="/projekte"
-          class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-        >
+        <NuxtLink to="/projekte"
+          class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
           Alle Beiträge des Projektes
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="ml-1 h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </NuxtLink>
       </div>
