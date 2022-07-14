@@ -73,7 +73,7 @@ const transforms: transforms = {
   paragraph: ({ data }) => {
     return h("p", {
       innerHTML: data.text,
-      class: "font-body text-md mb-8 prose lg:prose-lg mx-auto",
+      class: "font-body text-md mb-8 prose lg:prose-lg max-w-none",
     });
   },
 
