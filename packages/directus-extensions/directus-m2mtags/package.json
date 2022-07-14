@@ -1,0 +1,23 @@
+{
+  "name": "directus-extension-m2mtags",
+  "version": "1.0.0",
+  "directus:extension": {
+    "type": "interface",
+    "path": "../.output/extensions/interfaces/m2mtags/index.js",
+    "source": "src/index.ts",
+    "host": "^v9.9.0",
+    "hidden": false
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify --sourcemap"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "^9.11.0",
+    "lodash": "^4.17.21",
+    "typescript": "^4.7.2"
+  }
+}
