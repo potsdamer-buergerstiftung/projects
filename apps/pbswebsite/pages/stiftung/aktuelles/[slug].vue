@@ -37,7 +37,9 @@
     </section>
     <section>
       <div class="mx-auto max-w-5xl px-4 pt-12 pb-20">
-        <div class="prose lg:prose-lg max-w-full" v-html="post.content" />
+        <div class="max-w-4xl mx-auto">
+          <BlockRenderer :data="post.content"/>
+        </div>
       </div>
     </section>
   </div>
