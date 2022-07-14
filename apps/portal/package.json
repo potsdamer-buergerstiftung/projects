@@ -16,6 +16,7 @@
     "directus": "^9.14.1",
     "directus-extension-editorjs": "*",
     "directus-extension-filepreview": "*",
+    "directus-extension-slug": "*",
     "sqlite3": "^5.0.8"
   }
 }
