@@ -199,7 +199,7 @@
             :project-title="post.project.title"
             :tags="post.tags"
             compact
-            :link="`/stiftung/aktuelles/${post.slug}`"
+            :link="`/stiftung/aktuelles/${post.id}`"
           />
         </div>
       </div>

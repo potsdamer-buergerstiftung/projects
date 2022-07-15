@@ -27,7 +27,6 @@
         >
           <template #default="{ item: post }: any">
             <ArticleCard
-              :post-id="post.id.toString()"
               :title="post.title"
               :date="new Date(post.date)"
               :imageId="post.image"
