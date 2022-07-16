@@ -2,13 +2,13 @@
   <div class="relative h-full">
     <div class="absolute z-[-1] h-full w-full">
       <div
-        class="absolute bottom-0 top-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent"
+        class="absolute bottom-0 top-0 left-0 right-0 bg-gradient-to-t from-slate-900 via-transparent"
       />
       <DirectusImage
         :asset-id="image"
         class="h-full w-full object-cover"
-        :width="500"
-        :height="700"
+        :width="800"
+        :height="900"
         :quality="30"
         v-if="image"
       />
