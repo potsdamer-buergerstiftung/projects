@@ -24,7 +24,7 @@
   "dependencies": {
     "@formkit/nuxt": "^1.0.0-beta.8",
     "@formkit/themes": "^1.0.0-beta.8",
-    "@nuxt/kit": "^3.0.0-rc.3"
+    "@nuxt/kit": "^3.0.0-rc.5"
   },
   "devDependencies": {
     "@directus/sdk": "^9.12.2",
@@ -34,7 +34,7 @@
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
-    "nuxt": "^3.0.0-rc.3",
+    "nuxt": "^3.0.0-rc.5",
     "nuxt-directus": "^2.1.0"
   }
 }

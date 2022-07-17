@@ -9,7 +9,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.4",
+    "nuxt": "3.0.0-rc.5",
     "nuxt-ui": "*",
     "@vueuse/core": "^8.5.0",
     "@vueuse/nuxt": "^8.5.0"
