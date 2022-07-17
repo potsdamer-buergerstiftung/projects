@@ -3,11 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [
-        "dist/**",
-        ".next/**",
-        ".output/**"
-      ]
+      "outputs": ["dist/**", ".next/**", ".output/**", ".vercel/**"]
     },
     "nuxt-ui#build": {
       "outputs": ["dist/**", "playground/.nuxt/**"],
@@ -15,11 +11,11 @@
     },
     "pbswebsite#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel/**"]
     },
     "inselbuehne#build": {
       "dependsOn": ["^build"],
-      "outputs": [".output/**"]
+      "outputs": [".output/**", ".vercel/**"]
     },
     "portal#build": {
       "dependsOn": ["^build"],
