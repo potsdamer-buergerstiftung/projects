@@ -43,3 +43,6 @@ yarn-error.log*
 
 # directus extensions
 .directus
+
+# vercel build output
+.vercel
