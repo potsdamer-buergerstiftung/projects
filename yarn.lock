@@ -2050,13 +2050,6 @@
   resolved "https://registry.yarnpkg.com/@phc/format/-/format-1.0.0.tgz#b5627003b3216dc4362125b13f48a4daa76680e4"
   integrity sha512-m7X9U6BG2+J+R1lSOdCiITLLrxm+cWlNI3HUFA92oLO77ObGNzaKdh8pMLqdZcshtkKuV84olNNXDfMc4FezBQ==
 
-"@pinia/nuxt@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.1.9.tgz#96bd971ff5e280d401d1b2be1510b6ae4600a510"
-  integrity sha512-5YmfBOxXHM5eA5pE4mq5opJnSmVYn2qYJ2ak01FrCww0esxfRLkmuu4emynu0Ar5eQ/DDz9wI3ukgRwAubXqmg==
-  dependencies:
-    vue-demi "*"
-
 "@pinia/nuxt@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.3.0.tgz#3ee83b5562efb8a726b763054fa5e6e99b15e855"
@@ -10088,7 +10081,7 @@ nuxi@^3.0.0-rc.5:
   optionalDependencies:
     fsevents "~2.3.2"
 
-nuxt-directus@^2.0.1, nuxt-directus@^2.1.0:
+nuxt-directus@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-2.2.0.tgz#80a54678b4cd275edcf186c686e14438ec525d89"
   integrity sha512-WVa+dKDaXFSNg49rV/Tfhb5iehM5AmQervH6gkCT1fd6G1pqGqm/C0J4fQlV7YPCsb0/XoBzhYDcKAp0wD+Q+w==
