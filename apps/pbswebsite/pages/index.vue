@@ -199,7 +199,7 @@
             :project-title="post.project.title"
             :tags="post.tags"
             compact
-            :link="`/stiftung/aktuelles/${post.id}`"
+            :link="`/stiftung/aktuelles/${post.slug}`"
           />
         </div>
       </div>
@@ -247,7 +247,7 @@ const projects = await getItems<any>({
 const posts = await getItems<any>({
   collection: "posts",
   params: {
-    fields: ["title", "date", "id", "image", "tags", "project.title"],
+    fields: ["title", "date", "id", "image", "tags", "project.title", "slug"],
     limit: 4,
     sort: "-date",
   },
