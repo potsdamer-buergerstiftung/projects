@@ -17,7 +17,7 @@
         <MasonryGrid :items="posts" :ssr-columns="1" :column-width="400" :gap="16">
           <template #default="{ item: post }: any">
             <ArticleCard :title="post.title" :date="new Date(post.date)"
-              :project-title="post.project.title" :tags="[post.publisher]" />
+              :project-title="post.project.title" :tags="[post.publisher]" :link="post.url"/>
           </template>
         </MasonryGrid>
       </div>
