@@ -28,7 +28,7 @@
     </section>
     <section class="mb-32">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-3 gap-16">
+        <div class="grid grid-cols-3 gap-10">
           <div
               class="container mx-auto flex h-full flex-col"
               v-for="priority in priorities"
