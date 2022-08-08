@@ -6,7 +6,7 @@
         <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung' }]"/>
       </template>
     </PageTitle>
-    <section class="mb-32">
+    <section class="pb-20 pt-20 bg-slate-100">
       <div class="container mx-auto grid grid-cols-1 gap-8 px-4 lg:grid-cols-2">
         <div>
           <h1 class="font-header mt-2 text-4xl font-bold">
@@ -26,9 +26,21 @@
         </div>
       </div>
     </section>
-    <section class="mb-32">
+    <section>
+      <DirectusImage
+          asset-id="b6431451-1fdc-45ac-ab79-c42c3a0b7627"
+          format="webp"
+          :quality="70"
+          :width="1600"
+          :height="1300"
+          class="w-full h-[25rem] object-cover"
+          ref="image"
+          :style="{objectPosition: `50% ${(top / height * 20) + 20}%`}"
+      />
+    </section>
+    <section class="py-16 md:py-20">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div
               class="container mx-auto flex h-full flex-col"
               v-for="priority in priorities"
@@ -46,24 +58,24 @@
         </div>
       </div>
     </section>
-    <section class="mt-16">
+    <section class="pt-8 md:pt-16">
       <div class="container mx-auto px-4">
-        <h2 class="font-header text-4xl font-bold -mb-10 max-w-xl">
+        <h2 class="font-header text-4xl font-bold md:-mb-4 lg:-mb-10 max-w-xl">
           Gemeinsam Gutes tun und stiften
         </h2>
       </div>
       <div class="grid grid-cols-5">
-        <div class="col-span-3">
+        <div class="col-span-5 md:col-span-2 lg:col-span-3">
           <DirectusImage
               asset-id="7d0a648b-c484-4e4e-9d69-f0230f7278bd"
               format="webp"
               :quality="50"
               :width="1800"
               :height="800"
-              class="w-full h-[20rem] object-cover mt-24"
+              class="w-full h-[20rem] object-cover mt-10 md:mt-24"
           />
         </div>
-        <div class="bg-slate-50 p-16 col-span-2">
+        <div class="bg-slate-50 px-4 py-16 md:px-16 col-span-5 md:col-span-3 lg:col-span-2">
           <h2 class="font-header text-3xl font-bold mb-8 max-w-md">
             Wie unsere Stiftung aufgebaut ist und arbeitet
           </h2>
@@ -112,10 +124,17 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/vue'
+import {useElementBounding, useWindowSize} from "@vueuse/core"
 
 definePageMeta({
   layout: "default",
 });
+
+const image = ref(null);
+
+const {top} = useElementBounding(image)
+const { height } = useWindowSize()
+
 
 const priorities = [
   {
