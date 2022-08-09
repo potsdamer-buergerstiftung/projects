@@ -8,13 +8,14 @@
         </p>
       </template>
       <template #actions>
-        <button
-          class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+        <a
+            href="mailto:info@potsdamer-buergerstiftung.org"
+            class="text-md font-header rounded-md bg-emerald-500 py-1.5 px-4 font-bold text-white transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
           info@potsdamer-buergerstiftung.org
-        </button>
+        </a>
       </template>
       <template #breadcrumb>
-        <PageTitleBreadcrumb :items="[{ text: 'Kontakt', link: '/kontakt' }]" />
+        <PageTitleBreadcrumb :items="[{ text: 'Kontakt', link: '/kontakt' }]"/>
       </template>
     </PageTitle>
     <section class="bg-white">
@@ -63,37 +64,37 @@
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">Vorname (Erforderlich)</label>
                 <input v-model="firstName" type="text"
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Dein Vorname" required />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Dein Vorname" required/>
               </div>
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">Nachname (Erforderlich)</label>
                 <input v-model="lastName" type="text"
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Dein Nachname" required />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Dein Nachname" required/>
               </div>
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">Organisation</label>
                 <input v-model="organisation" type="text"
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Deine Organisation" />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Deine Organisation"/>
               </div>
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">E-Mail (Erforderlich)</label>
                 <input v-model="email" type="email"
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Deine E-Mail" required />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Deine E-Mail" required/>
               </div>
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">Telefon</label>
                 <input v-model="phone" type="text"
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Deine Telefonnummer" />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Deine Telefonnummer"/>
               </div>
               <div class="col-span-3 md:col-span-1">
                 <label class="text-sm font-medium">Projektbezug</label>
                 <select v-model="projectId"
-                  class="mt-2 w-full appearance-none rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                        class="mt-2 w-full appearance-none rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                   <option value="none">Keine Angabe</option>
                   <option v-for="project in projects" :value="project.id">
                     {{ project.title }}
@@ -103,21 +104,21 @@
               <div class="col-span-3">
                 <label class="text-sm font-medium">Betreff (Erforderlich)</label>
                 <input v-model="subject" type="text" required
-                  class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Dein Betreff" />
+                       class="mt-2 w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                       placeholder="Dein Betreff"/>
               </div>
               <div class="col-span-3">
                 <label class="text-sm font-medium">Nachricht (Erforderlich)</label>
                 <textarea v-model="message"
-                  class="mt-2 h-40 min-h-max w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                  placeholder="Deine Nachricht" />
+                          class="mt-2 h-40 min-h-max w-full rounded-md border-none bg-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                          placeholder="Deine Nachricht"/>
               </div>
               <div class="col-span-3">
                 <div class="mb-6 flex items-start">
                   <div class="flex h-5 items-center">
                     <input id="remember" type="checkbox"
-                      class="focus:ring-3 h-4 w-4 rounded-sm border border-slate-300 bg-slate-100 accent-emerald-500 focus:ring-emerald-300"
-                      required />
+                           class="focus:ring-3 h-4 w-4 rounded-sm border border-slate-300 bg-slate-100 accent-emerald-500 focus:ring-emerald-300"
+                           required/>
                   </div>
                   <label for="remember" class="ml-2 max-w-xl text-sm font-medium">Ich erkläre mich einverstanden, dass
                     die eingegebenen Daten
@@ -127,9 +128,9 @@
               </div>
               <div class="col-span-3">
                 <button type="submit"
-                  class="text-md font-header inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+                        class="text-md font-header inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
                   {{
-                      state === "SUBMITTING"
+                    state === "SUBMITTING"
                         ? "Nachricht wird gesendet"
                         : "Nachricht senden"
                   }}
@@ -144,7 +145,7 @@
               Anschluss.
             </p>
             <button type="submit" @click="resetForm"
-              class="text-md font-header mt-8 inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+                    class="text-md font-header mt-8 inline-flex items-center rounded-md bg-slate-800 py-3 px-5 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
               Neue Nachricht
             </button>
           </div>
@@ -155,7 +156,7 @@
 </template>
 
 <script setup lang="ts">
-const { getItems, createItems } = useDirectusItems();
+const {getItems, createItems} = useDirectusItems();
 
 const firstName = ref("");
 const lastName = ref("");
