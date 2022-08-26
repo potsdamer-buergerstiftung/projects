@@ -48,7 +48,7 @@
           </h4>
           <div class="mt-4 flex flex-col gap-y-4 gap-x-2 md:flex-row">
             <a href="https://donorbox.org/potsdamer-buergerstiftung"
-              class="text-md font-header inline-flex items-center justify-center rounded-md bg-emerald-500 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+              class="text-md font-header inline-flex items-center justify-center rounded-md bg-emerald-500 py-1.5 px-4 text-center font-bold text-white transition ease-in-out hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
               Jetzt spenden
             </a>
           </div>
