@@ -75,7 +75,7 @@
               class="w-full h-[20rem] object-cover mt-10 md:mt-24"
           />
         </div>
-        <div class="bg-slate-50 px-4 py-16 md:px-16 col-span-6 md:col-span-4 xl:col-span-3">
+        <div class="bg-slate-50 px-4 py-16 md:px-16 lg:pr-24 col-span-6 md:col-span-4 xl:col-span-3">
           <h2 class="font-header text-3xl font-bold mb-8 max-w-md">
             Wie unsere Stiftung aufgebaut ist und arbeitet
           </h2>
