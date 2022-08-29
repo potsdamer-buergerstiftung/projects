@@ -140,7 +140,7 @@
             Unternehmen.
           </p>
           <NuxtLink to="/mitstiften"
-            class="text-md font-header mt-6 inline-flex items-center rounded-md bg-slate-900 py-1.5 px-4 font-bold text-white transition ease-in-out hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
+            class="text-md font-header mt-6 inline-flex items-center rounded-md bg-slate-900 py-1.5 px-4 font-bold text-white transition ease-in-out hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75">
             Sprechen Sie uns an
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" stroke-width="2">
