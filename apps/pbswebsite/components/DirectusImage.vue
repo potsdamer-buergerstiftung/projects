@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageUrl.toString()" />
+  <img :src="imageUrl.toString()" :loading="lazy ? 'lazy' : 'eager'" />
 </template>
 
 <script setup lang="ts">
@@ -11,6 +11,7 @@ const {
   quality = 50,
   fit,
   format = "webp",
+  lazy = true,
 } = defineProps<{
   assetId: string;
   height?: number;
@@ -18,6 +19,7 @@ const {
   quality?: number;
   fit?: "cover" | "contain" | "inside" | "outside";
   format?: "jpg" | "png" | "webp" | "tiff";
+  lazy?: boolean;
 }>();
 
 const imageUrl = new URL("/assets/" + assetId, directusUrl);
