@@ -3,12 +3,10 @@
     <Title>Unsere Gremien</Title>
     <PageTitle title="Unsere Gremien">
       <template #breadcrumb>
-        <PageTitleBreadcrumb
-          :items="[
-            { text: 'Die Stiftung', link: '/stiftung' },
-            { text: 'Unsere Gremien' },
-          ]"
-        />
+        <PageTitleBreadcrumb :items="[
+          { text: 'Die Stiftung', link: '/stiftung' },
+          { text: 'Unsere Gremien' },
+        ]" />
       </template>
       <template #description>
         <p class="max-w-3xl">
@@ -39,10 +37,7 @@
     </section>
     <section>
       <div class="grid grid-cols-4 overflow-hidden">
-        <div
-          class="col-span-4 md:col-span-2 lg:col-span-1"
-          v-for="member in boardMembers"
-        >
+        <div class="col-span-4 md:col-span-2 lg:col-span-1" v-for="member in boardMembers">
           <TeamMemberCard v-bind="member" />
         </div>
       </div>
@@ -64,11 +59,8 @@
       </div>
     </section>
     <section>
-      <div class="grid grid-cols-4 overflow-hidden">
-        <div
-          class="col-span-4 md:col-span-2 lg:col-span-1"
-          v-for="member in boardOfTrustees"
-        >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 overflow-hidden">
+        <div v-for="member in boardOfTrustees">
           <TeamMemberCard v-bind="member" />
         </div>
       </div>
@@ -92,10 +84,7 @@
     </section>
     <section>
       <div class="grid grid-cols-4 overflow-hidden">
-        <div
-          class="col-span-4 md:col-span-2 lg:col-span-1"
-          v-for="member in boardOfCurators"
-        >
+        <div class="col-span-4 md:col-span-2 lg:col-span-1" v-for="member in boardOfCurators">
           <TeamMemberCard v-bind="member" />
         </div>
       </div>
@@ -127,7 +116,7 @@ const boardMembers = [
   {
     title: "Vorstandsmitglied",
     name: "Rosa Toledano",
-    image: "b36be811-2bda-4ef0-88a7-5f773658c23a",
+    image: "4e66f129-b45d-4908-b98a-a336a0403c42",
   },
 ];
 
@@ -152,10 +141,11 @@ const boardOfTrustees = [
     name: "Johannes Baron von der Osten-Sacken",
     image: "6e906a64-da74-4a0e-9f32-92430d6b9dcd",
   },
-  /* {
-        title: "Stiftungsratmitglied",
-        name: "Christian Miethe",
-    } */
+  {
+    title: "Stiftungsratmitglied",
+    name: "Christian Miethe",
+    image: "36d72824-b1b0-4cbf-a018-8a7edadb4732"
+  }
 ];
 
 const boardOfCurators = [
