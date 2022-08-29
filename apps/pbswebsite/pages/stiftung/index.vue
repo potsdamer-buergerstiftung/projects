@@ -60,12 +60,12 @@
     </section>
     <section class="pt-8 md:pt-16">
       <div class="container mx-auto px-4">
-        <h2 class="font-header text-4xl font-bold md:-mb-4 lg:-mb-10 max-w-xl">
+        <h2 class="font-header text-4xl font-bold md:-mb-4 xl:-mb-10 max-w-xl">
           Gemeinsam Gutes tun und stiften
         </h2>
       </div>
-      <div class="grid grid-cols-5">
-        <div class="col-span-5 md:col-span-2 lg:col-span-3">
+      <div class="grid grid-cols-6">
+        <div class="col-span-6 md:col-span-2 xl:col-span-3">
           <DirectusImage
               asset-id="7d0a648b-c484-4e4e-9d69-f0230f7278bd"
               format="webp"
@@ -75,7 +75,7 @@
               class="w-full h-[20rem] object-cover mt-10 md:mt-24"
           />
         </div>
-        <div class="bg-slate-50 px-4 py-16 md:px-16 col-span-5 md:col-span-3 lg:col-span-2">
+        <div class="bg-slate-50 px-4 py-16 md:px-16 col-span-6 md:col-span-4 xl:col-span-3">
           <h2 class="font-header text-3xl font-bold mb-8 max-w-md">
             Wie unsere Stiftung aufgebaut ist und arbeitet
           </h2>
@@ -160,40 +160,19 @@ const priorities = [
 const disclosures = [
   {
     title: "Das Konzept",
-    content: `Wir sind eine institutionell und finanziell unabhängige
-              gemeinnützige Stiftung von und für Bürgerinnen und Bürger mit
-              möglichst breitem Stiftungszweck. Wir engagieren uns
-              nachhaltig und dauerhaft für das Gemeinwesen vor Ort. Sie
-              unterstützt mit ihrer Arbeit bürgerschaftliches Engagement.`,
+    content: `Die Potsdamer Bürgerstiftung ist eine gemeinnützige Stiftung, die institutionell, finanziell, konfessionell und parteipolitisch unabhängig ist. Sie ist gegründet von und für Bürgerinnen und Bürger Potsdams. Ihr Stiftungszweck ist sehr breit gefasst und zielt immer auf das Gemeinwohl vor Ort. Sie agiert nachhaltig und dauerhaft  - auch für die Anliegen künftiger Generationen - und baut hierfür auf Zustiftungen und Spenden vieler Menschen in und aus Potsdam. Sie bietet verantwortungsbewussten Bürger:innen die Möglichkeit, sich für ihre Stadt und die Menschen, die hier leben, mit Zeit, Geld und Ideen einzusetzen.`,
   },
   {
     title: "Die Satzung",
-    content: `Unsere Satzung ist der Maßstab unseres Handelns. In ihr haben
-              wir Struktur und Förderziele dauerhaft festgelegt. Unser
-                  Förderzweck ist bewusst weit gefasst, damit wir möglichst
-                  viele Anliegen der Potsdamer Stadtgesellschaft, heute und
-                  morgen, angehen können.`
+    content: `Die Satzung ist der Maßstab allen Handelns. In ihr sind die Struktur und Förderziele dauerhaft festgelegt. Die Einhaltung des Satzungszwecks und die satzungsgemäße Mittelverwendung wird durch den Stiftungsrat, die Stiftungsaufsicht des Landes Brandenburg und das Finanzamt Potsdam überwacht.`
   },
   {
     title: "Die Organisation",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.`
+    content: `Die Bürgerstiftung besteht aus vier Gremien, deren Mitglieder alle ehrenamtlich arbeiten: Der Vorstand führt die laufenden Geschäfte. Der Stiftungsrat kontrolliert den Vorstand, ob dieser seine Aufgaben ordnungsgemäß und insbesondere den Stiftungszweck erfüllt. Das Kuratorium berät den Vorstand, insbesondere über die Schwerpunktsetzung der Stiftungsarbeit. Die Stifterversammlung besteht aus langjährigen Zeiststifter:innen und Zustifter:innen von mindestens 5000 € ins Stiftungsvermögen sowie den Gründungsstifter:innen. Das Fundament bilden die vielen Menschen, die sich in der Stiftungsarbeit und den Projekten überwiegend ehrenamtlich engagieren.`
   },
   {
     title: "Die Prinzipien",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.`
-  },
-  {
-    title: "Unser Auftrag",
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.`
+    content: `Die Potsdamer Bürgerstiftung steht für bürgerschaftliches Engagement, Beteiligung, Mitgestaltung, Vielfalt und Toleranz. Sie ist vor allem eine operative Mitmach-Stiftung, kann aber auch fördernd tätig sein. Sie setzt auf offenen Austausch, Dialog und ein wachsendes Netzwerk, Partnerschaften und Kooperationen mit anderen Akteur:innen der Stadtgesellschaft. Die Potsdamer Bürgerstiftung verpflichtet sich zu transparenter Haushaltsführung sowie zur effizienten, effektiven und nachhaltigen Mittelverwendung. `
   }
 ]
 </script>
