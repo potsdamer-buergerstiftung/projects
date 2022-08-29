@@ -1,7 +1,7 @@
 <template>
   <div>
     <Title>Datenschutz</Title>
-    <PageTitle title="Datenschutz" class="max-w-4xl mx-auto -mt-24">
+    <PageTitle title="Datenschutz" class="max-w-4xl mx-auto -mt-24" is-compact>
       <template #breadcrumb>
         <PageTitleBreadcrumb :items="[{ text: 'Datenschutz', link: '/datenschutz' }]" />
       </template>
@@ -13,9 +13,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: "text"
-})
 const { getSingletonItem } = useDirectusItems()
 const policy = await getSingletonItem<any>({ collection: "privacy_policy" })
 </script>

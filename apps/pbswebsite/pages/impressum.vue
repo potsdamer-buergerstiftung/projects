@@ -1,7 +1,7 @@
 <template>
   <div>
     <Title>Impressum</Title>
-    <PageTitle title="Impressum" class="max-w-4xl mx-auto -mt-24">
+    <PageTitle title="Impressum" class="max-w-4xl mx-auto -mt-24" is-compact>
       <template #breadcrumb>
         <PageTitleBreadcrumb :items="[{ text: 'Impressum' }]" />
       </template>
@@ -13,9 +13,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  layout: "text"
-})
 const { getSingletonItem } = useDirectusItems()
 const imprint = await getSingletonItem<any>({ collection: "imprint" })
 </script>

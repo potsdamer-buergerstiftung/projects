@@ -3,7 +3,7 @@
     <Title>Die Stiftung</Title>
     <PageTitle title="Wer wir sind">
       <template #breadcrumb>
-        <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung' }]"/>
+        <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung' }]" />
       </template>
     </PageTitle>
     <section class="pb-20 pt-20 bg-slate-100">
@@ -27,24 +27,14 @@
       </div>
     </section>
     <section>
-      <DirectusImage
-          asset-id="b6431451-1fdc-45ac-ab79-c42c3a0b7627"
-          format="webp"
-          :quality="70"
-          :width="1600"
-          :height="1300"
-          class="w-full h-[25rem] object-cover"
-          ref="image"
-          :style="{objectPosition: `50% ${(top / height * 20) + 20}%`}"
-      />
+      <DirectusImage asset-id="b6431451-1fdc-45ac-ab79-c42c3a0b7627" format="webp" :quality="70" :width="1600"
+        :height="1300" class="w-full h-[25rem] object-cover" ref="image"
+        :style="{ objectPosition: `50% ${(top / height * 20) + 20}%` }" />
     </section>
     <section class="py-16 md:py-20">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div
-              class="container mx-auto flex h-full flex-col"
-              v-for="priority in priorities"
-          >
+          <div class="container mx-auto flex h-full flex-col" v-for="priority in priorities">
             <div>
               <h1 class="text-sm font-semibold uppercase text-gray-600 mb-2">
                 {{ priority.subTitle }}
@@ -66,14 +56,8 @@
       </div>
       <div class="grid grid-cols-6">
         <div class="col-span-6 md:col-span-2 xl:col-span-3">
-          <DirectusImage
-              asset-id="7d0a648b-c484-4e4e-9d69-f0230f7278bd"
-              format="webp"
-              :quality="50"
-              :width="1800"
-              :height="800"
-              class="w-full h-[20rem] object-cover mt-10 md:mt-24"
-          />
+          <DirectusImage asset-id="7d0a648b-c484-4e4e-9d69-f0230f7278bd" format="webp" :quality="50" :width="1800"
+            :height="800" class="w-full h-[20rem] object-cover mt-10 md:mt-24" />
         </div>
         <div class="bg-slate-50 px-4 py-16 md:px-16 lg:pr-24 col-span-6 md:col-span-4 xl:col-span-3">
           <h2 class="font-header text-3xl font-bold mb-8 max-w-md">
@@ -82,17 +66,29 @@
           <Disclosure v-slot="{ open }" v-for="disclosure in disclosures" as="div" class="mt-8">
             <DisclosureButton class="flex flex-row w-full text-left mb-4 items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor" stroke-width="2" v-if="!open">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                stroke="currentColor" stroke-width="2" v-if="!open">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
               </svg>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                   stroke="currentColor" stroke-width="2" v-else>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/>
+                stroke="currentColor" stroke-width="2" v-else>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
               </svg>
               <h4 class="text-lg font-bold">{{ disclosure.title }}</h4>
             </DisclosureButton>
             <DisclosurePanel>
               {{ disclosure.content }}
+              <div v-if="disclosure.button" class="mt-2">
+                <NuxtLink :href="disclosure.button.link"
+                  class="py-1 px-3 bg-emerald-100 inline-flex items-center text-slate-800 text-md font-header rounded-md font-bold transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75 hover:bg-emerald-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 h-4 mr-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+
+                  {{ disclosure.button.text }}
+                </NuxtLink>
+              </div>
             </DisclosurePanel>
           </Disclosure>
         </div>
@@ -124,7 +120,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/vue'
-import {useElementBounding, useWindowSize} from "@vueuse/core"
+import { useElementBounding, useWindowSize } from "@vueuse/core"
 
 definePageMeta({
   layout: "default",
@@ -132,7 +128,7 @@ definePageMeta({
 
 const image = ref(null);
 
-const {top} = useElementBounding(image)
+const { top } = useElementBounding(image)
 const { height } = useWindowSize()
 
 
@@ -164,7 +160,11 @@ const disclosures = [
   },
   {
     title: "Die Satzung",
-    content: `Die Satzung ist der Maßstab allen Handelns. In ihr sind die Struktur und Förderziele dauerhaft festgelegt. Die Einhaltung des Satzungszwecks und die satzungsgemäße Mittelverwendung wird durch den Stiftungsrat, die Stiftungsaufsicht des Landes Brandenburg und das Finanzamt Potsdam überwacht.`
+    content: `Die Satzung ist der Maßstab allen Handelns. In ihr sind die Struktur und Förderziele dauerhaft festgelegt. Die Einhaltung des Satzungszwecks und die satzungsgemäße Mittelverwendung wird durch den Stiftungsrat, die Stiftungsaufsicht des Landes Brandenburg und das Finanzamt Potsdam überwacht.`,
+    button: {
+      text: "Satzung aufrufen",
+      link: "/stiftung/satzung"
+    }
   },
   {
     title: "Die Organisation",
