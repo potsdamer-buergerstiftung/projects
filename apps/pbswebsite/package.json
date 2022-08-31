@@ -9,8 +9,8 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.5.0",
-    "@vueuse/nuxt": "^9.5.0",
+    "@vueuse/core": "^9.1.1",
+    "@vueuse/nuxt": "^9.1.1",
     "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
