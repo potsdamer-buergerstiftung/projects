@@ -19,7 +19,7 @@
           class="grid grid-cols-6 md:gap-10 relative overflow-hidden rounded-md">
           <div class="col-span-6 md:col-span-3 lg:col-span-4 relative group"
             :class="[index % 2 == 0 ? 'md:order-1' : 'md:order-2']">
-            <NuxtLink :href="`/projects/${project.id}`">
+            <NuxtLink :href="`/projekte/${project.id}`">
               <div class="overflow-hidden md:aspect-square w-full md:rounded-md">
                 <DirectusImage :asset-id="project.image" :width="800" :height="800"
                   class="w-full group-hover:scale-105 transition overflow-hidden duration-500" />
