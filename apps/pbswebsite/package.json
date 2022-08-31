@@ -9,16 +9,16 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@vueuse/core": "^8.5.0",
-    "@vueuse/nuxt": "^8.5.0",
+    "@vueuse/core": "^9.5.0",
+    "@vueuse/nuxt": "^9.5.0",
     "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
-    "@directus/sdk": "^9.12.2",
+    "@directus/sdk": "^10.0.0",
     "@fontsource/space-grotesk": "^4.5.8",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
-    "@pinia/nuxt": "^0.3.0",
+    "@pinia/nuxt": "^0.4.0",
     "@vue-stripe/vue-stripe": "^4.4.2",
     "@vueuse/motion": "2.0.0-beta.18",
     "angger-sticky-sidebar-v2": "^1.0.0",
