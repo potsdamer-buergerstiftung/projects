@@ -14,7 +14,7 @@
           <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/stiftung/aktuelles" />
           <HeaderSubNavItem title="Presse & Dokumente" link="/stiftung/presse" />
         </HeaderNavItem>
-        <HeaderNavItem title="Projekte & Programme" link="/projekte">
+        <HeaderNavItem title="Projekte & Initiativen" link="/projekte">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />
         </HeaderNavItem>
         <HeaderNavItem title="Unterstützen & engagieren" link="/mitstiften">
