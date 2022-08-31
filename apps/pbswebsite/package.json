@@ -18,13 +18,13 @@
     "@fontsource/space-grotesk": "^4.5.8",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
-    "@pinia/nuxt": "^0.4.0",
+    "@pinia/nuxt": "^0.4.1",
     "@vue-stripe/vue-stripe": "^4.4.2",
     "@vueuse/motion": "2.0.0-beta.18",
     "angger-sticky-sidebar-v2": "^1.0.0",
     "nuxt-directus": "*",
     "nuxt-ui": "*",
-    "pinia": "^2.0.14",
+    "pinia": "^2.0.21",
     "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^8.1.6"
   }

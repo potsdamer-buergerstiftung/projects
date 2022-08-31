@@ -1248,6 +1248,13 @@
     knex-schema-inspector "2.0.4"
     lodash "^4.17.21"
 
+"@directus/sdk@^10.0.0":
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/@directus/sdk/-/sdk-10.1.4.tgz#f61efe071ebb18411140f419c1b1232504ee9286"
+  integrity sha512-e8iwEbdMLMYBfla7QPh5ZfWua03PRMhhAwMkNz1/6k+ZCHc5+VQh7oR13OFU8r5KinsVPc7TjXElw3B6wxG0wg==
+  dependencies:
+    axios "^0.27.2"
+
 "@directus/sdk@^9.10.0", "@directus/sdk@^9.12.1", "@directus/sdk@^9.12.2":
   version "9.14.2"
   resolved "https://registry.yarnpkg.com/@directus/sdk/-/sdk-9.14.2.tgz#095602730fba2de2212b864ec0eb4eb5fec89498"
@@ -1959,7 +1966,7 @@
     unimport "^0.4.5"
     untyped "^0.4.4"
 
-"@nuxt/kit@3.0.0-rc.8", "@nuxt/kit@^3.0.0-rc.4", "@nuxt/kit@^3.0.0-rc.5", "@nuxt/kit@^3.0.0-rc.8":
+"@nuxt/kit@3.0.0-rc.8", "@nuxt/kit@^3.0.0-rc.4", "@nuxt/kit@^3.0.0-rc.5", "@nuxt/kit@^3.0.0-rc.6", "@nuxt/kit@^3.0.0-rc.8":
   version "3.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.8.tgz#e65e739e986abf5bfe99fa44a3bf44bacc66a35a"
   integrity sha512-FkbO7DPkJxuLqeiWEMUI8OWXaQ4qzmreIjslIPrc9buYdB9nbJqVVzQRicxcKzF09R7VwpJTiG6onIZq6iGuDQ==
@@ -2237,6 +2244,14 @@
   dependencies:
     "@nuxt/kit" "3.0.0-rc.6"
     pinia ">=2.0.17"
+
+"@pinia/nuxt@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@pinia/nuxt/-/nuxt-0.4.1.tgz#f32b046cef6b6663f5ce0d4cce6863e7a965873b"
+  integrity sha512-lxf2r3jaJysGxKuuv5FcoFEd4jQbZu+hMLGEQhDlz06IBJ1U+Dlxv5FklHHS6pa5+4ffaVqhUinhlElI/pknXQ==
+  dependencies:
+    "@nuxt/kit" "3.0.0-rc.6"
+    pinia ">=2.0.19"
 
 "@rollup/plugin-alias@^3.1.9":
   version "3.1.9"
@@ -2593,6 +2608,11 @@
   version "0.0.14"
   resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.14.tgz#94e175b53623384bff1f354cdb3197a8d63cdbe5"
   integrity sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==
+
+"@types/web-bluetooth@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz#d60330046a6ed8a13b4a53df3813c44942ebdf72"
+  integrity sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA==
 
 "@typescript-eslint/eslint-plugin@^4.29.0":
   version "4.33.0"
@@ -3016,6 +3036,16 @@
     "@vueuse/shared" "8.9.4"
     vue-demi "*"
 
+"@vueuse/core@9.1.1", "@vueuse/core@^9.5.0":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-9.1.1.tgz#a5c09c33ccee58cfd53bc3ec2d5a0d304155529e"
+  integrity sha512-QfuaNWRDMQcCUwXylCyYhPC3ScS9Tiiz4J0chdwr3vOemBwRToSywq8MP+ZegKYFnbETzRY8G/5zC+ca30wrRQ==
+  dependencies:
+    "@types/web-bluetooth" "^0.0.15"
+    "@vueuse/metadata" "9.1.1"
+    "@vueuse/shared" "9.1.1"
+    vue-demi "*"
+
 "@vueuse/head@^0.7.6", "@vueuse/head@^0.7.9":
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.9.tgz#888ab87667ab6dbe6edba10d176fa91c1b0ec021"
@@ -3025,6 +3055,11 @@
   version "8.9.4"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-8.9.4.tgz#a4132db33e4c1b1023636acfa20aa7b37ab3d978"
   integrity sha512-IwSfzH80bnJMzqhaapqJl9JRIiyQU0zsRGEgnxN6jhq7992cPUJIRfV+JHRIZXjYqbwt07E1gTEp0R0zPJ1aqw==
+
+"@vueuse/metadata@9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.1.1.tgz#b3fe4b97e62096f7566cd8eb107c503998b2c9a6"
+  integrity sha512-XZ2KtSW+85LLHB/IdGILPAtbIVHasPsAW7aqz3BRMzJdAQWRiM/FGa1OKBwLbXtUw/AmjKYFlZJo7eOFIBXRog==
 
 "@vueuse/motion@2.0.0-beta.18", "@vueuse/motion@^2.0.0-beta.18":
   version "2.0.0-beta.18"
@@ -3050,10 +3085,28 @@
     local-pkg "^0.4.1"
     vue-demi "*"
 
+"@vueuse/nuxt@^9.5.0":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/nuxt/-/nuxt-9.1.1.tgz#d397a5f4c01a48c942929c39124d2ecb17d9f558"
+  integrity sha512-gXg0/vmseAuZFxM3orVkMCxIZ58Niph8H0YuB6c2VSMux38dEi8AdG0zX/SJSR+wTk0sT9Ayil/2LM4JvYbe+Q==
+  dependencies:
+    "@nuxt/kit" "^3.0.0-rc.6"
+    "@vueuse/core" "9.1.1"
+    "@vueuse/metadata" "9.1.1"
+    local-pkg "^0.4.2"
+    vue-demi "*"
+
 "@vueuse/shared@8.9.4", "@vueuse/shared@^8.1.2":
   version "8.9.4"
   resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-8.9.4.tgz#c9741c30ffb666b50d62f0dd80b76119fd47573e"
   integrity sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-9.1.1.tgz#811f47629e281a19013ae6dcdf11ed3e1e91e023"
+  integrity sha512-c+IfcOYmHiHqoEa3ED1Tbpue5GHmoUmTp8PtO4YbczthtY155Rt6DmWhjxMLXBF1Bcidagxljmp/7xtAzEHXLw==
   dependencies:
     vue-demi "*"
 
@@ -11288,7 +11341,7 @@ pify@^4.0.0, pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pinia@>=2.0.17, pinia@^2.0.14:
+pinia@>=2.0.17, pinia@>=2.0.19, pinia@^2.0.14, pinia@^2.0.21:
   version "2.0.21"
   resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.21.tgz#2a6599ad3736fa71866f4b053ffb0073cd482270"
   integrity sha512-6ol04PtL29O0Z6JHI47O3JUSoyOJ7Og0rstXrHVMZSP4zAldsQBXJCNF0i/H7m8vp/Hjd/CSmuPl7C5QAwpeWQ==
