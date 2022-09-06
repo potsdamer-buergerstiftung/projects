@@ -17,7 +17,7 @@
         <StickySidebar containerSelector=".container" :top-spacing="40">
           <DirectusImage :asset-id="project.image" :quality="50" :width="800" class="w-full" />
         </StickySidebar>
-        <BlockRenderer :data="project.content" class="mt-16" />
+        <BlockRenderer :data="project.content" class="mt-16 md:mt-0" />
       </div>
     </section>
     <section class="bg-white" v-if="posts.length">
