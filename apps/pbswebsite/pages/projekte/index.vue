@@ -47,7 +47,7 @@
                     {{  category.name  }}<span v-if="index < project.categories.length - 1">,&nbsp;</span>
                   </li>
                 </ul>
-                <div v-html="project.summary" class="my-8" />
+                <div v-html="project.summary" class="my-8 prose" />
                 <NuxtLink class="flex flex-row items-center group" :href="`/projekte/${project.id}`">
                   <span class="font-bold group-hover:text-emerald-500 transition">Mehr zum Projekt</span>
                   <div class="ml-2 h-0.5 w-12 bg-slate-800 group-hover:bg-emerald-500 transition" />
