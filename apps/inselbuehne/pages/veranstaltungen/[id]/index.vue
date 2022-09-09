@@ -1,28 +1,20 @@
 <template>
   <section class="bg-gray-100">
     <div class="container mx-auto px-4 pt-40 pb-12">
-      <div
-        class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:bg-white md:shadow-xl"
-      >
+      <div class="overflow-hidden md:rounded-tl-xl md:rounded-br-xl md:bg-white md:shadow-xl">
         <div class="grid grid-cols-6">
           <div
-            class="relative col-span-6 h-64 overflow-hidden rounded-tl-lg rounded-br-lg bg-green-500 bg-cover md:rounded-none lg:col-span-3 lg:h-full"
-          >
-            <img
-              :src="`https://cdn.potsdamer-buergerstiftung.org/${image}?key=low-1000`"
-              alt="test"
-              class="absolute h-full w-full object-cover"
-            />
+            class="relative col-span-6 h-64 overflow-hidden rounded-tl-lg rounded-br-lg bg-green-500 bg-cover md:rounded-none lg:col-span-3 lg:h-full">
+            <img :src="`https://cdn.potsdamer-buergerstiftung.org/${image}?key=low-1000`" alt="test"
+              class="absolute h-full w-full object-cover" />
           </div>
           <div class="col-span-6 mt-8 md:px-8 lg:col-span-3 lg:mt-0 lg:pt-8">
-            <p
-              class="text-sm font-bold uppercase tracking-widest text-green-500"
-            >
+            <p class="text-sm font-bold uppercase tracking-widest text-green-500">
               {{ longStart }}
             </p>
             <h1 class="mt-8 mb-8 font-serif text-4xl lg:mb-24">{{ name }}</h1>
             <ClientOnly>
-              <button
+              <!-- <button
                 v-if="isShareSupported"
                 @click="startShare()"
                 class="inline-flex items-center rounded-tl-lg rounded-br-lg bg-gray-50 px-3 py-2 text-sm font-medium shadow-md transition hover:bg-gray-100"
@@ -46,6 +38,7 @@
               <button
                 v-if="isClipboardSupported && !isShareSupported"
                 @click="startCopy()"
+                ref="shareButton"
                 class="inline-flex items-center rounded-tl-lg rounded-br-lg bg-gray-50 px-3 py-2 text-sm font-medium shadow-md transition hover:bg-gray-100"
               >
                 {{ copied ? "Link kopiert" : "Veranstaltungslink kopieren" }}
@@ -79,39 +72,27 @@
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-              </button>
-              <NuxtLink
-                v-if="registration_needed"
-                :to="external_ticket_url"
-                target="_blank"
-                class="text-md mt-4 block w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400"
-              >
+              </button> -->
+              <NuxtLink v-if="registration_needed" :to="external_ticket_url" target="_blank"
+                class="text-md mt-4 block w-full rounded-tl-lg rounded-br-lg bg-green-500 px-4 py-2.5 text-center font-medium text-white shadow-md transition hover:bg-green-400">
                 Tickets
               </NuxtLink>
             </ClientOnly>
           </div>
         </div>
-        <div
-          class="mt-8 grid grid-cols-3 gap-4 md:mt-0 md:px-8 md:py-16 lg:gap-16 lg:px-16"
-        >
+        <div class="mt-8 grid grid-cols-3 gap-4 md:mt-0 md:px-8 md:py-16 lg:gap-16 lg:px-16">
           <div class="order-2 col-span-3 md:order-1 md:col-span-2">
-            <p
-              class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
-            >
+            <p class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500">
               Beschreibung
             </p>
             <ClientOnly>
-              <p
-                class="text-md prose prose-headings:font-serif prose-headings:font-normal lg:prose-lg mt-4 leading-relaxed"
-                v-html="description"
-              />
+              <p class="text-md prose prose-headings:font-serif prose-headings:font-normal lg:prose-lg mt-4 leading-relaxed"
+                v-html="description" />
             </ClientOnly>
           </div>
           <div class="order-1 col-span-3 md:order-2 md:col-span-1">
             <div>
-              <p
-                class="text-sm font-bold uppercase tracking-widest text-green-500 md:mt-4"
-              >
+              <p class="text-sm font-bold uppercase tracking-widest text-green-500 md:mt-4">
                 Datum und Uhrzeit
               </p>
               <p class="mt-4">
@@ -120,18 +101,14 @@
               <p>{{ timeStart }}</p>
             </div>
             <div class="mt-8 md:mt-12 lg:mt-16">
-              <p
-                class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
-              >
+              <p class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500">
                 Veranstaltungsort
               </p>
               <p class="mt-4">Inselbühne Potsdam</p>
               <p>Burgstraße, 14476 Potsdam</p>
             </div>
             <div class="mt-8 md:mt-12 lg:mt-16">
-              <p
-                class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500"
-              >
+              <p class="mt-4 text-sm font-bold uppercase tracking-widest text-green-500">
                 Hinweise vom Veranstalter
               </p>
               <p class="mt-4">Keine</p>
@@ -184,9 +161,9 @@ const {
   external_ticket_url,
 } = props;
 
-const { share, isSupported: isShareSupported } = useShare();
+/* const { share, isSupported: isShareSupported } = useShare();
 
-const shareButton = ref("");
+const shareButton = ref();
 
 const {
   copy,
@@ -204,5 +181,5 @@ function startShare() {
     text: summary,
     url: location.href,
   });
-}
+} */
 </script>

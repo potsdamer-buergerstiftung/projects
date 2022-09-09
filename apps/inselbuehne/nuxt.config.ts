@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@vueuse/nuxt",
     "nuxt-directus",
     "@pinia/nuxt",
-    "@vueuse/nuxt",
     "nuxt-ui",
   ],
   ui: {
