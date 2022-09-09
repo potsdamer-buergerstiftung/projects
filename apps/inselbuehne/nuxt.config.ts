@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     "nuxt-directus",
     "@pinia/nuxt",
     "@vueuse/nuxt",
-    "@vueuse/motion/nuxt",
     "nuxt-ui",
   ],
   ui: {

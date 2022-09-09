@@ -27,10 +27,6 @@ export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: "nuxt-directus",
     configKey: "directus",
-    compatibility: {
-      nuxt: "^3.0.0 || ^2.16.0",
-      bridge: true,
-    },
   },
   defaults: {
     url: process.env.DIRECTUS_URL,
