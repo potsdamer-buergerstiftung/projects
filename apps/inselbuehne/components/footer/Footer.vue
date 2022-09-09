@@ -46,13 +46,6 @@
           </h4>
           <ul class="mt-4 flex flex-col space-y-4">
             <li>
-              <NuxtLink
-                to="/ueber/uns"
-                class="text-gray-300 transition hover:text-green-300"
-                >Team
-              </NuxtLink>
-            </li>
-            <li>
               <a
                 href="https://www.potsdamer-buergerstiftung.org"
                 target="_blank"
