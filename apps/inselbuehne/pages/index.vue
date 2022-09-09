@@ -79,12 +79,11 @@
           />
         </div>
         <div class="order-1 col-span-2 lg:order-2 lg:col-span-1">
-          <h1 class="font-serif text-4xl" v-motion-fade-visible-once>
+          <h1 class="font-serif text-4xl">
             Was ist die Inselbühne?
           </h1>
           <p
             class="mt-4 text-lg leading-relaxed text-gray-600"
-            v-motion-fade-visible-once
           >
             Inselbühne haben wir die 1973 errichtete Freilichtbühne auf der
             Freundschaftsinsel neu benannt. Seit 2012 wurde sie nicht mehr

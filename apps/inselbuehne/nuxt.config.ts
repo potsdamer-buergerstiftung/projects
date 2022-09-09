@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    "@vueuse/motion/nuxt",
     "nuxt-directus",
     "@pinia/nuxt",
     "@vueuse/nuxt",
