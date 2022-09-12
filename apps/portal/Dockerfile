@@ -9,5 +9,5 @@ COPY packages/directus-extensions/ ./packages/directus-extensions
 RUN yarn install
 RUN yarn build --filter=portal
 
-FROM directus/directus:9.17.0
+FROM directus/directus:9.16.1
 COPY --from=build /fe/packages/directus-extensions/.output/extensions /directus/extensions
