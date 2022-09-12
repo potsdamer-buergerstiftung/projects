@@ -117,7 +117,7 @@
         </div>
         <div class="relative col-span-6 md:col-span-3 lg:col-span-6">
           <div class="absolute z-[-1] h-full w-full">
-            <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900" />
+            <div class="absolute bottom-0 top-0 left-0 right-0" />
           </div>
           <div
             class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16"
@@ -143,7 +143,7 @@
                   />
                 </svg>
               </NuxtLink>
-              <p class="max-w-2xl text-white">
+              <p class="max-w-2xl ">
                 Mit Deiner Spende und einem von Dir bestimmten Spendenzweck
                 kannst Du bestimmen, welche unserer Projekte und
                 Projektkategorien Du unterstützen möchtest.

@@ -3,6 +3,7 @@ import { defineStore } from "pinia";
 
 export const useStore = defineStore("header", () => {
   const isSubMenuOpen = ref(false);
+  const isQuickDonateDrawerOpen = ref(false);
   const isMobileMenuOpen = ref(false);
   const isSubMenuOpenDebounced = ref(false);
   const headerOverlayHight = ref(0);
@@ -57,6 +58,14 @@ export const useStore = defineStore("header", () => {
     isMobileMenuOpen.value = false;
   }
 
+  function openQuickDonateDrawer() {
+    isQuickDonateDrawerOpen.value = true;
+  }
+
+  function closeQuickDonateDrawer() {
+    isQuickDonateDrawerOpen.value = false;
+  }
+
   return {
     toggleSubMenuOpen,
     toggleMobileMenuOpen,
@@ -67,5 +76,8 @@ export const useStore = defineStore("header", () => {
     closeMobileMenu,
     setHeaderOverlayHight,
     headerOverlayHight,
+    closeQuickDonateDrawer,
+    openQuickDonateDrawer,
+    isQuickDonateDrawerOpen
   };
 });

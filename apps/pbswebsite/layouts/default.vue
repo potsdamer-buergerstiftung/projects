@@ -29,15 +29,16 @@
         <HeaderActions />
       </template>
     </Header>
+    <HeaderQuickDonateDrawer />
     <slot />
     <Footer />
     <ClientOnly>
-      <div class="fixed left-[4vh] top-[50%] z-50 inline-flex origin-top-left items-center align-middle" v-if="lgAndUp"
+      <div class="fixed left-[4vh] top-[50%] z-40 inline-flex origin-top-left items-center align-middle" v-if="lgAndUp"
         style="transform: rotate(-90deg) translate(-50%, 0)">
         <ScrollProgressIndicator />
       </div>
     </ClientOnly>
-    <div class="fixed right-[4vh] top-[50%] z-50 hidden origin-top-right items-center align-middle lg:inline-flex"
+    <div class="fixed right-[4vh] top-[50%] z-40 hidden origin-top-right items-center align-middle lg:inline-flex"
       style="transform: rotate(-90deg) translate(50%, -100%)">
       <SocialMediaLinks size="large" :is-dark="(route.meta.isDark as boolean)" />
     </div>
