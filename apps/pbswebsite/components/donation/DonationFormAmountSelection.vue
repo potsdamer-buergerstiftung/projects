@@ -9,9 +9,7 @@
             <h1 class="font-header font-bold text-3xl">
                 Betrag wählen
             </h1>
-            <p class="mt-2">Wir engagieren uns in vielen Bereichen. <b>Informiere Dich über unsere
-                    Veranstaltungen</b> und
-                Einsatzgebiete, damit Du etwas Passendes für Dich findest.</p>
+            <p class="mt-2"><b>Jeder Euro zählt.</b> Ab einer Spende von 50€ stellen wir Dir gerne eine Spendenbescheinigung aus.</p>
             <ul class="flex flex-row gap-6 mt-8">
                 <li v-for="duration in planDurations"
                     class="relative font-bold py-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-emerald-500"

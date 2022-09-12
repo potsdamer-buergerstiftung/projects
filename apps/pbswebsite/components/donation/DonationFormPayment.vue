@@ -9,9 +9,9 @@
             <h1 class="font-header font-bold text-3xl">
                 Betrag wählen
             </h1>
-            <p class="mt-2">Wir engagieren uns in vielen Bereichen. <b>Informiere Dich über unsere
-                    Veranstaltungen</b> und
-                Einsatzgebiete, damit Du etwas Passendes für Dich findest.</p>
+            <p class="mt-2">Du kannst uns gerne über PayPal, Google Pay oder Apple Pay schnell spenden oder regulär mit
+                deiner Kredit- oder Debitkarte zahlen. Wir unterstützen neuerdings auch die Zahlung durch elektronische
+                SEPA-Lastschrift, sodass das Mandat nicht mehr schriftlich erteilen musst.</p>
             <ul class="flex flex-row gap-6 mt-8">
                 <li v-for="duration in planDurations"
                     class="relative font-bold py-2 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-slate-900"

@@ -9,9 +9,8 @@
             <h1 class="font-header font-bold text-3xl">
                 Bezahlmethode wählen
             </h1>
-            <p class="mt-2">Wir engagieren uns in vielen Bereichen. <b>Informiere Dich über unsere
-                    Veranstaltungen</b> und
-                Einsatzgebiete, damit Du etwas Passendes für Dich findest.</p>
+            <p class="mt-2">Wir unterstützen neuerdings auch die Zahlung durch elektronische
+                SEPA-Lastschrift, sodass Du das Mandat nicht mehr schriftlich erteilen musst.</p>
             <ul class="flex flex-row gap-4 mt-8 flex-wrap">
                 <button v-for="provider in paymentOptions"
                     class="flex-grow px-4 bg-emerald-100 rounded-lg relative font-bold py-3" :class="{
