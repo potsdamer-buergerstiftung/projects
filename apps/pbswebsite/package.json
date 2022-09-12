@@ -9,22 +9,21 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.1.1",
-    "@vueuse/nuxt": "^9.1.1",
-    "nuxt": "3.0.0-rc.8"
+    "@vueuse/core": "^9.2.0",
+    "@vueuse/nuxt": "^9.2.0",
+    "nuxt": "3.0.0-rc.9"
   },
   "dependencies": {
     "@directus/sdk": "^10.0.0",
     "@fontsource/space-grotesk": "^4.5.8",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
-    "@pinia/nuxt": "^0.4.1",
+    "@pinia/nuxt": "^0.4.2",
     "@vue-stripe/vue-stripe": "^4.4.2",
-    "@vueuse/motion": "2.0.0-beta.18",
     "angger-sticky-sidebar-v2": "^1.0.0",
     "nuxt-directus": "*",
     "nuxt-ui": "*",
-    "pinia": "^2.0.21",
+    "pinia": "^2.0.22",
     "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^8.1.6"
   }
