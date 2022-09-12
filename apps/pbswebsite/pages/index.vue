@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="relative col-span-6 md:col-span-3 lg:col-span-6">
+        <div class="relative col-span-6 md:col-span-3 lg:col-span-6 bg-slate-100">
           <div class="absolute z-[-1] h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0" />
           </div>
@@ -125,7 +125,7 @@
             <div>
               <NuxtLink
                 to="/mitstiften"
-                class="text-md font-header mb-6 inline-flex items-center rounded-md font-bold text-emerald-500 transition ease-in-out hover:text-emerald-200"
+                class="text-md font-header mb-6 inline-flex items-center rounded-md font-bold transition ease-in-out hover:text-emerald-500"
               >
                 Unterstütze uns
                 <svg
