@@ -8,11 +8,11 @@
         Brücken bauen,<br />
         Menschen verbinden
       </h1>
-      <p class="mt-8 text-slate-800">
+      <p class="mt-8 text-slate-800 md:text-lg">
         Wir sind die Potsdamer Bürgerstiftung und fördern als Mitmach-Stiftung
         ehrenamtliches Engagement.
       </p>
-      <p class="pt-1 font-bold text-emerald-500">
+      <p class="pt-1 font-bold text-emerald-500 md:text-lg">
         Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
       </p>
     </div>
