@@ -17,7 +17,8 @@
         <div class="flex flex-row mt-16 gap-10">
             <ul class="flex flex-col items-end shrink-0">
                 <button class="group font-bold font-header py-2 relative" v-for="item in navItems"
-                    @click="store.setProgress(item.key as any)">{{ item.text }}
+                    @click="store.setProgress(item.key as any)"
+                    :class="[item.active ? 'opacity-100' : 'opacity-10 cursor-not-allowed']">{{ item.text }}
                     <span class="absolute top-0 -right-5 bottom-0 w-0.5 bg-emerald-500 transition"
                         :class="[item.key === store.progress ? 'opacity-100' : 'opacity-0 group-hover:opacity-100']" />
                 </button>
@@ -41,22 +42,28 @@ const { projectId } = defineProps<{ projectId?: string, projectTitle?: string }>
 const project = projectId ? await getItemById<any>({ collection: "projects", id: projectId }) : null;
 provide("project", project);
 
+const contactDetailsActive = computed(() => { return store.paymentProvider !== null })
+
 const navItems = [
     {
         key: "AMOUNT_SELECTION",
-        text: "Betrag wählen"
+        text: "Betrag wählen",
+        active: ref(true),
     },
     {
         key: "PAYMENT_SELECTION",
-        text: "Bezahlmethode wählen"
+        text: "Bezahlmethode wählen",
+        active: ref(true),
     },
     {
         key: "CONTACT_DETAILS",
-        text: "Kontaktdaten angeben"
+        text: "Kontaktdaten angeben",
+        active: contactDetailsActive
     },
     {
         key: "PAYMENT",
-        text: "Spenden"
-    },
+        text: "Spenden",
+        active: ref(true)
+    }
 ]
 </script>
