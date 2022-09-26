@@ -10,16 +10,12 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    mollieApiKey: "",
     public: {
       websiteUrl: "",
     },
   },
-  modules: [
-    "nuxt-directus",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "nuxt-ui",
-  ],
+  modules: ["nuxt-directus", "@pinia/nuxt", "@vueuse/nuxt", "nuxt-ui"],
   experimental: {
     reactivityTransform: true,
   },
