@@ -2,9 +2,7 @@
   <div>
     <Title>Brücken bauen, Menschen verbinden</Title>
     <div class="container mx-auto px-4 pt-32 md:pt-44">
-      <h1
-        class="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl"
-      >
+      <h1 class="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl">
         Brücken bauen,<br />
         Menschen verbinden
       </h1>
@@ -18,41 +16,20 @@
     </div>
     <div class="container mx-auto px-4 pt-10 pb-16 md:pt-20">
       <div class="grid grid-cols-6 gap-8">
-        <div
-          v-for="(project, i) in projects"
-          class="col-span-6 lg:col-span-3"
-          :class="{
-            'xl:col-span-2': indexToColSpan(i) * 2 == 2,
-            'xl:col-span-4': indexToColSpan(i) * 2 == 4,
-          }"
-        >
-          <ProjectCard
-            :title="project.title"
-            :sub-title="project.sub_title"
-            :project-id="project.id"
-            :image-id="project.image"
-            :image-size="indexToColSpan(i) * 2 == 2 ? 'small' : 'large'"
-          />
+        <div v-for="(project, i) in projects" class="col-span-6 lg:col-span-3" :class="{
+          'xl:col-span-2': indexToColSpan(i) * 2 == 2,
+          'xl:col-span-4': indexToColSpan(i) * 2 == 4,
+        }">
+          <ProjectCard :title="project.title" :sub-title="project.sub_title" :project-id="project.id"
+            :image-id="project.image" :image-size="indexToColSpan(i) * 2 == 2 ? 'small' : 'large'" />
         </div>
       </div>
-      <NuxtLink
-        to="/projekte"
-        class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-      >
+      <NuxtLink to="/projekte"
+        class="text-md font-header mt-12 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
         Alle Projekte
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="ml-1 h-4 w-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </NuxtLink>
     </div>
@@ -75,33 +52,20 @@
             leichter machen, das <b>Gemeinwohl zu stärken</b>,
             Gemeinschaftsgefühl zu erleben, ein
             <b>herzliches Miteinander</b> und eine starke Zukunft für Potsdam zu
-            stiften.
+            stiften. Mit unserer Arbeit konnten wir seit unserer Gründung <b>erste Schwerpunkte setzen</b>.
           </p>
         </div>
       </div>
     </section>
     <section>
       <div class="grid grid-cols-6 overflow-hidden">
-        <div
-          class="relative col-span-6 md:col-span-3 lg:col-span-2"
-          v-for="priority in priorities"
-        >
+        <div class="relative col-span-6 md:col-span-3 lg:col-span-2" v-for="priority in priorities">
           <div class="absolute z-[-1] h-full w-full">
-            <div
-              class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900 opacity-60"
-            />
-            <DirectusImage
-              :asset-id="priority.assetId"
-              class="h-full w-full object-cover"
-              :width="700"
-              :height="500"
-              :quality="30"
-              v-if="priority.assetId"
-            />
+            <div class="absolute bottom-0 top-0 left-0 right-0 bg-slate-900 opacity-60" />
+            <DirectusImage :asset-id="priority.assetId" class="h-full w-full object-cover" :width="700" :height="500"
+              :quality="30" v-if="priority.assetId" />
           </div>
-          <div
-            class="container mx-auto flex h-full flex-col justify-between px-4 py-16 md:p-8 lg:max-w-none xl:p-10"
-          >
+          <div class="container mx-auto flex h-full flex-col justify-between px-4 py-16 md:p-8 lg:max-w-none xl:p-10">
             <div class="mb-20 md:mb-36">
               <h1 class="mb-1 text-sm font-semibold uppercase text-slate-200">
                 {{ priority.subTitle }}
@@ -119,34 +83,20 @@
           <div class="absolute z-[-1] h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0" />
           </div>
-          <div
-            class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16"
-          >
+          <div class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16">
             <div>
-              <NuxtLink
-                to="/mitstiften"
-                class="text-md font-header mb-6 inline-flex items-center rounded-md font-bold transition ease-in-out hover:text-emerald-500"
-              >
+              <NuxtLink to="/mitstiften"
+                class="text-md font-header mb-6 inline-flex items-center rounded-md font-bold transition ease-in-out hover:text-emerald-500">
                 Unterstütze uns
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="ml-1 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </NuxtLink>
               <p class="max-w-2xl ">
-                Mit Deiner Spende und einem von Dir bestimmten Spendenzweck
-                kannst Du bestimmen, welche unserer Projekte und
-                Projektkategorien Du unterstützen möchtest.
+                Komm' an Bord der Bürgerstiftung. Setz' Dich mit <b>Deiner Spende</b> gemeinsam mit uns für <b>Themen,
+                  die Dir und uns wichtig sind</b>, ein!
+                <br />
               </p>
             </div>
           </div>
@@ -166,41 +116,19 @@
             Verfolge die Entwicklung unserer Projekte, die dank Deiner
             großzügigen Beiträge und Deiner Unterstützung möglich wurden.
           </p>
-          <NuxtLink
-            to="/stiftung/aktuelles"
-            class="text-md font-header mt-12 mb-4 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
-          >
+          <NuxtLink to="/stiftung/aktuelles"
+            class="text-md font-header mt-12 mb-4 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
             Alle Beiträge
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ml-1 h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </NuxtLink>
         </div>
-        <div
-          v-for="post in posts"
-          class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2"
-        >
-          <ArticleCard
-            :title="post.title"
-            :date="new Date(post.date)"
-            :post-id="post.id.toString()"
-            :image-id="post.image"
-            :project-title="post.project.title"
-            :tags="post.tags"
-            compact
-            :link="`/stiftung/aktuelles/${post.slug}`"
-          />
+        <div v-for="post in posts" class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2">
+          <ArticleCard :title="post.title" :date="new Date(post.date)" :post-id="post.id.toString()"
+            :image-id="post.image" :project-title="post.project.title" :tags="post.tags" compact
+            :link="`/stiftung/aktuelles/${post.slug}`" />
         </div>
       </div>
     </section>
@@ -217,19 +145,22 @@ const priorities = [
     subTitle: "Nachhaltigkeit",
     title: "Nachhaltig engagieren und handeln",
     assetId: "0e823ed4-1409-4827-b9c3-14a442a1db52",
-    description: `Wir verschaffen Nachhaltigkeit und Müllvermeidung in Potsdam ein größeres Gehör und unterstützen lokale Unternehmen dabei, sich nachhaltig entwickeln zu können.`,
+    description: `Wir verschaffen Nachhaltigkeit und Müllvermeidung in Potsdam mehr Aufmerksamkeit und leisten unseren Beitrag zu Umweltschutz, Stadtgrün und Klima.`,
+    color: "",
   },
   {
     subTitle: "Kultur",
-    title: "Chancengleichheit und Zugang für Kultur schaffen",
+    title: "Kultur und Teilhabe fördern",
     assetId: "72baf604-4397-4f22-9ac7-195df8b1a591",
-    description: `Finanzierbarer Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und allen, Teil des Publikums zu sein.`,
+    description: `Freier Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und allen Menschen, Teil des Publikums zu sein.`,
+    color: "",
   },
   {
     subTitle: "Begegnung & Toleranz",
-    title: "Menschen aus der Welt zusammenbringen",
+    title: "Menschen zusammenbringen",
     assetId: "db74ab6f-0e47-415d-8686-a3a6afa2b6a1",
-    description: `Menschen in Potsdam kennenlernen, zusammen leben und Spaß haben. Wir organisieren Zusammentreffen aller Art und vereinfachen Begegnung durch gemeinsame Interessen.`,
+    description: `Zusammenhalt, Solidarität und Toleranz entsteht durch Begegnung. Wir organisieren Zusammentreffen aller Art und vereinfachen Begegnung durch gemeinsame Interessen. Wir alle sind Potsdam.`,
+    color: "",
   },
 ];
 
