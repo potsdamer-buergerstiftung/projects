@@ -67,7 +67,7 @@
           </div>
           <div class="container mx-auto flex h-full flex-col justify-between px-4 py-16 md:p-8 lg:max-w-none xl:p-10">
             <div class="mb-20 md:mb-36">
-              <h1 class="mb-1 text-sm font-semibold uppercase text-slate-200">
+              <h1 :class="`mb-1 text-sm font-semibold uppercase ${priority.color}`">
                 {{ priority.subTitle }}
               </h1>
               <h2 class="font-header text-3xl font-bold text-white">
@@ -94,8 +94,9 @@
                 </svg>
               </NuxtLink>
               <p class="max-w-2xl ">
-                Komm' an Bord der Bürgerstiftung. Setz' Dich mit <b>Deiner Spende</b> gemeinsam mit uns für <b>Themen,
-                  die Dir und uns wichtig sind</b>, ein!
+                Komm' an Bord der Bürgerstiftung. Setz' Dich mit <b>Deiner Spende</b> gemeinsam mit uns für
+                <b>Themen</b> ein, <b>
+                  die Dir und uns wichtig sind</b>!
                 <br />
               </p>
             </div>
@@ -146,21 +147,21 @@ const priorities = [
     title: "Nachhaltig engagieren und handeln",
     assetId: "0e823ed4-1409-4827-b9c3-14a442a1db52",
     description: `Wir verschaffen Nachhaltigkeit und Müllvermeidung in Potsdam mehr Aufmerksamkeit und leisten unseren Beitrag zu Umweltschutz, Stadtgrün und Klima.`,
-    color: "",
+    color: "text-emerald-200",
   },
   {
     subTitle: "Kultur",
     title: "Kultur und Teilhabe fördern",
     assetId: "72baf604-4397-4f22-9ac7-195df8b1a591",
     description: `Freier Zugang zu Kultur und Unterhaltung ist wichtiger denn je. Wir ermöglichen Kunstschaffenen sich in Potsdam zu präsentieren und allen Menschen, Teil des Publikums zu sein.`,
-    color: "",
+    color: "text-red-200",
   },
   {
     subTitle: "Begegnung & Toleranz",
     title: "Menschen zusammenbringen",
     assetId: "db74ab6f-0e47-415d-8686-a3a6afa2b6a1",
     description: `Zusammenhalt, Solidarität und Toleranz entsteht durch Begegnung. Wir organisieren Zusammentreffen aller Art und vereinfachen Begegnung durch gemeinsame Interessen. Wir alle sind Potsdam.`,
-    color: "",
+    color: "text-blue-200",
   },
 ];
 
