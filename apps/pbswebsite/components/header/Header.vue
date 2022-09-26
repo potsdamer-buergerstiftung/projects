@@ -27,9 +27,9 @@
         </div>
       </div>
     </div>
-    <div
-      class="pointer-events-none invisible fixed top-0 right-0 left-0 bottom-0 bg-slate-900 transition duration-500 lg:visible"
-      :class="[store.isSubMenuOpen || store.isQuickDonateDrawerOpen ? 'opacity-70' : 'opacity-0', { '-z-[1]': !store.isQuickDonateDrawerOpen }]" />
+    <div class="invisible fixed top-0 right-0 left-0 bottom-0 bg-slate-900 transition duration-500 lg:visible"
+      :class="[store.isSubMenuOpen || store.isQuickDonateDrawerOpen ? 'opacity-70' : 'opacity-0', { '-z-[1] pointer-events-none': !store.isQuickDonateDrawerOpen }]"
+      @click="store.isQuickDonateDrawerOpen ? store.closeQuickDonateDrawer() : undefined" />
     <div class="transition-[height, opacity] invisible absolute top-0 left-0 w-full bg-white duration-500 lg:visible"
       :class="[
         store.isSubMenuOpen
