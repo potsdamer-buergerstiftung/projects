@@ -24,6 +24,7 @@
                 </button>
             </ul>
             <div class="w-full">
+                <DonationFormProjectSelection v-if="store.progress === 'PROJECT_SELECTION'" />
                 <DonationFormAmountSelection v-if="store.progress === 'AMOUNT_SELECTION'" />
                 <DonationFormPaymentSelection v-if="store.progress === 'PAYMENT_SELECTION'" />
                 <DonationFormContactDetails v-if="store.progress === 'CONTACT_DETAILS'" />
@@ -44,7 +45,18 @@ provide("project", project);
 
 const contactDetailsActive = computed(() => { return store.paymentProvider !== null })
 
+if (projectId) {
+    store.setProgress("AMOUNT_SELECTION");
+    store.setShowProjectSelection(false);
+    store.setProject(projectId);
+}
+
 const navItems = [
+    {
+        key: "PROJECT_SELECTION",
+        text: "Verwendungszweck wählen",
+        active: ref(true),
+    },
     {
         key: "AMOUNT_SELECTION",
         text: "Betrag wählen",

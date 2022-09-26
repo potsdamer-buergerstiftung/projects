@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 
 type Progress =
+  | "PROJECT_SELECTION"
   | "AMOUNT_SELECTION"
   | "PAYMENT_SELECTION"
   | "CONTACT_DETAILS"
@@ -11,10 +12,12 @@ type PlanDuration = "ONE_TIME" | "MONTHLY";
 type PaymentProvider = "PAYPAL" | "GOOGLE_PAY" | "APPLE_PAY";
 
 export default defineStore("donationForm", () => {
-  const progress = ref<Progress>("AMOUNT_SELECTION");
+  const progress = ref<Progress>("PROJECT_SELECTION");
   const planDuration = ref<PlanDuration>("MONTHLY");
   const paymentProvider = ref(null);
   const amount = ref(10);
+  const projectId = ref(null);
+  const showProjectSelection = ref(false);
 
   const getActiveProgressTitle = () => {
     switch (progress.value) {
@@ -45,6 +48,14 @@ export default defineStore("donationForm", () => {
     paymentProvider.value = p;
   }
 
+  function setProject(id: string) {
+    projectId.value = id;
+  }
+
+  function setShowProjectSelection(show: boolean) {
+    showProjectSelection.value = show;
+  }
+
   return {
     planDuration,
     progress,
@@ -55,5 +66,8 @@ export default defineStore("donationForm", () => {
     setPlanDuration,
     setPaymentProvider,
     paymentProvider,
+    projectId,
+    setProject,
+    setShowProjectSelection,
   };
 });

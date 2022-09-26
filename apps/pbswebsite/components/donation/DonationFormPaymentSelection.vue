@@ -30,16 +30,18 @@
 <script setup lang="ts">
 import useStore from './state';
 const store = useStore();
-const router = useRouter()
 
 const PayPalIcon = resolveComponent("IconsPayPal");
-const GooglePayIcon = resolveComponent("IconsGooglePay");
-const ApplePayIcon = resolveComponent("IconsApplePay");
 
 const { data: paymentOptions } = await useFetch<any[]>("/api/methods") as any;
 
 const redirectToPayment = () => {
-    window.location.replace(`/api/payment?provider=${store.paymentProvider}&amount=${store.amount}`);
+
+    const params = new URLSearchParams();
+    params.append("amount", store.amount.toString());
+    params.append("projectId", store.projectId ?? "");
+    params.append("method", store.paymentProvider);
+    window.location.replace("/api/donate?" + params.toString());
 }
 
 const getIcon = (id: string) => {
