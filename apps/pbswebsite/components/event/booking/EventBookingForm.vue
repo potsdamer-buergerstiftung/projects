@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Title>{{store.event.name}}</Title>
     <div v-if="store.event" class="grid grid-cols-3">
       <div class="col-span-2 bg-white">
         <EventBookingFormEventInfo />

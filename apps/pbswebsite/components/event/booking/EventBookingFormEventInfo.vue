@@ -7,6 +7,7 @@
       >
     </p>
     <h1 class="font-header mt-2 text-4xl font-bold">{{ store.event.name }}</h1>
+    <div v-html="store.event.description" class="mt-8 prose"></div>
   </div>
 </template>
 

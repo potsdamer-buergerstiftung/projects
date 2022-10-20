@@ -83,8 +83,53 @@
           <div class="absolute z-[-1] h-full w-full">
             <div class="absolute bottom-0 top-0 left-0 right-0" />
           </div>
-          <div class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16">
-            <div>
+          <!-- <div class="container mx-auto  px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16">
+            <h4 class="text-sm font-semibold uppercase text-gray-600">
+              Von unserem Blog
+            </h4>
+            <h1 class="font-header mt-2 text-4xl font-bold">
+              Aktuelles & Neuigkeiten
+            </h1>
+          </div> -->
+          <div
+            class="container mx-auto grid grid-cols-6 gap-8 px-4 flex h-full flex-col justify-end px-4 py-16 md:px-8 md:py-8 lg:px-4 lg:py-16">
+            <div class="col-span-6">
+              <h4 class="text-sm font-semibold uppercase text-gray-600">
+                Nimm teil
+              </h4>
+              <h1 class="font-header mt-2 text-4xl font-bold">
+                Kommende Veranstaltungen
+              </h1>
+            </div>
+            <div v-for="event in events" class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2">
+              <NuxtLink :to="`/events/${event.id}`"
+                class="group relative block h-60 w-full cursor-pointer overflow-hidden rounded-lg">
+                <DirectusImage :asset-id="event.image" :height="600" :width="400" :quality="40"
+                  class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  :alt="`Bild von ${event.name}`" />
+                <div
+                  class="pointer-events-none absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                <div class="flex-column absolute top-0 bottom-0 left-0 right-0 flex items-end p-8">
+                  <div class="relative w-full">
+                    <h1 class="font-header text-2xl font-bold text-white">{{ event.name }}</h1>
+                    <div class="relative mt-2 w-full overflow-hidden">
+                      <p
+                        class="block translate-y-0 text-white opacity-100 transition duration-500 group-hover:-translate-y-3 group-hover:opacity-0">
+                        {{ formattedDate(new Date(event.start)) }}
+                      </p>
+                      <div
+                        class="absolute translate-y-0 text-white opacity-0 transition duration-500 group-hover:-translate-y-full group-hover:opacity-100">
+                        <div class="relative flex flex-row items-center font-bold">
+                          <span>Event anzeigen</span>
+                          <div class="ml-2 h-0.5 w-12 bg-white" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </NuxtLink>
+            </div>
+            <!-- <div class="col-span-6">
               <NuxtLink to="/mitstiften"
                 class="text-md font-header mb-6 inline-flex items-center rounded-md font-bold transition ease-in-out hover:text-emerald-500">
                 Unterstütze uns
@@ -99,11 +144,39 @@
                   die Dir und uns wichtig sind</b>!
                 <br />
               </p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </section>
+    <!-- <section class="py-16 md:py-24">
+      <div class="container mx-auto grid grid-cols-6 gap-8 px-4">
+        <div class="col-span-6 lg:col-span-4">
+          <h4 class="text-sm font-semibold uppercase text-gray-600">
+            Von unserem Blog
+          </h4>
+          <h1 class="font-header mt-2 text-4xl font-bold">
+            Kommende Events
+          </h1>
+          <p class="mt-4 max-w-2xl">
+            Verfolge die Entwicklung unserer Projekte, die dank Deiner
+            großzügigen Beiträge und Deiner Unterstützung möglich wurden.
+          </p>
+          <NuxtLink to="/stiftung/aktuelles"
+            class="text-md font-header mt-12 mb-4 inline-flex items-center rounded-md bg-green-100 py-1.5 px-4 font-bold transition ease-in-out hover:bg-green-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Alle Events
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </NuxtLink>
+        </div>
+        <div v-for="post in events" class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2">
+          <ArticleCard :title="post.name" :date="new Date(post.start)" :post-id="post.id" :image-id="post.image"
+            project-title="post.project.title" compact :link="`/stiftung/aktuelles/${post.slug}`" />
+        </div>
+      </div>
+    </section> -->
     <section class="py-16 md:py-24">
       <div class="container mx-auto grid grid-cols-6 gap-8 px-4">
         <div class="col-span-6 lg:col-span-4">
@@ -111,7 +184,7 @@
             Von unserem Blog
           </h4>
           <h1 class="font-header mt-2 text-4xl font-bold">
-            Aktuelles & Neuigkeiten
+            Aktuelles & Neues von uns
           </h1>
           <p class="mt-4 max-w-2xl">
             Verfolge die Entwicklung unserer Projekte, die dank Deiner
@@ -176,6 +249,20 @@ const projects = await getItems<any>({
   },
 });
 
+const events = await getItems<any>({
+  collection: "events",
+  params: {
+    fields: ["name", "start", "id", "image"],
+    limit: 4,
+    sort: "start",
+    filter: {
+      start: {
+        _gte: new Date().toISOString(),
+      },
+    },
+  },
+});
+
 const posts = await getItems<any>({
   collection: "posts",
   params: {
@@ -186,4 +273,10 @@ const posts = await getItems<any>({
 });
 
 const indexToColSpan = useGridSpanLayout();
+
+const formattedDate = (date: Date) => date.toLocaleDateString("de", {
+  year: "numeric",
+  day: "numeric",
+  month: "long",
+});
 </script>
