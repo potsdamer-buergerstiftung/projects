@@ -12,7 +12,8 @@
           <HeaderSubNavItem title="Wer wir sind" link="/stiftung" />
           <HeaderSubNavItem title="Unsere Gremien" link="/stiftung/gremien" />
           <HeaderSubNavItem title="Aktuelles & Veranstaltungen" link="/stiftung/aktuelles" />
-          <HeaderSubNavItem title="Presse & Dokumente" link="/stiftung/presse" />
+          <HeaderSubNavItem title="Presse" link="/stiftung/presse" />
+          <HeaderSubNavItem title="Veröffentlichungen" link="/stiftung/veroeffentlichungen" />
         </HeaderNavItem>
         <HeaderNavItem title="Projekte & Initiativen" link="/projekte">
           <HeaderSubNavItem title="Unsere Projekte" link="/projekte" />

@@ -1,14 +1,13 @@
 <template>
   <div>
-    <Title>Presse & Dokumente</Title>
-    <PageTitle title="Presse & Dokumente">
+    <Title>Presse</Title>
+    <PageTitle title="Presse">
       <template #breadcrumb>
-        <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung', link: '/stiftung' }, { text: 'Presse & Dokumente' }]" />
+        <PageTitleBreadcrumb :items="[{ text: 'Die Stiftung', link: '/stiftung' }, { text: 'Presse' }]" />
       </template>
       <template #description>
         <p>
-          Wir stellen Dir bald ein Pressekit zur Verfügung, das Du mit freier
-          Lizenz für Berichterstattung verwenden darfst.
+          Was andere über uns berichten.
         </p>
       </template>
     </PageTitle>
