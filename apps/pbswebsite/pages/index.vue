@@ -102,8 +102,8 @@
               </h1>
             </div>
             <div v-for="event in events" class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2">
-              <NuxtLink :to="`/events/${event.id}`"
-                class="group relative block h-60 w-full cursor-pointer overflow-hidden rounded-lg">
+              <NuxtLink :to="event.registration_needed && event.external_ticket_url ? event.external_ticket_url : `/events/${event.id}`"
+                class="group relative block h-60 w-full cursor-pointer overflow-hidden rounded-lg" :target="event.external_ticket_url ? '_blank' : null">
                 <DirectusImage :asset-id="event.image" :height="600" :width="400" :quality="40"
                   class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                   :alt="`Bild von ${event.name}`" />
@@ -252,7 +252,7 @@ const projects = await getItems<any>({
 const events = await getItems<any>({
   collection: "events",
   params: {
-    fields: ["name", "start", "id", "image"],
+    fields: ["name", "start", "id", "image", "external_ticket_url", "registration_needed"],
     limit: 4,
     sort: "start",
     filter: {
