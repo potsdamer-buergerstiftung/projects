@@ -152,6 +152,7 @@ const boardOfCurators = [
   {
     title: "Vorsitzender",
     name: "Jann Jakobs",
+    image: "d71169be-cc28-4608-bc33-dc9d125c108d",
   },
   {
     title: "Stellv. Vorsitzende",
@@ -160,6 +161,7 @@ const boardOfCurators = [
   {
     title: "Kuratoriumsmitglied",
     name: "Katja Dietrich-Kröck",
+    image: "f3ac1ccd-1309-4750-8e2d-e3097a0ea5d1",
   },
   {
     title: "Kuratoriumsmitglied",
@@ -168,6 +170,7 @@ const boardOfCurators = [
   {
     title: "Kuratoriumsmitglied",
     name: "Daniel Beermann",
+    image: "d1b30e68-5d56-4d4e-8e3e-f7588fc64818",
   },
   {
     title: "Kuratoriumsmitglied",
@@ -180,6 +183,7 @@ const boardOfCurators = [
   {
     title: "Kuratoriumsmitglied",
     name: "Bettina Jahnke",
+    image: "4a302aba-1370-4426-8141-7d4d87172a39",
   },
   {
     title: "Kuratoriumsmitglied",
@@ -188,10 +192,7 @@ const boardOfCurators = [
   {
     title: "Kuratoriumsmitglied",
     name: "Heiko Sill",
-  },
-  {
-    title: "Kuratoriumsmitglied",
-    name: "Ingrid Howes",
+    image: "53d7b6fe-66c0-4b3e-bd15-46a231b354ed",
   },
 ];
 </script>
