@@ -157,6 +157,10 @@ const disclosures = [
   {
     title: "Das Konzept",
     content: `Die Potsdamer Bürgerstiftung ist eine gemeinnützige Stiftung, die institutionell, finanziell, konfessionell und parteipolitisch unabhängig ist. Sie ist gegründet von und für Bürgerinnen und Bürger Potsdams. Ihr Stiftungszweck ist sehr breit gefasst und zielt immer auf das Gemeinwohl vor Ort. Sie agiert nachhaltig und dauerhaft  - auch für die Anliegen künftiger Generationen - und baut hierfür auf Zustiftungen und Spenden vieler Menschen in und aus Potsdam. Sie bietet verantwortungsbewussten Bürger:innen die Möglichkeit, sich für ihre Stadt und die Menschen, die hier leben, mit Zeit, Geld und Ideen einzusetzen.`,
+    button: {
+      text: "Mission Statement",
+      link: "/mission-statement.pdf",
+    },
   },
   {
     title: "Die Satzung",
