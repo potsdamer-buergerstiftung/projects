@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full z-[1000]">
-    <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-4 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
+    <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-3 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
       <div class="font-medium text-center md:inline-flex lg:justify-center items-center"><b class="mr-2 text-sm md:text-md">{{ banner.title }}</b>
         <div v-html="banner.text" class="text-sm lg:text-md md:prose"></div><span
           class="text-sm md:text-md text-emerald-500 font-header inline-flex items-center rounded-md px-4 ml-1 font-bold transition ease-in-out group focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">{{banner.link_label}}<svg
