@@ -1,4 +1,16 @@
 <template>
+  <div class="relative w-full z-[1000]">
+    <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-4 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
+      <div class="font-medium text-center md:inline-flex lg:justify-center items-center"><b class="mr-2 text-sm md:text-md">{{ banner.title }}</b>
+        <div v-html="banner.text" class="text-sm lg:text-md md:prose"></div><span
+          class="text-sm md:text-md text-emerald-500 font-header inline-flex items-center rounded-md px-4 ml-1 font-bold transition ease-in-out group focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">{{banner.link_label}}<svg
+            xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 group-hover:translate-x-1 transition" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg></span>
+      </div>
+    </a>
+  </div>
   <header class="absolute z-40 w-full">
     <div
       class="z-50 flex w-full flex-row items-center justify-between gap-4 px-4 py-2 md:px-8 md:py-4 lg:px-4 lg:py-6 xl:px-10">
@@ -42,6 +54,19 @@
 
 <script setup lang="ts">
 import { useStore } from "./state";
+
+const { getSingletonItem } = useDirectusItems();
+
+const banner = await getSingletonItem<any>({ collection: "website_banner" });
+
+var bannerHex = banner.color.slice(1,6).match(/.{1,2}/g);
+var bannerRgb = [
+  parseInt(bannerHex[0], 16),
+  parseInt(bannerHex[1], 16),
+  parseInt(bannerHex[2], 16)
+];
+
+console.log(bannerRgb)
 
 const store = useStore();
 
