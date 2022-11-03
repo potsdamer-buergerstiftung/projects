@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-0 right-0 bottom-0 bg-slate-50 z-50 shadow-lg w-2/3 transition duration-700 overflow-y-auto"
+    <div class="fixed top-0 right-0 bottom-0 bg-slate-50 z-[1001] shadow-lg w-2/3 transition duration-700 overflow-y-auto"
         :class="[!store.isQuickDonateDrawerOpen ? 'translate-x-full' : 'translate-x-0']">
         <div class="w-full p-6 -mb-12">
             <button @click="store.closeQuickDonateDrawer()"
