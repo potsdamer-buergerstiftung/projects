@@ -12,6 +12,7 @@
         :quality="30"
         v-if="image"
       />
+      <div class="w-full h-full bg-emerald-100" v-else></div>
     </div>
     <div
       class="container mx-auto flex h-full flex-col justify-end px-4 py-16 md:p-8 lg:max-w-none xl:p-10"

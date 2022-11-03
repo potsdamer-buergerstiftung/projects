@@ -78,7 +78,7 @@
             <DisclosurePanel>
               {{ disclosure.content }}
               <div v-if="disclosure.button" class="mt-2">
-                <NuxtLink :href="disclosure.button.link"
+                <a :href="disclosure.button.link" target="_blank"
                   class="py-1 px-3 bg-emerald-100 inline-flex items-center text-slate-800 text-md font-header rounded-md font-bold transition ease-in-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75 hover:bg-emerald-200">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-4 h-4 mr-1">
@@ -87,7 +87,7 @@
                   </svg>
 
                   {{ disclosure.button.text }}
-                </NuxtLink>
+                </a>
               </div>
             </DisclosurePanel>
           </Disclosure>
@@ -157,13 +157,17 @@ const disclosures = [
   {
     title: "Das Konzept",
     content: `Die Potsdamer Bürgerstiftung ist eine gemeinnützige Stiftung, die institutionell, finanziell, konfessionell und parteipolitisch unabhängig ist. Sie ist gegründet von und für Bürgerinnen und Bürger Potsdams. Ihr Stiftungszweck ist sehr breit gefasst und zielt immer auf das Gemeinwohl vor Ort. Sie agiert nachhaltig und dauerhaft  - auch für die Anliegen künftiger Generationen - und baut hierfür auf Zustiftungen und Spenden vieler Menschen in und aus Potsdam. Sie bietet verantwortungsbewussten Bürger:innen die Möglichkeit, sich für ihre Stadt und die Menschen, die hier leben, mit Zeit, Geld und Ideen einzusetzen.`,
+    button: {
+      text: "Mission Statement",
+      link: "/mission-statement.pdf",
+    },
   },
   {
     title: "Die Satzung",
     content: `Die Satzung ist der Maßstab allen Handelns. In ihr sind die Struktur und Förderziele dauerhaft festgelegt. Die Einhaltung des Satzungszwecks und die satzungsgemäße Mittelverwendung wird durch den Stiftungsrat, die Stiftungsaufsicht des Landes Brandenburg und das Finanzamt Potsdam überwacht.`,
     button: {
       text: "Satzung aufrufen",
-      link: "/stiftung/satzung"
+      link: "/satzung.pdf",
     }
   },
   {

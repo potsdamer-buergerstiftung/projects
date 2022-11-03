@@ -1,8 +1,8 @@
 <template>
   <div class="relative w-full z-[1000]">
-    <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-4 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
+    <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-3 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
       <div class="font-medium text-center md:inline-flex lg:justify-center items-center"><b class="mr-2 text-sm md:text-md">{{ banner.title }}</b>
-        <div v-html="banner.text" class="text-sm lg:text-md md:prose"></div><span
+        <div v-html="banner.text" class="text-sm md:text-md md:prose-md"></div><span
           class="text-sm md:text-md text-emerald-500 font-header inline-flex items-center rounded-md px-4 ml-1 font-bold transition ease-in-out group focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">{{banner.link_label}}<svg
             xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 group-hover:translate-x-1 transition" fill="none"
             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
