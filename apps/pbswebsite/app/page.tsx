@@ -12,7 +12,7 @@ export default async function HomePage() {
     <>
       <div className="container mx-auto px-4 pt-32 md:pt-44">
         <h1 className="font-header text-5xl font-bold text-slate-800 md:text-6xl lg:text-7xl">
-          Brücken bauen,
+          Brücken bauen,s
           <br />
           Menschen verbinden
         </h1>
