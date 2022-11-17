@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full z-[1000]">
+  <div class="relative w-full z-[1000]" v-if="banner.status == 'visible'">
     <a class="px-10 group cursor-pointer flex justify-center py-2 md:py-3 transition bg-emerald-100 hover:bg-emerald-200" :href="banner.link" target="_blank">
       <div class="font-medium text-center md:inline-flex lg:justify-center items-center"><b class="mr-2 text-sm md:text-md">{{ banner.title }}</b>
         <div v-html="banner.text" class="text-sm md:text-md md:prose-md"></div><span
@@ -66,7 +66,7 @@ var bannerRgb = [
   parseInt(bannerHex[2], 16)
 ];
 
-console.log(bannerRgb)
+console.log(banner)
 
 const store = useStore();
 
