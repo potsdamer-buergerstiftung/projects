@@ -59,15 +59,6 @@ const { getSingletonItem } = useDirectusItems();
 
 const banner = await getSingletonItem<any>({ collection: "website_banner" });
 
-var bannerHex = banner.color.slice(1,6).match(/.{1,2}/g);
-var bannerRgb = [
-  parseInt(bannerHex[0], 16),
-  parseInt(bannerHex[1], 16),
-  parseInt(bannerHex[2], 16)
-];
-
-console.log(banner)
-
 const store = useStore();
 
 const isDark = computed(() => propsIsDark && !store.isSubMenuOpen);
