@@ -2,13 +2,12 @@ import { Directus } from "@directus/sdk";
 
 async function getProjects() {
   const directus = new Directus("https://portal.potsdamer-buergerstiftung.org");
-  const res = await directus.items("projects").readByQuery();
-  console.log(res);
-  return res;
+  const res = await directus.items<any, any>("projects").readByQuery();
+  return res.data;
 }
 
-export default function HomePage() {
-  const projects = getProjects();
+export default async function HomePage() {
+  const projects = await getProjects();
   return (
     <>
       <div className="container mx-auto px-4 pt-32 md:pt-44">
@@ -24,6 +23,11 @@ export default function HomePage() {
         <p className="pt-1 font-bold text-emerald-500 md:text-lg">
           Lass uns gemeinsam unsere schöne Stadt noch l(i)ebenswerter machen.
         </p>
+      </div>
+      <div>
+      {projects?.map((project) => (
+        <div key={project.title}>{project.title}</div>
+      ),)}
       </div>
     </>
   );
