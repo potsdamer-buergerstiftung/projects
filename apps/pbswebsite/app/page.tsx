@@ -42,7 +42,7 @@ export default async function HomePage() {
       <div className="container mx-auto px-4 pt-10 pb-16 md:pt-20">
         <div className="grid grid-cols-6 gap-8">
           {projects?.map((project, index) => (
-            <div className="col-span-6 lg:col-span-3">
+            <div className="col-span-6 lg:col-span-3" key={project.id}>
               <ProjectCard
                 title={project.title}
                 subTitle={project.sub_title}
@@ -59,6 +59,31 @@ export default async function HomePage() {
           Alle Projekte
         </Link>
       </div>
+      <section className="bg-slate-100 py-16 lg:py-24">
+        <div className="container mx-auto grid grid-cols-1 gap-8 px-4 lg:grid-cols-2">
+          <div>
+            <h4 className="text-sm font-semibold uppercase text-gray-600">
+              Lebe deine Stadt
+            </h4>
+            <h1 className="font-header mt-2 text-4xl font-bold">
+              Ehrenamtlich, engagiert, miteinander
+            </h1>
+          </div>
+          <div>
+            <p>
+              Alle sind eingeladen, sich mit Ideen, Zeit und Geld für eine
+              <b>positive Entwicklung Potsdams einzubringen</b>. Wir vernetzen
+              Gleichgesinnte, versammeln engagierte Menschen, bieten
+              Unterstützung als Plattform für Ehrenamt und möchten es den
+              Menschen in Potsdam leichter machen, das{" "}
+              <b>Gemeinwohl zu stärken</b>, Gemeinschaftsgefühl zu erleben, ein
+              <b>herzliches Miteinander</b> und eine starke Zukunft für Potsdam
+              zu stiften. Mit unserer Arbeit konnten wir seit unserer Gründung{" "}
+              <b>erste Schwerpunkte setzen</b>.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

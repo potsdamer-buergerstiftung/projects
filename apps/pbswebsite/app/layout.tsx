@@ -1,8 +1,13 @@
-import Link from "next/link";
 import "../styles/globals.css";
+import Head from "next/head";
+
 import { Space_Grotesk } from "@next/font/google";
 
-const spaceGrotesk = Space_Grotesk({weight: ["400", "700"], subsets: ["latin"], style: ["normal"]});
+const font = Space_Grotesk({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  style: ["normal"],
+});
 
 export default function RootLayout({
   children,
@@ -10,11 +15,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={spaceGrotesk.className}>
+    <html>
+      <head>
+        <style
+          dangerouslySetInnerHTML={{__html: `
+          :root {
+            --font-header: ${font.style.fontFamily};
+          }
+        `}}
+        ></style>
+      </head>
       <body>
         <main>
-          <nav>
-          </nav>
+          <nav></nav>
           {children}
         </main>
       </body>
