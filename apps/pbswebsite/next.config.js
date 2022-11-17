@@ -13,6 +13,10 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    loader: "custom",
+    loaderFile: "./imageLoader.js",
+  }
 };
 
 module.exports = nextConfig;

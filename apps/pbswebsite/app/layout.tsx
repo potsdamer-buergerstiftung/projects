@@ -2,7 +2,7 @@ import Link from "next/link";
 import "../styles/globals.css";
 import { Space_Grotesk } from "@next/font/google";
 
-const spaceGrotesk = Space_Grotesk();
+const spaceGrotesk = Space_Grotesk({weight: ["400", "700"], subsets: ["latin"], style: ["normal"]});
 
 export default function RootLayout({
   children,
@@ -14,8 +14,6 @@ export default function RootLayout({
       <body>
         <main>
           <nav>
-            <Link href="/">Home</Link>
-            <Link href="/notes">Notes</Link>
           </nav>
           {children}
         </main>
