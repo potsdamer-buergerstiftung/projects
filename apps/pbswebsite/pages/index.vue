@@ -201,7 +201,7 @@
         </div>
         <div v-for="post in posts" class="col-span-6 min-h-max lg:col-span-3 xl:col-span-2">
           <ArticleCard :title="post.title" :date="new Date(post.date)" :post-id="post.id.toString()"
-            :image-id="post.image" :project-title="post.project.title" :tags="post.tags" compact
+            :image-id="post.image" :project-title="post.project?.title" :tags="post.tags" compact
             :link="`/stiftung/aktuelles/${post.slug}`" />
         </div>
       </div>
