@@ -42,9 +42,9 @@ const ArticleCard: React.FC<{
         >
           <Image
             src={imageId}
-            height="700"
-            width="700"
-            quality="40"
+            height={400}
+            width={400}
+            quality={32}
             alt=""
             className={classNames(
               "h-full w-full object-cover transition duration-500",

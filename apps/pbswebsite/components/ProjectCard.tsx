@@ -6,8 +6,14 @@ const ProjectCard: React.FC<{
   projectId: string;
   subTitle: string;
   imageId: string;
+  imageSize?: "small" | "large";
 }> = (props) => {
-  const { title, subTitle, projectId, imageId } = props;
+  const { title, subTitle, projectId, imageId, imageSize } = props;
+
+  const imageProps =
+    imageSize == "small"
+      ? { width: 400, height: 300 }
+      : { width: 600, height: 300 };
   return (
     <Link
       href={`/projekte/${projectId}`}
@@ -15,9 +21,9 @@ const ProjectCard: React.FC<{
     >
       <Image
         src={`${imageId}`}
-        height={400}
-        width={400}
-        quality="40"
+        height={imageProps.height}
+        width={imageProps.width}
+        quality={30}
         className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
         alt={`Bild von ${title}`}
       />

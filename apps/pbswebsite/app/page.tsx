@@ -80,17 +80,19 @@ export default async function HomePage() {
       <div className="container mx-auto px-4 pt-10 pb-16 md:pt-20">
         <div className="grid grid-cols-6 gap-8">
           {projects?.map((project, i) => (
-            <div className={classNames(
-              "col-span-6 lg:col-span-3", {
-                'xl:col-span-2': indexToSpan(i) * 2 == 2,
-                'xl:col-span-4': indexToSpan(i) * 2 == 4,
-              }
-            )} key={project.id}>
+            <div
+              className={classNames("col-span-6 lg:col-span-3", {
+                "xl:col-span-2": indexToSpan(i) * 2 == 2,
+                "xl:col-span-4": indexToSpan(i) * 2 == 4,
+              })}
+              key={project.id}
+            >
               <ProjectCard
                 title={project.title}
                 subTitle={project.sub_title}
                 projectId={project.id}
                 imageId={project.image}
+                imageSize={indexToSpan(i) * 2 == 2 ? 'small' : 'large'}
               />
             </div>
           ))}
@@ -139,9 +141,9 @@ export default async function HomePage() {
                 <Image
                   src={priority.assetId}
                   className="h-full w-full object-cover"
-                  width="700"
-                  height="500"
-                  quality="30"
+                  quality={32}
+                  width={300}
+                  height={200}
                   alt="Bild"
                 />
               </div>
