@@ -1,7 +1,7 @@
 import "../styles/globals.css";
-import Head from "next/head";
 
 import { Space_Grotesk } from "@next/font/google";
+import Footer from "../components/Footer/Footer";
 
 const font = Space_Grotesk({
   weight: ["400", "700"],
@@ -30,6 +30,7 @@ export default function RootLayout({
           <nav></nav>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
