@@ -167,7 +167,7 @@ const disclosures = [
     content: `Die Satzung ist der Maßstab allen Handelns. In ihr sind die Struktur und Förderziele dauerhaft festgelegt. Die Einhaltung des Satzungszwecks und die satzungsgemäße Mittelverwendung wird durch den Stiftungsrat, die Stiftungsaufsicht des Landes Brandenburg und das Finanzamt Potsdam überwacht.`,
     button: {
       text: "Satzung aufrufen",
-      link: "/satzung.pdf",
+      link: "/Satzung.pdf",
     }
   },
   {
