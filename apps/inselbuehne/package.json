@@ -9,13 +9,13 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.8",
+    "nuxt": "^3.0.0",
     "nuxt-ui": "*",
     "@vueuse/core": "^9.2.0",
     "@vueuse/nuxt": "^9.2.0"
   },
   "dependencies": {
-    "@directus/sdk": "^9.10.0",
+    "@directus/sdk": "^10.3.1",
     "@fontsource/dm-sans": "^4.5.7",
     "@fontsource/dm-serif-display": "^4.5.7",
     "@pinia/nuxt": "^0.4.2",

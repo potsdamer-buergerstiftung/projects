@@ -9,12 +9,12 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.2.0",
-    "@vueuse/nuxt": "^9.2.0",
-    "nuxt": "3.0.0-rc.9"
+    "@vueuse/core": "^9.10.0",
+    "@vueuse/nuxt": "^9.10.0",
+    "nuxt": "3.0.0"
   },
   "dependencies": {
-    "@directus/sdk": "^10.0.0",
+    "@directus/sdk": "^10.3.0",
     "@fontsource/space-grotesk": "^4.5.8",
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
