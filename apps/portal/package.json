@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "directus": "^9.14.1",
+    "directus": "^10.0.0",
     "directus-extension-editorjs": "*",
     "directus-extension-filepreview": "*",
     "directus-extension-slug": "*",
