@@ -17,7 +17,6 @@
     "directus-extension-editorjs": "*",
     "directus-extension-filepreview": "*",
     "directus-extension-slug": "*",
-    "directus-extension-m2mtags": "*",
     "sqlite3": "^5.0.8"
   }
 }
